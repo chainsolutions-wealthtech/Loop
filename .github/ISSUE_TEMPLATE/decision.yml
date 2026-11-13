@@ -1,0 +1,29 @@
+name: "Décision d'architecture ou de gouvernance"
+description: "Soumettre un arbitrage à validation, sans le considérer comme adopté."
+title: "[DECISION] "
+labels: []
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: Contexte et problème
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options étudiées et conséquences
+    validations:
+      required: true
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommandation et critères
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: Sources / preuves
+    validations:
+      required: false
