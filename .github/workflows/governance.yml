@@ -1,0 +1,25 @@
+name: Repository Governance Checks
+
+on:
+  push:
+    branches:
+      - main
+      - "bootstrap/**"
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  structure-and-policy:
+    name: structure-and-policy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify repository governance structure
+        run: python3 scripts/check_repository.py
+
+      - name: Compile Python checking script
+        run: python3 -m py_compile scripts/check_repository.py

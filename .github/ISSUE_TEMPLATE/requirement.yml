@@ -1,0 +1,32 @@
+name: "Exigence ou instruction"
+description: "Proposer une exigence en conservant la provenance et les impacts potentiels."
+title: "[REQ] "
+labels: []
+body:
+  - type: textarea
+    id: original_instruction
+    attributes:
+      label: Instruction / besoin d'origine
+      description: Formulation fidèle de la demande, sans contenu sensible.
+    validations:
+      required: true
+  - type: input
+    id: provenance
+    attributes:
+      label: Source et date
+      description: Lien vers une source publiable ou référence interne non sensible.
+    validations:
+      required: true
+  - type: textarea
+    id: analysis
+    attributes:
+      label: Qualification et impacts potentiels
+      description: Domaines, modèles, dépendances, risques et questions.
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d'acceptation proposés
+    validations:
+      required: false
