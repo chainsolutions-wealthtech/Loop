@@ -407,7 +407,13 @@
         "LOOP-W17"
       ],
       "evidence": [
-        "EV-020"
+        "EV-020",
+        "EV-021",
+        "EV-022",
+        "EV-023",
+        "EV-024",
+        "EV-025",
+        "EV-026"
       ],
       "acceptance": "Adaptateur de lecture testé sur un lien vérifié, un répertoire observé sans lien actif et une vue non concluante. Une projection V1/V2 ne suffit ni à vérifier un lien ni à prouver l’absence. Aucune écriture ni mise en service dans cette tranche."
     }

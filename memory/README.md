@@ -35,3 +35,6 @@ l'inventaire sont dans le registre privé indexé par `LOOP-INV-20261113-02`.
 ## Identité de reprise
 
 Reprendre `WT-PROJECT-LOOP-001` avec `LOOP-CONV-CONT-20261113-ROOT-01`. L'[arbre canonique](../docs/LOOP_CANONICAL_REGISTRY.md) relie cette mémoire aux modules, tables, décisions et travaux.
+
+[Précédents de création, entrée MCP et hébergement](../docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md) —
+GRT, Gouvern, UAES/CUG et Regulatory, preuves EV-021 à EV-026.

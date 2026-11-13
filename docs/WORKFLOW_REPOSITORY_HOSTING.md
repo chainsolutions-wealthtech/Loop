@@ -213,3 +213,12 @@ répertoire existant sans lien actif et une source V1 non concluante.
 Puis qualifier, séparément, le chemin d’écriture du lien et sa relecture.
 Cette note ne raccorde pas l’adaptateur, n’écrit pas le registre MCP et
 ne provisionne rien sur S1 ou S2.
+
+## Précédents d'entrée et d'exécution
+
+Voir [la chaîne sourcée GRT, Gouvern, UAES et Regulatory](REPOSITORY_LIFECYCLE_PRECEDENTS.md).
+L'entrée générale démarre à la sélection du dépôt, conformément à
+[l'addendum MCP du 28 octobre](https://github.com/Patricked-code/MCP/issues/349#issuecomment-6461939290).
+Le préflight d'une mise en service est un autre point d'appel. Il exige
+la révision à livrer. L'entrée et la découverte du rattachement ne
+dépendent pas de cette révision.

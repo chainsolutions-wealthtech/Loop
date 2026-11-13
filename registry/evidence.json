@@ -189,6 +189,54 @@
       "status": "observed",
       "reference": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
       "summary": "Le GitRegistry runtime est en V1 au relevé. Le dry run V2 n’écrit rien. La synchronisation V1 peut affecter S1 et un chemin par défaut, sans attester de répertoire. La route Git affiche un état de correspondance, sans appeler le sélecteur d’hébergement."
+    },
+    {
+      "id": "EV-021",
+      "kind": "historical_source_and_execution_review",
+      "scope": "Patricked-code/Gouvern",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#grt-et-gouvern--création-puis-entrée",
+      "summary": "Création depuis GRT attestée et bootstrap GitHub réussi. Le run central a échoué en relisant main avant apparition du commit."
+    },
+    {
+      "id": "EV-022",
+      "kind": "historical_source_and_execution_review",
+      "scope": "GRT et Patricked-code/Gouvern",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#grt-et-gouvern--création-puis-entrée",
+      "summary": "Appels MCP de lecture attestés. L'upgrade v2.8.1 de Gouvern remet la projection Git à UNCONFIGURED, sans prouver un état serveur."
+    },
+    {
+      "id": "EV-023",
+      "kind": "historical_source_and_execution_review",
+      "scope": "UAES et CUG",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#uaes-et-cug--portée-de-chaque-preuve",
+      "summary": "Bypass de ruleset et préflight S1 en lecture seule observés. Installation nominative, permissions et runtime UAES non attestés."
+    },
+    {
+      "id": "EV-024",
+      "kind": "historical_source_and_execution_review",
+      "scope": "chainsolutions-wealthtech/Regulatory",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#regulatory--constitution-du-dépôt-et-du-produit",
+      "summary": "Dépôt initial README, puis gouvernance, corpus et kit documentaire Loop 1.0.0. Aucun template parent déclaré ni transfert attesté."
+    },
+    {
+      "id": "EV-025",
+      "kind": "historical_source_and_execution_review",
+      "scope": "chainsolutions-wealthtech/Regulatory",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#regulatory--constitution-du-dépôt-et-du-produit",
+      "summary": "Moteur et application Next.js versionnés. CI avec build, API HTTP et PostgreSQL en environnement de test."
+    },
+    {
+      "id": "EV-026",
+      "kind": "historical_source_and_execution_review",
+      "scope": "Regulatory et Patricked-code/MCP #349",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#regulatory--préparation-s1-et-limite-de-preuve",
+      "summary": "Manifestes successifs sous-chemin et sous-domaine. Pilote et admission MCP non livrés bout en bout. Aucun déploiement Regulatory attesté."
     }
   ]
 }

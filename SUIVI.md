@@ -112,3 +112,12 @@ Les décisions « proposées » ne constituent pas une approbation. Mettre à jo
 entre mapping proposé et chemin attesté. Le planificateur est appelable,
 mais le raccordement automatique n’est pas implémenté. Voir le
 [relevé et la séquence](docs/WORKFLOW_REPOSITORY_HOSTING.md#jonction-vérifiée-et-point-dappel-du-workflow).
+
+## Précédents GRT, Gouvern, UAES et Regulatory — LOOP-W18
+
+Les [preuves et limites](docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md) sont indexées sous EV-021 à EV-026
+et dans la chronologie E20 à E25. Le parcours global débute à l'identification
+du dépôt. Reprendre par un adaptateur de lecture testé sur lien vérifié,
+répertoire existant sans lien et registre non concluant. La mise en service
+exige plus tard la cible relue et une révision exacte. Aucun déploiement
+ni raccordement automatique n'a été réalisé dans ce lot documentaire.
