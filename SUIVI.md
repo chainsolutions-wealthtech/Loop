@@ -10,7 +10,10 @@
 - **Branche de préparation :** `bootstrap/governance-setup-20261113`.
 - **Objectif :** paramétrage documentaire et CI du dépôt AVANT installation du moteur Software Design.
 - **Limites :** protections GitHub/rulesets non activées par ces fichiers ; elles nécessitent une opération d'administration séparée.
-- **Prochaine action :** vérifier la PR de configuration ; établir le registre historique exhaustif et les règles de protection ; décider du squelette canonique avant d'installer le kit v0.1.
+- **Pull Request de configuration :** [#1 (Draft)](https://github.com/chainsolutions-wealthtech/Loop/pull/1), non fusionnée.
+- **Contrôle CI initial :** GitHub Actions `structure-and-policy` SUCCESS, exécution #43356722778 sur la branche avant mise à jour de ce checkpoint.
+- **Protection de main :** `protected: false` dans la liste des branches ; zéro ruleset de dépôt retournée, activation nécessaire dans GitHub Settings.
+- **Prochaine action :** activer/vérifier la ruleset de main, revérifier la CI, réviser puis approuver explicitement la PR ; établir le registre historique exhaustif avant d'installer le kit v0.1.
 - **Interdictions :** pas d'action sur `Patricked-code/MCP`, pas de fusion non approuvée, pas de déploiement.
 
 ## Chantiers
@@ -21,7 +24,7 @@
 | LOOP-P1 | Constitution du registre historique | à démarrer |
 | LOOP-P2 | Coordination documentaire et taxonomie WF-00 | conception requise |
 | LOOP-P3 | Méthodologie Software Design | conception requise |
-| LOOP-SETUP-01 | Fondation GitHub / docs / contrôle CI | branche de préparation |
+| LOOP-SETUP-01 | Fondation GitHub / docs / contrôle CI | PR #1 Draft, CI initiale PASS, protections à configurer |
 | LOOP-P4+ | Architecture moteur puis intégration | bloqué par P1–P3 |
 
 ## Journal des décisions
