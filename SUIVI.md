@@ -121,3 +121,11 @@ du dépôt. Reprendre par un adaptateur de lecture testé sur lien vérifié,
 répertoire existant sans lien et registre non concluant. La mise en service
 exige plus tard la cible relue et une révision exacte. Aucun déploiement
 ni raccordement automatique n'a été réalisé dans ce lot documentaire.
+
+## Carte de reprise du fil — LOOP-W18
+
+Depuis `LOOP-CONV-CONT-20261113-ROOT-01`, ouvrir la [carte du cycle](docs/REPOSITORY_LIFECYCLE_MAP.md).
+Les E26 à E28 indexent la correction du déclencheur, les capacités et les
+limites de la mémoire. Prochaine action du sujet inchangée : tester
+l'adaptateur de lecture sur lien attesté, répertoire existant sans lien
+actif et vue non concluante. Aucun raccordement ni déploiement dans ce lot.

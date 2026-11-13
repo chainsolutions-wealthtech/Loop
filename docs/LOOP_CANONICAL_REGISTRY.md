@@ -92,3 +92,8 @@ Le [contrat d’ancrage](PROJECT_ANCHOR.md) complète LOOP-MOD-007.
 La projection publique `registry/project-anchors.json` est contrôlée avec
 le manifeste d’identité. L’index privé peut résoudre le même ID depuis
 un serveur et un chemin réel attesté, sans publier ce chemin.
+
+Pour le sujet `LOOP-SUJ-020`, la [carte de reprise](REPOSITORY_LIFECYCLE_MAP.md) relie
+l'ordre des échanges, les capacités et leurs preuves à `LOOP-W18`.
+Ce point de reprise est propre au sujet et ne remplace pas le
+checkpoint global.

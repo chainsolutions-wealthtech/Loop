@@ -222,3 +222,7 @@ L'entrée générale démarre à la sélection du dépôt, conformément à
 Le préflight d'une mise en service est un autre point d'appel. Il exige
 la révision à livrer. L'entrée et la découverte du rattachement ne
 dépendent pas de cette révision.
+
+[Carte de reprise du parcours complet](REPOSITORY_LIFECYCLE_MAP.md) —
+pour distinguer l'entrée historique à la sélection du dépôt et le
+sous-cycle de mise en service, et retrouver les précédents par étape.

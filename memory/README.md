@@ -38,3 +38,7 @@ Reprendre `WT-PROJECT-LOOP-001` avec `LOOP-CONV-CONT-20261113-ROOT-01`. L'[arbre
 
 [Précédents de création, entrée MCP et hébergement](../docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md) —
 GRT, Gouvern, UAES/CUG et Regulatory, preuves EV-021 à EV-026.
+
+[Carte de reprise du fil GitHub → MCP → application](../docs/REPOSITORY_LIFECYCLE_MAP.md) —
+index des échanges visibles, des passages entre capacités et des limites
+de preuve. Événements E26 à E28.
