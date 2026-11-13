@@ -271,12 +271,14 @@
         "validation hors ligne",
         "résolution d'un ID et de ses anciens alias",
         "arbre de descendance",
-        "lecture privée par ID"
+        "lecture privée par ID",
+        "résolution hors ligne de l’ancrage global à partir d’un instantané injecté"
       ],
       "inputs": [
         "Manifeste d'identité",
         "Index des sujets, contrats et registres",
-        "ID canonique, alias ou clé SQLite privée"
+        "ID canonique, alias ou clé SQLite privée",
+        "ID global, clé dépôt stable ou serveur et chemin réel"
       ],
       "process": [
         "Assembler la hiérarchie et les relations",
@@ -287,18 +289,23 @@
       "outputs": [
         "Nœud canonique ou erreur explicite",
         "Chemin de descendance",
-        "Point de reprise et travaux liés"
+        "Point de reprise et travaux liés",
+        "Projet et rattachements avec états inchangés ou erreur de cohérence"
       ],
       "boundary": "Registre de Loop, ni identifiant de session MCP, ni autorisation opérationnelle, ni adoption sur main.",
       "work": [
-        "LOOP-W14"
+        "LOOP-W14",
+        "LOOP-W15"
       ],
       "requirements": [
-        "REQ-011"
+        "REQ-011",
+        "REQ-012"
       ],
       "evidence": [
         "EV-010",
-        "EV-011"
+        "EV-011",
+        "EV-015",
+        "EV-016"
       ]
     }
   ],

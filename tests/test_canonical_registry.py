@@ -35,6 +35,15 @@ class CanonicalRegistryTest(unittest.TestCase):
         self.assertEqual(self.nodes['LOOP-CAP-001']['state'], 'specified_not_implemented')
         self.assertNotIn('implementation', self.nodes['LOOP-CAP-001'])
 
+    def test_anchor_and_evidence_are_reachable_without_server_paths(self):
+        anchor = describe(self.nodes, self.aliases, self.children, 'LOOP-ANCHOR-001')
+        self.assertEqual(anchor['hierarchy'], [self.project, 'LOOP-SP-02',
+                         'LOOP-SUJ-019', 'LOOP-TBL-015', 'LOOP-ANCHOR-001'])
+        self.assertEqual(anchor['state'], 'server_not_attested')
+        self.assertEqual(anchor['canonical_links']['work'], ['LOOP-W15'])
+        self.assertNotIn('directories', anchor)
+        self.assertEqual(self.nodes['LOOP-W15']['evidence'], ['EV-015', 'EV-016'])
+
     def test_private_lookup_uses_exact_snapshot_and_is_read_only(self):
         with TemporaryDirectory() as tmp:
             d = Path(tmp)

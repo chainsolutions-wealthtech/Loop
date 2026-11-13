@@ -141,6 +141,22 @@
       "status": "draft",
       "reference": "docs/PARALLEL_ARCHITECTURE_SKELETON.md",
       "summary": "Proposition de modèle des vues fonctionnelle et technique, conservée dans Loop."
+    },
+    {
+      "id": "EV-015",
+      "kind": "read_only_observation_and_offline_replay",
+      "scope": "Patricked-code/Stablecoin",
+      "status": "observed",
+      "reference": "docs/PROJECT_ANCHOR.md#test-réel-en-lecture-seule--13-novembre-2026",
+      "summary": "Checkout et remote observés sur S2. Reconnaissance active et CUG non attestées. Garde mcp_unverified, sans appel métier."
+    },
+    {
+      "id": "EV-016",
+      "kind": "read_only_observation",
+      "scope": "Patricked-code/MCP",
+      "status": "observed",
+      "reference": "docs/PROJECT_ANCHOR.md#test-réel-en-lecture-seule--13-novembre-2026",
+      "summary": "Même révision observée sur GitHub, checkout S1 et runtime Docker. État global en réconciliation. Aucun ancrage serveur créé."
     }
   ]
 }

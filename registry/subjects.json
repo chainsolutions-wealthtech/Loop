@@ -140,6 +140,12 @@
       "LOOP-SP-06",
       "Hôte d'intégration et opérations autorisées",
       "docs/LOOP_ROADMAP.md"
+    ],
+    [
+      "LOOP-SUJ-019",
+      "LOOP-SP-02",
+      "Ancrage global du projet, du dépôt et des répertoires serveur",
+      "docs/PROJECT_ANCHOR.md"
     ]
   ],
   "levels": {
@@ -196,7 +202,8 @@
     "LOOP-W11": "LOOP-SUJ-017",
     "LOOP-W12": "LOOP-SUJ-018",
     "LOOP-W13": "LOOP-SUJ-014",
-    "LOOP-W14": "LOOP-SUJ-008"
+    "LOOP-W14": "LOOP-SUJ-008",
+    "LOOP-W15": "LOOP-SUJ-019"
   },
   "tables": [
     [
@@ -377,6 +384,22 @@
         "sorties",
         "limites"
       ]
+    ],
+    [
+      "LOOP-TBL-015",
+      "LOOP-SUJ-019",
+      "Projections et clés d’ancrage du projet",
+      "registry/project-anchors.json",
+      [
+        "ID global projet",
+        "Hôte Git",
+        "ID stable dépôt",
+        "Nom du dépôt",
+        "ID serveur (privé)",
+        "Chemin réel (privé)",
+        "Environnement et rôle (privés)",
+        "État et preuves de rattachement (privés)"
+      ]
     ]
   ],
   "operations": [
@@ -461,7 +484,8 @@
         "E12": "LOOP-SUJ-001",
         "E13": "LOOP-SUJ-016",
         "E14": "LOOP-SUJ-016",
-        "E15": "LOOP-SUJ-008"
+        "E15": "LOOP-SUJ-008",
+        "E16": "LOOP-SUJ-019"
       }
     }
   ],
@@ -510,6 +534,15 @@
       "registry/identity.json",
       [
         "E15"
+      ]
+    ],
+    [
+      "LOOP-DEC-006",
+      "LOOP-SUJ-019",
+      "Un ID stable relie dépôt et répertoires sous une autorité privée",
+      "docs/PROJECT_ANCHOR.md",
+      [
+        "E16"
       ]
     ]
   ]

@@ -75,3 +75,14 @@ Les décisions « proposées » ne constituent pas une approbation. Mettre à jo
 - Continuité : `LOOP-CONV-CONT-20261113-ROOT-01` ; checkpoint `LOOP-CP-20261113-002`.
 - [Entrée canonique](docs/LOOP_CANONICAL_REGISTRY.md) et [contrats des modules](registry/modules.json).
 - Reprendre LOOP-W09 et LOOP-W10 en lecture seule. LOOP-W11 reste bloqué par la preuve de reconnaissance et l'identité CUG. Ces identifiants n'autorisent ni fusion, ni déploiement, ni action externe.
+
+## Test d’entrée Stablecoin et ancrage global — 13 novembre 2026
+
+- LOOP-W15 est vérifié dans la branche de travail. Le checkout S2 de Stablecoin
+  est observé, mais l’entrée retourne `mcp_unverified`. Aucun appel métier.
+- L’ID global Loop est résolu par son dépôt GitHub. La réciproque par serveur
+  et chemin est testée sur données fictives. Aucun chemin privé ni ancrage
+  actif n'est ajouté côté serveur.
+- LOOP-W11 reste bloqué. Obtenir une réponse de l’autorité sur le dépôt exact,
+  puis une preuve nominative CUG, la procédure approuvée et les preuves
+  privées pour chaque répertoire. Voir [le test](docs/PROJECT_ANCHOR.md).

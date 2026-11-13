@@ -58,3 +58,7 @@ et [la feuille de route](LOOP_ROADMAP.md).
 ## Registre descendant
 
 Le projet et ses six sous-projets internes ont leurs propres identifiants. Les [contrats de modules](../registry/modules.json) précisent modes, entrées, opérations, sorties et limites. L'[entrée canonique](LOOP_CANONICAL_REGISTRY.md) distingue parenté et relations de traçabilité.
+
+L'[ancrage canonique](PROJECT_ANCHOR.md) relie l'ID projet au dépôt et à ses
+répertoires. Le noyau valide des données injectées. La collecte et la
+persistance des rattachements appartiennent aux adaptateurs de l'autorité.

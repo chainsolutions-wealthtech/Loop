@@ -92,6 +92,13 @@
         "E15"
       ],
       "need": "Attribuer un ID au projet et à la continuité, puis rattacher sous-projets, modules et contrats, sujets, tables, preuves et travaux à une architecture descendante."
+    },
+    {
+      "id": "REQ-012",
+      "events": [
+        "E16"
+      ],
+      "need": "Relier chaque ID global stable aux dépôts identifiés et aux répertoires serveur attestés. Retrouver le projet depuis chacune de ces clés sans confondre identité, observation, activation et autorisation."
     }
   ],
   "work": [
@@ -272,7 +279,8 @@
       ],
       "evidence": [
         "EV-004",
-        "EV-005"
+        "EV-005",
+        "EV-015"
       ],
       "acceptance": "Preuve d'App CUG couvrant le dépôt exact et d'ID relisible par l'autorité. Gouvern et Regulatory restent des cas de preuve, pas des cibles à modifier."
     },
@@ -333,6 +341,22 @@
         "EV-011"
       ],
       "acceptance": "Projet et dépôt non ambigus, contrats de module complets, alias historiques résolus, liens valides, tables et observations privées adressables sans publication."
+    },
+    {
+      "id": "LOOP-W15",
+      "title": "Tester l’entrée sur Stablecoin et modéliser l’ancrage global",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-012"
+      ],
+      "depends_on": [
+        "LOOP-W14"
+      ],
+      "evidence": [
+        "EV-015",
+        "EV-016"
+      ],
+      "acceptance": "Rejeu du cas réel sans appel métier, résolution bidirectionnelle testée et projection Loop vérifiable. Aucune écriture côté MCP ou sur S1/S2."
     }
   ]
 }

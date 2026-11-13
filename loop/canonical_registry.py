@@ -7,6 +7,8 @@ from pathlib import Path
 import re
 import sqlite3
 
+from .project_anchor import public_index
+
 
 def read(root, path):
     return json.loads((root / path).read_text(encoding='utf-8'))
@@ -21,6 +23,15 @@ def build(root):
     dispatch = read(root, 'registry/dispatch-review.json')
     repos = read(root, 'registry/public-repositories.json')['repositories']
     root_id = identity['project_id']
+    anchors_path = 'registry/project-anchors.json'
+    anchors = public_index(read(root, anchors_path))
+    repository = identity['repository']
+    anchor = anchors.by_repository(repository['host'], repository['github_id'])
+    if (anchor is None or anchor.project_id != root_id
+            or not any(r.full_name == repository['full_name'] and
+                       r.key == (repository['host'].lower(), repository['github_id'])
+                       for r in anchor.repositories)):
+        raise ValueError('public project anchor disagrees with the identity manifest')
     nodes, aliases = {}, {}
 
     def add(node_id, parent, kind, title, source, **data):
@@ -59,6 +70,9 @@ def build(root):
         add(uid, parent, 'table', title, source, fields=fields)
         for i, field in enumerate(fields, 1):
             add(f'{uid}-FIELD-{i:02d}', uid, 'table_field', field, source)
+    add('LOOP-ANCHOR-001', 'LOOP-TBL-015', 'project_anchor', 'Ancrage GitHub du projet Loop',
+        anchors_path, contract='docs/PROJECT_ANCHOR.md', state='server_not_attested',
+        repository=repository, work=['LOOP-W15'])
     for uid, parent, title, source in subjects['operations']:
         add(uid, parent, 'operation', title, source)
 

@@ -31,3 +31,7 @@ GROUP BY full_name, section;
 ## Navigation par identifiant
 
 [Identité du projet et continuité](identity.json) · [Contrats des modules](modules.json) · [Sous-projets, sujets et tables](subjects.json) · [Mode d'emploi](../docs/LOOP_CANONICAL_REGISTRY.md).
+
+`project-anchors.json` projette les identités de projet et de dépôt qui
+peuvent être publiées. Les répertoires serveur et leurs attestations
+relèvent du [contrat d’ancrage privé](../docs/PROJECT_ANCHOR.md).
