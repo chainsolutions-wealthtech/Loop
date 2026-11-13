@@ -27,3 +27,7 @@ FROM observation JOIN repository USING (snapshot_id, github_id)
 WHERE snapshot_id = 'LOOP-INV-20261113-02'
 GROUP BY full_name, section;
 ```
+
+## Navigation par identifiant
+
+[Identité du projet et continuité](identity.json) · [Contrats des modules](modules.json) · [Sous-projets, sujets et tables](subjects.json) · [Mode d'emploi](../docs/LOOP_CANONICAL_REGISTRY.md).

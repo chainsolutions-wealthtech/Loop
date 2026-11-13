@@ -68,3 +68,10 @@ Les décisions « proposées » ne constituent pas une approbation. Mettre à jo
 - Instantané `LOOP-INV-20261113-02` : registre SQLite privé contrôlé et référencé, aucune donnée de dépôt privé ni chemin serveur publié ici.
 - La revue des 11 sites distingue 5 cibles résolues statiquement, 2 entrées proxy, 2 tests et 2 moteurs à corréler avec un paquet. Aucun appel externe n'a été déclenché.
 - Reprise : poursuivre LOOP-W09 et LOOP-W10 en lecture seule. LOOP-W11 attend une preuve nominative CUG et une autorité de reconnaissance. Ni fusion, ni déploiement.
+
+## Identité et continuité de Loop — PR #2
+
+- Projet : `WT-PROJECT-LOOP-001` ; dépôt `LOOP-REPO-1456075212`.
+- Continuité : `LOOP-CONV-CONT-20261113-ROOT-01` ; checkpoint `LOOP-CP-20261113-002`.
+- [Entrée canonique](docs/LOOP_CANONICAL_REGISTRY.md) et [contrats des modules](registry/modules.json).
+- Reprendre LOOP-W09 et LOOP-W10 en lecture seule. LOOP-W11 reste bloqué par la preuve de reconnaissance et l'identité CUG. Ces identifiants n'autorisent ni fusion, ni déploiement, ni action externe.

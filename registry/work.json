@@ -85,6 +85,13 @@
         "E13"
       ],
       "need": "Compléter les appels dynamiques et les clients effectivement liés par preuves de code ou de runtime autorisées."
+    },
+    {
+      "id": "REQ-011",
+      "events": [
+        "E15"
+      ],
+      "need": "Attribuer un ID au projet et à la continuité, puis rattacher sous-projets, modules et contrats, sujets, tables, preuves et travaux à une architecture descendante."
     }
   ],
   "work": [
@@ -308,6 +315,24 @@
         "EV-014"
       ],
       "acceptance": "Exigences, risques et preuves de réception du premier lot versionnés avant toute décision d'exécution."
+    },
+    {
+      "id": "LOOP-W14",
+      "title": "Identité canonique, sous-projets et navigation descendante",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-011",
+        "REQ-008",
+        "REQ-009"
+      ],
+      "depends_on": [
+        "LOOP-W08"
+      ],
+      "evidence": [
+        "EV-010",
+        "EV-011"
+      ],
+      "acceptance": "Projet et dépôt non ambigus, contrats de module complets, alias historiques résolus, liens valides, tables et observations privées adressables sans publication."
     }
   ]
 }

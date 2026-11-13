@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "project_id": "WT-PROJECT-LOOP-001",
+  "name": "Loop Engineering",
+  "status": "canonical_for_pr_branch_pending_main_adoption",
+  "responsibility": {
+    "assistant": "Tenir le registre, exécuter les travaux autorisés et conserver la continuité.",
+    "project_owner": "Arbitrer le périmètre, les autorités, les fusions et les activations."
+  },
+  "repository": {
+    "id": "LOOP-REPO-1456075212",
+    "host": "github.com",
+    "github_id": "1456075212",
+    "full_name": "chainsolutions-wealthtech/Loop",
+    "url": "https://github.com/chainsolutions-wealthtech/Loop",
+    "default_branch": "main",
+    "work_branch": "feat/repository-entry-admission",
+    "pull_request": 2
+  },
+  "continuity": {
+    "id": "LOOP-CONV-CONT-20261113-ROOT-01",
+    "checkpoint_id": "LOOP-CP-20261113-002",
+    "parent_checkpoint_id": "LOOP-CP-20261113-001",
+    "baseline_sha": "2f8395e59d54e9dd19b583ee0be6aafb4be98b92",
+    "record": "SUIVI.md",
+    "next_work": ["LOOP-W09", "LOOP-W10"],
+    "blocked_work": ["LOOP-W11"],
+    "next_action": "Corréler les deux moteurs et les deux proxys dynamiques à des preuves autorisées. Étendre ensuite la couverture aux branches utiles.",
+    "operation_mode": "lecture_seule_externe"
+  },
+  "excluded_repositories": ["chainsolutions-wealthtech/Looping-", "Patricked-code/MCP", "chainsolutions-wealthtech/Regulatory"]
+}

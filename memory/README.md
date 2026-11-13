@@ -31,3 +31,7 @@ les actions attestées. Les références permettent de retrouver les sources
 sans republier les échanges bruts, les données privées, les noms de dépôts
 privés ni les chemins sensibles dans ce GitHub public. Les détails de
 l'inventaire sont dans le registre privé indexé par `LOOP-INV-20261113-02`.
+
+## Identité de reprise
+
+Reprendre `WT-PROJECT-LOOP-001` avec `LOOP-CONV-CONT-20261113-ROOT-01`. L'[arbre canonique](../docs/LOOP_CANONICAL_REGISTRY.md) relie cette mémoire aux modules, tables, décisions et travaux.

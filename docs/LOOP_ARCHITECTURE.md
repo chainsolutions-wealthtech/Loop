@@ -54,3 +54,7 @@ Voir [la mémoire](../memory/README.md), [le contrat d'inventaire](MCP_INVENTORY
 [WF-00](WORKFLOW_WF00.md), [le contrat de passage](WF00_DESIGN_PLANNING_CONTRACT.md),
 [le squelette des cartes parallèles](PARALLEL_ARCHITECTURE_SKELETON.md)
 et [la feuille de route](LOOP_ROADMAP.md).
+
+## Registre descendant
+
+Le projet et ses six sous-projets internes ont leurs propres identifiants. Les [contrats de modules](../registry/modules.json) précisent modes, entrées, opérations, sorties et limites. L'[entrée canonique](LOOP_CANONICAL_REGISTRY.md) distingue parenté et relations de traçabilité.

@@ -29,3 +29,5 @@ Présenter l'état avant/après, les chemins modifiés, le SHA/PR, les contrôle
 ## Reprise du chantier de la PR #2
 
 Après le checkpoint, lire [la mémoire du chantier](memory/README.md) et [la roadmap](docs/LOOP_ROADMAP.md). Les décisions et preuves du registre sont bornées à leur périmètre. Ne jamais publier les instantanés privés dans ce dépôt public.
+
+Pour une reprise par ID, lire [l'entrée canonique](docs/LOOP_CANONICAL_REGISTRY.md) et résoudre `LOOP-CONV-CONT-20261113-ROOT-01`. Cette référence ne remplace pas les vérifications d'autorité et de périmètre.

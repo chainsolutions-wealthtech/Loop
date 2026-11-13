@@ -30,3 +30,5 @@ un projet candidat et la couverture d'une autre App ne débloquent pas ce lot.
 
 Les actions d'écriture externes, l'installation d'une App, un déploiement ou
 une fusion ne font pas partie de cette feuille de route exécutable.
+
+**LOOP-W14** complète le lot 3 avec l'[identité canonique et l'arbre de reprise](LOOP_CANONICAL_REGISTRY.md). Il ne remplace ni LOOP-W09/W10, ni leurs preuves opérationnelles manquantes.

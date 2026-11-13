@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "scope": "WT-PROJECT-LOOP-001",
+  "modules": [
+    {
+      "id": "LOOP-MOD-001",
+      "name": "Repository Entry Guard",
+      "parent": "LOOP-SP-02",
+      "state": "implemented_in_draft",
+      "purpose": "Contrôler le contexte du dépôt avant transmission à la couche d'autorisation.",
+      "implementation": "loop/repository_entry.py",
+      "contract": "docs/REPOSITORY_ENTRY.md",
+      "modes": [
+        "diagnostic seul",
+        "garde avant appel ciblé"
+      ],
+      "inputs": [
+        "Localisateur du dépôt",
+        "Observateurs d'identité, de reconnaissance, de liaison et d'installation App",
+        "Catalogue des procédures approuvées et App ID attendu"
+      ],
+      "process": [
+        "Résoudre l'identité exacte",
+        "Lire reconnaissance et liaison",
+        "Contrôler App et procédure versionnée",
+        "Refuser ou transmettre le contexte"
+      ],
+      "outputs": [
+        "EntryResult",
+        "Projet, installation et procédure vérifiés lorsque disponibles",
+        "Motif de refus explicite"
+      ],
+      "boundary": "Aucun droit accordé, aucune exécution de procédure, aucun branchement live dans cette PR.",
+      "work": [
+        "LOOP-W04",
+        "LOOP-W11",
+        "LOOP-W12"
+      ],
+      "requirements": [
+        "REQ-002",
+        "REQ-003"
+      ],
+      "evidence": [
+        "EV-011"
+      ]
+    },
+    {
+      "id": "LOOP-MOD-002",
+      "name": "Repository Onboarding Planner",
+      "parent": "LOOP-SP-02",
+      "state": "implemented_in_draft",
+      "purpose": "Planifier l'entrée d'un dépôt et évaluer un checkout candidat à partir de preuves.",
+      "implementation": "loop/repository_onboarding.py",
+      "contract": "docs/REPOSITORY_ONBOARDING.md",
+      "modes": [
+        "reprise d'un dépôt connu",
+        "découverte d'un dépôt inconnu",
+        "réconciliation d'accès",
+        "vérification d'un checkout"
+      ],
+      "inputs": [
+        "Diagnostic du contrôle d'entrée",
+        "Choix nouveau projet ou projet existant",
+        "Observation App",
+        "Cible et observation du checkout"
+      ],
+      "process": [
+        "Distinguer connu, inconnu et non vérifiable",
+        "Vérifier la couverture et proposer la suite",
+        "Former une clé de relance stable",
+        "Comparer projet, dépôt, environnement, chemin, branche et SHA"
+      ],
+      "outputs": [
+        "OnboardingPlan et prochaine étape",
+        "Demande d'inscription candidate si applicable",
+        "Statut de concordance du checkout"
+      ],
+      "boundary": "Aucune App installée, aucune écriture de registre, aucun checkout créé, aucun déploiement.",
+      "work": [
+        "LOOP-W05",
+        "LOOP-W11"
+      ],
+      "requirements": [
+        "REQ-004",
+        "REQ-005"
+      ],
+      "evidence": [
+        "EV-004",
+        "EV-005",
+        "EV-011"
+      ]
+    },
+    {
+      "id": "LOOP-MOD-003",
+      "name": "GitHub Inventory Source",
+      "parent": "LOOP-SP-03",
+      "state": "implemented_in_draft",
+      "purpose": "Fournir au noyau une lecture bornée des dépôts, arbres et blobs GitHub.",
+      "implementation": "loop/github_inventory_source.py",
+      "contract": "docs/MCP_INVENTORY.md",
+      "modes": [
+        "organisation",
+        "compte personnel authentifié",
+        "export JSON ou HTML"
+      ],
+      "inputs": [
+        "Comptes demandés",
+        "Identités de lecture configurées hors Git",
+        "Limites de collecte et observations facultatives"
+      ],
+      "process": [
+        "Vérifier le compte et paginer",
+        "Résoudre la branche et fixer le SHA",
+        "Lire les arbres et blobs",
+        "Produire l'export et signaler les lacunes"
+      ],
+      "outputs": [
+        "Dépôts, arbres et contenus bornés",
+        "Export privé JSON ou HTML",
+        "Erreurs ou limites explicites"
+      ],
+      "boundary": "Requêtes de lecture seulement. Le CLI n'est pas déployé et ne lance pas de workflow externe.",
+      "work": [
+        "LOOP-W06",
+        "LOOP-W12"
+      ],
+      "requirements": [
+        "REQ-006"
+      ],
+      "evidence": [
+        "EV-002",
+        "EV-003"
+      ]
+    },
+    {
+      "id": "LOOP-MOD-004",
+      "name": "MCP Inventory Engine",
+      "parent": "LOOP-SP-03",
+      "state": "implemented_in_draft",
+      "purpose": "Recenser les dépôts visibles et qualifier les indices MCP sans exécuter les sources.",
+      "implementation": "loop/mcp_inventory.py",
+      "contract": "docs/MCP_INVENTORY.md",
+      "modes": [
+        "source GitHub",
+        "source locale compatible",
+        "lecture bornée ou sans plafond de nombre de fichiers"
+      ],
+      "inputs": [
+        "Adaptateur Source",
+        "Comptes",
+        "Limites de nombre de fichiers et de taille"
+      ],
+      "process": [
+        "Dédoublonner par identifiant GitHub",
+        "Inventorier les artefacts",
+        "Sélectionner et lire les fichiers",
+        "Qualifier les signaux et consigner les omissions"
+      ],
+      "outputs": [
+        "Rapport de couverture",
+        "Indices de code client, fournisseur, workflow, configuration ou référence"
+      ],
+      "boundary": "Heuristiques statiques. Un indice n'atteste ni usage en production ni absence d'usage.",
+      "work": [
+        "LOOP-W06",
+        "LOOP-W07"
+      ],
+      "requirements": [
+        "REQ-006",
+        "REQ-007"
+      ],
+      "evidence": [
+        "EV-002",
+        "EV-003"
+      ]
+    },
+    {
+      "id": "LOOP-MOD-005",
+      "name": "MCP Catalog & Call Graph",
+      "parent": "LOOP-SP-03",
+      "state": "implemented_in_draft",
+      "purpose": "Produire les fiches et relier artefacts, configurations, appels et preuves distinctes.",
+      "implementation": "loop/mcp_catalog.py",
+      "contract": "docs/MCP_INVENTORY.md",
+      "modes": [
+        "cartographie statique",
+        "enrichissement avec observations de lecture",
+        "rendu HTML"
+      ],
+      "inputs": [
+        "Arbres et fichiers au SHA observé",
+        "Indices classés",
+        "Candidats de registre et catalogue fournisseur facultatifs"
+      ],
+      "process": [
+        "Repérer les artefacts",
+        "Extraire références et sites d'appel",
+        "Identifier les cibles statiques ou non résolues",
+        "Rendre les fiches avec provenance"
+      ],
+      "outputs": [
+        "Fiche GitHub par dépôt",
+        "Tables des indices, artefacts, raccordements et appels",
+        "Cibles et clients non attestés distincts"
+      ],
+      "boundary": "Ne prouve pas une exécution, une connexion client ni un rattachement actif.",
+      "work": [
+        "LOOP-W07",
+        "LOOP-W09",
+        "LOOP-W10"
+      ],
+      "requirements": [
+        "REQ-007",
+        "REQ-010"
+      ],
+      "evidence": [
+        "EV-003",
+        "EV-012"
+      ]
+    },
+    {
+      "id": "LOOP-MOD-006",
+      "name": "Evidence Snapshot Store",
+      "parent": "LOOP-SP-04",
+      "state": "implemented_in_draft",
+      "purpose": "Conserver en SQLite privé des instantanés d'inventaire et leur provenance.",
+      "implementation": "loop/evidence_store.py",
+      "contract": "registry/README.md",
+      "modes": [
+        "import JSON structuré",
+        "import HTML historique sans exécution",
+        "relecture SQLite privée"
+      ],
+      "inputs": [
+        "Rapport HTML ou JSON",
+        "Identifiant et périmètre d'instantané",
+        "Nombre attendu facultatif"
+      ],
+      "process": [
+        "Valider identités et dédoublonnage",
+        "Calculer le hash source",
+        "Importer sous transaction ou refuser la collision",
+        "Conserver instantané, dépôts et observations"
+      ],
+      "outputs": [
+        "Tables snapshot, repository et observation",
+        "Décompte et empreinte source"
+      ],
+      "boundary": "Le détail privé n'est pas versionné sur GitHub. Aucun service SQLite hébergé n'est affirmé.",
+      "work": [
+        "LOOP-W08"
+      ],
+      "requirements": [
+        "REQ-008",
+        "REQ-009"
+      ],
+      "evidence": [
+        "EV-003",
+        "EV-010"
+      ]
+    },
+    {
+      "id": "LOOP-MOD-007",
+      "name": "Canonical Project Registry",
+      "parent": "LOOP-SP-04",
+      "state": "implemented_in_draft",
+      "purpose": "Résoudre l'identité de Loop et naviguer dans son architecture, ses sources et sa continuité.",
+      "implementation": "loop/canonical_registry.py",
+      "contract": "docs/LOOP_CANONICAL_REGISTRY.md",
+      "modes": [
+        "validation hors ligne",
+        "résolution d'un ID et de ses anciens alias",
+        "arbre de descendance",
+        "lecture privée par ID"
+      ],
+      "inputs": [
+        "Manifeste d'identité",
+        "Index des sujets, contrats et registres",
+        "ID canonique, alias ou clé SQLite privée"
+      ],
+      "process": [
+        "Assembler la hiérarchie et les relations",
+        "Valider les parents et les références",
+        "Résoudre l'ID",
+        "Restituer fiche, enfants et liens"
+      ],
+      "outputs": [
+        "Nœud canonique ou erreur explicite",
+        "Chemin de descendance",
+        "Point de reprise et travaux liés"
+      ],
+      "boundary": "Registre de Loop, ni identifiant de session MCP, ni autorisation opérationnelle, ni adoption sur main.",
+      "work": [
+        "LOOP-W14"
+      ],
+      "requirements": [
+        "REQ-011"
+      ],
+      "evidence": [
+        "EV-010",
+        "EV-011"
+      ]
+    }
+  ],
+  "planned_capabilities": [
+    {
+      "id": "LOOP-CAP-001",
+      "parent": "LOOP-SP-05",
+      "name": "WF-00 — Constitution et coordination documentaire",
+      "state": "specified_not_implemented",
+      "contract": "docs/WORKFLOW_WF00.md",
+      "work": [
+        "LOOP-W03"
+      ]
+    },
+    {
+      "id": "LOOP-CAP-002",
+      "parent": "LOOP-SP-05",
+      "name": "Software Design et planification",
+      "state": "specified_not_implemented",
+      "contract": "docs/WF00_DESIGN_PLANNING_CONTRACT.md",
+      "work": [
+        "LOOP-W03",
+        "LOOP-W13"
+      ]
+    },
+    {
+      "id": "LOOP-CAP-003",
+      "parent": "LOOP-SP-06",
+      "name": "Preuves runtime, reconnaissance canonique et identité CUG",
+      "state": "not_integrated",
+      "contract": "docs/REPOSITORY_ENTRY.md",
+      "work": [
+        "LOOP-W09",
+        "LOOP-W10",
+        "LOOP-W11"
+      ]
+    },
+    {
+      "id": "LOOP-CAP-004",
+      "parent": "LOOP-SP-06",
+      "name": "Point de passage Loop et hôte d'intégration",
+      "state": "not_integrated",
+      "contract": "docs/LOOP_ROADMAP.md",
+      "work": [
+        "LOOP-W12"
+      ]
+    },
+    {
+      "id": "LOOP-CAP-005",
+      "parent": "LOOP-SP-05",
+      "name": "Description des workflows et contrôle des prérequis par lot",
+      "state": "specified_not_implemented",
+      "contract": "docs/WF00_DESIGN_PLANNING_CONTRACT.md",
+      "work": [
+        "LOOP-W03",
+        "LOOP-W13"
+      ]
+    }
+  ]
+}

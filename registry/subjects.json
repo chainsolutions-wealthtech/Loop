@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "subprojects": [
+    [
+      "LOOP-SP-01",
+      "Fondations et gouvernance",
+      "SOURCE_OF_TRUTH.md"
+    ],
+    [
+      "LOOP-SP-02",
+      "Entrée, découverte et rattachement",
+      "docs/REPOSITORY_ENTRY.md"
+    ],
+    [
+      "LOOP-SP-03",
+      "Inventaire GitHub et cartographie MCP",
+      "docs/MCP_INVENTORY.md"
+    ],
+    [
+      "LOOP-SP-04",
+      "Mémoire, registres et continuité",
+      "memory/README.md"
+    ],
+    [
+      "LOOP-SP-05",
+      "Constitution, conception et planification",
+      "docs/LOOP_ARCHITECTURE.md"
+    ],
+    [
+      "LOOP-SP-06",
+      "Vérification, intégration et passage à l'exécution",
+      "docs/LOOP_ROADMAP.md"
+    ]
+  ],
+  "topics": [
+    [
+      "LOOP-SUJ-001",
+      "LOOP-SP-01",
+      "Gouvernance, branches et autorités",
+      "GOVERNANCE.md"
+    ],
+    [
+      "LOOP-SUJ-002",
+      "LOOP-SP-01",
+      "Corpus fondateur, kit et précédents externes",
+      "docs/SOURCE_REGISTER.md"
+    ],
+    [
+      "LOOP-SUJ-003",
+      "LOOP-SP-02",
+      "Identité exacte et garde de dépôt",
+      "docs/REPOSITORY_ENTRY.md"
+    ],
+    [
+      "LOOP-SUJ-004",
+      "LOOP-SP-02",
+      "Découverte, couverture App et inscription",
+      "docs/REPOSITORY_ONBOARDING.md"
+    ],
+    [
+      "LOOP-SUJ-005",
+      "LOOP-SP-02",
+      "Projet, serveur, environnement et checkout",
+      "docs/REPOSITORY_ONBOARDING.md"
+    ],
+    [
+      "LOOP-SUJ-006",
+      "LOOP-SP-03",
+      "Périmètre GitHub multi-compte",
+      "docs/MCP_INVENTORY.md"
+    ],
+    [
+      "LOOP-SUJ-007",
+      "LOOP-SP-03",
+      "Fiche de dépôt, artefacts et relations MCP",
+      "docs/MCP_INVENTORY.md"
+    ],
+    [
+      "LOOP-SUJ-008",
+      "LOOP-SP-04",
+      "Mémoire canonique et traçabilité",
+      "memory/README.md"
+    ],
+    [
+      "LOOP-SUJ-009",
+      "LOOP-SP-04",
+      "Registre des instantanés et preuves",
+      "registry/README.md"
+    ],
+    [
+      "LOOP-SUJ-010",
+      "LOOP-SP-05",
+      "Carte des besoins et qualification de l'instruction",
+      "docs/WF00_DESIGN_PLANNING_CONTRACT.md"
+    ],
+    [
+      "LOOP-SUJ-011",
+      "LOOP-SP-05",
+      "Constitution documentaire WF-00",
+      "docs/WORKFLOW_WF00.md"
+    ],
+    [
+      "LOOP-SUJ-012",
+      "LOOP-SP-05",
+      "Vue fonctionnelle parallèle",
+      "docs/PARALLEL_ARCHITECTURE_SKELETON.md"
+    ],
+    [
+      "LOOP-SUJ-013",
+      "LOOP-SP-05",
+      "Vue technique parallèle",
+      "docs/PARALLEL_ARCHITECTURE_SKELETON.md"
+    ],
+    [
+      "LOOP-SUJ-014",
+      "LOOP-SP-05",
+      "Conception, planification et critères de passage",
+      "docs/WF00_DESIGN_PLANNING_CONTRACT.md"
+    ],
+    [
+      "LOOP-SUJ-015",
+      "LOOP-SP-06",
+      "Cas de vérification Regulatory, Gouvern et Ekyc",
+      "registry/evidence.json"
+    ],
+    [
+      "LOOP-SUJ-016",
+      "LOOP-SP-06",
+      "Dispatchs dynamiques et preuves des clients liés",
+      "registry/dispatch-review.json"
+    ],
+    [
+      "LOOP-SUJ-017",
+      "LOOP-SP-06",
+      "Reconnaissance et couverture CUG non attestées",
+      "docs/LOOP_ROADMAP.md"
+    ],
+    [
+      "LOOP-SUJ-018",
+      "LOOP-SP-06",
+      "Hôte d'intégration et opérations autorisées",
+      "docs/LOOP_ROADMAP.md"
+    ]
+  ],
+  "levels": {
+    "LOOP-SUJ-010": {
+      "N01": "Objectif et résultat attendu",
+      "N02": "Personnes, rôles et responsabilités",
+      "N03": "Périmètre, usages et livrables",
+      "N04": "Lieu, accès et logistique",
+      "N05": "Infrastructure et environnement",
+      "N06": "Ressources, compétences et budget",
+      "N07": "Informations, données et échanges",
+      "N08": "Période, délais et disponibilités",
+      "N09": "Contraintes, règles et autorisations",
+      "N10": "Prérequis, dépendances et risques",
+      "N11": "Critères d'acceptation et preuves",
+      "N12": "Mise en service, exploitation et reprise"
+    },
+    "LOOP-SUJ-012": {
+      "F1": "Acteurs et rôles",
+      "F2": "Domaines et capacités",
+      "F3": "Fonctions et parcours",
+      "F4": "Règles, états et exceptions",
+      "F5": "Informations et résultats",
+      "F6": "Exigences et acceptation"
+    },
+    "LOOP-SUJ-013": {
+      "T1": "Interfaces et Front",
+      "T2": "Back et modules applicatifs",
+      "T3": "Données et persistance",
+      "T4": "Contrats et intégrations",
+      "T5": "Infrastructure et exploitation",
+      "T6": "Sécurité et contrôles",
+      "T7": "Tests et qualité",
+      "T8": "Outils de construction"
+    },
+    "LOOP-SUJ-014": {
+      "P1": "Concept, conception et planification",
+      "P2": "Développement, validation et déploiement",
+      "G1": "Passage d'un lot vers le développement",
+      "G2": "Passage d'une révision vers le déploiement"
+    }
+  },
+  "work_topics": {
+    "LOOP-W01": "LOOP-SUJ-001",
+    "LOOP-W02": "LOOP-SUJ-002",
+    "LOOP-W03": "LOOP-SUJ-011",
+    "LOOP-W04": "LOOP-SUJ-003",
+    "LOOP-W05": "LOOP-SUJ-004",
+    "LOOP-W06": "LOOP-SUJ-006",
+    "LOOP-W07": "LOOP-SUJ-007",
+    "LOOP-W08": "LOOP-SUJ-009",
+    "LOOP-W09": "LOOP-SUJ-016",
+    "LOOP-W10": "LOOP-SUJ-016",
+    "LOOP-W11": "LOOP-SUJ-017",
+    "LOOP-W12": "LOOP-SUJ-018",
+    "LOOP-W13": "LOOP-SUJ-014",
+    "LOOP-W14": "LOOP-SUJ-008"
+  },
+  "tables": [
+    [
+      "LOOP-TBL-001",
+      "LOOP-MOD-006",
+      "snapshot",
+      "loop/evidence_store.py",
+      [
+        "snapshot_id",
+        "scope",
+        "source_format",
+        "source_sha256",
+        "source_name"
+      ]
+    ],
+    [
+      "LOOP-TBL-002",
+      "LOOP-MOD-006",
+      "repository",
+      "loop/evidence_store.py",
+      [
+        "snapshot_id",
+        "github_id",
+        "full_name",
+        "account",
+        "url",
+        "payload_json"
+      ]
+    ],
+    [
+      "LOOP-TBL-003",
+      "LOOP-MOD-006",
+      "observation",
+      "loop/evidence_store.py",
+      [
+        "snapshot_id",
+        "github_id",
+        "section",
+        "position",
+        "payload_json"
+      ]
+    ],
+    [
+      "LOOP-TBL-004",
+      "LOOP-MOD-005",
+      "Fiche par dépôt",
+      "docs/MCP_INVENTORY.md",
+      [
+        "identité GitHub",
+        "branche et SHA",
+        "outils appelés et exposés",
+        "serveur et répertoire",
+        "clients déclarés et attestés",
+        "couverture"
+      ]
+    ],
+    [
+      "LOOP-TBL-005",
+      "LOOP-MOD-005",
+      "Indices classés",
+      "docs/MCP_INVENTORY.md",
+      [
+        "classification",
+        "source",
+        "signaux"
+      ]
+    ],
+    [
+      "LOOP-TBL-006",
+      "LOOP-MOD-005",
+      "Workflows, scripts et configurations",
+      "docs/MCP_INVENTORY.md",
+      [
+        "type",
+        "chemin",
+        "état de lecture"
+      ]
+    ],
+    [
+      "LOOP-TBL-007",
+      "LOOP-MOD-005",
+      "Raccordements et appels",
+      "docs/MCP_INVENTORY.md",
+      [
+        "type",
+        "cible",
+        "statut",
+        "SHA, chemin et ligne"
+      ]
+    ],
+    [
+      "LOOP-TBL-008",
+      "LOOP-MOD-005",
+      "Rattachements serveur",
+      "docs/MCP_INVENTORY.md",
+      [
+        "serveur",
+        "chemin",
+        "statut",
+        "projet",
+        "source"
+      ]
+    ],
+    [
+      "LOOP-TBL-009",
+      "LOOP-MOD-005",
+      "Appels génériques ou cibles dynamiques",
+      "registry/dispatch-review.json",
+      [
+        "source",
+        "qualification",
+        "outil",
+        "attestation"
+      ]
+    ],
+    [
+      "LOOP-TBL-010",
+      "LOOP-MOD-007",
+      "Exigences et travaux",
+      "registry/work.json",
+      [
+        "identifiant",
+        "état",
+        "dépendances",
+        "preuves",
+        "réception"
+      ]
+    ],
+    [
+      "LOOP-TBL-011",
+      "LOOP-MOD-007",
+      "Preuves et instantanés",
+      "registry/evidence.json",
+      [
+        "identifiant",
+        "type",
+        "portée",
+        "preuve",
+        "statut"
+      ]
+    ],
+    [
+      "LOOP-TBL-012",
+      "LOOP-MOD-007",
+      "Projection des dépôts publics",
+      "registry/public-repositories.json",
+      [
+        "identifiant GitHub",
+        "compte",
+        "branche",
+        "SHA",
+        "couverture"
+      ]
+    ],
+    [
+      "LOOP-TBL-013",
+      "LOOP-MOD-005",
+      "Catalogue fournisseur observé",
+      "docs/MCP_INVENTORY.md",
+      [
+        "fournisseur",
+        "instant",
+        "révision",
+        "outils"
+      ]
+    ],
+    [
+      "LOOP-TBL-014",
+      "LOOP-MOD-007",
+      "Modules et contrats",
+      "registry/modules.json",
+      [
+        "identifiant",
+        "parent",
+        "modes",
+        "entrées",
+        "processus",
+        "sorties",
+        "limites"
+      ]
+    ]
+  ],
+  "operations": [
+    [
+      "LOOP-OP-001",
+      "LOOP-MOD-001",
+      "before_repository_call",
+      "loop/repository_entry.py"
+    ],
+    [
+      "LOOP-OP-002",
+      "LOOP-MOD-001",
+      "guard",
+      "loop/repository_entry.py"
+    ],
+    [
+      "LOOP-OP-003",
+      "LOOP-MOD-002",
+      "plan",
+      "loop/repository_onboarding.py"
+    ],
+    [
+      "LOOP-OP-004",
+      "LOOP-MOD-002",
+      "evaluate_checkout",
+      "loop/repository_onboarding.py"
+    ],
+    [
+      "LOOP-OP-005",
+      "LOOP-MOD-003",
+      "repositories, tree, read",
+      "loop/github_inventory_source.py"
+    ],
+    [
+      "LOOP-OP-006",
+      "LOOP-MOD-004",
+      "inventory et inspect",
+      "loop/mcp_inventory.py"
+    ],
+    [
+      "LOOP-OP-007",
+      "LOOP-MOD-005",
+      "Catalog.read et Catalog.project",
+      "loop/mcp_catalog.py"
+    ],
+    [
+      "LOOP-OP-008",
+      "LOOP-MOD-005",
+      "supplement et render_html",
+      "loop/mcp_catalog.py"
+    ],
+    [
+      "LOOP-OP-009",
+      "LOOP-MOD-006",
+      "import_snapshot",
+      "loop/evidence_store.py"
+    ],
+    [
+      "LOOP-OP-010",
+      "LOOP-MOD-007",
+      "validate, show, tree et private",
+      "loop/canonical_registry.py"
+    ]
+  ],
+  "timelines": [
+    {
+      "date": "20261113",
+      "record": "memory/2026-11-13-loop.md",
+      "legacy_short_aliases": true,
+      "event_topics": {
+        "E01": "LOOP-SUJ-001",
+        "E02": "LOOP-SUJ-010",
+        "E03": "LOOP-SUJ-001",
+        "E04": "LOOP-SUJ-003",
+        "E05": "LOOP-SUJ-004",
+        "E06": "LOOP-SUJ-005",
+        "E07": "LOOP-SUJ-015",
+        "E08": "LOOP-SUJ-006",
+        "E09": "LOOP-SUJ-007",
+        "E10": "LOOP-SUJ-008",
+        "E11": "LOOP-SUJ-015",
+        "E12": "LOOP-SUJ-001",
+        "E13": "LOOP-SUJ-016",
+        "E14": "LOOP-SUJ-016",
+        "E15": "LOOP-SUJ-008"
+      }
+    }
+  ],
+  "decisions": [
+    [
+      "LOOP-DEC-001",
+      "LOOP-SUJ-001",
+      "Noyau Loop indépendant et aucune mutation des dépôts externes",
+      "memory/2026-11-13-loop.md",
+      [
+        "E03",
+        "E12"
+      ]
+    ],
+    [
+      "LOOP-DEC-002",
+      "LOOP-SUJ-003",
+      "Une reconnaissance ou un rattachement ne vaut pas autorisation",
+      "docs/REPOSITORY_ENTRY.md",
+      [
+        "E04"
+      ]
+    ],
+    [
+      "LOOP-DEC-003",
+      "LOOP-SUJ-009",
+      "Git public pour les références et SQLite privé pour le détail",
+      "docs/LOOP_ARCHITECTURE.md",
+      [
+        "E10"
+      ]
+    ],
+    [
+      "LOOP-DEC-004",
+      "LOOP-SUJ-014",
+      "Évaluer séparément les passages vers développement et déploiement",
+      "docs/WF00_DESIGN_PLANNING_CONTRACT.md",
+      [
+        "E02"
+      ]
+    ],
+    [
+      "LOOP-DEC-005",
+      "LOOP-SUJ-008",
+      "Projet, dépôt, continuité et checkpoint identifiés séparément",
+      "registry/identity.json",
+      [
+        "E15"
+      ]
+    ]
+  ]
+}
