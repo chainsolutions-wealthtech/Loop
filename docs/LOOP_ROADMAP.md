@@ -39,8 +39,8 @@ l’attestation de chaque répertoire sont les prérequis d'un premier passage
 réel. La persistance côté serveur reste distincte de la projection Git.
 Voir [le contrat d’ancrage et le test Stablecoin](PROJECT_ANCHOR.md).
 
-**LOOP-W16 — Rattachement et préparation d’un hébergement**. Le
-[contrat portable](WORKFLOW_REPOSITORY_HOSTING.md) est documenté sous
-`LOOP-CAP-006`. Prochaine tranche proposée : planificateur hors ligne,
-puis adaptateur de lecture et preuves. Aucun déploiement applicatif
-ni changement sur les serveurs dans ce lot.
+**LOOP-W16 / LOOP-W17 — Rattachement et préparation d’un hébergement**.
+Le [contrat portable](WORKFLOW_REPOSITORY_HOSTING.md) est documenté et
+le planificateur `LOOP-CAP-006` est appelable et testé hors ligne.
+La prochaine tranche est l’adaptateur de lecture et ses preuves.
+Aucun déploiement applicatif ni changement serveur dans ce lot.

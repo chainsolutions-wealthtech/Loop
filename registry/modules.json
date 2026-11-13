@@ -368,18 +368,35 @@
       "id": "LOOP-CAP-006",
       "parent": "LOOP-SUJ-020",
       "name": "Rattachement et préparation d’un hébergement applicatif",
-      "state": "specified_not_implemented",
+      "state": "planner_implemented_in_draft",
       "contract": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
       "work": [
-        "LOOP-W16"
+        "LOOP-W16",
+        "LOOP-W17"
       ],
       "requirements": [
         "REQ-013"
       ],
       "evidence": [
         "EV-017",
-        "EV-018"
-      ]
+        "EV-018",
+        "EV-019"
+      ],
+      "implementation": "loop/repository_hosting.py",
+      "entrypoint": "plan_repository_hosting",
+      "modes": [
+        "planification hors ligne"
+      ],
+      "inputs": [
+        "Demande et clé stable du dépôt",
+        "Observation du registre",
+        "Observation du répertoire si nécessaire"
+      ],
+      "outputs": [
+        "Décision, champs manquants ou choix",
+        "Plan stable et références de preuve si applicable"
+      ],
+      "boundary": "Aucune mutation, installation ou admission au déploiement."
     }
   ]
 }

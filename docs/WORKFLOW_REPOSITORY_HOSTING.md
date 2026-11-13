@@ -1,6 +1,6 @@
 # Rattachement et préparation d’un hébergement applicatif
 
-**Capacité Loop** `LOOP-CAP-006` · **Travail** `LOOP-W16` · **État** spécifié dans la branche de travail, non exécutable.
+**Capacité Loop** `LOOP-CAP-006` · **Travail** `LOOP-W16` · **État** planificateur appelable dans la branche de travail (`LOOP-W17`). Aucune exécution externe.
 **Précédent MCP** [issue #349](https://github.com/Patricked-code/MCP/issues/349), continuité historique `GD-U-CONT-20261030-ROOT-01`.
 
 ## Ce que MCP possède et ce qu’il manque
@@ -37,7 +37,7 @@ sans la convertir en absence. L’inventaire des trois périmètres
 est une entrée, pas un droit. Ne pas ajouter une cible à tous les dépôts
 automatiquement.
 
-**Entrées.** Hôte et ID stable du dépôt, compte propriétaire, ID global
+**Entrées du parcours complet.** Hôte et ID stable du dépôt, compte propriétaire, ID global
 retrouvé ou décision explicite de création, éventuel SHA source,
 environnement et rôle, choix opérateur s’il existe, observations versionnées
 des registres et de l’hébergement. Le compte GitHub propriétaire, l’identité
@@ -78,7 +78,52 @@ références privées des cibles, état, décision ou preuve manquante,
 référence du plan et point de reprise. Ne jamais recopier de chemins
 privés ou de credentials dans Loop public.
 
-**Prochaine tranche.** Implémenter et tester hors ligne le routage et
-ses refus. Puis valider avec un adaptateur de lecture l’existence d’un
-rattachement et l’absence réelle d’un autre, séparément de la création.
-Garder l’exécution et la recette applicative dans des tranches distinctes.
+## Point d’appel Python
+
+`plan_repository_hosting(request, registry, directory=None)` compose la clé
+stable de `Repository` et le `ProjectAnchorIndex` existants. Exemple de
+réutilisation sur données fictives, sans accès réseau.
+
+```python
+from loop.project_anchor import (
+    AnchorStatus, DirectoryBinding, DirectoryRole, ProjectAnchor, ProjectAnchorIndex,
+)
+from loop.repository_entry import Repository
+from loop.repository_hosting import HostingRequest, RegistryObservation, plan_repository_hosting
+
+repo = Repository("github.com", "42", "example/app")
+target = DirectoryBinding(
+    repo.key, "S2", "production", "/fixture/app", DirectoryRole.RUNTIME,
+    AnchorStatus.VERIFIED_ACTIVE, "PROBE-FIXTURE", "LINK-FIXTURE", "a" * 40,
+)
+index = ProjectAnchorIndex((ProjectAnchor("WT-PROJECT-FIXTURE", (repo,), (target,)),))
+registry = RegistryObservation(index, "SNAPSHOT-FIXTURE", repo.key, complete_for_request=True)
+request = HostingRequest(repo, "production", DirectoryRole.RUNTIME)
+result = plan_repository_hosting(request, registry)
+assert result.status.value == "REUSE_VERIFIED"
+```
+
+Le prochain appel se fait avec les valeurs manquantes ou une observation
+complémentaire, pas avec une commande. Le registre doit être autoritaire,
+complet pour la demande et associé au dépôt exact. Il doit couvrir les
+rattachements utiles et les collisions avec les autres projets pour la
+cible demandée. Une projection publique ou un extrait partiel ne répond
+pas à cette condition. L’accès de la GitHub App et le SHA source ne sont
+pas évalués par ce point d’appel. Pour établir l’absence ou
+la provenance d’un répertoire, l’observateur doit couvrir le même dépôt,
+serveur, chemin réel, rôle et environnement, et fournir des références
+de preuve et de périmètre. Le code n’authentifie pas ces références.
+Les structures retournées peuvent contenir des chemins privés. L’appelant
+doit les conserver dans le périmètre autorisé.
+
+Une création est seulement **planifiée**. Les vérifications de capacité,
+droits d’exécution, collision DNS/ingress et admission sont du ressort de
+l’adaptateur et de l’hôte gouverné. Pour une cible existante, une demande
+d’exposition non attestée reste non vérifiée. Une intention de déploiement
+ne vaut jamais autorisation. L’identifiant de plan déduplique une intention
+stable, sans remplacer un journal d’exécution, une relecture ou un verrou.
+
+**Prochaine tranche.** Raccorder et valider un adaptateur en lecture seule
+avant toute intégration d’écriture ou de déploiement. Le planificateur
+est utilisable comme fonction Python, sans CLI ni branchement automatique
+du parcours d’entrée dans cette tranche.

@@ -173,6 +173,14 @@
       "status": "observed",
       "reference": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
       "summary": "Revue au SHA exact des contrats et du raccordement partiel. Le run réussi après #350 a déployé MCP et ne prouve pas le parcours applicatif universel."
+    },
+    {
+      "id": "EV-019",
+      "kind": "offline_acceptance_tests",
+      "scope": "chainsolutions-wealthtech/Loop",
+      "status": "observed",
+      "reference": "tests/test_repository_hosting.py",
+      "summary": "Fixtures locales couvrant les branches du planificateur, les trois périmètres GitHub, la portée des preuves et la stabilité du plan. Aucun appel réseau."
     }
   ]
 }

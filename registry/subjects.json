@@ -210,7 +210,8 @@
     "LOOP-W13": "LOOP-SUJ-014",
     "LOOP-W14": "LOOP-SUJ-008",
     "LOOP-W15": "LOOP-SUJ-019",
-    "LOOP-W16": "LOOP-SUJ-020"
+    "LOOP-W16": "LOOP-SUJ-020",
+    "LOOP-W17": "LOOP-SUJ-020"
   },
   "tables": [
     [
@@ -469,6 +470,12 @@
       "LOOP-MOD-007",
       "validate, show, tree et private",
       "loop/canonical_registry.py"
+    ],
+    [
+      "LOOP-OP-011",
+      "LOOP-CAP-006",
+      "plan_repository_hosting",
+      "loop/repository_hosting.py"
     ]
   ],
   "timelines": [
@@ -493,7 +500,8 @@
         "E14": "LOOP-SUJ-016",
         "E15": "LOOP-SUJ-008",
         "E16": "LOOP-SUJ-019",
-        "E17": "LOOP-SUJ-020"
+        "E17": "LOOP-SUJ-020",
+        "E18": "LOOP-SUJ-020"
       }
     }
   ],

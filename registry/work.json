@@ -380,6 +380,21 @@
         "EV-018"
       ],
       "acceptance": "Contrat portable, transitions de rattachement, création et refus, lacunes historiques et portes de vérification sourcées. Aucun exécuteur ni écriture externe dans ce lot."
+    },
+    {
+      "id": "LOOP-W17",
+      "title": "Implémenter et vérifier le planificateur portable de rattachement",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-013"
+      ],
+      "depends_on": [
+        "LOOP-W16"
+      ],
+      "evidence": [
+        "EV-019"
+      ],
+      "acceptance": "Un point d’appel Python hors ligne, avec des tests pour réutiliser, rattacher, préparer la création et refuser les preuves insuffisantes ou contradictoires. Aucun accès externe."
     }
   ]
 }

@@ -95,3 +95,12 @@ Les décisions « proposées » ne constituent pas une approbation. Mettre à jo
   rattachement, provisionnement et déploiement applicatif. Le chemin
   restant est le routage hors ligne, puis la validation de l’adaptateur
   de lecture. Aucun changement MCP, Regulatory, S1 ou S2.
+
+## Planificateur d’hébergement appelable dans Loop
+
+- `LOOP-W17` vérifié hors ligne. Point d’appel
+  `loop.repository_hosting.plan_repository_hosting`.
+- `LOOP-CAP-006` compose les identifiants et l’index d’ancrage existants.
+  Les retours ne donnent aucun droit d’écriture ni de déploiement.
+- Reprise de cette capacité : tester l’adaptateur de lecture séparément,
+  sans convertir une observation indisponible en absence.
