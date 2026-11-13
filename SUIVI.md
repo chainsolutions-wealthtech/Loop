@@ -34,3 +34,9 @@
 - D-BOOT-03 (proposée) : tout changement ultérieur sur branche et PR, sans fusion automatique.
 
 Les décisions « proposées » ne constituent pas une approbation. Mettre à jour ce document après revue de la PR et vérification des paramètres GitHub.
+
+## Module d'entrée d'un dépôt — candidat
+
+- **Objet :** vérifier dépôt exact → reconnaissance → ID canonique → installation GitHub App → procédure versionnée avant admission.
+- **Preuve :** tests unitaires hors ligne du noyau et de sa garde. Aucun raccordement MCP/CUG en service ni nouvelle autorité.
+- **Point de reprise :** choisir l'hôte d'intégration et les sources autorisées, puis tester en lecture seule un dépôt reconnu et un inconnu. Voir [le contrat](docs/REPOSITORY_ENTRY.md).
