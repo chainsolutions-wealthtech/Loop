@@ -70,3 +70,7 @@ Tests hors ligne depuis la racine du dépôt
 ```sh
 python3 -m unittest discover -s tests -v
 ```
+
+## Dépôt découvert sans rattachement
+
+Le [parcours de découverte et de rattachement](REPOSITORY_ONBOARDING.md) traite séparément l'identité projet et l'accès App manquants, sans laisser passer l'appel métier.

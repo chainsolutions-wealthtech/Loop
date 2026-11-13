@@ -40,3 +40,10 @@ Les décisions « proposées » ne constituent pas une approbation. Mettre à jo
 - **Objet :** vérifier dépôt exact → reconnaissance → ID canonique → installation GitHub App → procédure versionnée avant admission.
 - **Preuve :** tests unitaires hors ligne du noyau et de sa garde. Aucun raccordement MCP/CUG en service ni nouvelle autorité.
 - **Point de reprise :** choisir l'hôte d'intégration et les sources autorisées, puis tester en lecture seule un dépôt reconnu et un inconnu. Voir [le contrat](docs/REPOSITORY_ENTRY.md).
+
+## Découverte et rattachement d'un dépôt — candidat
+
+- **Objet :** séparer la découverte en lecture, la préparation CUG, l'inscription par une autorité et la vérification d'un checkout.
+- **Preuve :** scénarios hors ligne de reprise, réconciliation d'accès, réessai après inscription et comparaison du checkout.
+- **Limites :** aucune installation, inscription ni association serveur exécutée.
+- **Point de reprise :** identifier l'interface de reconnaissance et d'inscription autorisée, puis éprouver un dépôt connu et un inconnu sur des adaptateurs en lecture seule. Voir [le parcours](docs/REPOSITORY_ONBOARDING.md).
