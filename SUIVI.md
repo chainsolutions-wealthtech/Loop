@@ -86,3 +86,12 @@ Les décisions « proposées » ne constituent pas une approbation. Mettre à jo
 - LOOP-W11 reste bloqué. Obtenir une réponse de l’autorité sur le dépôt exact,
   puis une preuve nominative CUG, la procédure approuvée et les preuves
   privées pour chaque répertoire. Voir [le test](docs/PROJECT_ANCHOR.md).
+
+## Extraction du parcours historique MCP vers Loop — 13 novembre 2026
+
+- `LOOP-W16` documenté et lié à `LOOP-CAP-006`, avec les preuves
+  `EV-017` et `EV-018`. Le GitRegistry runtime reste V1 au relevé.
+- Le [contrat](docs/WORKFLOW_REPOSITORY_HOSTING.md) distingue découverte,
+  rattachement, provisionnement et déploiement applicatif. Le chemin
+  restant est le routage hors ligne, puis la validation de l’adaptateur
+  de lecture. Aucun changement MCP, Regulatory, S1 ou S2.

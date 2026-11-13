@@ -55,3 +55,7 @@ chemins fictifs. Loop publie uniquement sa propre identité GitHub dans
 la projection initiale, sans rattachement serveur attesté. Les deux cas
 ci-dessus restent des preuves séparées et ne sont pas importés comme
 projets actifs.
+
+Quand le lien manque ou reste à qualifier, voir le [workflow séparé de
+rattachement et de préparation d’un hébergement](WORKFLOW_REPOSITORY_HOSTING.md).
+Il distingue absence constatée, observation indisponible et conflit.

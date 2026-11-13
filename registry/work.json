@@ -99,6 +99,13 @@
         "E16"
       ],
       "need": "Relier chaque ID global stable aux dépôts identifiés et aux répertoires serveur attestés. Retrouver le projet depuis chacune de ces clés sans confondre identité, observation, activation et autorisation."
+    },
+    {
+      "id": "REQ-013",
+      "events": [
+        "E17"
+      ],
+      "need": "Isoler la jonction dépôt, compte, projet global et cibles serveur. Fournir découverte et questions conditionnelles, puis plan distinct de rattachement ou de création, avec remise au déploiement seulement si demandé et autorisé."
     }
   ],
   "work": [
@@ -357,6 +364,22 @@
         "EV-016"
       ],
       "acceptance": "Rejeu du cas réel sans appel métier, résolution bidirectionnelle testée et projection Loop vérifiable. Aucune écriture côté MCP ou sur S1/S2."
+    },
+    {
+      "id": "LOOP-W16",
+      "title": "Isoler le parcours de rattachement et d’hébergement applicatif",
+      "state": "documented",
+      "requirements": [
+        "REQ-013"
+      ],
+      "depends_on": [
+        "LOOP-W15"
+      ],
+      "evidence": [
+        "EV-017",
+        "EV-018"
+      ],
+      "acceptance": "Contrat portable, transitions de rattachement, création et refus, lacunes historiques et portes de vérification sourcées. Aucun exécuteur ni écriture externe dans ce lot."
     }
   ]
 }

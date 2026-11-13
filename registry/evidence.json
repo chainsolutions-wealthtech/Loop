@@ -157,6 +157,22 @@
       "status": "observed",
       "reference": "docs/PROJECT_ANCHOR.md#test-réel-en-lecture-seule--13-novembre-2026",
       "summary": "Même révision observée sur GitHub, checkout S1 et runtime Docker. État global en réconciliation. Aucun ancrage serveur créé."
+    },
+    {
+      "id": "EV-017",
+      "kind": "read_only_runtime_registry_dry_run",
+      "scope": "Patricked-code/MCP",
+      "status": "observed",
+      "reference": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
+      "summary": "Registre en service V1, projection V2 en mémoire, aucune écriture. 3 connexions, 6 dépôts projetés, 5 mappings, 1 migration en attente."
+    },
+    {
+      "id": "EV-018",
+      "kind": "source_and_historical_workflow_review",
+      "scope": "Patricked-code/MCP #349",
+      "status": "observed",
+      "reference": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
+      "summary": "Revue au SHA exact des contrats et du raccordement partiel. Le run réussi après #350 a déployé MCP et ne prouve pas le parcours applicatif universel."
     }
   ]
 }

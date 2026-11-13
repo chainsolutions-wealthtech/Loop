@@ -363,6 +363,23 @@
         "LOOP-W03",
         "LOOP-W13"
       ]
+    },
+    {
+      "id": "LOOP-CAP-006",
+      "parent": "LOOP-SUJ-020",
+      "name": "Rattachement et préparation d’un hébergement applicatif",
+      "state": "specified_not_implemented",
+      "contract": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
+      "work": [
+        "LOOP-W16"
+      ],
+      "requirements": [
+        "REQ-013"
+      ],
+      "evidence": [
+        "EV-017",
+        "EV-018"
+      ]
     }
   ]
 }

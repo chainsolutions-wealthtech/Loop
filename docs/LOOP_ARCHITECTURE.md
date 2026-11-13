@@ -62,3 +62,7 @@ Le projet et ses six sous-projets internes ont leurs propres identifiants. Les [
 L'[ancrage canonique](PROJECT_ANCHOR.md) relie l'ID projet au dépôt et à ses
 répertoires. Le noyau valide des données injectées. La collecte et la
 persistance des rattachements appartiennent aux adaptateurs de l'autorité.
+
+La [préparation d’un hébergement](WORKFLOW_REPOSITORY_HOSTING.md) est une
+capacité distincte de l’entrée, de l’index d’ancrage et du déploiement.
+Elle rend un plan et un point de reprise, jamais une autorisation.
