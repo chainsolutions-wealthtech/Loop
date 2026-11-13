@@ -54,3 +54,10 @@ Les décisions « proposées » ne constituent pas une approbation. Mettre à jo
 - Module réutilisable : découverte GitHub paginée et classification indicative en lecture seule. Aucun workflow externe lancé.
 - Relevé public et contrat : [Inventaire des usages MCP](docs/MCP_INVENTORY.md). Les détails privés ne sont pas publiés.
 - Reprise : configurer les identités de lecture sur l'hôte, exécuter le CLI en contexte privé et examiner les candidats retenus. Aucun octroi de droits implicite.
+
+## Fiches GitHub et carte des raccordements MCP — candidat
+
+- Schéma v2 : une fiche par dépôt, inventaire des workflows et scripts, relations statiques sourcées, identités client et preuves serveur séparées.
+- Échantillon privé du 13 novembre 2026 : 45 dépôts, 169 workflows lus et 1 104 fichiers lus. L'inventaire privé et les chemins serveur ne sont pas publiés ici.
+- Le rapport n'attribue aucune autorisation et ne confirme pas les clients actifs. Les candidats GitRegistry ne sont pas des rattachements actifs.
+- Point de reprise : vérifier les dispatchs dynamiques et les liaisons client à partir de preuves runtime autorisées. Voir [le contrat](docs/MCP_INVENTORY.md).

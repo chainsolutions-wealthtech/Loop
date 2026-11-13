@@ -11,6 +11,7 @@ from urllib.parse import quote, urlencode
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
 from .mcp_inventory import Blob, EmptyRepository, Repo, SourceError, inventory
+from .mcp_catalog import render_html, supplement
 
 
 class NoRedirect(HTTPRedirectHandler):
@@ -113,13 +114,23 @@ def main():
     cli.add_argument('--org', action='append', default=[])
     cli.add_argument('--user', action='append', default=[])
     cli.add_argument('--max-files', type=int, default=125)
+    cli.add_argument('--all-eligible', action='store_true', help='remove the per-repository file count cap')
+    cli.add_argument('--format', choices=('json', 'html'), default='json')
+    cli.add_argument('--observations', type=argparse.FileType('r', encoding='utf-8'),
+                     help='trusted local JSON snapshot of optional read-only MCP observations')
     args = cli.parse_args()
     accounts = list(dict.fromkeys(args.org + args.user))
     if not accounts:
         cli.error('specify at least one --org or --user')
     tokens = {a: os.environ.get('LOOP_GH_TOKEN_' + re.sub(r'[^A-Z0-9]', '_', a.upper()), '') for a in accounts}
-    report = inventory(GitHubSource(tokens, set(args.org)), accounts, max_files=args.max_files)
-    print(json.dumps(report, indent=2, ensure_ascii=False))
+    report = inventory(GitHubSource(tokens, set(args.org)), accounts,
+                       max_files=None if args.all_eligible else args.max_files)
+    if args.observations:
+        with args.observations as observation_file:
+            observed = json.load(observation_file)
+        supplement(report, registry_candidates=observed.get('registry_candidates', []),
+                   runtime_catalogue=observed.get('runtime_catalogue'))
+    print(render_html(report) if args.format == 'html' else json.dumps(report, indent=2, ensure_ascii=False))
     return 1 if report['account_errors'] or any(
         r['status'] == 'tree_unverified' or r.get('tree_truncated') or r.get('file_errors')
         for r in report['repositories']

@@ -64,3 +64,43 @@ les deux dépôts n'est introduite ici.
 La collecte initiale a utilisé les accès GitHub déjà connectés. Le nouvel
 adaptateur est testé hors ligne. Son activation et la configuration des
 identités de lecture restent à faire. Aucun octroi de droits n'est inclus.
+
+## Fiche par dépôt et graphe des raccordements
+
+Le rapport JSON v2 est additif par rapport à v1. Il conserve les indices
+initiaux et leur ajoute une classification normalisée : code client,
+code fournisseur, workflow candidat, configuration ou référence.
+
+Pour chaque dépôt, la fiche contient son nom, son URL, son compte propriétaire,
+son ID GitHub, la branche observée et le SHA. Elle distingue :
+
+- les outils nommés dans le code client des outils exposés par le fournisseur ;
+- les points d'accès déclarés, les variables non résolues et les
+  rattachements au serveur ou au répertoire, chacun avec son statut ;
+- les implémentations et identités MCP déclarées des clients dont la
+  connexion effective au dépôt a été attestée par une source de runtime ;
+- les workflows, scripts et configurations repérés dans l'arbre ;
+- les liens workflow → action / workflow réutilisable / script, les
+  références vers les scripts de package, et les appels MCP repérés ;
+- les dispatchs dont la cible n'est pas déterminée au point d'appel.
+
+Le SHA, le chemin et la ligne accompagnent les relations lorsqu'ils sont
+disponibles. Un lien statique n'est pas une preuve d'exécution. Les scripts
+listés par leur chemin ne sont pas tous lus. Les erreurs, exclusions,
+limites de taille et plafonds de lecture restent visibles. Les commandes
+construites à l'exécution, les imports indirects et les autres branches
+peuvent nécessiter une analyse complémentaire.
+
+```sh
+python3 -m loop.github_inventory_source --org chainsolutions-wealthtech --user Patricked-code --user Wealthtechinnovations --all-eligible --format html > inventaire-prive.html
+```
+
+Un instantané facultatif obtenu séparément en lecture seule peut être
+fourni avec `--observations observations-privees.json`. Le format accepte
+`registry_candidates` (objets `repo`, `project_id`, `server`, `directory`,
+`binding_status`, `source`) et `runtime_catalogue` (`repository`,
+`observed_at`, `revision`, `tools`). Un candidat du registre reste un
+candidat. Le catalogue du fournisseur ne prouve ni la connexion d'un
+client ni l'utilisation d'un outil par un dépôt. Le CLI ne collecte pas
+automatiquement ces observations, ne lit pas les sessions clientes
+actives et ne lance aucun appel MCP.
