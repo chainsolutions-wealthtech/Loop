@@ -26,6 +26,32 @@ conserve la filiation historique, pas l’autorité opérationnelle.
 - Le [checkpoint B3i](https://github.com/Patricked-code/MCP/blob/c7d7b44b1fedf1954e63b0d921f992362daae4b3/docs/history/governed-deploy-integral/13_20261029_EXECUTION_B3I_CONTINUITE.md) documente l’absence initiale de liaison prouvée entre la session web et le transport OAuth MCP. L’issue #349 documente ensuite le contrôle manquant du reçu de bootstrap dans le lecteur d’autorité et une tentative de correction. Ce sont des défauts historiques, pas un diagnostic d’échec de la route en production aujourd’hui. [Constat et correction historique](https://github.com/Patricked-code/MCP/issues/349#issuecomment-6513464182).
 - Stablecoin montre pourquoi l’absence d’un mapping **actif** ne doit pas lancer une création. Un checkout S2 a déjà été observé, mais le contrôle d’entrée n’a pas attesté l’activation du lien. L’étape correcte est la réconciliation du lien, pas un second checkout. [Test Loop](PROJECT_ANCHOR.md).
 
+## Questionnaire historique retrouvé dans Governed Repository Template
+
+Le questionnaire qui demande de **réutiliser ou créer** est une étape
+du parcours local de préparation, distincte de la page `/git` du MCP.
+Il est versionné dans [`scripts/local_governed_entry.py`](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/2f2333bd9f0724e9119f4de9ab72108ebf74b94e/scripts/local_governed_entry.py#L470-L516)
+et décrit dans [`docs/LOCAL_GOVERNED_ENTRY.md`](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/2f2333bd9f0724e9119f4de9ab72108ebf74b94e/docs/LOCAL_GOVERNED_ENTRY.md).
+C'est une source à réutiliser pour les questions, pas un second registre
+ni un exécuteur à installer dans Loop.
+
+| Étape du précédent | Rôle à conserver dans Loop |
+| --- | --- |
+| `Q_LINK_MCP`, puis plan de découverte en lecture seule | Séparer le choix de relier le projet à MCP de la découverte effective. Le précédent interroge le contexte, les domaines S1/S2 et les capacités. Le résultat oriente la décision, sans valider de rattachement. |
+| `Q_PRODUCTION_SERVER_SELECTION`, puis choix du domaine | Proposer les serveurs et domaines effectivement observés. Réutiliser un choix déjà attesté. Si la cible n'est pas décidée, conserver la décision ouverte. |
+| [`Q_DEPLOYMENT_MOUNT_MODE` et `Q_DEPLOYMENT_PATH`](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/2f2333bd9f0724e9119f4de9ab72108ebf74b94e/scripts/local_governed_entry.py#L622-L659) | Sur un hôte existant, distinguer la racine HTTP, la création d'un sous-chemin, la réutilisation d'un sous-chemin et le report. Le sous-chemin HTTP n'est ni une entrée DNS ni le chemin disque réel du checkout ou du runtime. |
+| [`derive_deployment_binding` et `deployment_operation_requirements`](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/2f2333bd9f0724e9119f4de9ab72108ebf74b94e/scripts/local_governed_entry.py#L238-L297) | Transformer les réponses en cible déclarée et exigences de capacité. Cette déclaration ne prouve pas l'existence du répertoire et ne vaut ni inscription dans GitRegistry ni autorisation de création ou de déploiement. |
+
+Dans Loop, le questionnaire reprend ces décisions **après** lecture du
+registre et découverte ciblée. Si la vue est non concluante, la prochaine
+étape est de compléter les preuves, pas de demander de créer. Une fois
+la décision établie, `LOOP-CAP-006` rend un plan ou un lien réutilisable.
+La jonction manquante est l'appel automatique à cette capacité suivi,
+le cas échéant, d'une opération admise puis d'une **relecture du lien
+par l'autorité**. Governed Deploy Application reçoit ce lien vérifié
+seulement si le déploiement est demandé. Voir [le point de reprise
+LOOP-W18](#jonction-vérifiée-et-point-dappel-du-workflow).
+
 ## Contrat portable de Loop
 
 **Déclenchement.** Le parcours d’entrée, un opérateur ou le planificateur
