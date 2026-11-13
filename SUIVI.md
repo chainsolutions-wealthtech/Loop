@@ -47,3 +47,10 @@ Les décisions « proposées » ne constituent pas une approbation. Mettre à jo
 - **Preuve :** scénarios hors ligne de reprise, réconciliation d'accès, réessai après inscription et comparaison du checkout.
 - **Limites :** aucune installation, inscription ni association serveur exécutée.
 - **Point de reprise :** identifier l'interface de reconnaissance et d'inscription autorisée, puis éprouver un dépôt connu et un inconnu sur des adaptateurs en lecture seule. Voir [le parcours](docs/REPOSITORY_ONBOARDING.md).
+
+## Inventaire des usages MCP — candidat
+
+- Périmètre initial observé : 45 dépôts visibles sur trois comptes, 44 arbres de branche par défaut lus et un dépôt vide.
+- Module réutilisable : découverte GitHub paginée et classification indicative en lecture seule. Aucun workflow externe lancé.
+- Relevé public et contrat : [Inventaire des usages MCP](docs/MCP_INVENTORY.md). Les détails privés ne sont pas publiés.
+- Reprise : configurer les identités de lecture sur l'hôte, exécuter le CLI en contexte privé et examiner les candidats retenus. Aucun octroi de droits implicite.
