@@ -27,3 +27,7 @@
 ## Processus de révision
 
 Toute promotion d'une source ou d'un modèle au rang d'autorité requiert : provenance, périmètre, justification, version/commit, décision, revue d'impact et inscription dans SUIVI.md. Les versions précédentes restent traçables.
+
+## Références de continuité du chantier PR #2
+
+La [mémoire de travail](memory/README.md) et les [registres de travail et de preuves](registry/README.md) sont des références versionnées pour ce chantier. Ils ne remplacent pas la gouvernance et ne sont pas une autorité MCP ou CUG. Tant que la PR est en brouillon, ils ne sont pas adoptés sur `main`.

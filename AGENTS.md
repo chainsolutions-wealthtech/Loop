@@ -25,3 +25,7 @@
 ## Après travail
 
 Présenter l'état avant/après, les chemins modifiés, le SHA/PR, les contrôles réellement exécutés, les limites, les décisions en attente et un point de reprise exact. Ne pas déclarer une règle « active » si elle n'existe que dans la documentation.
+
+## Reprise du chantier de la PR #2
+
+Après le checkpoint, lire [la mémoire du chantier](memory/README.md) et [la roadmap](docs/LOOP_ROADMAP.md). Les décisions et preuves du registre sont bornées à leur périmètre. Ne jamais publier les instantanés privés dans ce dépôt public.

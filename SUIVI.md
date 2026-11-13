@@ -61,3 +61,10 @@ Les décisions « proposées » ne constituent pas une approbation. Mettre à jo
 - Échantillon privé du 13 novembre 2026 : 45 dépôts, 169 workflows lus et 1 104 fichiers lus. L'inventaire privé et les chemins serveur ne sont pas publiés ici.
 - Le rapport n'attribue aucune autorisation et ne confirme pas les clients actifs. Les candidats GitRegistry ne sont pas des rattachements actifs.
 - Point de reprise : vérifier les dispatchs dynamiques et les liaisons client à partir de preuves runtime autorisées. Voir [le contrat](docs/MCP_INVENTORY.md).
+
+## Mémoire et registre de travail — candidat PR #2
+
+- Référence de reprise : [mémoire du chantier](memory/README.md), [registre du travail](registry/work.json), [preuves](registry/evidence.json), [architecture](docs/LOOP_ARCHITECTURE.md) et [roadmap](docs/LOOP_ROADMAP.md).
+- Instantané `LOOP-INV-20261113-02` : registre SQLite privé contrôlé et référencé, aucune donnée de dépôt privé ni chemin serveur publié ici.
+- La revue des 11 sites distingue 5 cibles résolues statiquement, 2 entrées proxy, 2 tests et 2 moteurs à corréler avec un paquet. Aucun appel externe n'a été déclenché.
+- Reprise : poursuivre LOOP-W09 et LOOP-W10 en lecture seule. LOOP-W11 attend une preuve nominative CUG et une autorité de reconnaissance. Ni fusion, ni déploiement.

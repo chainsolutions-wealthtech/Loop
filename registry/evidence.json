@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "scope": "chainsolutions-wealthtech/Loop",
+  "evidence": [
+    {
+      "id": "EV-001",
+      "kind": "github_pr",
+      "scope": "Loop",
+      "status": "draft",
+      "reference": "https://github.com/chainsolutions-wealthtech/Loop/pull/1",
+      "summary": "Fondations documentaires et de gouvernance. Ne vaut pas activation des règles GitHub."
+    },
+    {
+      "id": "EV-002",
+      "kind": "github_commit_ci",
+      "scope": "Loop",
+      "status": "observed",
+      "reference": "https://github.com/chainsolutions-wealthtech/Loop/actions/runs/43382807245/job/131744287885",
+      "sha": "45d0549ca884f20b8ff81653e4a44cbbd23dee1f",
+      "summary": "Inventaire v2 et contrôle structure-and-policy réussi. 38 tests hors ligne lors de cette tranche."
+    },
+    {
+      "id": "EV-003",
+      "kind": "private_snapshot_index",
+      "scope": "Trois comptes GitHub, branches par défaut",
+      "status": "observed",
+      "reference": "LOOP-INV-20261113-02",
+      "source_sha256": "129326382e4aaa17ea9428e610e9d2df1e31628611ea7c8246de449a533703b6",
+      "storage": "private",
+      "counts": {
+        "repositories": 45,
+        "trees": 44,
+        "empty_repositories": 1,
+        "workflows_read": 169,
+        "files_read": 1104,
+        "code_or_script_paths": 4119,
+        "package_scripts": 304,
+        "static_relations": 3485,
+        "generic_dispatch_sites": 11
+      },
+      "summary": "Le hash porte sur le rapport HTML d'origine. Le détail n'est pas dans Git public. Branches secondaires et clients actifs non attestés.",
+      "public_projection": "registry/public-repositories.json"
+    },
+    {
+      "id": "EV-004",
+      "kind": "repository_declaration",
+      "scope": "Regulatory",
+      "status": "declared",
+      "reference": "https://github.com/chainsolutions-wealthtech/Regulatory/blob/15933ff9ea1e9b83ae5c1cb23725169667af4969/deploy/mcp-target.json",
+      "summary": "Cible S1 demandée. Répertoire et provisioning non attestés."
+    },
+    {
+      "id": "EV-005",
+      "kind": "registry_observation",
+      "scope": "Loop et Regulatory",
+      "status": "not_established",
+      "reference": "memory/2026-11-13-loop.md#e07--vérification-en-lecture-seule-de-loop-et-regulatory",
+      "summary": "La projection du registre consultée ne démontre pas un ID actif. L'installation GitHub visible ne démontre pas l'identité CUG."
+    },
+    {
+      "id": "EV-006",
+      "kind": "github_job",
+      "scope": "Gouvern",
+      "status": "observed",
+      "reference": "https://github.com/Patricked-code/Gouvern/actions/runs/43355364468/job/131656011048",
+      "summary": "Job bootstrap réussi, dépôt déjà initialisé. Pas une attestation d'appel MCP."
+    },
+    {
+      "id": "EV-007",
+      "kind": "github_job",
+      "scope": "Ekyc",
+      "status": "observed",
+      "reference": "https://github.com/Patricked-code/Ekyc/actions/runs/43352830929/job/131647747515",
+      "summary": "Job bootstrap réussi, dépôt déjà initialisé. Pas une attestation d'appel MCP."
+    },
+    {
+      "id": "EV-008",
+      "kind": "github_job",
+      "scope": "Regulatory",
+      "status": "observed",
+      "reference": "https://github.com/chainsolutions-wealthtech/Regulatory/actions/runs/43359946145/job/131670793225",
+      "summary": "Plan réussi. Jobs reconcile, claim et release non exécutés dans ce run."
+    },
+    {
+      "id": "EV-009",
+      "kind": "historical_source_index",
+      "scope": "Loop",
+      "status": "partial",
+      "reference": "docs/SOURCE_REGISTER.md",
+      "summary": "Corpus fondateur de juillet. Les sources ne sont pas des autorités opérationnelles de Loop."
+    },
+    {
+      "id": "EV-010",
+      "kind": "private_registry",
+      "scope": "LOOP-INV-20261113-02",
+      "status": "observed",
+      "reference": "LOOP_REGISTRE_PREUVES_20261113.sqlite",
+      "storage": "private",
+      "counts": {
+        "repositories": 45,
+        "observation_rows": 8936
+      },
+      "summary": "SQLite reconstruit à partir du rapport HTML. Les lignes incluent fiches, artefacts, relations, indices, rattachements et sections du catalogue, pas 8 936 exécutions. Contrôle SQLite integrity_check = ok.",
+      "artifact_sha256": "3bf3077b1d43d7dd619ab8d3cef3416cb3a12ee8830f2691b6436f620767286f"
+    },
+    {
+      "id": "EV-011",
+      "kind": "draft_code",
+      "scope": "Loop",
+      "status": "draft",
+      "reference": "https://github.com/chainsolutions-wealthtech/Loop/pull/2",
+      "summary": "Contrôle d'entrée, planificateur de rattachement, inventaire et projection statique. Aucun branchement réel au transport ni déploiement."
+    },
+    {
+      "id": "EV-012",
+      "kind": "static_dispatch_review",
+      "scope": "LOOP-INV-20261113-02",
+      "status": "observed",
+      "reference": "registry/dispatch-review.json",
+      "counts": {
+        "sites": 11,
+        "static_resolved": 5,
+        "incoming_dynamic": 2,
+        "test_fixture": 2,
+        "runtime_package_required": 2
+      },
+      "summary": "Chaque site du relevé est qualifié sur son SHA. Aucun appel exécuté ni client connecté n'est attesté par cette revue."
+    },
+    {
+      "id": "EV-013",
+      "kind": "design_document",
+      "scope": "Loop",
+      "status": "draft",
+      "reference": "docs/WF00_DESIGN_PLANNING_CONTRACT.md",
+      "summary": "Proposition de passage WF-00, Software Design et planification, conservée dans Loop."
+    },
+    {
+      "id": "EV-014",
+      "kind": "design_document",
+      "scope": "Loop",
+      "status": "draft",
+      "reference": "docs/PARALLEL_ARCHITECTURE_SKELETON.md",
+      "summary": "Proposition de modèle des vues fonctionnelle et technique, conservée dans Loop."
+    }
+  ]
+}
