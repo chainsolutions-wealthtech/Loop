@@ -211,7 +211,8 @@
     "LOOP-W14": "LOOP-SUJ-008",
     "LOOP-W15": "LOOP-SUJ-019",
     "LOOP-W16": "LOOP-SUJ-020",
-    "LOOP-W17": "LOOP-SUJ-020"
+    "LOOP-W17": "LOOP-SUJ-020",
+    "LOOP-W18": "LOOP-SUJ-020"
   },
   "tables": [
     [
@@ -501,7 +502,8 @@
         "E15": "LOOP-SUJ-008",
         "E16": "LOOP-SUJ-019",
         "E17": "LOOP-SUJ-020",
-        "E18": "LOOP-SUJ-020"
+        "E18": "LOOP-SUJ-020",
+        "E19": "LOOP-SUJ-020"
       }
     }
   ],

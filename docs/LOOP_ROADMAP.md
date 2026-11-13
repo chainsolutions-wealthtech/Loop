@@ -44,3 +44,8 @@ Le [contrat portable](WORKFLOW_REPOSITORY_HOSTING.md) est documenté et
 le planificateur `LOOP-CAP-006` est appelable et testé hors ligne.
 La prochaine tranche est l’adaptateur de lecture et ses preuves.
 Aucun déploiement applicatif ni changement serveur dans ce lot.
+
+**LOOP-W18 — Jonction à l’arrivée et au préflight applicatif.** Tester
+l’adaptateur de lecture et le [point de déclenchement](WORKFLOW_REPOSITORY_HOSTING.md#jonction-vérifiée-et-point-dappel-du-workflow)
+avant de qualifier une écriture de lien. Ne pas utiliser la synchronisation
+historique du GitRegistry comme simple lecture.

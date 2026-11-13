@@ -372,7 +372,8 @@
       "contract": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
       "work": [
         "LOOP-W16",
-        "LOOP-W17"
+        "LOOP-W17",
+        "LOOP-W18"
       ],
       "requirements": [
         "REQ-013"
@@ -380,7 +381,8 @@
       "evidence": [
         "EV-017",
         "EV-018",
-        "EV-019"
+        "EV-019",
+        "EV-020"
       ],
       "implementation": "loop/repository_hosting.py",
       "entrypoint": "plan_repository_hosting",

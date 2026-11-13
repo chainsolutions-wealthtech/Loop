@@ -395,6 +395,21 @@
         "EV-019"
       ],
       "acceptance": "Un point d’appel Python hors ligne, avec des tests pour réutiliser, rattacher, préparer la création et refuser les preuves insuffisantes ou contradictoires. Aucun accès externe."
+    },
+    {
+      "id": "LOOP-W18",
+      "title": "Raccorder l’arrivée et le préflight applicatif au planificateur d’hébergement",
+      "state": "conditional",
+      "requirements": [
+        "REQ-013"
+      ],
+      "depends_on": [
+        "LOOP-W17"
+      ],
+      "evidence": [
+        "EV-020"
+      ],
+      "acceptance": "Adaptateur de lecture testé sur un lien vérifié, un répertoire observé sans lien actif et une vue non concluante. Une projection V1/V2 ne suffit ni à vérifier un lien ni à prouver l’absence. Aucune écriture ni mise en service dans cette tranche."
     }
   ]
 }

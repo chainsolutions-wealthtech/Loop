@@ -127,3 +127,63 @@ stable, sans remplacer un journal d’exécution, une relecture ou un verrou.
 avant toute intégration d’écriture ou de déploiement. Le planificateur
 est utilisable comme fonction Python, sans CLI ni branchement automatique
 du parcours d’entrée dans cette tranche.
+
+## Jonction vérifiée et point d’appel du workflow
+
+Relevé du 13 novembre 2026 sur `Patricked-code/MCP` au SHA
+`c775709fdaf490eef2e1d43345e0b26e460a072c`. GitHub, le checkout S1 et la
+révision du MCP en service correspondent, mais l’état global demeure
+`RECONCILIATION_REQUIRED`. Le test runtime du registre a relu une **source
+V1** et calculé une projection V2, sans l’écrire. Les 3 connexions,
+6 dépôts projetés, 5 mappings et 1 migration du rapport ne mesurent pas
+la couverture des dépôts visibles dans les trois comptes.
+
+| Fonction ou surface MCP | Ce qu’elle transmet | Point de vigilance |
+| --- | --- | --- |
+| [Inventaire GitHub en lecture seule](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/tools/githubInventory.ts#L8-L40) | `github_org_inventory` ou `github_account_inventory` rend les dépôts visibles par la connexion interrogée. | Couverture par propriétaire et identité de connexion à conserver séparément. La [synchronisation historique](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/github/inventory.ts#L116-L171) écrit des mappings, choisit S1 et construit un chemin par défaut pour un nouveau dépôt, puis déduplique par nom de dépôt. Ne pas l’utiliser comme simple lecture, preuve de chemin ou base d’une migration à plusieurs cibles. |
+| [Page Git et lecture des preuves](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/server.ts#L842-L858) | `/git?repository=owner/repo` appelle `readGitRegistryProjectEvidence`, puis `deriveRepositoryMappingCompletion`. La page distingue `RESOLVED`, `MISSING`, `AMBIGUOUS` et `UNOBSERVED`. | `RESOLVED` signifie qu’une seule ligne correspond, pas que le répertoire est vérifié. `MISSING` signifie qu’aucune ligne ne correspond dans la vue lue, pas que le répertoire est absent de S1 et S2. |
+| [Résolution de l’hébergement existant](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/provisioning/repositoryPleskHostingRoute.ts#L25-L57) | `resolveRepositoryPleskHostingRoute` exige une source V2, un mapping et un lien de production uniques, prêts et avec chemin réel attesté. Sans mapping dans un V2 valide, le résultat est une demande de découverte. | Ce sélecteur ne choisit pas entre plusieurs cibles et ne crée rien. Il n’est pas appelé par la route Git lue. Ne pas convertir la projection V2 en observation autoritaire. |
+| [Prévisualisation S1/S2](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/tools/pleskProvisioning.ts#L64-L81) et [routes d’exécution](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/server.ts#L510-L548) | Le sous-domaine peut faire l’objet d’un préflight Plesk sur S1/S2. Le parcours Project Runtime est câblé sur S1. Le POST Plesk passe par son admission distincte. | Pas de preuve ici d’un exécuteur Project Runtime S2 équivalent ni d’un parcours universel pour créer un sous-chemin. Le [blueprint](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/provisioning/universalDeploymentBlueprint.ts) ne lance ni création ni déploiement. |
+
+**Contrat de jointure.** Indexer par hôte et ID GitHub stable, avec le
+propriétaire GitHub en métadonnée distincte de la connexion et de
+l’installation App. Associer le dépôt au projet global, puis à zéro,
+une ou plusieurs cibles. Chaque cible a son serveur, environnement, rôle,
+chemin réel, état de preuve et référence du lien. Un dépôt inventorié
+peut n’avoir aucune cible. Un dépôt inaccessible à la connexion interrogée
+reste non observé. Un chemin calculé par défaut reste candidat.
+
+**Déclencheur proposé.** À l’arrivée sur un dépôt ou en préflight de
+Governed Deploy Application, appeler le parcours de rattachement quand
+une cible est nécessaire et qu’elle n’est pas déjà vérifiée pour le
+périmètre demandé. L’opérateur peut aussi l’appeler explicitement.
+L’adaptateur lit d’abord la cartographie. Si elle ne suffit pas, il
+présente les liens vérifiés, les candidats, les conflits et les éléments
+non observés, puis ne demande que la prochaine décision utile.
+
+- Un lien vérifié et compatible est réutilisé. Plusieurs cibles compatibles
+  demandent un choix entre les cibles effectivement observées.
+- Un répertoire déjà présent est proposé au rattachement si sa provenance,
+  son chemin réel et son périmètre sont établis. Aucun second répertoire
+  n’est créé pour compléter une fiche.
+- Un répertoire dont l’absence est attestée pour la cible exacte peut
+  faire l’objet d’un plan de création. Le choix S1/S2 ne découle jamais
+  d’un défaut de la synchronisation historique.
+- Une source indisponible, incomplète, candidate ou contradictoire déclenche
+  une demande de preuve ou une réconciliation, sans plan d’écriture.
+
+Le cœur `plan_repository_hosting` est déjà appelable. L’arrivée et le
+préflight doivent l’appeler via un adaptateur qui normalise les preuves
+en `RegistryObservation` et `DirectoryObservation`. Après une opération
+explicitement admise, le registre qui fait autorité doit rendre le même
+ID global depuis le dépôt et le chemin réel. Seul ce lien vérifié rejoint
+le cycle applicatif, avec une révision exacte, et uniquement si un
+déploiement a été demandé et admis. Le workflow GitHub **MCP Governed
+Deploy** met à jour MCP lui-même et ne remplace pas ce passage.
+
+**Point de reprise `LOOP-W18`.** Tester d’abord l’adaptateur de lecture
+et le déclenchement à l’arrivée ou en préflight sur un lien vérifié, un
+répertoire existant sans lien actif et une source V1 non concluante.
+Puis qualifier, séparément, le chemin d’écriture du lien et sa relecture.
+Cette note ne raccorde pas l’adaptateur, n’écrit pas le registre MCP et
+ne provisionne rien sur S1 ou S2.

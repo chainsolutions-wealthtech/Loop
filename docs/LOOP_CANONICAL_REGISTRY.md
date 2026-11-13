@@ -84,7 +84,7 @@ python3 -m loop.canonical_registry private registre-prive.sqlite 'LOOP-INV-20261
 Pour prolonger la mémoire à une autre date, ajouter une chronologie et sa
 carte de sujets dans `timelines`. Les nouveaux liens doivent citer les ID
 datés complets. Seule la première chronologie fournit les alias courts
-historiques E01…E18. Les étapes et champs numérotés d'un contrat publié
+historiques E01…E19. Les étapes et champs numérotés d'un contrat publié
 gardent leur numéro. Un changement structurel se versionne sans réaffecter
 un ancien identifiant à un autre objet.
 

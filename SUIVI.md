@@ -104,3 +104,11 @@ Les décisions « proposées » ne constituent pas une approbation. Mettre à jo
   Les retours ne donnent aucun droit d’écriture ni de déploiement.
 - Reprise de cette capacité : tester l’adaptateur de lecture séparément,
   sans convertir une observation indisponible en absence.
+
+## Jonction GitRegistry vers Governed Deploy Application
+
+`LOOP-W18` décrit le raccordement à l’arrivée ou en préflight applicatif.
+`EV-020` consigne le dry run runtime V1→V2 sans écriture et la différence
+entre mapping proposé et chemin attesté. Le planificateur est appelable,
+mais le raccordement automatique n’est pas implémenté. Voir le
+[relevé et la séquence](docs/WORKFLOW_REPOSITORY_HOSTING.md#jonction-vérifiée-et-point-dappel-du-workflow).

@@ -181,6 +181,14 @@
       "status": "observed",
       "reference": "tests/test_repository_hosting.py",
       "summary": "Fixtures locales couvrant les branches du planificateur, les trois périmètres GitHub, la portée des preuves et la stabilité du plan. Aucun appel réseau."
+    },
+    {
+      "id": "EV-020",
+      "kind": "source_and_read_only_runtime_review",
+      "scope": "Patricked-code/MCP",
+      "status": "observed",
+      "reference": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
+      "summary": "Le GitRegistry runtime est en V1 au relevé. Le dry run V2 n’écrit rien. La synchronisation V1 peut affecter S1 et un chemin par défaut, sans attester de répertoire. La route Git affiche un état de correspondance, sans appeler le sélecteur d’hébergement."
     }
   ]
 }
