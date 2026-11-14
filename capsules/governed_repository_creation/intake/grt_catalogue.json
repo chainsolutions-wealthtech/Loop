@@ -1,0 +1,2363 @@
+{
+  "source_repository": "chainsolutions-wealthtech/Governed-Repository-Template",
+  "source_sha": "3d9cba0223ec43003802635dd264f1f266b7b12b",
+  "manifest_version": "2.8.43",
+  "source_manifest_git_sha": "6643fb87ef0405038e0905b8ef6cf2f9811428be",
+  "catalogue_status": "PLANNING_ONLY_NOT_RUNTIME_BOUND",
+  "catalogue_git_sha": "a71ff61db74aa0951cb928213f199bbd0e301350",
+  "questions": [
+    {
+      "id": "AQ-001",
+      "field": "project_existence",
+      "group": "IDENTITY_TOPOLOGY",
+      "text": "Le projet est-il nouveau, existant ou hybride ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "NEW",
+          "EXISTING",
+          "HYBRID",
+          "UNKNOWN_DISCOVER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-002",
+      "field": "git_provider",
+      "group": "IDENTITY_TOPOLOGY",
+      "text": "Quel fournisseur Git porte le projet ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "GITHUB",
+          "GITLAB",
+          "MULTI_PROVIDER",
+          "UNKNOWN_DISCOVER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-003",
+      "field": "repository_topology",
+      "group": "IDENTITY_TOPOLOGY",
+      "text": "Quelle topologie de repositories s'applique ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "SINGLE_REPOSITORY",
+          "MULTI_REPOSITORY",
+          "MONOREPO",
+          "UNKNOWN_DISCOVER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-004",
+      "field": "repository_members",
+      "group": "IDENTITY_TOPOLOGY",
+      "text": "Quels repositories observés appartiennent au projet ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "OBSERVED",
+        "kind": "REPOSITORIES",
+        "fallback_values": [
+          "DISCOVER_MORE",
+          "NONE_OF_THESE"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-005",
+      "field": "environment_scope",
+      "group": "GOVERNANCE_POSTURE",
+      "text": "Quel environnement représente ce périmètre ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "OBSERVED_PLUS_STATIC",
+        "kind": "ENVIRONMENTS",
+        "static_values": [
+          "PRODUCTION",
+          "STAGING",
+          "DEVELOPMENT",
+          "MULTI_ENVIRONMENT",
+          "UNKNOWN_DISCOVER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-006",
+      "field": "governance_adoption_posture",
+      "group": "GOVERNANCE_POSTURE",
+      "text": "Comment traiter la gouvernance déjà présente ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PRESERVE_AND_COMPLETE",
+          "ALIGN_WITH_TARGET_MODEL",
+          "MIGRATE_LEGACY_INCREMENTALLY",
+          "MAP_ONLY_NO_CHANGE",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-007",
+      "field": "project_profile",
+      "group": "GOVERNANCE_POSTURE",
+      "text": "Quel profil de projet doit piloter les exigences applicables ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "OBSERVED_PLUS_STATIC",
+        "kind": "PROJECT_PROFILES",
+        "static_values": [
+          "generic",
+          "application",
+          "chainsolutions-fullstack-web",
+          "data-platform",
+          "UNKNOWN_DISCOVER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-008",
+      "field": "architecture_posture",
+      "group": "GOVERNANCE_POSTURE",
+      "text": "Que faut-il faire de l'architecture observée ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PRESERVE_EXISTING",
+          "ALIGN_INCREMENTALLY",
+          "MIGRATE_SELECTED_PARTS",
+          "TARGET_MODEL_ONLY_NO_CHANGE",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-009",
+      "field": "server_binding_mode",
+      "group": "INFRASTRUCTURE",
+      "text": "Le projet a-t-il déjà une cible serveur exploitable ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "EXISTING_SINGLE",
+          "EXISTING_MULTI",
+          "NONE_PLAN_NEW",
+          "UNKNOWN_DISCOVER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-010",
+      "field": "server_selection",
+      "group": "INFRASTRUCTURE",
+      "text": "Quel serveur observé doit être associé au projet ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "OBSERVED_PLUS_STATIC",
+        "kind": "SERVERS",
+        "static_values": [
+          "PLAN_NEW_SERVER",
+          "DISCOVER_MORE",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-010N",
+      "field": "production_server_selection",
+      "group": "INFRASTRUCTURE",
+      "text": "Sur quel serveur veux-tu préparer la production de ce projet neuf ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY"
+      ],
+      "choice_source": {
+        "type": "OBSERVED_PLUS_STATIC",
+        "kind": "SERVERS",
+        "static_values": [
+          "PLAN_NEW_SERVER",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-011",
+      "field": "deployment_path_posture",
+      "group": "INFRASTRUCTURE",
+      "text": "Comment traiter les chemins de déploiement observés ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "REUSE_OBSERVED_PATHS",
+          "ALIGN_EXISTING_PATHS",
+          "PLAN_NEW_PATHS",
+          "MAP_ONLY",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-012",
+      "field": "deployment_path_selection",
+      "group": "INFRASTRUCTURE",
+      "text": "Quels chemins observés appartiennent réellement au projet ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "OBSERVED_PLUS_STATIC",
+        "kind": "DEPLOYMENT_PATHS",
+        "static_values": [
+          "DISCOVER_MORE",
+          "PLAN_NEW_PATH"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-013",
+      "field": "domain_posture",
+      "group": "DOMAIN_NETWORK",
+      "text": "Que faut-il faire pour le ou les domaines ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "REUSE_EXISTING",
+          "CREATE_NEW",
+          "REUSE_AND_ADD",
+          "NO_DOMAIN_REQUIRED",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-014",
+      "field": "domain_selection",
+      "group": "DOMAIN_NETWORK",
+      "text": "Quels domaines observés sont liés au projet ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "OBSERVED_PLUS_STATIC",
+        "kind": "DOMAINS",
+        "static_values": [
+          "NONE_OF_THESE",
+          "DISCOVER_MORE"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-015",
+      "field": "dns_tls_posture",
+      "group": "DOMAIN_NETWORK",
+      "text": "Comment traiter DNS et TLS ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PRESERVE_IF_VALID",
+          "VERIFY_AND_COMPLETE",
+          "PLAN_NEW",
+          "MAP_ONLY",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-016",
+      "field": "runtime_posture",
+      "group": "RUNTIME_DATA",
+      "text": "Que faut-il faire du runtime observé ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PRESERVE_RUNTIME",
+          "ALIGN_RUNTIME",
+          "MIGRATE_RUNTIME",
+          "MAP_ONLY",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-017",
+      "field": "runtime_selection",
+      "group": "RUNTIME_DATA",
+      "text": "Quels runtimes/process managers observés sont réellement utilisés ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "OBSERVED_PLUS_STATIC",
+        "kind": "RUNTIMES",
+        "static_values": [
+          "DISCOVER_MORE",
+          "NONE"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-018",
+      "field": "database_posture",
+      "group": "RUNTIME_DATA",
+      "text": "Comment traiter la base de données ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "REUSE_EXISTING",
+          "CREATE_NEW",
+          "REUSE_AND_EXTEND",
+          "NO_DATABASE",
+          "DISCOVER_FIRST",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-019",
+      "field": "database_selection",
+      "group": "RUNTIME_DATA",
+      "text": "Quelle base observée appartient au projet ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "OBSERVED_PLUS_STATIC",
+        "kind": "DATABASES",
+        "static_values": [
+          "NONE_OF_THESE",
+          "DISCOVER_MORE"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-020",
+      "field": "external_system_posture",
+      "group": "RUNTIME_DATA",
+      "text": "Comment traiter les systèmes externes détectés ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "REUSE_EXISTING_INTEGRATIONS",
+          "VERIFY_AND_KEEP",
+          "REPLACE_SELECTED",
+          "ADD_NEW",
+          "NONE",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-021",
+      "field": "ci_cd_posture",
+      "group": "DELIVERY_OPERATIONS",
+      "text": "Comment traiter le CI/CD existant ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PRESERVE_IF_VALID",
+          "ALIGN_INCREMENTALLY",
+          "CREATE_IF_MISSING",
+          "MAP_ONLY",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-022",
+      "field": "deployment_strategy",
+      "group": "DELIVERY_OPERATIONS",
+      "text": "Quel modèle de déploiement doit être retenu ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PRESERVE_OBSERVED",
+          "GIT_TO_SERVER_GOVERNED",
+          "CONTAINER_GOVERNED",
+          "PLESK_GOVERNED",
+          "NO_DEPLOYMENT",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-023",
+      "field": "observability_posture",
+      "group": "DELIVERY_OPERATIONS",
+      "text": "Quel niveau d'observabilité faut-il préparer ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PRESERVE_EXISTING",
+          "VERIFY_AND_COMPLETE",
+          "ADD_MINIMUM_HEALTH",
+          "ADD_FULL_MONITORING",
+          "NONE",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-024",
+      "field": "backup_rollback_posture",
+      "group": "DELIVERY_OPERATIONS",
+      "text": "Quel niveau de sauvegarde/rollback faut-il préparer ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PRESERVE_EXISTING",
+          "VERIFY_AND_COMPLETE",
+          "REQUIRE_BEFORE_WRITE",
+          "NOT_APPLICABLE",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-025",
+      "field": "mcp_linkage",
+      "group": "MCP_ACCESS",
+      "text": "Le projet doit-il être lié au MCP gouverné ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "REUSE_EXISTING_BINDING",
+          "CREATE_BINDING",
+          "VERIFY_EXISTING_BINDING",
+          "NO_MCP",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-026",
+      "field": "mcp_transport",
+      "group": "MCP_ACCESS",
+      "text": "Quelles routes MCP doivent être préparées ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "DIRECT_MCP_TOKEN",
+          "SSH",
+          "BOTH",
+          "NO_MCP"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-027",
+      "field": "mcp_scope",
+      "group": "MCP_ACCESS",
+      "text": "Quel périmètre d'observation MCP faut-il préparer ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PROJECT_ONLY",
+          "PROJECT_AND_RUNTIME",
+          "FULL_GOVERNED_MAPPING",
+          "NO_DISCOVERY",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-028",
+      "field": "authority_envelope",
+      "group": "AUTHORITY_SECURITY",
+      "text": "Quel niveau d'autorité permanente peut être préparé pour Loop Engineering ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "READ_ONLY",
+          "SCOPED_GIT_WRITE",
+          "SCOPED_RUNTIME_WRITE",
+          "SCOPED_DEPLOY",
+          "SCOPED_FULL_LIFECYCLE",
+          "PER_ACTION_APPROVAL",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-029",
+      "field": "secret_provisioning",
+      "group": "AUTHORITY_SECURITY",
+      "text": "Comment les secrets nécessaires doivent-ils être fournis ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "REUSE_EXISTING_SECURE_SOURCE",
+          "OIDC_OR_SHORT_LIVED_IDENTITY",
+          "GITHUB_OR_GITLAB_SECRET",
+          "SERVER_SECRET_STORE",
+          "NO_SECRET_REQUIRED",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-030",
+      "field": "data_classification",
+      "group": "AUTHORITY_SECURITY",
+      "text": "Quelle classification de données s'applique ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PUBLIC",
+          "INTERNAL",
+          "CONFIDENTIAL",
+          "SENSITIVE_PERSONAL",
+          "REGULATED",
+          "MIXED",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-031",
+      "field": "compliance_profile",
+      "group": "AUTHORITY_SECURITY",
+      "text": "Quel profil de conformité doit être prévu ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "NONE",
+          "PERSONAL_DATA",
+          "FINANCIAL_SERVICES",
+          "KYC_AML",
+          "PCI_LIKE",
+          "MULTI_PROFILE",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-032",
+      "field": "test_posture",
+      "group": "QUALITY_RECOVERY",
+      "text": "Quel niveau de tests doit être préparé avant modification ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PRESERVE_EXISTING_TESTS",
+          "ADD_UNIT_ONLY",
+          "ADD_UNIT_AND_INTEGRATION",
+          "ADD_FULL_E2E",
+          "MAP_ONLY",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-033",
+      "field": "gap_action_policy",
+      "group": "QUALITY_RECOVERY",
+      "text": "Comment transformer les écarts observés en travail futur ?",
+      "applies_to": [
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "REUSE_ALIGN_CREATE_VERIFY",
+          "PREPARE_ONLY",
+          "PREPARE_AND_AUTO_EXECUTE_WITHIN_AUTHORITY",
+          "MAP_ONLY",
+          "DECIDE_LATER"
+        ]
+      },
+      "execution_authority_granted": false
+    },
+    {
+      "id": "AQ-034",
+      "field": "execution_timing",
+      "group": "QUALITY_RECOVERY",
+      "text": "Quand les tâches préparées peuvent-elles être exécutées ?",
+      "applies_to": [
+        "CREATE_NEW_REPOSITORY",
+        "ADOPT_EXISTING_REPOSITORY",
+        "MAP_EXISTING_PROJECT",
+        "LAB_EVOLUTION"
+      ],
+      "choice_source": {
+        "type": "STATIC",
+        "values": [
+          "PREPARE_ONLY_NOW",
+          "AUTO_WHEN_DEPENDENCIES_AND_AUTHORITY_READY",
+          "EXPLICIT_APPROVAL_PER_MUTATION",
+          "HOLD_ALL_EXECUTION"
+        ]
+      },
+      "execution_authority_granted": false
+    }
+  ],
+  "workflow_models": {
+    "REGULATORY_AFRICAFUNDS_GOVERNED_FLOW": [
+      "READ_AUTHORITIES",
+      "OBSERVE_GITHUB_HEAD",
+      "OBSERVE_MCP_RUNTIME_IF_RELEVANT",
+      "RECONCILE_CURRENT_STATE",
+      "BASELINE",
+      "SELECT_WORK",
+      "IMPACT_ANALYSIS",
+      "VERIFY_HEAD",
+      "SINGLE_WRITER_CLAIM",
+      "IMPLEMENT",
+      "VERIFY",
+      "REGRESSION_CHECK",
+      "PERSIST_STATE",
+      "COMMIT",
+      "VERIFY_REMOTE",
+      "DEPLOY_IF_AUTHORIZED",
+      "VERIFY_PRODUCTION_IF_APPLICABLE",
+      "SELECT_NEXT"
+    ],
+    "STANDARD_GOVERNED_FLOW": [
+      "READ_AUTHORITIES",
+      "OBSERVE",
+      "RECONCILE",
+      "SELECT_WORK",
+      "VERIFY_HEAD",
+      "IMPLEMENT",
+      "VERIFY",
+      "PERSIST_STATE",
+      "COMMIT",
+      "VERIFY_REMOTE"
+    ]
+  },
+  "workflow_model_git_sha": "1fcdc4db46cee81d9258faa9ae1971b824184b49",
+  "source_only_paths": [
+    ".github/workflows/governed-control-plane.yml",
+    ".github/ISSUE_TEMPLATE/governed-request.yml",
+    "docs/control-plane",
+    ".governance/control-plane-state",
+    ".governance/control-plane-db",
+    ".github/workflows/mcp-capability-refresh.yml",
+    "scripts/control_plane_mcp_capability_snapshot.py",
+    "scripts/test_control_plane_mcp_capability_snapshot.py",
+    "scripts/control_plane_server_inventory_collector.py",
+    "scripts/test_control_plane_server_inventory_collector.py",
+    "scripts/control_plane_server_inventory_facts.py",
+    "scripts/test_control_plane_server_inventory_facts.py",
+    "scripts/control_plane_server_recipe_capabilities.py",
+    "scripts/test_control_plane_server_recipe_capabilities.py",
+    "scripts/control_plane_github_secret_metadata.py",
+    "scripts/test_control_plane_github_secret_metadata.py"
+  ],
+  "entries": [
+    {
+      "category": "generic_core",
+      "path": "00_START_HERE.md",
+      "type": "blob",
+      "git_sha": "d7ade5c9e03e937e89ada02933062637e95dff41",
+      "source_only": false
+    },
+    {
+      "category": "generic_core",
+      "path": "GOVERNANCE.md",
+      "type": "blob",
+      "git_sha": "e7a0cac022347cc483f4a9214dd0eb69c292da43",
+      "source_only": false
+    },
+    {
+      "category": "generic_core",
+      "path": "AGENTS.md",
+      "type": "blob",
+      "git_sha": "8797a0da05dbefd8d112edf5b52c68bba1489488",
+      "source_only": false
+    },
+    {
+      "category": "generic_core",
+      "path": "SOURCE_OF_TRUTH.md",
+      "type": "blob",
+      "git_sha": "cd23a5b466f3027964f0be900e46d6e8f699444e",
+      "source_only": false
+    },
+    {
+      "category": "generic_core",
+      "path": "LOOP_ENGINEERING.md",
+      "type": "blob",
+      "git_sha": "984450c1db65c51eb9429938814b2427bf8fb3c7",
+      "source_only": false
+    },
+    {
+      "category": "generic_core",
+      "path": "DEFINITION_OF_DONE.md",
+      "type": "blob",
+      "git_sha": "c7601a46d72d0d0dab4f1dc297fa63fe29d7bacd",
+      "source_only": false
+    },
+    {
+      "category": "generic_core",
+      "path": "ASSUMPTIONS.md",
+      "type": "blob",
+      "git_sha": "7961b7d2ed0eca00f16fd6ec6b803e13daf270b3",
+      "source_only": false
+    },
+    {
+      "category": "generic_core",
+      "path": "CONSTRAINTS.md",
+      "type": "blob",
+      "git_sha": "f6ec30998d2a1c8112d462e9320369e95adeda58",
+      "source_only": false
+    },
+    {
+      "category": "generic_core",
+      "path": "RISKS.md",
+      "type": "blob",
+      "git_sha": "7f61ca9b465e36565bfe3ea5904a5d3cca563bdc",
+      "source_only": false
+    },
+    {
+      "category": "generic_core",
+      "path": "DEPENDENCIES.md",
+      "type": "blob",
+      "git_sha": "57070e4657ace0e7dfad3b4730bef5337a2b91c1",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "PROJECT_CONTEXT.md",
+      "type": "blob",
+      "git_sha": "8431cce0f37a36be5821df9abd020984a1cfc69a",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "STATUS.md",
+      "type": "blob",
+      "git_sha": "65dbbd250e0b0edf19f09d2876c432686eed19b0",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "SUIVI.md",
+      "type": "blob",
+      "git_sha": "3a7990a4aff45d49e7176e978c5ea932f6ae2571",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "TODO.md",
+      "type": "blob",
+      "git_sha": "a5f007de33d430ca2fdb7240814ca6f313b91a19",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "NEXT_ACTION.md",
+      "type": "blob",
+      "git_sha": "b9980e4b71f5140d4164e8c81edc3b7eb92b42c8",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "LOOP_STATE.md",
+      "type": "blob",
+      "git_sha": "5292f6570e6cf84aa2c2367243a99755b9095634",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "CURRENT_ITERATION.md",
+      "type": "blob",
+      "git_sha": "61a763382b86c01fc161b73f31d201c1799a6af0",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "WORK_LOG.md",
+      "type": "blob",
+      "git_sha": "535ba503b32014d5f7f0b32e60c44198e58652ef",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "HANDOFF.md",
+      "type": "blob",
+      "git_sha": "e168ec09dd3a99890029b4f463e1b199a1c33abb",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "CHANGELOG.md",
+      "type": "blob",
+      "git_sha": "0ff5523c7db85d6df6fa7be727bd1dba31ca8381",
+      "source_only": false
+    },
+    {
+      "category": "project_state_templates",
+      "path": "ACCEPTANCE_CRITERIA.md",
+      "type": "blob",
+      "git_sha": "8e0ac1bb27bea55a7a049d95d89f5780d10b3329",
+      "source_only": false
+    },
+    {
+      "category": "decision_and_architecture",
+      "path": "docs/ARCHITECTURE.md",
+      "type": "blob",
+      "git_sha": "0f20ce47c63f9b6960f53063f33b195a4c0198a7",
+      "source_only": false
+    },
+    {
+      "category": "decision_and_architecture",
+      "path": "docs/DECISIONS.md",
+      "type": "blob",
+      "git_sha": "b57f64696ba00b26fc1f950be097c87e4c0e53a7",
+      "source_only": false
+    },
+    {
+      "category": "decision_and_architecture",
+      "path": "docs/adr/ADR-0000-template.md",
+      "type": "blob",
+      "git_sha": "0fddda560249741c31ca81e539145a82adfa9c14",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/initialize_governance.py",
+      "type": "blob",
+      "git_sha": "71636a76c04a65c1045c78312fc5d340acc727d9",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/auto_bootstrap.py",
+      "type": "blob",
+      "git_sha": "c3960581310976c7621feeb82e6c202145edd3dc",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/finalize_bootstrap.py",
+      "type": "blob",
+      "git_sha": "ac3fea2d51997c3898164638e8bb03e694f1efec",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/governance_agent.py",
+      "type": "blob",
+      "git_sha": "8c5ea9a33eddd63926c6ed118be10b5ba5709bdb",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/validate_governance.py",
+      "type": "blob",
+      "git_sha": "4aaa0e2dd31a3f438cc60344ac4a62472d62adec",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_bootstrap_consistency.py",
+      "type": "blob",
+      "git_sha": "5d557320872914268d8d45f4d611e1d0fea7ad0f",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": ".github/workflows/governance-ci.yml",
+      "type": "blob",
+      "git_sha": "7e66da1fce55080c876c17a7c7022ba34cef8884",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": ".github/workflows/governance-auto-bootstrap.yml",
+      "type": "blob",
+      "git_sha": "a6ca82ee364f56f3e25671a7ee36d3c7a7a6a561",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_connection_intent.py",
+      "type": "blob",
+      "git_sha": "28beb733a0f623266c1c2b56377873c49fb10f52",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/adopt_existing_repository.py",
+      "type": "blob",
+      "git_sha": "4fb427d35686c2760fdb7241dcb8f50c5622f78a",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_entry_action_router.py",
+      "type": "blob",
+      "git_sha": "39780c02b21125e679f34699958e7afcbb6890d4",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_repository_adoption.py",
+      "type": "blob",
+      "git_sha": "058159c981d11a2ae64e1d01bc0f8fa53351f836",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_repository_scope.py",
+      "type": "blob",
+      "git_sha": "557a95d5bea9f284e67a8d9f966bfd05120c5b22",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/governed_request.py",
+      "type": "blob",
+      "git_sha": "3934f6700bb84e446d76d1b0c0379db7f8c8a0b6",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/control_plane_issue_bridge.py",
+      "type": "blob",
+      "git_sha": "0e73bb1ef0b2a4b1963788f0998cca2e5de12055",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_control_plane_request.py",
+      "type": "blob",
+      "git_sha": "e66a72dac25391c73f1a9b6984d942df68281697",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_control_plane_issue_contract.py",
+      "type": "blob",
+      "git_sha": "40c20a78b6bfa655978d354bff2855d83a51cdab",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/control_plane_create_repository.py",
+      "type": "blob",
+      "git_sha": "d6f407ff58c4d067c840747c62ac51053a725753",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_repository_creation_executor.py",
+      "type": "blob",
+      "git_sha": "5d89bbc6d1e21de1a78a6bbf7219f5363ca0adc1",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/local_governed_entry.py",
+      "type": "blob",
+      "git_sha": "c9a9bf442b60a20ba8babadcd3d7da9941e7bc8a",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/local_entry_issue_bridge.py",
+      "type": "blob",
+      "git_sha": "e98bc78aa2e22d8418f72e9dbf9027d4479c4d3f",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/local_entry_apply_baseline.py",
+      "type": "blob",
+      "git_sha": "8251a9c3e0d53e92067be7fbd6466d9fdc62694b",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_local_governed_entry.py",
+      "type": "blob",
+      "git_sha": "41c827434ea7caf162e8ca7704d92429f97b335d",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": ".github/workflows/governed-local-entry.yml",
+      "type": "blob",
+      "git_sha": "bc1d0b69863e2b4d4e1d0f4817edeeb132ac7739",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/mcp_repository_discovery.py",
+      "type": "blob",
+      "git_sha": "4b98274e6e3e39e020245fbcc3ff0e10329b4828",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/control_plane_local_command.py",
+      "type": "blob",
+      "git_sha": "a87664fe4962cc5aaa305896efb8e64e6dc66935",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/control_plane_provision_mcp_credential.py",
+      "type": "blob",
+      "git_sha": "632eb260e393f5a0a64d48bbfacd51acdc5ebfe0",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_mcp_credential_provisioning.py",
+      "type": "blob",
+      "git_sha": "be29439a1ba3f8069aed85daacc2df9278408be0",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/control_plane_upgrade_local_entry.py",
+      "type": "blob",
+      "git_sha": "25283bcdce27f3f4b9ffe22eafdfd955ad910f54",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_upgrade_session_head_migration.py",
+      "type": "blob",
+      "git_sha": "282292533e25128e129f3ea7bd76431f6c126e3c",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_mcp_both_ssh_fallback.py",
+      "type": "blob",
+      "git_sha": "52352952d9ad218c9fdd1c1dbb77ce0e04151520",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/control_plane_local_start.py",
+      "type": "blob",
+      "git_sha": "3e4cb89b1799a4fc3e0a95a04b621cfa70ca2836",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/governed_agent_continuity_relay.py",
+      "type": "blob",
+      "git_sha": "1790741d5f8c959b056bb15459c1879b38d39a62",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gacr_workflow_bridge.py",
+      "type": "blob",
+      "git_sha": "40cad7e30137f69916b4ad556d8a42ef2f3a60d6",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_governed_agent_continuity_relay.py",
+      "type": "blob",
+      "git_sha": "fc277e0efa8d2086690d660be64664d4997e8ab7",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": ".github/workflows/governed-agent-continuity-relay.yml",
+      "type": "blob",
+      "git_sha": "56f2a0e73b9fa3e845b60c3f811cf734532e5ad4",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gacr_agent_telemetry.py",
+      "type": "blob",
+      "git_sha": "9ffe73300f7c72b6c8cdec094026e0165e3ba93f",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_gacr_capacity_dispatch.py",
+      "type": "blob",
+      "git_sha": "1df152dbcb5d5d981f625c6f9df993598156d25c",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gacr_capacity_dispatch.py",
+      "type": "blob",
+      "git_sha": "dda617aff88dc68470c9c5c546c38359c36b96c5",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gacr_bridge_notifier.py",
+      "type": "blob",
+      "git_sha": "26a1d51abcc21521f851a7ed99ef1f8102f573b3",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_gacr_agent_telemetry.py",
+      "type": "blob",
+      "git_sha": "67f6f8222a3829a749493693fe378636ebe3e821",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gacr_auto_attach.py",
+      "type": "blob",
+      "git_sha": "dfb2b786f2bf8556cb3d25b7f99e5ec24e3da0e2",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_gacr_auto_attach.py",
+      "type": "blob",
+      "git_sha": "07dd8648cf4f806b597eeb3460a49c6125cc295d",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_gacr_presence_first.py",
+      "type": "blob",
+      "git_sha": "9dc35361da707c4db0e808db97ac7e66c7fb3867",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gacr_client_emitter.py",
+      "type": "blob",
+      "git_sha": "f52be25a7a6c3dacd79f55607a3c8f4c0c0ce7e1",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_gacr_client_emitter.py",
+      "type": "blob",
+      "git_sha": "0862d84e17ad14846a9365cb83d43cb06ab11139",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gacr_host_issue_ingress.py",
+      "type": "blob",
+      "git_sha": "161dadfff25086683a1f4c3dd41aa382d50bfbb9",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_gacr_host_issue_ingress.py",
+      "type": "blob",
+      "git_sha": "ab1a36f545e71648199952f569910468597287e2",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_gacr_host_issue_workflow.py",
+      "type": "blob",
+      "git_sha": "f201add83febe81a6d0aeb47671a32ca39c025cb",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gscc/__init__.py",
+      "type": "blob",
+      "git_sha": "91a6540015c74ca77b95cc4c27138e1e5b552c85",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gscc/protocol.py",
+      "type": "blob",
+      "git_sha": "a20e52b496fd06819211168677b3d2345c91fdd2",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gscc/transport.py",
+      "type": "blob",
+      "git_sha": "0aeb48c2e2acd66b7b158be43ba21d29a05d7e98",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gscc/session_endpoint.py",
+      "type": "blob",
+      "git_sha": "a2e9d7c667c2b59a8b9ebc89d3a5bf17241e4205",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gscc/instrumentation.py",
+      "type": "blob",
+      "git_sha": "86e525d441f933df161bfe3009eaac322162dbed",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gscc/gacr_compat.py",
+      "type": "blob",
+      "git_sha": "e600bf4dc7b59ec52177e912eb5dfecb18c85392",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gscc_observable_arrival.py",
+      "type": "blob",
+      "git_sha": "9f4bb47916ed9d9224ed6360b77764e6d37dcd51",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_gscc_observable_arrival.py",
+      "type": "blob",
+      "git_sha": "e84c725ac7f72151dab1feed1ad221201f197170",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": ".github/workflows/gscc-observable-arrival.yml",
+      "type": "blob",
+      "git_sha": "0084061deb24b5362789ba84872a96c9e5cae983",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gscc/admission.py",
+      "type": "blob",
+      "git_sha": "5bad83f3f6019a432e45e8b845e98f45f2c12858",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_gscc_admission.py",
+      "type": "blob",
+      "git_sha": "4131f276d924e4f2a429d7748a9d6353f811967a",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": ".github/workflows/gscc-admission-gate.yml",
+      "type": "blob",
+      "git_sha": "cbdd492d22dd37e216520c37f3c936bfa45c2b36",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gscc/capability_projection.py",
+      "type": "blob",
+      "git_sha": "609b6d9666f124feecf9681785af1c50c756bc0c",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/gscc_function_exposure_gate.py",
+      "type": "blob",
+      "git_sha": "789d3a4f54674e9d95f4f3017686d1cadb7d921f",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": "scripts/test_gscc_function_exposure_gate.py",
+      "type": "blob",
+      "git_sha": "a6c4a075f0a04b40d5248d6463b981ceebb211bd",
+      "source_only": false
+    },
+    {
+      "category": "automation",
+      "path": ".github/workflows/gscc-function-exposure-gate.yml",
+      "type": "blob",
+      "git_sha": "3412bb3305672eaab8d48a1a0913bde7449af9a4",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/bootstrap-state.json",
+      "type": "blob",
+      "git_sha": "64b4d77736c9528124cfb993390a28e7ef0554b6",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/canonical-memory/current.json",
+      "type": "blob",
+      "git_sha": "c647b3378310bc21654b3faf3b863f39ead00790",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/sessions/sessions.json",
+      "type": "blob",
+      "git_sha": "41529d8fced41c0aba4b8bf781043441e322e546",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/work/work-items.json",
+      "type": "blob",
+      "git_sha": "171a72591af0562635d10e187d5549b9787a81fc",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/work/claims.json",
+      "type": "blob",
+      "git_sha": "728be6d3c18809ce9202a4acd2635a2fcc6936c0",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/intake/cursor.json",
+      "type": "blob",
+      "git_sha": "812503de974dd4ac7d833135e99505900cc5b084",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/project-profile.json",
+      "type": "blob",
+      "git_sha": "7299118f1b2a253bcc1cc90cab4008427682b449",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/infrastructure-intent.json",
+      "type": "blob",
+      "git_sha": "c491ca8e6d473b63fee0886d9438cf414a2c03af",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/connection-intent-policy.json",
+      "type": "blob",
+      "git_sha": "35e3a85d8b57f24baaa7c2867089b1e5d65ef2ce",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/entry-action-policy.json",
+      "type": "blob",
+      "git_sha": "7b8d5ec8960aec436e5457fe4e0ce737178719d7",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/repository-scope-policy.json",
+      "type": "blob",
+      "git_sha": "3008e115f7665481f9be9448837a77db77989a4c",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/control-plane-policy.json",
+      "type": "blob",
+      "git_sha": "ef0c8db330c3590049e1ec21c76cbd4c4ca31cda",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/repository-creation-executor.json",
+      "type": "blob",
+      "git_sha": "72610463b821083d2b171ef0e5d889c2d3eab644",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/local-entry-policy.json",
+      "type": "blob",
+      "git_sha": "2021b529c5a2171d652a1971c6c86d9e5c64f652",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/local-entry/state.json",
+      "type": "blob",
+      "git_sha": "f9acd4f0fa19c141356e3cd6a8ef76e61a715c35",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/mcp-connection-policy.json",
+      "type": "blob",
+      "git_sha": "4d7488e97e436f24aedbc278322cc4926c5e1be7",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/mcp-binding.json",
+      "type": "blob",
+      "git_sha": "3ae228fa3462df7600f1d9f371e0cb1414e7a1bc",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/access-plan.json",
+      "type": "blob",
+      "git_sha": "452bff2d871ca1ef62bc1f8b3ccf620a7ef4981d",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/workflow-model.json",
+      "type": "blob",
+      "git_sha": "1fcdc4db46cee81d9258faa9ae1971b824184b49",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/agent-relay/config.json",
+      "type": "blob",
+      "git_sha": "b09c5319c7ecff92ca2f47945d9a5562b85bc275",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/agent-relay/takeovers.json",
+      "type": "blob",
+      "git_sha": "7a6020a32769248d99b5b8f2490542911157787f",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/agent-relay/beacons.json",
+      "type": "blob",
+      "git_sha": "8a79f2d7c9939e55534cc1640ebc10caab087eb5",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/agent-relay/correlations.json",
+      "type": "blob",
+      "git_sha": "8a79f2d7c9939e55534cc1640ebc10caab087eb5",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/agent-relay/dispatches.json",
+      "type": "blob",
+      "git_sha": "8a79f2d7c9939e55534cc1640ebc10caab087eb5",
+      "source_only": false
+    },
+    {
+      "category": "machine_governance",
+      "path": ".governance/agent-relay/forensics.json",
+      "type": "blob",
+      "git_sha": "8a79f2d7c9939e55534cc1640ebc10caab087eb5",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/AUTOMATION.md",
+      "type": "blob",
+      "git_sha": "e4cef8c015cb465bcf4d3d6d8ad32832613a8274",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/MULTI_AGENT_COORDINATION.md",
+      "type": "blob",
+      "git_sha": "8e4c8097992ae4cafd72a559e67000aa0c130954",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/INFORMATION_INTAKE.md",
+      "type": "blob",
+      "git_sha": "42b4b8799a7388cf27a6216956c12489f2c73237",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/PROJECT_PROFILES.md",
+      "type": "blob",
+      "git_sha": "2a024dd1e55fbd06002e73df0c796a7ba7c736c7",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/INFRASTRUCTURE_BOOTSTRAP.md",
+      "type": "blob",
+      "git_sha": "8329ca2b122895cc06c1fbb558c5ce1800b65a0c",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/CONNECTION_INTENT.md",
+      "type": "blob",
+      "git_sha": "a2b227e28b158dda6a900c2b7e7df9b4922e4bb6",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/ENTRY_ACTION_ROUTER.md",
+      "type": "blob",
+      "git_sha": "cd3cb5857ffcdbf92590e9884ba1a5d15cfd5460",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/EXISTING_REPOSITORY_ADOPTION.md",
+      "type": "blob",
+      "git_sha": "a73ce1532efec65d695937ac5962d00edee5c842",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/PROJECT_MAPPING.md",
+      "type": "blob",
+      "git_sha": "b896ab5317833f95525ed920549ed42e261cecaa",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/LAB_EVOLUTION.md",
+      "type": "blob",
+      "git_sha": "e29f901aa07600cbac6d0f655c4320c9f8eca96b",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/REPOSITORY_SCOPES.md",
+      "type": "blob",
+      "git_sha": "19b098fa9c46d895a59df0856a5829bff7b95824",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/CONTROL_PLANE.md",
+      "type": "blob",
+      "git_sha": "232e92881a93a5dd9379a263f0db9f0f3d348017",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/LOCAL_GOVERNED_ENTRY.md",
+      "type": "blob",
+      "git_sha": "188e5d3ae850a13923863958f3d9b8750deb2ba3",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/MCP_REPOSITORY_BINDING.md",
+      "type": "blob",
+      "git_sha": "8e5c2e65da15f1a3f6662599fc6d8636f20cc51f",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/GACR_AGENT_CONTINUITY_RELAY.md",
+      "type": "blob",
+      "git_sha": "4d333f84edc23bd0b7c4ea5f1ee293c2b131a1ad",
+      "source_only": false
+    },
+    {
+      "category": "coordination_docs",
+      "path": "docs/GACR_BRIDGE_CONTRACT.md",
+      "type": "blob",
+      "git_sha": "bd1559e5577d074eed4701a7ed1b195125b48095",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/entry-action.schema.json",
+      "type": "blob",
+      "git_sha": "b1f16455e56780c8b1160b87a2d83df5de08d153",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/repository-scope.schema.json",
+      "type": "blob",
+      "git_sha": "4f06761252be61d90234f3c13e17c217a5e71e5f",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/governed-request.schema.json",
+      "type": "blob",
+      "git_sha": "7bad3127b894029de2056154323d4f6e6ed6421e",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/execution-package.schema.json",
+      "type": "blob",
+      "git_sha": "9537516fba7f442f123be1047ae2c426415b3e40",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/governed-handoff.schema.json",
+      "type": "blob",
+      "git_sha": "91171bce76eb67737ae73321d2a99ebeb4d9d231",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/local-entry-request.schema.json",
+      "type": "blob",
+      "git_sha": "42d6e6252d7792ec16ce87d316755d9e233e9db7",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/local-entry-receipt.schema.json",
+      "type": "blob",
+      "git_sha": "164549f4e8a825e34ddfd5526cddde309169edc4",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/mcp-binding.schema.json",
+      "type": "blob",
+      "git_sha": "60e9ead39b55c152950a80241942a435a1af50fe",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/gacr-state.schema.json",
+      "type": "blob",
+      "git_sha": "e32f3af3e5f2d2ec3cb44f7216299d947817dd2d",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/gacr-telemetry.schema.json",
+      "type": "blob",
+      "git_sha": "b5abcdb13e8030a18414c25248bffcbbb6632cc3",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/gacr-bridge-contract.schema.json",
+      "type": "blob",
+      "git_sha": "f4fa5733eb8b90e1eccda08ab1a373d7d93aaa92",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/gscc-admission-envelope.schema.json",
+      "type": "blob",
+      "git_sha": "a9888e357e4463b5e81b6bb674751ffdcf2e50b3",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/gscc-admission-receipt.schema.json",
+      "type": "blob",
+      "git_sha": "27c0bde9c5fdd7c449e706dc694a012d3ba0259a",
+      "source_only": false
+    },
+    {
+      "category": "schemas",
+      "path": "schemas/gscc-access-grant.schema.json",
+      "type": "blob",
+      "git_sha": "5d65200d9c1d2da354c4922cb754782c1bfee08d",
+      "source_only": false
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".github/workflows/governed-control-plane.yml",
+      "type": "blob",
+      "git_sha": "4b73e840d4cdc2ec49feebb6919ccf47bd1abd4c",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".github/ISSUE_TEMPLATE/governed-request.yml",
+      "type": "blob",
+      "git_sha": "1d65bc01c06b0328d8b04c8273a510e8dc2e1758",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "docs/control-plane",
+      "type": "tree",
+      "git_sha": "3d4bf77ad287157eaa851522ebf7f3736b99e419",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state",
+      "type": "tree",
+      "git_sha": "e8c668fe21b9e83a6a2ea108316c52e356c96519",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "docs/control-plane/CASE1_REPLAY_LEDGER.md",
+      "type": "blob",
+      "git_sha": "de9b0c6ff4bed4bcda0fe7a06daf21c81e3e2db6",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/case1-replay.json",
+      "type": "blob",
+      "git_sha": "d190af3721760b451bee8f92136a4ed40b50eac8",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-db",
+      "type": "tree",
+      "git_sha": "ca411e11ac9b6c2fe892ea6cf6b2b54e5354a060",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "docs/control-plane/CANONICAL_ARCHITECTURE.md",
+      "type": "blob",
+      "git_sha": "724d59104ea713ad124255e63ebcaa5a943c7d5e",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/canonical-architecture.json",
+      "type": "blob",
+      "git_sha": "869dd8877dad9f0ae11e013b1982c2ce0623230e",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-db/003_canonical_authorities.sql",
+      "type": "blob",
+      "git_sha": "fe93ecbf59823073abc2aca704671771caee04d8",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-db/004_server_inventory_facts.sql",
+      "type": "blob",
+      "git_sha": "d04e043d461b690fd11fe2e924432bf1cdbf2726",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".github/workflows/mcp-capability-refresh.yml",
+      "type": "blob",
+      "git_sha": "2198717222c69bf336ab3b67074c347bbaf745de",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/control_plane_mcp_capability_snapshot.py",
+      "type": "blob",
+      "git_sha": "1f0c7ca590bc8dabb300ca66ac0f2a67b53f0ee7",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_control_plane_mcp_capability_snapshot.py",
+      "type": "blob",
+      "git_sha": "f6ef9325d38670c1826c639c9bb81069d9e28c59",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/control_plane_server_inventory_collector.py",
+      "type": "blob",
+      "git_sha": "34bdc072e38dd778d896502679acf810dffd9bcc",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_control_plane_server_inventory_collector.py",
+      "type": "blob",
+      "git_sha": "fc94f0aa680242b5567da0c0319fab93a4282773",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/control_plane_server_inventory_facts.py",
+      "type": "blob",
+      "git_sha": "61232e3d1543b5669b69c11d2eddc7ddfa7efdb7",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_control_plane_server_inventory_facts.py",
+      "type": "blob",
+      "git_sha": "00772111f9b541b0b9300064bf4765b4c67b3b7c",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/control_plane_server_recipe_capabilities.py",
+      "type": "blob",
+      "git_sha": "d03e8435e1e1a6a0645ecf2a116491566c455d33",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_control_plane_server_recipe_capabilities.py",
+      "type": "blob",
+      "git_sha": "920f771339ddda323e48dde40702bb3fcb1d2413",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/control_plane_github_secret_metadata.py",
+      "type": "blob",
+      "git_sha": "b507fa2554d01dd1613c12db89bc94c5fc77c34b",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_control_plane_github_secret_metadata.py",
+      "type": "blob",
+      "git_sha": "981e092d98178c8154cb65915c7b4388915e2e29",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "docs/control-plane/MCP_CAPABILITY_MODEL.md",
+      "type": "blob",
+      "git_sha": "fbf62f19aba215f443b5ec292a8a6825ed96f8f3",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/mcp-capability-snapshot.json",
+      "type": "blob",
+      "git_sha": "7836e23e9d17bfaa083ada3dde5b16429f3b3b44",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "docs/control-plane/ADAPTIVE_CHOICE_QUESTION_CATALOGUE.md",
+      "type": "blob",
+      "git_sha": "11a58ba477cb9d715b86afe61aead4f7a4276d72",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/adaptive-question-catalogue.json",
+      "type": "blob",
+      "git_sha": "a71ff61db74aa0951cb928213f199bbd0e301350",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/adaptive_question_planner.py",
+      "type": "blob",
+      "git_sha": "16fbfa05a6ca22b6c0d68ccdb81140bc2a6beadd",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_adaptive_question_catalogue.py",
+      "type": "blob",
+      "git_sha": "827c11c347ab0785028a2004d32d1bdea318ce68",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "docs/control-plane/KNOWLEDGE_BASE.md",
+      "type": "blob",
+      "git_sha": "8a0814ff745916d7725ddb6dd6e82bb94dd5bc32",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/knowledge-base.json",
+      "type": "blob",
+      "git_sha": "f00a4691ca681cfae147d1ad25f500b7ba3ad745",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_control_plane_knowledge_base.py",
+      "type": "blob",
+      "git_sha": "0da6b70cfaf35832a96c8f493716f365f28cdf45",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "docs/control-plane/SERVER_KNOWLEDGE_MODEL.md",
+      "type": "blob",
+      "git_sha": "0469bdac982dff992f505a373df6d69341750bf2",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/server-knowledge-model.json",
+      "type": "blob",
+      "git_sha": "fe933388c5555ed4197fbbfd387cace0327163a2",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/server-inventory-facts.json",
+      "type": "blob",
+      "git_sha": "ecc7d64b2b52b6f407bbee6e27a33a9f50cad19e",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_server_knowledge_model.py",
+      "type": "blob",
+      "git_sha": "e6890ea9247e33b3ef24f2c7ba4ce57538e7e068",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "docs/control-plane/IDENTITY_SECRET_LIFECYCLE.md",
+      "type": "blob",
+      "git_sha": "455599967debbdbb05554525d60c69d5c24f76e2",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/identity-secret-lifecycle.json",
+      "type": "blob",
+      "git_sha": "03503bc3ddad3809d038eac7f475d6591ede64bb",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_identity_secret_lifecycle.py",
+      "type": "blob",
+      "git_sha": "fe39124d6f070371adbb624d94e1fc4d9331bbfb",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "docs/control-plane/GOVERNED_EXECUTION_ENGINE.md",
+      "type": "blob",
+      "git_sha": "37b1fb26c2c619dfb7f3af701a4025768833e656",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/execution-registry.json",
+      "type": "blob",
+      "git_sha": "68d45767282edac72332b7e4c312b5c373f90d66",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "schemas/governed-execution-package.schema.json",
+      "type": "blob",
+      "git_sha": "d2104bb9394276cdf113dc919b4b75dd83131dbf",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/governed_execution_engine.py",
+      "type": "blob",
+      "git_sha": "75576bf441264a5c63c2980fce8d50ededc1576a",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/governed_execution_workflow_bridge.py",
+      "type": "blob",
+      "git_sha": "07e5e35826a98816c0307cf92c323afe7243e099",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_governed_execution_engine.py",
+      "type": "blob",
+      "git_sha": "accfb8e15377674382a3ade033bb993d5892d251",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_governed_execution_workflow.py",
+      "type": "blob",
+      "git_sha": "c747c0635436a156f510560b2a4c51802f556242",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".github/workflows/governed-execution.yml",
+      "type": "blob",
+      "git_sha": "f6d2796774b7e7737d0d1bf90d08b6910c75dbec",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/governed_execution_package_compiler.py",
+      "type": "blob",
+      "git_sha": "59b13811864363e3c3e49a145b9e4d6137fd2ee8",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_governed_execution_package_compiler.py",
+      "type": "blob",
+      "git_sha": "f8514efa9e1aa5ec496736cb1a77f7b74fc0b2d9",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/governed_project_execution_blueprint.py",
+      "type": "blob",
+      "git_sha": "d6a46a150f725abfa0fe2c32e7274abf7e962937",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/governed_loop_execution_adapter.py",
+      "type": "blob",
+      "git_sha": "9cfe648fce4f8eaa4abc48b1cd3a22eee473d34e",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_governed_project_execution_dag.py",
+      "type": "blob",
+      "git_sha": "739152afdd82e11e93e64bc1c1c2523280c1f7fc",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/control_plane_server_identity_secret_metadata.py",
+      "type": "blob",
+      "git_sha": "66c760628a0547341402fa42e25e97e61a9ce2cd",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_control_plane_server_identity_secret_metadata.py",
+      "type": "blob",
+      "git_sha": "f90ddcb4637102f971b9253c103557c7a1c46796",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/server-identity-secret-facts.json",
+      "type": "blob",
+      "git_sha": "ce9a5edb07651c0539987355f4aa03b40a6232dd",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-db/005_server_identity_secret_facts.sql",
+      "type": "blob",
+      "git_sha": "e35ef931ec885accbc4b9ed2149e7caca0bd8dab",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/control_plane_server_identity_secret_facts.py",
+      "type": "blob",
+      "git_sha": "98e44ae2ebb7932bc2c99f39b262f4e332db185b",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_control_plane_server_identity_secret_facts.py",
+      "type": "blob",
+      "git_sha": "1bb3edab63ac69873d4388f2013c4b62f6a6eaa9",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".github/workflows/server-identity-secret-refresh.yml",
+      "type": "blob",
+      "git_sha": "7122738272bea2e1d13d555d1e8c56cebe44e836",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/test_server_identity_secret_refresh_workflow.py",
+      "type": "blob",
+      "git_sha": "de08028693e8532ec4c937d1c9f19b50eb329dab",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "docs/control-plane/NAMESPACE_WORK_REGISTRY.md",
+      "type": "blob",
+      "git_sha": "31f7d9e44ea45680237b681d40902bf80f906632",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/namespace-work-registry.json",
+      "type": "blob",
+      "git_sha": "d65bcd18d82a74ce5b97334016987bc685513049",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "scripts/validate_namespace_work_registry.py",
+      "type": "blob",
+      "git_sha": "d6558f5f0932a7d57ea7520979384db537a2e292",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/gacr-sessions.json",
+      "type": "blob",
+      "git_sha": "ae379579e6bc8de2d78784e43a3fe2cf98cea0e9",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/gacr-claims.json",
+      "type": "blob",
+      "git_sha": "728be6d3c18809ce9202a4acd2635a2fcc6936c0",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/gacr-takeovers.json",
+      "type": "blob",
+      "git_sha": "b2cc7ead85355ea766a1209868e04826730964cf",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/gacr-beacons.json",
+      "type": "blob",
+      "git_sha": "f7fd00e8fd8f44a7d846198e853ab13c67cbfd3a",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/gacr-correlations.json",
+      "type": "blob",
+      "git_sha": "ff8504e8405b8b7cd74faff4952e0004d35c712c",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/gacr-dispatches.json",
+      "type": "blob",
+      "git_sha": "d06fff91f226adf0ded89d6d62aeb2fa9d40a292",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".governance/control-plane-state/gacr-forensics.json",
+      "type": "blob",
+      "git_sha": "4a5ba424535cd39017ae9d830f4c22f8b8e73d1c",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": ".github/workflows/gscc-function-route-selftest.yml",
+      "type": "blob",
+      "git_sha": "da0b3dd9f5fa89a1a4882a10c69f625dffd89aef",
+      "source_only": true
+    },
+    {
+      "category": "control_plane_source_only",
+      "path": "tests/fixtures/gscc-function-route-package.json",
+      "type": "blob",
+      "git_sha": "b255480388c67dbb2424d1d1734209f216a84fdb",
+      "source_only": true
+    },
+    {
+      "category": "local_entry_ui",
+      "path": ".github/ISSUE_TEMPLATE/governed-local-entry.yml",
+      "type": "blob",
+      "git_sha": "8d35ade00ad0590a2c674b02305f553bf9808040",
+      "source_only": false
+    }
+  ]
+}

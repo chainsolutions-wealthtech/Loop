@@ -23,3 +23,6 @@ jobs:
 
       - name: Compile Python checking script
         run: python3 -m py_compile scripts/check_repository.py
+
+      - name: Run repository admission tests offline
+        run: python3 -m unittest discover -s tests -v

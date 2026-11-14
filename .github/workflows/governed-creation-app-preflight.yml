@@ -1,0 +1,62 @@
+name: Governed creation - GitHub App preflight
+
+on:
+  workflow_dispatch:
+    inputs:
+      owner:
+        description: Compte GitHub cible
+        type: choice
+        options:
+          - chainsolutions-wealthtech
+          - Patricked-code
+          - Wealthtechinnovations
+        required: true
+      name:
+        description: Nom envisagé du dépôt
+        type: string
+        required: true
+      visibility:
+        description: Visibilité envisagée
+        type: choice
+        options:
+          - private
+          - public
+        default: private
+        required: true
+      template:
+        description: Modèle GitHub exact (owner/repository)
+        type: string
+        required: true
+      template_sha:
+        description: Commit attendu de la branche par défaut du modèle
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    # Never read the App key from a pull request or a non-default branch.
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: governed-creation-app-preflight
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify CUG and the requested installation without repository writes
+        env:
+          CREATION_APP_CLIENT_ID: ${{ vars.CREATION_APP_CLIENT_ID }}
+          CREATION_APP_PRIVATE_KEY: ${{ secrets.CREATION_APP_PRIVATE_KEY }}
+          TARGET_OWNER: ${{ inputs.owner }}
+          TARGET_NAME: ${{ inputs.name }}
+          TARGET_VISIBILITY: ${{ inputs.visibility }}
+          TEMPLATE: ${{ inputs.template }}
+          TEMPLATE_SHA: ${{ inputs.template_sha }}
+        run: |
+          python3 -m capsules.governed_repository_creation.adapters.github_app_preflight \
+            --app-id 5417646 --owner "$TARGET_OWNER" --name "$TARGET_NAME" \
+            --visibility "$TARGET_VISIBILITY" --template "$TEMPLATE" \
+            --template-sha "$TEMPLATE_SHA"

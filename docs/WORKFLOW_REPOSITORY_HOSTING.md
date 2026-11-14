@@ -1,0 +1,228 @@
+# Rattachement et préparation d’un hébergement applicatif
+
+**Capacité Loop** `LOOP-CAP-006` · **Travail** `LOOP-W16` · **État** planificateur appelable dans la branche de travail (`LOOP-W17`). Aucune exécution externe.
+**Précédent MCP** [issue #349](https://github.com/Patricked-code/MCP/issues/349), continuité historique `GD-U-CONT-20261030-ROOT-01`.
+
+## Ce que MCP possède et ce qu’il manque
+
+| Maillon | Existant vérifié | Limite à ne pas franchir par supposition |
+| --- | --- | --- |
+| Comptes, dépôts et hébergement | [Configuration des comptes](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/data/github-accounts.json), [GitRegistry](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/github/registry.ts) et version Git [du registre](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/data/mcp-git-registry.json). | Le registre en service répond encore **V1**. La simulation V2 en lecture seule compte 3 connexions, 6 dépôts projetés, 5 mappings et 1 migration en attente. Des chemins restent non vérifiés. Ce n’est ni la liste exhaustive des dépôts des trois comptes, ni un registre V2 activé. |
+| Question de rattachement | La [complétion du contexte](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/governedContext/contextCompletion.ts#L131-L169) alimente la page Git. Elle distingue absence, choix entre plusieurs mappings, présence et absence d’observation. | Un mapping présent n’est pas attesté. La [sélection de l’hébergement](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/provisioning/repositoryPleskHostingRoute.ts) exige un registre source V2, un mapping et un rattachement de production uniques et prêts. Zéro mapping dans un registre valide appelle la découverte, pas la création. La fonction a été retrouvée dans son module et ses tests, pas dans le parcours de la page Git. |
+| Découverte et création | [PR #350](https://github.com/Patricked-code/MCP/pull/350) fusionnée. [Prévisualisation Plesk S1/S2](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/tools/pleskProvisioning.ts), planificateur et exécuteur borné de sous-domaine, et [routes de provisionnement](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/server.ts#L508-L745) dans le code. | La prévisualisation ne crée rien. Le parcours Project Runtime lu est câblé **sur S1**. Le sous-domaine n’est pas le sous-chemin d’un hôte existant. La [PR #362](https://github.com/Patricked-code/MCP/pull/362), non fusionnée au relevé, propose de renforcer la validation des chemins avant réutilisation. |
+| Accès et admission | [PR #355](https://github.com/Patricked-code/MCP/pull/355), [#357](https://github.com/Patricked-code/MCP/pull/357) et [#361](https://github.com/Patricked-code/MCP/pull/361) fusionnées. Le code actuel possède un pont web Plesk vers les autorités existantes. Le [checkpoint historique](https://github.com/Patricked-code/MCP/issues/349#issuecomment-6529432146) distingue preuve d’accès GitHub App, admission OAuth/E3, tâche, session, claim, verrou, CI et revue. | La présence du code et une permission observée ne prouvent pas une opération Plesk admise. Le pilote GRT `/gouvern` conserve une garde qui refuse l’écriture sur le SHA lu, et [sa PR #351](https://github.com/Patricked-code/MCP/pull/351) reste brouillon. Ce refus explicite du pilote ne doit pas être généralisé à toutes les routes Plesk. |
+| Orchestration et recette | Le [blueprint universel](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/provisioning/universalDeploymentBlueprint.ts) compose source, hôte, build, déploiement, vérification et retour arrière. Le [run #39884876866](https://github.com/Patricked-code/MCP/actions/runs/39884876866) a bien déployé le **MCP** après #350. | Le blueprint ne lance aucune action, et l’adaptateur sous-chemin n’y est pas attesté. Aucun résultat bout en bout du parcours universel application n’a été établi par les sources examinées. |
+| Pilote Regulatory | Le [mandat du pilote #352](https://github.com/Patricked-code/MCP/pull/352) vise un sous-chemin sur S1. Le [manifeste produit au SHA lu](https://github.com/chainsolutions-wealthtech/Regulatory/blob/15933ff9ea1e9b83ae5c1cb23725169667af4969/deploy/mcp-target.json) vise un sous-domaine. [Issue produit #3](https://github.com/chainsolutions-wealthtech/Regulatory/issues/3), [PR #353](https://github.com/Patricked-code/MCP/pull/353) et [#364](https://github.com/Patricked-code/MCP/pull/364) documentent l’écart et l’admission. | Choix de cible et manifeste à réconcilier, puis adaptateur ingress adapté. Une prévisualisation de sous-domaine ne satisfait pas le mandat sous-chemin. |
+
+**Frontière de preuve.** Relevé du 13 novembre 2026. Source MCP `main` au SHA
+`c775709fdaf490eef2e1d43345e0b26e460a072c`. Le constat V1 est confirmé
+par une simulation runtime MCP réussie et sans écriture. Les autres états
+runtime et les permissions par dépôt ne se déduisent ni de ce relevé
+ni de la configuration des comptes. La [PR d’archives #356](https://github.com/Patricked-code/MCP/pull/356)
+conserve la filiation historique, pas l’autorité opérationnelle.
+
+### Deux difficultés concrètes à conserver dans l’historique
+
+- Le [checkpoint B3i](https://github.com/Patricked-code/MCP/blob/c7d7b44b1fedf1954e63b0d921f992362daae4b3/docs/history/governed-deploy-integral/13_20261029_EXECUTION_B3I_CONTINUITE.md) documente l’absence initiale de liaison prouvée entre la session web et le transport OAuth MCP. L’issue #349 documente ensuite le contrôle manquant du reçu de bootstrap dans le lecteur d’autorité et une tentative de correction. Ce sont des défauts historiques, pas un diagnostic d’échec de la route en production aujourd’hui. [Constat et correction historique](https://github.com/Patricked-code/MCP/issues/349#issuecomment-6513464182).
+- Stablecoin montre pourquoi l’absence d’un mapping **actif** ne doit pas lancer une création. Un checkout S2 a déjà été observé, mais le contrôle d’entrée n’a pas attesté l’activation du lien. L’étape correcte est la réconciliation du lien, pas un second checkout. [Test Loop](PROJECT_ANCHOR.md).
+
+## Questionnaire historique retrouvé dans Governed Repository Template
+
+Le questionnaire qui demande de **réutiliser ou créer** est une étape
+du parcours local de préparation, distincte de la page `/git` du MCP.
+Il est versionné dans [`scripts/local_governed_entry.py`](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/2f2333bd9f0724e9119f4de9ab72108ebf74b94e/scripts/local_governed_entry.py#L470-L516)
+et décrit dans [`docs/LOCAL_GOVERNED_ENTRY.md`](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/2f2333bd9f0724e9119f4de9ab72108ebf74b94e/docs/LOCAL_GOVERNED_ENTRY.md).
+C'est une source à réutiliser pour les questions, pas un second registre
+ni un exécuteur à installer dans Loop.
+
+| Étape du précédent | Rôle à conserver dans Loop |
+| --- | --- |
+| `Q_LINK_MCP`, puis plan de découverte en lecture seule | Séparer le choix de relier le projet à MCP de la découverte effective. Le précédent interroge le contexte, les domaines S1/S2 et les capacités. Le résultat oriente la décision, sans valider de rattachement. |
+| `Q_PRODUCTION_SERVER_SELECTION`, puis choix du domaine | Proposer les serveurs et domaines effectivement observés. Réutiliser un choix déjà attesté. Si la cible n'est pas décidée, conserver la décision ouverte. |
+| [`Q_DEPLOYMENT_MOUNT_MODE` et `Q_DEPLOYMENT_PATH`](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/2f2333bd9f0724e9119f4de9ab72108ebf74b94e/scripts/local_governed_entry.py#L622-L659) | Sur un hôte existant, distinguer la racine HTTP, la création d'un sous-chemin, la réutilisation d'un sous-chemin et le report. Le sous-chemin HTTP n'est ni une entrée DNS ni le chemin disque réel du checkout ou du runtime. |
+| [`derive_deployment_binding` et `deployment_operation_requirements`](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/2f2333bd9f0724e9119f4de9ab72108ebf74b94e/scripts/local_governed_entry.py#L238-L297) | Transformer les réponses en cible déclarée et exigences de capacité. Cette déclaration ne prouve pas l'existence du répertoire et ne vaut ni inscription dans GitRegistry ni autorisation de création ou de déploiement. |
+
+Dans Loop, le questionnaire reprend ces décisions **après** lecture du
+registre et découverte ciblée. Si la vue est non concluante, la prochaine
+étape est de compléter les preuves, pas de demander de créer. Une fois
+la décision établie, `LOOP-CAP-006` rend un plan ou un lien réutilisable.
+La jonction manquante est l'appel automatique à cette capacité suivi,
+le cas échéant, d'une opération admise puis d'une **relecture du lien
+par l'autorité**. Governed Deploy Application reçoit ce lien vérifié
+seulement si le déploiement est demandé. Voir [le point de reprise
+LOOP-W18](#jonction-vérifiée-et-point-dappel-du-workflow).
+
+## Contrat portable de Loop
+
+**Déclenchement.** Le parcours d’entrée, un opérateur ou le planificateur
+de déploiement appelle cette capacité lorsqu’il faut obtenir un
+rattachement vérifié. Une absence autoritaire déclenche une découverte.
+Une observation indisponible déclenche un diagnostic en lecture seule,
+sans la convertir en absence. L’inventaire des trois périmètres
+(`chainsolutions-wealthtech`, `Patricked-code`, `Wealthtechinnovations`)
+est une entrée, pas un droit. Ne pas ajouter une cible à tous les dépôts
+automatiquement.
+
+**Entrées du parcours complet.** Hôte et ID stable du dépôt, compte propriétaire, ID global
+retrouvé ou décision explicite de création, éventuel SHA source,
+environnement et rôle, choix opérateur s’il existe, observations versionnées
+des registres et de l’hébergement. Le compte GitHub propriétaire, l’identité
+de connexion et l’installation GitHub App sont trois champs distincts.
+
+| État observé | Transition | Sortie attendue |
+| --- | --- | --- |
+| Rattachement vérifié pour le rôle et l’environnement demandés | Réutiliser et relire l’ID global. | `REUSE_VERIFIED`, référence du lien. Aucune création. |
+| Plusieurs cibles valides ou contradiction | Choisir un rattachement ou réconcilier les sources. | `NEEDS_CHOICE` ou `CONFLICT`. Aucune sélection tacite. Plusieurs répertoires d’un projet ne sont pas une ambiguïté si leurs rôles les distinguent. |
+| Registre ou observation indisponible | Identifier la preuve ou l’autorité manquante. | `UNOBSERVED`. Aucun nouvel ID, répertoire ou déploiement. |
+| Pas de rattachement, répertoire candidat déjà présent | Attester le chemin réel, le rôle, le dépôt ou la provenance, l’absence de collision et les droits exacts. Préparer le rattachement. | `PLAN_ATTACH_EXISTING`. Écriture du lien seulement via l’autorité, suivie de sa relecture. |
+| Pas de rattachement ni de répertoire, absence prouvée | Demander les décisions nécessaires et préparer un plan. | `PLAN_PROVISION`. L’autorité approuve l’action et le périmètre avant toute création. |
+| Aucun hébergement demandé | Conserver le dépôt dans l’inventaire sans cible. | `NO_HOSTING_REQUESTED`. Aucun serveur forcé. |
+
+**Questions conditionnelles.** Projet existant ou nouveau si l’ID n’est
+pas connu. Rattacher ou créer si les deux sont possibles. S1 ou S2,
+environnement et rôle si indéterminés. Hébergement privé, sous-chemin,
+sous-domaine ou domaine si une exposition est nécessaire. Runtime,
+dépendances, branche/SHA et recette seulement si le périmètre va jusqu’au
+déploiement. Réutiliser les réponses déjà attestées.
+
+**Séquence d’exécution future.** Lire et résoudre → découvrir et qualifier →
+rendre le plan et ses preuves → obtenir l’admission par l’hôte → rattacher
+ou provisionner → attester le répertoire et relire le lien enregistré →
+remettre le résultat au cycle de déploiement applicatif **seulement si
+demandé et admis séparément**. Celui-ci fixe la révision, valide l’artefact,
+la santé et la possibilité de retour arrière. Un répertoire prêt ne vaut
+pas une application déployée. Réessayer la même demande doit retrouver
+l’opération et le lien existants. Si une étape a abouti mais que l’écriture
+ou la relecture du lien échoue, rendre un état à réconcilier et reprendre
+depuis les preuves, sans recréer le répertoire.
+
+**Interface.** Le cœur ne choisit pas une autorité et ne modifie rien.
+L’adaptateur fournit lecture du dépôt et de l’installation, lecture et
+écriture gouvernée du registre, découverte d’hébergement, exécution
+bornée et attestations. Les sorties incluent ID global, clé dépôt,
+références privées des cibles, état, décision ou preuve manquante,
+référence du plan et point de reprise. Ne jamais recopier de chemins
+privés ou de credentials dans Loop public.
+
+## Point d’appel Python
+
+`plan_repository_hosting(request, registry, directory=None)` compose la clé
+stable de `Repository` et le `ProjectAnchorIndex` existants. Exemple de
+réutilisation sur données fictives, sans accès réseau.
+
+```python
+from loop.project_anchor import (
+    AnchorStatus, DirectoryBinding, DirectoryRole, ProjectAnchor, ProjectAnchorIndex,
+)
+from loop.repository_entry import Repository
+from loop.repository_hosting import HostingRequest, RegistryObservation, plan_repository_hosting
+
+repo = Repository("github.com", "42", "example/app")
+target = DirectoryBinding(
+    repo.key, "S2", "production", "/fixture/app", DirectoryRole.RUNTIME,
+    AnchorStatus.VERIFIED_ACTIVE, "PROBE-FIXTURE", "LINK-FIXTURE", "a" * 40,
+)
+index = ProjectAnchorIndex((ProjectAnchor("WT-PROJECT-FIXTURE", (repo,), (target,)),))
+registry = RegistryObservation(index, "SNAPSHOT-FIXTURE", repo.key, complete_for_request=True)
+request = HostingRequest(repo, "production", DirectoryRole.RUNTIME)
+result = plan_repository_hosting(request, registry)
+assert result.status.value == "REUSE_VERIFIED"
+```
+
+Le prochain appel se fait avec les valeurs manquantes ou une observation
+complémentaire, pas avec une commande. Le registre doit être autoritaire,
+complet pour la demande et associé au dépôt exact. Il doit couvrir les
+rattachements utiles et les collisions avec les autres projets pour la
+cible demandée. Une projection publique ou un extrait partiel ne répond
+pas à cette condition. L’accès de la GitHub App et le SHA source ne sont
+pas évalués par ce point d’appel. Pour établir l’absence ou
+la provenance d’un répertoire, l’observateur doit couvrir le même dépôt,
+serveur, chemin réel, rôle et environnement, et fournir des références
+de preuve et de périmètre. Le code n’authentifie pas ces références.
+Les structures retournées peuvent contenir des chemins privés. L’appelant
+doit les conserver dans le périmètre autorisé.
+
+Une création est seulement **planifiée**. Les vérifications de capacité,
+droits d’exécution, collision DNS/ingress et admission sont du ressort de
+l’adaptateur et de l’hôte gouverné. Pour une cible existante, une demande
+d’exposition non attestée reste non vérifiée. Une intention de déploiement
+ne vaut jamais autorisation. L’identifiant de plan déduplique une intention
+stable, sans remplacer un journal d’exécution, une relecture ou un verrou.
+
+**Prochaine tranche.** Raccorder et valider un adaptateur en lecture seule
+avant toute intégration d’écriture ou de déploiement. Le planificateur
+est utilisable comme fonction Python, sans CLI ni branchement automatique
+du parcours d’entrée dans cette tranche.
+
+## Jonction vérifiée et point d’appel du workflow
+
+Relevé du 13 novembre 2026 sur `Patricked-code/MCP` au SHA
+`c775709fdaf490eef2e1d43345e0b26e460a072c`. GitHub, le checkout S1 et la
+révision du MCP en service correspondent, mais l’état global demeure
+`RECONCILIATION_REQUIRED`. Le test runtime du registre a relu une **source
+V1** et calculé une projection V2, sans l’écrire. Les 3 connexions,
+6 dépôts projetés, 5 mappings et 1 migration du rapport ne mesurent pas
+la couverture des dépôts visibles dans les trois comptes.
+
+| Fonction ou surface MCP | Ce qu’elle transmet | Point de vigilance |
+| --- | --- | --- |
+| [Inventaire GitHub en lecture seule](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/tools/githubInventory.ts#L8-L40) | `github_org_inventory` ou `github_account_inventory` rend les dépôts visibles par la connexion interrogée. | Couverture par propriétaire et identité de connexion à conserver séparément. La [synchronisation historique](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/github/inventory.ts#L116-L171) écrit des mappings, choisit S1 et construit un chemin par défaut pour un nouveau dépôt, puis déduplique par nom de dépôt. Ne pas l’utiliser comme simple lecture, preuve de chemin ou base d’une migration à plusieurs cibles. |
+| [Page Git et lecture des preuves](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/server.ts#L842-L858) | `/git?repository=owner/repo` appelle `readGitRegistryProjectEvidence`, puis `deriveRepositoryMappingCompletion`. La page distingue `RESOLVED`, `MISSING`, `AMBIGUOUS` et `UNOBSERVED`. | `RESOLVED` signifie qu’une seule ligne correspond, pas que le répertoire est vérifié. `MISSING` signifie qu’aucune ligne ne correspond dans la vue lue, pas que le répertoire est absent de S1 et S2. |
+| [Résolution de l’hébergement existant](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/provisioning/repositoryPleskHostingRoute.ts#L25-L57) | `resolveRepositoryPleskHostingRoute` exige une source V2, un mapping et un lien de production uniques, prêts et avec chemin réel attesté. Sans mapping dans un V2 valide, le résultat est une demande de découverte. | Ce sélecteur ne choisit pas entre plusieurs cibles et ne crée rien. Il n’est pas appelé par la route Git lue. Ne pas convertir la projection V2 en observation autoritaire. |
+| [Prévisualisation S1/S2](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/tools/pleskProvisioning.ts#L64-L81) et [routes d’exécution](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/server.ts#L510-L548) | Le sous-domaine peut faire l’objet d’un préflight Plesk sur S1/S2. Le parcours Project Runtime est câblé sur S1. Le POST Plesk passe par son admission distincte. | Pas de preuve ici d’un exécuteur Project Runtime S2 équivalent ni d’un parcours universel pour créer un sous-chemin. Le [blueprint](https://github.com/Patricked-code/MCP/blob/c775709fdaf490eef2e1d43345e0b26e460a072c/src/provisioning/universalDeploymentBlueprint.ts) ne lance ni création ni déploiement. |
+
+**Contrat de jointure.** Indexer par hôte et ID GitHub stable, avec le
+propriétaire GitHub en métadonnée distincte de la connexion et de
+l’installation App. Associer le dépôt au projet global, puis à zéro,
+une ou plusieurs cibles. Chaque cible a son serveur, environnement, rôle,
+chemin réel, état de preuve et référence du lien. Un dépôt inventorié
+peut n’avoir aucune cible. Un dépôt inaccessible à la connexion interrogée
+reste non observé. Un chemin calculé par défaut reste candidat.
+
+**Déclencheur proposé.** À l’arrivée sur un dépôt ou en préflight de
+Governed Deploy Application, appeler le parcours de rattachement quand
+une cible est nécessaire et qu’elle n’est pas déjà vérifiée pour le
+périmètre demandé. L’opérateur peut aussi l’appeler explicitement.
+L’adaptateur lit d’abord la cartographie. Si elle ne suffit pas, il
+présente les liens vérifiés, les candidats, les conflits et les éléments
+non observés, puis ne demande que la prochaine décision utile.
+
+- Un lien vérifié et compatible est réutilisé. Plusieurs cibles compatibles
+  demandent un choix entre les cibles effectivement observées.
+- Un répertoire déjà présent est proposé au rattachement si sa provenance,
+  son chemin réel et son périmètre sont établis. Aucun second répertoire
+  n’est créé pour compléter une fiche.
+- Un répertoire dont l’absence est attestée pour la cible exacte peut
+  faire l’objet d’un plan de création. Le choix S1/S2 ne découle jamais
+  d’un défaut de la synchronisation historique.
+- Une source indisponible, incomplète, candidate ou contradictoire déclenche
+  une demande de preuve ou une réconciliation, sans plan d’écriture.
+
+Le cœur `plan_repository_hosting` est déjà appelable. L’arrivée et le
+préflight doivent l’appeler via un adaptateur qui normalise les preuves
+en `RegistryObservation` et `DirectoryObservation`. Après une opération
+explicitement admise, le registre qui fait autorité doit rendre le même
+ID global depuis le dépôt et le chemin réel. Seul ce lien vérifié rejoint
+le cycle applicatif, avec une révision exacte, et uniquement si un
+déploiement a été demandé et admis. Le workflow GitHub **MCP Governed
+Deploy** met à jour MCP lui-même et ne remplace pas ce passage.
+
+**Point de reprise `LOOP-W18`.** Tester d’abord l’adaptateur de lecture
+et le déclenchement à l’arrivée ou en préflight sur un lien vérifié, un
+répertoire existant sans lien actif et une source V1 non concluante.
+Puis qualifier, séparément, le chemin d’écriture du lien et sa relecture.
+Cette note ne raccorde pas l’adaptateur, n’écrit pas le registre MCP et
+ne provisionne rien sur S1 ou S2.
+
+## Précédents d'entrée et d'exécution
+
+Voir [la chaîne sourcée GRT, Gouvern, UAES et Regulatory](REPOSITORY_LIFECYCLE_PRECEDENTS.md).
+L'entrée générale démarre à la sélection du dépôt, conformément à
+[l'addendum MCP du 28 octobre](https://github.com/Patricked-code/MCP/issues/349#issuecomment-6461939290).
+Le préflight d'une mise en service est un autre point d'appel. Il exige
+la révision à livrer. L'entrée et la découverte du rattachement ne
+dépendent pas de cette révision.
+
+[Carte de reprise du parcours complet](REPOSITORY_LIFECYCLE_MAP.md) —
+pour distinguer l'entrée historique à la sélection du dépôt et le
+sous-cycle de mise en service, et retrouver les précédents par étape.
