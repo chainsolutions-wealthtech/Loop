@@ -113,6 +113,13 @@
         "LOOP-EVT-20261114-001"
       ],
       "need": "Isoler la création gouvernée et son bootstrap de l'adoption, de l'entrée locale et du déploiement. Une demande doit être consultable et reprenable sans recréer le dépôt."
+    },
+    {
+      "id": "REQ-015",
+      "events": [
+        "LOOP-EVT-20261114-004"
+      ],
+      "need": "Préparer et tracer une demande de création avant session, afficher les choix conditionnels, les modèles et l'architecture documentaire dérivés de GRT."
     }
   ],
   "work": [
@@ -467,6 +474,21 @@
         "EV-029"
       ],
       "acceptance": "Hiérarchie sourcée, questionnaire et préflight CUG en lecture testés. Preuve nominative réelle et exécuteur GitHub de création restent à qualifier."
+    },
+    {
+      "id": "LOOP-W22",
+      "title": "Projeter le questionnaire GRT et journaliser la préparation web",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-015"
+      ],
+      "depends_on": [
+        "LOOP-W19"
+      ],
+      "evidence": [
+        "EV-030"
+      ],
+      "acceptance": "Catalogue et manifeste sourcés, choix conditionnels, journal reprenable, modèle et plan documentaires visibles. Aucun accès GitHub et aucune session d'exécution."
     }
   ]
 }

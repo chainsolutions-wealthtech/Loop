@@ -262,6 +262,14 @@
       "status": "observed",
       "reference": "tests/test_governed_creation_app_preflight.py",
       "summary": "Préflight simulé : App et installation exactes, JWT RS256 signé avec clé éphémère, jeton limité à la lecture, modèle, cible et révocation. Aucun appel GitHub dans les tests."
+    },
+    {
+      "id": "EV-030",
+      "kind": "offline_acceptance_tests",
+      "scope": "Interface locale Loop et projection GRT",
+      "status": "observed",
+      "reference": "tests/test_governed_creation_intake.py",
+      "summary": "Contrôle des entrées de manifeste, branchements conditionnels, historique SQLite et parcours HTTP local. Aucune création ni connexion externe."
     }
   ]
 }

@@ -215,7 +215,8 @@
     "LOOP-W18": "LOOP-SUJ-020",
     "LOOP-W19": "LOOP-SUJ-020",
     "LOOP-W20": "LOOP-SUJ-020",
-    "LOOP-W21": "LOOP-SUJ-020"
+    "LOOP-W21": "LOOP-SUJ-020",
+    "LOOP-W22": "LOOP-SUJ-020"
   },
   "tables": [
     [
@@ -525,7 +526,8 @@
       "event_topics": {
         "E01": "LOOP-SUJ-020",
         "E02": "LOOP-SUJ-020",
-        "E03": "LOOP-SUJ-020"
+        "E03": "LOOP-SUJ-020",
+        "E04": "LOOP-SUJ-020"
       }
     }
   ],

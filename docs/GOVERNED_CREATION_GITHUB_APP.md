@@ -68,3 +68,20 @@ le HEAD au préflight ne fige donc pas le modèle entre lecture et création.
 [Authentification GitHub App](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation)
 · [Génération depuis un modèle](https://docs.github.com/en/rest/repos/repos#create-a-repository-using-a-template)
 · [Déclenchement manuel](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow).
+
+## Séparer les opérations GitHub App
+
+Le dispatch d'un workflow déjà présent peut utiliser un jeton
+d'installation avec `Actions: write` si le workflow accepte
+`workflow_dispatch`. Modifier du code ou un registre versionné relève
+de `Contents: write`, et la modification de fichiers
+`.github/workflows/` exige aussi la permission Workflows applicable.
+PR, rulesets et administration se qualifient séparément. Ces capacités
+de la plateforme ne prouvent pas les droits effectifs de CUG.
+
+Le [parcours web](GOVERNED_CREATION_WEB_INTAKE.md) prépare les choix et
+le dossier sans demander de jeton et sans ouvrir de session d'exécution.
+Le MCP peut rester en dehors du premier raccordement.
+
+[Permissions GitHub App](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/choosing-permissions-for-a-github-app)
+· [Déclencher un workflow](https://docs.github.com/en/rest/actions/workflows#create-a-workflow-dispatch-event).

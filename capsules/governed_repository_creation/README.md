@@ -31,3 +31,7 @@ Le **MCP** est une interface d'appel possible pour des clients comme Loop. **CUG
 Un premier adaptateur optionnel de [préflight GitHub App](../../docs/GOVERNED_CREATION_GITHUB_APP.md)
 est livré séparément. Son signataire requiert OpenSSL, sans ajouter cette
 dépendance au noyau.
+
+L'[interface de préparation locale](../../docs/GOVERNED_CREATION_WEB_INTAKE.md)
+est optionnelle et n'ouvre pas de session d'exécution. Son journal et son
+catalogue restent séparés du noyau.

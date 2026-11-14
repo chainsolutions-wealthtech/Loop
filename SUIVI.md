@@ -167,3 +167,12 @@ depuis la PR. Aucun secret configuré et aucun changement GRT, MCP ou serveur.
 Reprise : obtenir la preuve nominative CUG sur le propriétaire et le modèle
 choisis. Aucun POST de génération avant qualification de l'exécution et de
 la corrélation durable. `LOOP-W18` reste inchangé.
+
+## Préparation web et architecture documentaire — LOOP-W22
+
+[Prototype local et inventaire GRT](docs/GOVERNED_CREATION_WEB_INTAKE.md). Journal dès l'ouverture,
+questionnaire conditionnel, deux modèles et plan documentaire. `EV-030`
+vérifie le journal et l'interface hors ligne. Aucune session d'exécution,
+création ou écriture externe. Reprendre par l'identité de l'appelant,
+le contrat de jonction au préflight CUG et la réconciliation du journal.
+`LOOP-W18` et le checkpoint global ne changent pas.
