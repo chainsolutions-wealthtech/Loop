@@ -57,3 +57,10 @@ Il représente `PREP-003` comme explicitement non résolu, sans requête
 d'infrastructure. Les tests du noyau sont distincts du rejeu historique
 GRT. Le port GitHub réel et l'exposition MCP ne sont pas encore raccordés.
 Suivi `LOOP-W20` et preuve hors ligne `EV-028`.
+
+## Premier raccordement GitHub App
+
+Le [guide de préflight](GOVERNED_CREATION_GITHUB_APP.md) documente la
+hiérarchie, les questions et la vérification de l'installation sur le compte
+cible. Ce diagnostic ne remplace pas le port `Gateway` d'écriture et ne
+fait pas avancer l'état de création. Suivi `LOOP-W21`, preuve `EV-029`.

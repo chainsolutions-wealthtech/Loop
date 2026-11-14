@@ -254,6 +254,14 @@
       "status": "observed",
       "reference": "tests/test_governed_repository_creation_capsule.py",
       "summary": "Tests hors ligne de soumission, stockage SQLite, reprise, réservation concurrente, corrélation et remise. Aucun dépôt réel créé et aucun service externe contacté."
+    },
+    {
+      "id": "EV-029",
+      "kind": "offline_acceptance_tests",
+      "scope": "Capsule de création gouvernée dans Loop",
+      "status": "observed",
+      "reference": "tests/test_governed_creation_app_preflight.py",
+      "summary": "Préflight simulé : App et installation exactes, JWT RS256 signé avec clé éphémère, jeton limité à la lecture, modèle, cible et révocation. Aucun appel GitHub dans les tests."
     }
   ]
 }

@@ -156,3 +156,14 @@ Reprise : choisir et qualifier un adaptateur d'exécution sur une cible
 isolée. Vérifier l'identité GitHub et la preuve de corrélation sans
 modifier GRT. Exposer ensuite le noyau comme outil si le test réel
 est concluant. L'hôte MCP et l'identité App restent des choix séparés.
+
+## Raccordement GitHub Apps en lecture seule — LOOP-W21
+
+[Hiérarchie et préflight CUG](docs/GOVERNED_CREATION_GITHUB_APP.md) ajoutés.
+`EV-029` couvre l'identité, l'installation, les permissions déclarées et la
+lecture du modèle sur données simulées. Le workflow candidat n'est pas actif
+depuis la PR. Aucun secret configuré et aucun changement GRT, MCP ou serveur.
+
+Reprise : obtenir la preuve nominative CUG sur le propriétaire et le modèle
+choisis. Aucun POST de génération avant qualification de l'exécution et de
+la corrélation durable. `LOOP-W18` reste inchangé.

@@ -27,3 +27,7 @@ Le port `Gateway` est volontairement fourni par l'hôte. Un adaptateur doit dém
 Le **MCP** est une interface d'appel possible pour des clients comme Loop. **CUG**, si l'identité et les droits sont validés, peut fournir à l'adaptateur l'autorité GitHub. Ces rôles sont distincts et optionnels pour le noyau. Le moteur de référence GRT et son modèle restent inchangés. Si un futur adaptateur utilise GRT ou un autre moteur, cela ne change ni l'interface de la capsule ni son point de remise.
 
 [Contrat de référence](../../docs/GOVERNED_REPOSITORY_CREATION_CONTRACT.md) · [Tests de la capsule](../../tests/test_governed_repository_creation_capsule.py)
+
+Un premier adaptateur optionnel de [préflight GitHub App](../../docs/GOVERNED_CREATION_GITHUB_APP.md)
+est livré séparément. Son signataire requiert OpenSSL, sans ajouter cette
+dépendance au noyau.

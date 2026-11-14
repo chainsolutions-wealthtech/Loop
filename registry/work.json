@@ -452,6 +452,21 @@
         "EV-028"
       ],
       "acceptance": "Noyau importable seul, demande durable, réservation et reprise sans second appel de création, remise sur preuves cohérentes. Port réel et exposition MCP hors de cette tranche."
+    },
+    {
+      "id": "LOOP-W21",
+      "title": "Relier la capsule à un préflight GitHub Apps nominatif",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-014"
+      ],
+      "depends_on": [
+        "LOOP-W20"
+      ],
+      "evidence": [
+        "EV-029"
+      ],
+      "acceptance": "Hiérarchie sourcée, questionnaire et préflight CUG en lecture testés. Preuve nominative réelle et exécuteur GitHub de création restent à qualifier."
     }
   ]
 }
