@@ -176,3 +176,16 @@ vérifie le journal et l'interface hors ligne. Aucune session d'exécution,
 création ou écriture externe. Reprendre par l'identité de l'appelant,
 le contrat de jonction au préflight CUG et la réconciliation du journal.
 `LOOP-W18` et le checkpoint global ne changent pas.
+
+## Jonction identité utilisateur et préflight CUG — LOOP-W23
+
+Le [parcours web](docs/GOVERNED_CREATION_WEB_INTAKE.md#jonction-de-la-demande-à-cug--loop-w23)
+peut associer un préflight à la demande complète, à l'ID GitHub stable
+du demandeur, à la révision et à l'empreinte du dossier. Le contrôle du
+compte précède tout appel à CUG. `EV-031` couvre la jonction sur fixtures.
+Le mode local reste autonome et n'affiche pas le bouton sans hôte
+authentifié. Aucun accès réel CUG, session d'exécution ou dépôt créé.
+
+Reprise : qualifier l'hôte d'authentification et de secrets, puis obtenir
+la preuve nominative CUG sur un dossier pilote en lecture. Le checkpoint
+global, `LOOP-W18`, GRT et MCP restent inchangés.

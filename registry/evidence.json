@@ -270,6 +270,14 @@
       "status": "observed",
       "reference": "tests/test_governed_creation_intake.py",
       "summary": "Contrôle des entrées de manifeste, branchements conditionnels, historique SQLite et parcours HTTP local. Aucune création ni connexion externe."
+    },
+    {
+      "id": "EV-031",
+      "kind": "offline_acceptance_tests",
+      "scope": "Loop — jonction de préparation et préflight CUG",
+      "status": "observed",
+      "reference": "tests/test_governed_creation_intake_preflight.py",
+      "summary": "Tests de l'identité hôte, des contrôles de compte et de révision, du résultat borné et de l'intégration HTTP locale. Aucun appel à GitHub ou CUG pendant les tests."
     }
   ]
 }

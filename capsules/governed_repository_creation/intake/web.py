@@ -3,12 +3,15 @@ from __future__ import annotations
 
 import argparse
 from html import escape
+import hashlib
+import hmac
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import re
 from secrets import token_urlsafe
 from urllib.parse import parse_qs, urlsplit
 
+from .preflight import GitHubActor
 from .planning import IntakeError, IntakeJournal, SOURCE, next_question, preview, project
 
 ACTOR = "local-preview"
@@ -54,7 +57,7 @@ def human(value):
     return LABELS.get(value, str(value).replace("_", " "))
 
 
-def page(events, request_id, csrf):
+def page(events, request_id, csrf, preflight_enabled=False):
     answers = project(events)
     question = next_question(answers)
     if question:
@@ -76,7 +79,17 @@ def page(events, request_id, csrf):
         )
     else:
         status = '<section><h2>Préparation terminée</h2><p>Plan consultable. Aucune session d’exécution ouverte.</p></section>'
+        if preflight_enabled:
+            status += (
+                f'<form method="post" action="/requests/{esc(request_id)}">'
+                + fields(csrf, revision=events[-1]["revision"])
+                + '<button name="command" value="preflight">Vérifier avec CUG</button></form>'
+            )
     plan = preview(answers)
+    evidence = next((e for e in reversed(events) if e["kind"] == "CUG_PREFLIGHT_RECORDED"), None)
+    if evidence:
+        status += '<details open><summary>Dernier préflight CUG</summary><pre>' + esc(
+            json.dumps(evidence, indent=2, ensure_ascii=False)) + '</pre></details>'
     history = "".join(
         f'<li>{esc(e["recorded_at"])} · r{esc(e["revision"])} · {esc(e["kind"])}'
         + (f' · {esc(e["question_id"])} — {esc(human(e.get("value")))}' if "question_id" in e else "") + '</li>'
@@ -84,14 +97,20 @@ def page(events, request_id, csrf):
     )
     return document("Préparer un dépôt gouverné",
                     f'<p>Demande <code>{esc(request_id)}</code> · {len(events)} événements</p>'
-                    '<p>Aperçu local. Aucun dépôt, déploiement ou accès externe n’est déclenché. Ne saisis aucun secret.</p>'
+                    '<p>Aperçu local. Aucun dépôt ni déploiement n’est déclenché. Ne saisis aucun secret.</p>'
                     + status + '<details open><summary>Historique</summary><ol>' + history + '</ol></details>'
                     + '<details><summary>Plan documentaire et workflows issus de GRT</summary><pre>'
                     + esc(json.dumps(plan, indent=2, ensure_ascii=False)) + '</pre></details>')
 
 
-def make_server(journal, port=0):
-    csrf = token_urlsafe(32)
+def make_server(journal, port=0, *, resolve_actor=None, preflight=None):
+    """Loopback server. An optional trusted host supplies verified actor context."""
+    if preflight is not None and resolve_actor is None:
+        raise ValueError("preflight requires an authenticated actor resolver")
+    csrf_secret = token_urlsafe(32).encode()
+
+    def csrf_for(key):
+        return hmac.new(csrf_secret, key.encode(), hashlib.sha256).hexdigest()
 
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
@@ -113,14 +132,31 @@ def make_server(journal, port=0):
             expected = self.server.server_port
             return host in {f"127.0.0.1:{expected}", f"localhost:{expected}"}
 
+        def actor_context(self):
+            if resolve_actor is None:
+                return ACTOR, None
+            try:
+                actor = resolve_actor(self)
+            except IntakeError:
+                actor = None
+            if not isinstance(actor, GitHubActor):
+                self.send_error(401)
+                return None
+            return actor.journal_key, actor
+
         def do_GET(self):
             if not self.check_host():
                 self.send_error(403)
                 return
+            context = self.actor_context()
+            if context is None:
+                return
+            key, actor = context
+            csrf = csrf_for(key)
             path = urlsplit(self.path).path
             if path == "/":
                 links = "".join(f'<li><a href="/requests/{esc(r)}">{esc(r)}</a></li>'
-                                for r in journal.recent(ACTOR))
+                                for r in journal.recent(key))
                 self.send_page(document("Registre des demandes",
                     '<p>Préparer un dépôt à partir de GRT et reprendre les réponses enregistrées.</p>'
                     '<form method="post" action="/requests">' + fields(csrf)
@@ -132,7 +168,8 @@ def make_server(journal, port=0):
                 self.send_error(404)
                 return
             try:
-                self.send_page(page(journal.get(ACTOR, match[1]), match[1], csrf))
+                self.send_page(page(journal.get(key, match[1]), match[1], csrf,
+                                    preflight_enabled=preflight is not None and actor is not None))
             except IntakeError as exc:
                 self.send_page(document("Reprise indisponible", f'<p>{esc(exc)}</p>'), 409)
 
@@ -140,6 +177,11 @@ def make_server(journal, port=0):
             if not self.check_host():
                 self.send_error(403)
                 return
+            context = self.actor_context()
+            if context is None:
+                return
+            key, actor = context
+            csrf = csrf_for(key)
             try:
                 size = int(self.headers.get("Content-Length", "0"))
                 if not 0 < size <= 4096 or self.headers.get_content_type() != "application/x-www-form-urlencoded":
@@ -148,19 +190,26 @@ def make_server(journal, port=0):
                 if any(len(items) != 1 for items in form.values()):
                     raise ValueError
                 values = {key: items[0] for key, items in form.items()}
-                if values.get("csrf") != csrf:
+                if not hmac.compare_digest(values.get("csrf", "").encode(), csrf.encode()):
                     self.send_error(403)
                     return
                 path = urlsplit(self.path).path
                 if path == "/requests":
-                    request_id = journal.start(ACTOR)
+                    request_id = journal.start(key)
                 else:
                     match = REQUEST.fullmatch(path)
-                    if not match or values.get("command") not in {"answer", "defer"}:
+                    if not match:
                         raise ValueError
                     request_id = match[1]
-                    journal.answer(ACTOR, request_id, int(values["revision"]), values["field"],
-                                   values.get("value", ""), defer=values["command"] == "defer")
+                    revision = int(values["revision"])
+                    command = values.get("command")
+                    if command == "preflight" and preflight is not None and actor is not None:
+                        preflight.run(actor, request_id, revision)
+                    elif command in {"answer", "defer"}:
+                        journal.answer(key, request_id, revision, values["field"],
+                                       values.get("value", ""), defer=command == "defer")
+                    else:
+                        raise ValueError
             except (KeyError, ValueError, UnicodeError):
                 self.send_error(400)
                 return

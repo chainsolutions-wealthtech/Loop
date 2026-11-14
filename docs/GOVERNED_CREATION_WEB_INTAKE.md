@@ -85,3 +85,34 @@ de remise, sans déclencher de génération ou de déploiement à la fin du form
 · [Catalogue adaptatif](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/3d9cba0223ec43003802635dd264f1f266b7b12b/.governance/control-plane-state/adaptive-question-catalogue.json)
 · [Modèle du registre GRT](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/3d9cba0223ec43003802635dd264f1f266b7b12b/docs/control-plane/DATA_MODEL.md)
 · [Modèles de workflow](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/3d9cba0223ec43003802635dd264f1f266b7b12b/.governance/workflow-model.json).
+
+## Jonction de la demande à CUG — LOOP-W23
+
+L'hôte authentifié peut injecter `resolve_actor` et le service `CUGPreflight`
+dans le prototype. Le résolveur est un adaptateur **côté serveur** : il ne
+doit pas faire confiance à un identifiant transmis dans un formulaire ni
+à un en-tête client. Le helper `verify_user` observe `GET /user` avec le
+jeton utilisateur déjà obtenu par l'hôte et prend l'ID GitHub stable.
+Il ne réalise pas lui-même l'échange OAuth. Le mode local par défaut
+garde son identité de démonstration et n'affiche pas le préflight.
+
+Le service exige la demande complète de cet acteur, la révision exacte et
+une décision positive de la politique hôte pour le compte demandé. Cette
+politique autorise une **observation**, pas une création. Le JWT CUG
+n'est demandé qu'après ces contrôles. L'adaptateur vérifie l'App 5417646,
+son installation et le modèle attendu. Le journal lie le résultat au SHA
+du dossier et à la révision observée. Un résultat tardif ne remplace pas
+une révision plus récente. Le rapport ne reçoit ni jeton, ni clé, ni
+réponse HTTP brute. Les diagnostics ne rendent jamais
+`creation_authorized: true`. Un `404` reste non concluant.
+
+Le dossier historique ouvert en mode démonstration n'est pas
+automatiquement réattribué à un utilisateur GitHub. Une éventuelle
+réconciliation de ces dossiers relève d'une décision explicite de
+l'hôte. Le modèle GRT est encore épinglé à la révision de la préparation.
+Si le HEAD courant a évolué, réconcilier les sources avant un autre essai.
+
+Prochain contrôle : fournir un résolveur de session et une politique
+d'accès réels sur un hôte de confiance, puis vérifier un préflight CUG
+nominatif en lecture. Ne pas confondre son résultat avec le droit
+d'ouvrir une session d'exécution ou de créer un dépôt.

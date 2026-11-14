@@ -191,3 +191,13 @@ class IntakeJournal:
             updated = self._load(db, actor, request_id)
             if next_question(project(updated)) is None:
                 self._append(db, actor, request_id, revision + 2, "PREPARATION_COMPLETE")
+
+    def record_preflight(self, actor, request_id, revision, digest, result):
+        """Internal write path for the trusted preflight service only."""
+        with self._write() as db:
+            events = self._load(db, actor, request_id)
+            if events[-1]["revision"] != revision:
+                raise IntakeError("La demande a changé pendant le préflight. Relance le contrôle.")
+            self._append(db, actor, request_id, revision + 1, "CUG_PREFLIGHT_RECORDED",
+                         prepared_revision=revision, dossier_sha256=digest, result=result)
+            return self._load(db, actor, request_id)[-1]

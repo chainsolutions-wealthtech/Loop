@@ -489,6 +489,23 @@
         "EV-030"
       ],
       "acceptance": "Catalogue et manifeste sourcés, choix conditionnels, journal reprenable, modèle et plan documentaires visibles. Aucun accès GitHub et aucune session d'exécution."
+    },
+    {
+      "id": "LOOP-W23",
+      "title": "Joindre la demande préparée à l’identité GitHub et au préflight CUG",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-014",
+        "REQ-015"
+      ],
+      "depends_on": [
+        "LOOP-W21",
+        "LOOP-W22"
+      ],
+      "evidence": [
+        "EV-031"
+      ],
+      "acceptance": "Identité stable fournie par l'hôte, contrôle d'accès par compte, preuve liée à la révision et au dossier, refus d'une preuve périmée, sans autoriser la création. Qualification réelle encore ouverte."
     }
   ]
 }
