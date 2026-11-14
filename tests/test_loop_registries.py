@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 import unittest
 
+from loop.canonical_registry import build, resolve
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -14,7 +16,7 @@ class LoopRegistryTest(unittest.TestCase):
     def test_requirements_work_and_evidence_references(self):
         registry = load('registry/work.json')
         proof = load('registry/evidence.json')['evidence']
-        events = (ROOT / 'memory/2026-11-13-loop.md').read_text(encoding='utf-8')
+        _, nodes, aliases = build(ROOT)
         requirements = {r['id'] for r in registry['requirements']}
         proof_ids = {p['id'] for p in proof}
         work_ids = {w['id'] for w in registry['work']}
@@ -23,7 +25,7 @@ class LoopRegistryTest(unittest.TestCase):
         self.assertEqual(len(requirements), len(registry['requirements']))
         for req in registry['requirements']:
             for e in req['events']:
-                self.assertIn(f'## {e} — ', events)
+                self.assertEqual(resolve(nodes, aliases, e)['kind'], 'event')
         graph = {}
         for work in registry['work']:
             self.assertIn(work['state'], registry['states'])

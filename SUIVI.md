@@ -129,3 +129,16 @@ Les E26 à E28 indexent la correction du déclencheur, les capacités et les
 limites de la mémoire. Prochaine action du sujet inchangée : tester
 l'adaptateur de lecture sur lien attesté, répertoire existant sans lien
 actif et vue non concluante. Aucun raccordement ni déploiement dans ce lot.
+
+## Contrat de création gouvernée de dépôt — LOOP-W19
+
+Le [contrat candidat](docs/GOVERNED_REPOSITORY_CREATION_CONTRACT.md) isole `CREATE_NEW_REPOSITORY`
+et le bootstrap automatique jusqu'à `HANDOFF_READY`, indépendamment du
+lieu d'exécution. L'entrée locale et `LOCAL_HANDOFF_READY` restent en aval.
+Rejeu hors ligne `EV-027` sur l'exécuteur GRT épinglé : deux tests réussis.
+La reprise après 409 ne fait qu'un POST dans ce scénario. Le manifeste
+actuel ne suffit pas à relier un dépôt homonyme à la même demande.
+
+Reprise propre à cette tranche : définir et tester l'adaptateur de
+corrélation durable avant d'exposer une exécution réelle. Le checkpoint
+global et `LOOP-W18` restent inchangés. Aucun outil MCP déployé.

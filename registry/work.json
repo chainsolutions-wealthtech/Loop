@@ -106,6 +106,13 @@
         "E17"
       ],
       "need": "Isoler la jonction dépôt, compte, projet global et cibles serveur. Fournir découverte et questions conditionnelles, puis plan distinct de rattachement ou de création, avec remise au déploiement seulement si demandé et autorisé."
+    },
+    {
+      "id": "REQ-014",
+      "events": [
+        "LOOP-EVT-20261114-001"
+      ],
+      "need": "Isoler la création gouvernée et son bootstrap de l'adoption, de l'entrée locale et du déploiement. Une demande doit être consultable et reprenable sans recréer le dépôt."
     }
   ],
   "work": [
@@ -416,6 +423,20 @@
         "EV-026"
       ],
       "acceptance": "Adaptateur de lecture testé sur un lien vérifié, un répertoire observé sans lien actif et une vue non concluante. Une projection V1/V2 ne suffit ni à vérifier un lien ni à prouver l’absence. Aucune écriture ni mise en service dans cette tranche."
+    },
+    {
+      "id": "LOOP-W19",
+      "title": "Spécifier et rejouer la création gouvernée jusqu’à HANDOFF_READY",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-014"
+      ],
+      "depends_on": [],
+      "evidence": [
+        "EV-021",
+        "EV-027"
+      ],
+      "acceptance": "Contrat portable et rejeu hors ligne du moteur de référence sur 409 après création et dépôt préexistant non reconnu. Suite distincte : adapter la corrélation durable et vérifier le contrat de l'outil avant toute création réelle."
     }
   ]
 }

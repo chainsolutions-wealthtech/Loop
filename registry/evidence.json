@@ -237,6 +237,15 @@
       "status": "observed",
       "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#regulatory--préparation-s1-et-limite-de-preuve",
       "summary": "Manifestes successifs sous-chemin et sous-domaine. Pilote et admission MCP non livrés bout en bout. Aucun déploiement Regulatory attesté."
+    },
+    {
+      "id": "EV-027",
+      "kind": "offline_acceptance_tests",
+      "scope": "Contrat Loop et exécuteur historique GRT",
+      "status": "observed",
+      "reference": "scripts/replay_governed_creation.py",
+      "sha": "3d9cba0223ec43003802635dd264f1f266b7b12b",
+      "summary": "Deux tests hors ligne sur l'exécuteur GRT épinglé et son état central : un seul POST puis reprise après 409 jusqu'au handoff sur preuves simulées, et refus d'un dépôt préexistant sans manifeste reconnu. Aucun appel externe."
     }
   ]
 }

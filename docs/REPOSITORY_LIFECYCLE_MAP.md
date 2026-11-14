@@ -105,3 +105,12 @@ MCP ne prouve pas celui de l'application.
    non concluante. Préserver le refus en cas de conflit.
 4. Ne pas modifier GitRegistry, S1/S2 ou Regulatory pour valider cette
    tranche. L'admission et le provisionnement restent une suite distincte.
+
+## 6. Branche créer un dépôt neuf — LOOP-W19
+
+Le [contrat portable de création](GOVERNED_REPOSITORY_CREATION_CONTRACT.md)
+isole la branche créer du premier maillon et le bootstrap automatique du
+deuxième, jusqu'à `HANDOFF_READY`. Il ne couvre ni le premier passage local
+jusqu'à `LOCAL_HANDOFF_READY` ni l'hébergement. Le contrat et le rejeu
+hors ligne sont suivis par `LOOP-W19` et `EV-027`. Le parcours d'hébergement
+et sa prochaine action `LOOP-W18` ne changent pas.
