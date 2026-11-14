@@ -120,6 +120,13 @@
         "LOOP-EVT-20261114-004"
       ],
       "need": "Préparer et tracer une demande de création avant session, afficher les choix conditionnels, les modèles et l'architecture documentaire dérivés de GRT."
+    },
+    {
+      "id": "REQ-016",
+      "events": [
+        "LOOP-EVT-20261114-006"
+      ],
+      "need": "Voir toutes les questions du dossier dans Loop, sélectionner les choix applicables et envoyer le lot en une fois sans écraser le journal existant."
     }
   ],
   "work": [
@@ -506,6 +513,23 @@
         "EV-031"
       ],
       "acceptance": "Identité stable fournie par l'hôte, contrôle d'accès par compte, preuve liée à la révision et au dossier, refus d'une preuve périmée, sans autoriser la création. Qualification réelle encore ouverte."
+    },
+    {
+      "id": "LOOP-W24",
+      "title": "Enregistrer les réponses groupées dans Loop",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-015",
+        "REQ-016"
+      ],
+      "depends_on": [
+        "LOOP-W22",
+        "LOOP-W23"
+      ],
+      "evidence": [
+        "EV-032"
+      ],
+      "acceptance": "Envoi groupé natif dans le journal existant. Réponses précédentes conservées, choix conditionnels, écritures atomiques, révisions concurrentes protégées. Le parcours séquentiel et le préflight distinct restent compatibles."
     }
   ]
 }

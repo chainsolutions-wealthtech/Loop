@@ -217,7 +217,8 @@
     "LOOP-W20": "LOOP-SUJ-020",
     "LOOP-W21": "LOOP-SUJ-020",
     "LOOP-W22": "LOOP-SUJ-020",
-    "LOOP-W23": "LOOP-SUJ-020"
+    "LOOP-W23": "LOOP-SUJ-020",
+    "LOOP-W24": "LOOP-SUJ-020"
   },
   "tables": [
     [
@@ -529,7 +530,8 @@
         "E02": "LOOP-SUJ-020",
         "E03": "LOOP-SUJ-020",
         "E04": "LOOP-SUJ-020",
-        "E05": "LOOP-SUJ-020"
+        "E05": "LOOP-SUJ-020",
+        "E06": "LOOP-SUJ-020"
       }
     }
   ],

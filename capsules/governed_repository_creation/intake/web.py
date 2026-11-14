@@ -7,15 +7,20 @@ import hashlib
 import hmac
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
+from pathlib import Path
 import re
 from secrets import token_urlsafe
 from urllib.parse import parse_qs, urlsplit
 
 from .preflight import GitHubActor
-from .planning import IntakeError, IntakeJournal, SOURCE, next_question, preview, project
+from .planning import (
+    BatchValidationError, IntakeError, IntakeJournal, QUESTIONS, SOURCE, next_question, preview, project,
+)
+from .web_batch import ASSET, batch_body
 
 ACTOR = "local-preview"
-REQUEST = re.compile(r"/requests/([0-9a-f-]{36})")
+REQUEST = re.compile(r"/requests/([0-9a-f-]{36})(/batch)?")
+BATCH_MAX_BYTES = 48 * 1024
 LABELS = {
     "STANDARD_GOVERNED_FLOW": "Standard gouverné",
     "REGULATORY_AFRICAFUNDS_GOVERNED_FLOW": "Renforcé, issu de Regulatory / AfricaFunds",
@@ -30,6 +35,11 @@ h1,h2{line-height:1.15}button,input,select{font:inherit;padding:.55rem;max-width
 button{background:#174c60;color:white;border:0;border-radius:.3rem;margin:.6rem .35rem 0 0}
 label,summary{font-weight:650}code,li{overflow-wrap:anywhere}small{color:#465970}
 a{color:#075166}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+.batch-question{margin:1rem 0}
+.batch-question input,.batch-question select{box-sizing:border-box;width:min(100%,32rem)}
+.batch-question select:disabled{background:#edf1f4;color:#526474}
+.batch-question.inactive label{color:#526474}
+.batch-error{color:#812522}
 """
 
 
@@ -71,7 +81,9 @@ def page(events, request_id, csrf, preflight_enabled=False):
         defer = '' if question["required"] else '<button name="command" value="defer">Reporter</button>'
         status = (
             f'<section><small>{esc(question["group"])} · {esc(question["id"])}</small>'
-            f'<h2>Question suivante</h2><form method="post" action="/requests/{esc(request_id)}">'
+            f'<h2>Question suivante</h2>'
+            f'<p><a href="/requests/{esc(request_id)}/batch">Ouvrir le questionnaire groupé</a></p>'
+            f'<form method="post" action="/requests/{esc(request_id)}">'
             + fields(csrf, revision=events[-1]["revision"], field=question["field"])
             + f'<p><label for="value">{esc(question["text"])}</label></p>{control}'
             + '<p><button name="command" value="answer">Enregistrer et continuer</button>'
@@ -108,6 +120,7 @@ def make_server(journal, port=0, *, resolve_actor=None, preflight=None):
     if preflight is not None and resolve_actor is None:
         raise ValueError("preflight requires an authenticated actor resolver")
     csrf_secret = token_urlsafe(32).encode()
+    batch_script = Path(__file__).with_name("intake-batch.js").read_bytes()
 
     def csrf_for(key):
         return hmac.new(csrf_secret, key.encode(), hashlib.sha256).hexdigest()
@@ -116,16 +129,31 @@ def make_server(journal, port=0, *, resolve_actor=None, preflight=None):
         def log_message(self, *args):
             pass
 
-        def send_page(self, text, status=200):
-            data = text.encode("utf-8")
+        def send_content(self, data, content_type, status=200, *, batch=False):
             self.send_response(status)
-            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Type", content_type)
             self.send_header("Cache-Control", "no-store")
+            self.send_header("X-Content-Type-Options", "nosniff")
             self.send_header("Content-Security-Policy",
-                             "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'")
+                             "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; frame-ancestors 'none'"
+                             + ("; script-src 'self'" if batch else ""))
             self.send_header("Content-Length", str(len(data)))
             self.end_headers()
             self.wfile.write(data)
+
+        def send_page(self, text, status=200, *, batch=False):
+            self.send_content(text.encode("utf-8"), "text/html; charset=utf-8", status, batch=batch)
+
+        def send_batch(self, events, request_id, csrf, status=200, **correction):
+            hidden = fields(csrf, revision=events[-1]["revision"])
+            body = batch_body(events, request_id, hidden, human, **correction)
+            self.send_page(document("Questionnaire groupé", body), status, batch=True)
+
+        def redirect_request(self, request_id):
+            self.send_response(303)
+            self.send_header("Location", f"/requests/{request_id}")
+            self.send_header("Cache-Control", "no-store")
+            self.end_headers()
 
         def check_host(self):
             host = self.headers.get("Host", "")
@@ -163,13 +191,23 @@ def make_server(journal, port=0, *, resolve_actor=None, preflight=None):
                     + '<button>Ouvrir une demande</button></form><h2>Demandes récentes</h2><ul>'
                     + links + f'</ul><small>Catalogue GRT {esc(SOURCE["manifest_version"])}</small>'))
                 return
+            if path == ASSET:
+                self.send_content(batch_script, "text/javascript; charset=utf-8")
+                return
             match = REQUEST.fullmatch(path)
             if not match:
                 self.send_error(404)
                 return
             try:
-                self.send_page(page(journal.get(key, match[1]), match[1], csrf,
-                                    preflight_enabled=preflight is not None and actor is not None))
+                events = journal.get(key, match[1])
+                if match[2]:
+                    if next_question(project(events)) is None:
+                        self.redirect_request(match[1])
+                    else:
+                        self.send_batch(events, match[1], csrf)
+                else:
+                    self.send_page(page(events, match[1], csrf,
+                                        preflight_enabled=preflight is not None and actor is not None))
             except IntakeError as exc:
                 self.send_page(document("Reprise indisponible", f'<p>{esc(exc)}</p>'), 409)
 
@@ -182,28 +220,42 @@ def make_server(journal, port=0, *, resolve_actor=None, preflight=None):
                 return
             key, actor = context
             csrf = csrf_for(key)
+            path = urlsplit(self.path).path
+            match = REQUEST.fullmatch(path)
+            batch = bool(match and match[2])
             try:
                 size = int(self.headers.get("Content-Length", "0"))
-                if not 0 < size <= 4096 or self.headers.get_content_type() != "application/x-www-form-urlencoded":
+                if (not 0 < size <= (BATCH_MAX_BYTES if batch else 4096)
+                        or self.headers.get_content_type() != "application/x-www-form-urlencoded"):
                     raise ValueError
-                form = parse_qs(self.rfile.read(size).decode(), keep_blank_values=True, max_num_fields=8)
+                form = parse_qs(self.rfile.read(size).decode(), keep_blank_values=True,
+                                max_num_fields=len(QUESTIONS) + 2 if batch else 8,
+                                errors="strict" if batch else "replace")
                 if any(len(items) != 1 for items in form.values()):
                     raise ValueError
                 values = {key: items[0] for key, items in form.items()}
                 if not hmac.compare_digest(values.get("csrf", "").encode(), csrf.encode()):
                     self.send_error(403)
                     return
-                path = urlsplit(self.path).path
                 if path == "/requests":
                     request_id = journal.start(key)
                 else:
-                    match = REQUEST.fullmatch(path)
                     if not match:
                         raise ValueError
                     request_id = match[1]
                     revision = int(values["revision"])
                     command = values.get("command")
-                    if command == "preflight" and preflight is not None and actor is not None:
+                    if batch:
+                        submitted = {k: v for k, v in values.items() if k not in {"csrf", "revision"}}
+                        try:
+                            journal.answer_batch(key, request_id, revision, submitted)
+                        except BatchValidationError as exc:
+                            events = journal.get(key, request_id)
+                            if events[-1]["revision"] != revision:
+                                raise IntakeError("La demande a changé. Rouvre-la avant d’envoyer le lot.") from exc
+                            self.send_batch(events, request_id, csrf, 422, submitted=submitted, error=exc)
+                            return
+                    elif command == "preflight" and preflight is not None and actor is not None:
                         preflight.run(actor, request_id, revision)
                     elif command in {"answer", "defer"}:
                         journal.answer(key, request_id, revision, values["field"],
@@ -216,10 +268,7 @@ def make_server(journal, port=0, *, resolve_actor=None, preflight=None):
             except IntakeError as exc:
                 self.send_page(document("Réponse non enregistrée", f'<p>{esc(exc)}</p>'), 409)
                 return
-            self.send_response(303)
-            self.send_header("Location", f"/requests/{request_id}")
-            self.send_header("Cache-Control", "no-store")
-            self.end_headers()
+            self.redirect_request(request_id)
 
     return ThreadingHTTPServer(("127.0.0.1", port), Handler)
 

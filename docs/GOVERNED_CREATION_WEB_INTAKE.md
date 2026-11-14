@@ -116,3 +116,33 @@ Prochain contrôle : fournir un résolveur de session et une politique
 d'accès réels sur un hôte de confiance, puis vérifier un préflight CUG
 nominatif en lecture. Ne pas confondre son résultat avec le droit
 d'ouvrir une session d'exécution ou de créer un dépôt.
+
+## Envoi groupé dans Loop — LOOP-W24
+
+Une demande inachevée donne accès à **Ouvrir le questionnaire groupé**.
+Loop présente les questions restantes sur une page, par thème, et
+affiche en lecture seule les réponses déjà enregistrées. Les options
+structurées viennent du même catalogue que le parcours séquentiel.
+Les suggestions de cadrage ne sont pas présélectionnées. Le nom du dépôt
+et les réponses libres restent saisissables. Une réponse facultative vide
+ou explicitement reportée reste à trancher, même si la préparation est
+terminée. Les questions conditionnelles sont signalées et désactivées
+dans le navigateur quand elles ne s'appliquent pas. Le serveur applique
+les mêmes conditions, y compris sans JavaScript.
+
+**Envoyer toutes les réponses** enregistre les choix applicables dans
+le journal de la même demande, dans l'ordre du catalogue et dans une
+seule transaction SQLite. L'acteur, la révision, les champs et les choix
+sont contrôlés avant l'enregistrement. Si la demande a changé depuis
+l'ouverture du formulaire, le lot est refusé et la demande doit être
+rouverte. Si un choix est invalide à révision inchangée, le formulaire
+est réaffiché pour correction sans écrire le lot. Il n'y a ni
+import JSON manuel ni migration du journal.
+
+Le parcours séquentiel reste disponible et produit les mêmes événements.
+Le plan et l'empreinte d'une préparation sont équivalents pour les mêmes
+réponses. Après l'envoi, Loop revient au dossier et indique que la
+préparation est terminée. Le préflight CUG reste une action séparée,
+disponible seulement dans le mode prévu à la section précédente.
+Aucune création GitHub ou Plesk, inscription GitRegistry, session
+d'exécution ou opération de déploiement n'est déclenchée par le lot.

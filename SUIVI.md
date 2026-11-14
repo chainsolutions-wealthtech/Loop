@@ -189,3 +189,18 @@ authentifié. Aucun accès réel CUG, session d'exécution ou dépôt créé.
 Reprise : qualifier l'hôte d'authentification et de secrets, puis obtenir
 la preuve nominative CUG sur un dossier pilote en lecture. Le checkpoint
 global, `LOOP-W18`, GRT et MCP restent inchangés.
+
+## Envoi groupé dans Loop — LOOP-W24
+
+Le [questionnaire groupé](docs/GOVERNED_CREATION_WEB_INTAKE.md#envoi-groupé-dans-loop--loop-w24)
+reprend la demande et le journal existants. Les réponses déjà enregistrées
+restent intactes. Le lot valide se termine par une seule préparation
+complète et laisse le préflight CUG distinct. `EV-032` couvre les
+parcours, la validation et la concurrence sur dossiers de test.
+Aucune soumission de choix à la place du demandeur. Aucun déploiement.
+
+Reprise : ouvrir la demande pilote dans l'interface locale, vérifier
+les décisions et les soumettre par le bouton groupé. Après une
+soumission effective, reprendre la qualification de l'hôte et de
+l'identité CUG de `LOOP-W23`. L'hébergement et le rapprochement
+dépôt–serveur–répertoire restent dans `LOOP-W18`.

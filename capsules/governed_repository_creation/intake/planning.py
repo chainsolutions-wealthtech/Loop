@@ -41,19 +41,40 @@ class IntakeError(Exception):
     pass
 
 
+class BatchValidationError(IntakeError):
+    """The lot is correctable at the submitted revision."""
+
+
+CONDITIONS = {
+    "mcp_transport": ("mcp_linkage", ("REUSE_EXISTING_BINDING", "CREATE_BINDING", "VERIFY_EXISTING_BINDING")),
+    "mcp_scope": ("mcp_linkage", ("REUSE_EXISTING_BINDING", "CREATE_BINDING", "VERIFY_EXISTING_BINDING")),
+    "production_server_selection": ("server_binding_mode", ("EXISTING_SINGLE", "EXISTING_MULTI", "NONE_PLAN_NEW")),
+    "dns_tls_posture": ("domain_posture", ("REUSE_EXISTING", "CREATE_NEW", "REUSE_AND_ADD")),
+}
+
+
 def visible(question, answers):
-    field = question["field"]
-    if field in {"mcp_transport", "mcp_scope"}:
-        return answers.get("mcp_linkage") in {
-            "REUSE_EXISTING_BINDING", "CREATE_BINDING", "VERIFY_EXISTING_BINDING"
-        }
-    if field == "production_server_selection":
-        return answers.get("server_binding_mode") in {
-            "EXISTING_SINGLE", "EXISTING_MULTI", "NONE_PLAN_NEW"
-        }
-    if field == "dns_tls_posture":
-        return answers.get("domain_posture") in {"REUSE_EXISTING", "CREATE_NEW", "REUSE_AND_ADD"}
-    return True
+    rule = CONDITIONS.get(question["field"])
+    return rule is None or answers.get(rule[0]) in rule[1]
+
+
+def validated_value(question, value, defer):
+    if defer:
+        if question["required"]:
+            raise IntakeError("Ce choix est requis pour préparer la création.")
+        return None
+    if not isinstance(value, str):
+        raise IntakeError("Format de réponse invalide.")
+    if question["field"] == "name":
+        if not re.fullmatch(r"[A-Za-z0-9_.-]{1,100}", value) or value in {".", ".."}:
+            raise IntakeError("Nom de dépôt invalide.")
+    elif question.get("limit"):
+        value = value.strip()
+        if not value or len(value) > question["limit"] or any(ord(c) < 32 for c in value):
+            raise IntakeError("Réponse texte invalide.")
+    elif value not in question["choices"]:
+        raise IntakeError("Choix non disponible.")
+    return value
 
 
 def next_question(answers):
@@ -163,34 +184,52 @@ class IntakeJournal:
                 (actor,),
             )]
 
+    def _append_answer(self, db, actor, request_id, revision, question, value):
+        data = {"field": question["field"], "question_id": question["id"]}
+        if value is None:
+            self._append(db, actor, request_id, revision, "QUESTION_DEFERRED", **data)
+        else:
+            self._append(db, actor, request_id, revision, "ANSWER_RECORDED", value=value, **data)
+
     def answer(self, actor, request_id, revision, field, value, defer=False):
         with self._write() as db:
             events = self._load(db, actor, request_id)
             if revision != events[-1]["revision"]:
                 raise IntakeError("La demande a changé. Rouvre-la avant de répondre.")
-            q = next_question(project(events))
+            answers = project(events)
+            q = next_question(answers)
             if not q or field != q["field"]:
                 raise IntakeError("Cette question n'est pas celle attendue.")
-            if defer:
-                if q["required"]:
-                    raise IntakeError("Ce choix est requis pour préparer la création.")
-                self._append(db, actor, request_id, revision + 1, "QUESTION_DEFERRED",
-                             field=field, question_id=q["id"])
-            else:
-                if field == "name":
-                    if not re.fullmatch(r"[A-Za-z0-9_.-]{1,100}", value) or value in {".", ".."}:
-                        raise IntakeError("Nom de dépôt invalide.")
-                elif q.get("limit"):
-                    value = value.strip()
-                    if not value or len(value) > q["limit"] or any(ord(c) < 32 for c in value):
-                        raise IntakeError("Réponse texte invalide.")
-                elif value not in q["choices"]:
-                    raise IntakeError("Choix non disponible.")
-                self._append(db, actor, request_id, revision + 1, "ANSWER_RECORDED",
-                             field=field, question_id=q["id"], value=value)
-            updated = self._load(db, actor, request_id)
-            if next_question(project(updated)) is None:
+            answers[field] = validated_value(q, value, defer)
+            self._append_answer(db, actor, request_id, revision + 1, q, answers[field])
+            if next_question(answers) is None:
                 self._append(db, actor, request_id, revision + 2, "PREPARATION_COMPLETE")
+
+    def answer_batch(self, actor, request_id, revision, submitted):
+        """Commit one lot against the current revision, with the same answer events as the step-by-step flow."""
+        with self._write() as db:
+            events = self._load(db, actor, request_id)
+            if revision != events[-1]["revision"]:
+                raise IntakeError("La demande a changé. Rouvre-la avant d’envoyer le lot.")
+            answers = project(events)
+            if next_question(answers) is None:
+                raise IntakeError("La préparation est déjà terminée.")
+            if set(submitted) - QUESTIONS.keys():
+                raise BatchValidationError("Le lot contient une question inconnue.")
+            if set(submitted) & answers.keys():
+                raise BatchValidationError("Le lot contient une réponse déjà enregistrée.")
+            pending = []
+            while question := next_question(answers):
+                field = question["field"]
+                value = submitted.get(field)
+                try:
+                    answers[field] = validated_value(question, value, defer=value in (None, ""))
+                except IntakeError as exc:
+                    raise BatchValidationError(f'{question["text"]} {exc}') from exc
+                pending.append((question, answers[field]))
+            for offset, (question, value) in enumerate(pending, start=1):
+                self._append_answer(db, actor, request_id, revision + offset, question, value)
+            self._append(db, actor, request_id, revision + len(pending) + 1, "PREPARATION_COMPLETE")
 
     def record_preflight(self, actor, request_id, revision, digest, result):
         """Internal write path for the trusted preflight service only."""
