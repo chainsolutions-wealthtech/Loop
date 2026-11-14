@@ -213,7 +213,8 @@
     "LOOP-W16": "LOOP-SUJ-020",
     "LOOP-W17": "LOOP-SUJ-020",
     "LOOP-W18": "LOOP-SUJ-020",
-    "LOOP-W19": "LOOP-SUJ-020"
+    "LOOP-W19": "LOOP-SUJ-020",
+    "LOOP-W20": "LOOP-SUJ-020"
   },
   "tables": [
     [
@@ -521,7 +522,8 @@
       "record": "memory/2026-11-14-loop.md",
       "legacy_short_aliases": false,
       "event_topics": {
-        "E01": "LOOP-SUJ-020"
+        "E01": "LOOP-SUJ-020",
+        "E02": "LOOP-SUJ-020"
       }
     }
   ],

@@ -437,6 +437,21 @@
         "EV-027"
       ],
       "acceptance": "Contrat portable et rejeu hors ligne du moteur de référence sur 409 après création et dépôt préexistant non reconnu. Suite distincte : adapter la corrélation durable et vérifier le contrat de l'outil avant toute création réelle."
+    },
+    {
+      "id": "LOOP-W20",
+      "title": "Implémenter la capsule autonome de création gouvernée",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-014"
+      ],
+      "depends_on": [
+        "LOOP-W19"
+      ],
+      "evidence": [
+        "EV-028"
+      ],
+      "acceptance": "Noyau importable seul, demande durable, réservation et reprise sans second appel de création, remise sur preuves cohérentes. Port réel et exposition MCP hors de cette tranche."
     }
   ]
 }

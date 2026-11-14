@@ -48,3 +48,12 @@ python3 scripts/replay_governed_creation.py /chemin/vers/checkout-grt
 Révision de référence `3d9cba0223ec43003802635dd264f1f266b7b12b`. Pour le futur adaptateur, couvrir aussi le timeout après acceptation, le dépôt homonyme avec le même modèle mais sans corrélation, le 404 non concluant, les reprises concurrentes, la révision périmée, le HEAD divergent et la consultation d'une demande terminée sans écriture. Préserver les entrées GRT existantes par issue et dispatch. Un test réel éventuel utilise une cible isolée, avec identité et autorité vérifiées.
 
 [Registre historique GRT](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/3d9cba0223ec43003802635dd264f1f266b7b12b/docs/control-plane/CASE1_REPLAY_LEDGER.md) · [Exécuteur GRT](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/3d9cba0223ec43003802635dd264f1f266b7b12b/scripts/control_plane_create_repository.py) · [Précédent Gouvern](REPOSITORY_LIFECYCLE_PRECEDENTS.md#grt-et-gouvern--création-puis-entrée) · [Run central Ekyc](https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/actions/runs/36293599446).
+
+## Capsule indépendante de référence
+
+Le [noyau portable](../capsules/governed_repository_creation/README.md) implémente
+le contrat de reprise sur un journal SQLite et un port d'exécution injecté.
+Il représente `PREP-003` comme explicitement non résolu, sans requête
+d'infrastructure. Les tests du noyau sont distincts du rejeu historique
+GRT. Le port GitHub réel et l'exposition MCP ne sont pas encore raccordés.
+Suivi `LOOP-W20` et preuve hors ligne `EV-028`.

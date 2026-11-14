@@ -142,3 +142,17 @@ actuel ne suffit pas à relier un dépôt homonyme à la même demande.
 Reprise propre à cette tranche : définir et tester l'adaptateur de
 corrélation durable avant d'exposer une exécution réelle. Le checkpoint
 global et `LOOP-W18` restent inchangés. Aucun outil MCP déployé.
+
+## Capsule indépendante de création gouvernée — LOOP-W20
+
+Le [noyau portable](capsules/governed_repository_creation/README.md)
+implémente soumission, consultation, reprise, réservation atomique et
+reçu `HANDOFF_READY`. Les tests `EV-028` couvrent les résultats
+incertains, la concurrence, la corrélation et les preuves de remise.
+Le dépôt GRT, le MCP, les serveurs, le checkpoint global et `LOOP-W18`
+ne changent pas.
+
+Reprise : choisir et qualifier un adaptateur d'exécution sur une cible
+isolée. Vérifier l'identité GitHub et la preuve de corrélation sans
+modifier GRT. Exposer ensuite le noyau comme outil si le test réel
+est concluant. L'hôte MCP et l'identité App restent des choix séparés.

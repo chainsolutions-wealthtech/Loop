@@ -246,6 +246,14 @@
       "reference": "scripts/replay_governed_creation.py",
       "sha": "3d9cba0223ec43003802635dd264f1f266b7b12b",
       "summary": "Deux tests hors ligne sur l'exécuteur GRT épinglé et son état central : un seul POST puis reprise après 409 jusqu'au handoff sur preuves simulées, et refus d'un dépôt préexistant sans manifeste reconnu. Aucun appel externe."
+    },
+    {
+      "id": "EV-028",
+      "kind": "offline_acceptance_tests",
+      "scope": "Capsule de création gouvernée dans Loop",
+      "status": "observed",
+      "reference": "tests/test_governed_repository_creation_capsule.py",
+      "summary": "Tests hors ligne de soumission, stockage SQLite, reprise, réservation concurrente, corrélation et remise. Aucun dépôt réel créé et aucun service externe contacté."
     }
   ]
 }
