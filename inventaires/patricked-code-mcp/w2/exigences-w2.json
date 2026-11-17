@@ -1,0 +1,719 @@
+{
+  "schemaVersion": 1,
+  "workPackage": "W2",
+  "status": "QUALIFICATION_DOCUMENTAIRE_NON_ADOPTEE",
+  "sourceBaseline": {
+    "repository": "Patricked-code/MCP",
+    "commit": "e8cfaf7246abb20151a8b439913d97ecf87a4979"
+  },
+  "intake": {
+    "repository": "chainsolutions-wealthtech/Loop",
+    "w1Commit": "e72138dc6e8d707c48994991c37b14de0c73fab4",
+    "w1Checkpoint": "inventaires/patricked-code-mcp/w1/R9-POINT-DE-REPRISE.md"
+  },
+  "sources": {
+    "H-LOOP-001": {
+      "repository": "Patricked-code/MCP",
+      "commit": "e8cfaf7246abb20151a8b439913d97ecf87a4979",
+      "path": "memory/LOOP_ENGINEERING_INSTRUCTIONS_DOCX_EXTRACT_20260702.md",
+      "blobSha": "0d99fa47fb2275f5f46e586ea24ab61b2aaddfa6",
+      "role": "Extrait dérivé du document Word. Original non attesté.",
+      "sourceDate": "2026-07-02",
+      "introductionGit": "ec4cd5e0f0f27a75209ef9aaefcbe6e461b163a9"
+    },
+    "H-LOOP-002": {
+      "repository": "Patricked-code/MCP",
+      "commit": "e8cfaf7246abb20151a8b439913d97ecf87a4979",
+      "path": "memory/LOOP_ENGINEERING_WEALTHTECH_MASTER_PLAN_20260702.md",
+      "blobSha": "8600d9d3d0da59078c4736a71198e65e2a266ae4",
+      "role": "Plan historique de WealthTech, non adopté par Loop.",
+      "sourceDate": "2026-07-02",
+      "introductionGit": "ec4cd5e0f0f27a75209ef9aaefcbe6e461b163a9"
+    },
+    "H-LOOP-003": {
+      "repository": "Patricked-code/MCP",
+      "commit": "e8cfaf7246abb20151a8b439913d97ecf87a4979",
+      "path": "memory/LOOP_ENGINEERING_WEALTHTECH_PLAYBOOK_COMPLET_20260702.md",
+      "blobSha": "92b45e3726588ffad100fac9b35fd97b20a305a8",
+      "role": "Playbook historique et modalités de clôture.",
+      "sourceDate": "2026-07-02",
+      "introductionGit": "ec4cd5e0f0f27a75209ef9aaefcbe6e461b163a9"
+    },
+    "H-LOOP-004": {
+      "repository": "Patricked-code/MCP",
+      "commit": "e8cfaf7246abb20151a8b439913d97ecf87a4979",
+      "path": "memory/MATRICE_TRACABILITE_SOURCES_EXIGENCES_TRACKS_20260702.md",
+      "blobSha": "465444d6132938be3eb3f365c0b3fe557810823c",
+      "role": "Table R01–R15 utilisée comme index de traçabilité.",
+      "sourceDate": "2026-07-02",
+      "introductionGit": "ec4cd5e0f0f27a75209ef9aaefcbe6e461b163a9"
+    },
+    "LOOP-WF00-CANDIDAT": {
+      "repository": "chainsolutions-wealthtech/Loop",
+      "commit": "c523c64f5c42dbd2115b5575772c1d5e1f9992df",
+      "path": "docs/WORKFLOW_WF00.md",
+      "blobSha": "d8746d08e4b4fd5562d49e73f8cbdfbbcdd42fce",
+      "role": "Spécification documentaire candidate, non exécutée ni adoptée sur main.",
+      "sourceDate": null
+    },
+    "LOOP-README-WF00": {
+      "repository": "chainsolutions-wealthtech/Loop",
+      "commit": "c523c64f5c42dbd2115b5575772c1d5e1f9992df",
+      "path": "README.md",
+      "blobSha": "3cc92e2ee95dfae1a2a48884bcad4a539e43235a",
+      "role": "Proposition de principes et de deux modes d’entrée, non adoptée.",
+      "sourceDate": null
+    },
+    "LOOP-W1-R9": {
+      "repository": "chainsolutions-wealthtech/Loop",
+      "commit": "e72138dc6e8d707c48994991c37b14de0c73fab4",
+      "path": "inventaires/patricked-code-mcp/w1/R9-POINT-DE-REPRISE.md",
+      "blobSha": "cca64ba858c154baac71bfad6fa1a04cccffbe68",
+      "role": "Mandat et arrêt W1. Atteste un point de reprise, pas une architecture.",
+      "sourceDate": null
+    },
+    "LOOP-W1-R4": {
+      "repository": "chainsolutions-wealthtech/Loop",
+      "commit": "e72138dc6e8d707c48994991c37b14de0c73fab4",
+      "path": "inventaires/patricked-code-mcp/w1/R4-ECARTS-ET-LIMITES.md",
+      "blobSha": "0862f119529e0850b67d0c774038822ec8788407",
+      "role": "Limites et corpus distincts.",
+      "sourceDate": null
+    },
+    "LOOP-PR1-SOURCES": {
+      "repository": "chainsolutions-wealthtech/Loop",
+      "commit": "9db9727ddd6c9e6ead7c5dcaa44db8c6afad780e",
+      "path": "docs/SOURCE_REGISTER.md",
+      "blobSha": "1f51cfc83ab8034e33ed3f56fa72d23963f198c5",
+      "role": "Registre candidat Loop #1. Référence d’identifiants, ne fait pas autorité sur main.",
+      "sourceDate": null
+    }
+  },
+  "requirements": [
+    {
+      "id": "R01",
+      "origin": "matrice-historique",
+      "historicalId": "R01",
+      "qualification": "commun-candidat",
+      "applicability": "reprendre",
+      "title": "Reprendre la mémoire et le dernier état vérifié",
+      "formulation": "Avant de déterminer le travail, résoudre la source d’autorité, la version du dossier et le checkpoint applicable. Identifier une contradiction ou une lacune au lieu d’inventer la reprise.",
+      "acceptance": {
+        "positive": "Un projet existant dispose d’un checkpoint vérifié et de références versionnées. Le dossier d’entrée cite l’autorité, l’état, la révision et la prochaine action applicables.",
+        "negative": "Deux checkpoints incompatibles ou aucune référence vérifiable. Le dossier conserve l’ambiguïté et n’attribue pas un travail à partir d’un état supposé.",
+        "expectedEvidence": "Fiche d’entrée, référence de checkpoint, liste des écarts."
+      },
+      "notTransferred": "Ordre de lecture et noms GPT.md, SUIVI.md ou équivalents définis pour chaque projet.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 9,
+          "endLine": 9
+        },
+        {
+          "sourceId": "H-LOOP-002",
+          "startLine": 60,
+          "endLine": 75
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 44,
+          "endLine": 54
+        },
+        {
+          "sourceId": "H-LOOP-001",
+          "startLine": 552,
+          "endLine": 569
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R02",
+      "origin": "matrice-historique",
+      "historicalId": "R02",
+      "qualification": "commun-candidat",
+      "applicability": "action-irreversible",
+      "title": "Gouverner une action irréversible",
+      "formulation": "Avant CHAQUE action irréversible, identifier la cible exacte, les dépendances et effets, puis vérifier la validation qui s’applique à cette action et cible.",
+      "acceptance": {
+        "positive": "La cible, ses dépendances, les impacts et l’autorité sur l’opération sont attestés séparément. Le dossier rend le candidat examinable, sans exécuter l’action.",
+        "negative": "Cible ambiguë, impact incomplet ou autorisation absente. L’action reste non admissible, même si la connexion technique fonctionne.",
+        "expectedEvidence": "Inventaire versionné, analyse d’impact, référence de décision applicable."
+      },
+      "notTransferred": "Forme de la matrice et contrôle effectif propres au profil.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 10,
+          "endLine": 10
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 23,
+          "endLine": 32
+        },
+        {
+          "sourceId": "H-LOOP-001",
+          "startLine": 552,
+          "endLine": 569
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R03",
+      "origin": "matrice-historique",
+      "historicalId": "R03",
+      "qualification": "profil-candidat",
+      "applicability": "actif-protege",
+      "title": "Identifier les actifs ou originaux protégés",
+      "formulation": "Un profil de projet peut déclarer des actifs protégés et leur périmètre. Les sélectionner par identité et preuve, pas par ressemblance de nom.",
+      "acceptance": {
+        "positive": "Le profil identifie les actifs à protéger et les relie aux cibles et contraintes du mandat.",
+        "negative": "Un actif protégé n’est pas identifié sans ambiguïté ou est incompatible avec l’opération. Ne pas l’altérer dans ce parcours.",
+        "expectedEvidence": "Liste de cibles protégées et motif de non-admission."
+      },
+      "notTransferred": "S2 et les originaux Stablecoin restent dans le périmètre WealthTech.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 11,
+          "endLine": 11
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 23,
+          "endLine": 32
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R04",
+      "origin": "matrice-historique",
+      "historicalId": "R04",
+      "qualification": "commun-candidat",
+      "applicability": "tous",
+      "title": "Séparer les preuves des valeurs sensibles",
+      "formulation": "Conserver les références nécessaires, sans reproduire les secrets, identifiants sensibles ou données interdites dans les livrables et journaux.",
+      "acceptance": {
+        "positive": "Une preuve exploitable conserve sa provenance et le résultat du contrôle, sans inclure la valeur sensible.",
+        "negative": "Un artefact de qualification contient une valeur sensible. Ne pas le publier tel quel et conserver un constat sans valeur divulguée.",
+        "expectedEvidence": "Résultat de contrôle expurgé ou référence de preuve contrôlée, sans secret reproduit."
+      },
+      "notTransferred": "Catégories sensibles et mécanisme de contrôle du projet.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 12,
+          "endLine": 12
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 23,
+          "endLine": 32
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R05",
+      "origin": "matrice-historique",
+      "historicalId": "R05",
+      "qualification": "profil-candidat",
+      "applicability": "synchronisation",
+      "title": "Préserver une mémoire persistante lors d’une synchronisation",
+      "formulation": "Dans un profil avec projections ou synchronisations, séparer la référence qui fait autorité, ses répliques et les mises à jour concurrentes.",
+      "acceptance": {
+        "positive": "La révision de lecture et celle de destination sont enregistrées, et un candidat de synchronisation ne remplace pas silencieusement une preuve plus récente.",
+        "negative": "Une divergence de version ou un résultat partiel demeure. Conserver les références concurrentes et suspendre l’écrasement.",
+        "expectedEvidence": "Versions source/destination, référence de conflit ou trace de vérification."
+      },
+      "notTransferred": "Les répertoires et la procédure de synchronisation MCP de juillet ne deviennent pas universels.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 13,
+          "endLine": 13
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 56,
+          "endLine": 69
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R06",
+      "origin": "matrice-historique",
+      "historicalId": "R06",
+      "qualification": "profil-candidat",
+      "applicability": "changement-sur-existant",
+      "title": "Préparer la modification hors production",
+      "formulation": "Préparer le changement dans un périmètre séparé et vérifier l’impact avant de proposer une mise en service.",
+      "acceptance": {
+        "positive": "Le plan distingue environnement de préparation, cible de production, compatibilité et contrôles. Aucun effet de production n’est déduit du plan.",
+        "negative": "La cible de préparation ne peut pas être distinguée de la production. Le dossier n’autorise pas la mise en service.",
+        "expectedEvidence": "Cartographie des environnements, plan de tests et conditions de promotion."
+      },
+      "notTransferred": "La refonte et la préproduction de WealthTech restent spécifiques.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 14,
+          "endLine": 14
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 71,
+          "endLine": 83
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 70,
+          "endLine": 83
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R07",
+      "origin": "matrice-historique",
+      "historicalId": "R07",
+      "qualification": "profil-candidat",
+      "applicability": "audit-lecture",
+      "title": "Séparer audit et opération métier mutative",
+      "formulation": "Un mandat d’audit peut exclure explicitement l’écriture ou l’opération métier même lorsque le système propose une capacité correspondante.",
+      "acceptance": {
+        "positive": "Le dossier nomme les observations admissibles et les opérations métier hors périmètre.",
+        "negative": "L’étape requiert une transaction ou une autre mutation exclue par le mandat. La consigner comme hors audit.",
+        "expectedEvidence": "Mandat, liste d’opérations et résultat de l’audit."
+      },
+      "notTransferred": "L’audit Stablecoin 6BI-B et l’interdiction de transaction appartiennent à leur mandat.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 15,
+          "endLine": 15
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 85,
+          "endLine": 98
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 84,
+          "endLine": 97
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R08",
+      "origin": "matrice-historique",
+      "historicalId": "R08",
+      "qualification": "commun-candidat",
+      "applicability": "changement-sur-existant",
+      "title": "Vérifier la non-régression de l’existant",
+      "formulation": "Identifier la baseline, les comportements protégés, les contrôles et les preuves requises avant de proposer un changement.",
+      "acceptance": {
+        "positive": "Les comportements à préserver sont reliés à des observations ou tests, avec des résultats à obtenir avant de déclarer la non-régression.",
+        "negative": "Aucune baseline pertinente ou un contrôle requis est en échec ou absent. Ne pas conclure que le changement est sans régression.",
+        "expectedEvidence": "Baseline datée, critères et résultats vérifiables."
+      },
+      "notTransferred": "Les contrôles OPCVM/FundAfrica restent spécifiques.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 16,
+          "endLine": 16
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 194,
+          "endLine": 202
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 98,
+          "endLine": 110
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R09",
+      "origin": "matrice-historique",
+      "historicalId": "R09",
+      "qualification": "profil-candidat",
+      "applicability": "nettoyage",
+      "title": "Qualifier une cible de nettoyage et ses dépendances",
+      "formulation": "Le profil décrit les objets candidats, leur état, les dépendances et le traitement de conservation, déplacement ou suppression envisagé.",
+      "acceptance": {
+        "positive": "L’objet et ses consommateurs sont identifiés et le traitement proposé est relié à une analyse. La préparation ne modifie aucun objet.",
+        "negative": "Dépendance ou identité non résolue. La cible reste à qualifier plutôt que sélectionnée pour suppression.",
+        "expectedEvidence": "Inventaire ciblé, matrice ou preuve équivalente, décision par objet."
+      },
+      "notTransferred": "Les seuils et catégories du nettoyage S1/S2 ne sont pas généralisés.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 17,
+          "endLine": 17
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 23,
+          "endLine": 32
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 111,
+          "endLine": 123
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R10",
+      "origin": "matrice-historique",
+      "historicalId": "R10",
+      "qualification": "profil-candidat",
+      "applicability": "migration",
+      "title": "Préparer une migration et sa reprise",
+      "formulation": "Identifier les révisions et environnements source/cible, la protection des données, les tests d’arrivée et les conditions de retour ou reprise.",
+      "acceptance": {
+        "positive": "Le dossier rattache sauvegarde, contrôles et procédure de retour ou de reprise à la migration exacte.",
+        "negative": "Source ou cible ambiguë, preuve de sauvegarde exigée absente, ou validation requise indisponible. Aucune migration déduite du dossier.",
+        "expectedEvidence": "Inventaire source/cible, plan et preuves requises."
+      },
+      "notTransferred": "S2 vers S1 et les artefacts précis du mandat de migration WealthTech.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 18,
+          "endLine": 18
+        },
+        {
+          "sourceId": "H-LOOP-002",
+          "startLine": 65,
+          "endLine": 75
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 124,
+          "endLine": 138
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R11",
+      "origin": "matrice-historique",
+      "historicalId": "R11",
+      "qualification": "historique-non-prescriptif",
+      "applicability": "choix-architecture",
+      "title": "Conserver une option d’architecture historique sans l’imposer",
+      "formulation": "Conserver la provenance de l’orientation historique. Un arbitrage d’architecture cible nécessite ses propres critères et une décision explicite.",
+      "acceptance": {
+        "positive": "La source décrit le choix historique comme tel. Le dossier de conception peut le comparer à d’autres options sans le présenter comme une obligation Loop.",
+        "negative": "Une fiche impose ces technologies comme condition d’entrée ou comme choix approuvé à partir de la seule source historique.",
+        "expectedEvidence": "Référence historique et, le cas échéant, décision d’architecture distincte."
+      },
+      "notTransferred": "Redis/ClickHouse/Docker et Kubernetes futur sont des orientations historiques WealthTech.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 19,
+          "endLine": 19
+        },
+        {
+          "sourceId": "H-LOOP-002",
+          "startLine": 120,
+          "endLine": 125
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 139,
+          "endLine": 151
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R12",
+      "origin": "matrice-historique",
+      "historicalId": "R12",
+      "qualification": "historique-non-prescriptif",
+      "applicability": "besoin-produit",
+      "title": "Conserver un exemple d’expression de besoin sans le généraliser",
+      "formulation": "Indexer le besoin produit sous sa bonne autorité. Ne pas importer ses fonctionnalités comme exigences de la méthode Loop.",
+      "acceptance": {
+        "positive": "La fiche attribue au bon projet les fonctions demandées et les laisse hors du tronc commun.",
+        "negative": "Une fonction du site devient une condition de création de tout projet Loop par simple import historique.",
+        "expectedEvidence": "Référence de besoin produit, rattachement au projet concerné."
+      },
+      "notTransferred": "SSR/SEO, admin, blog et contact du site ChainSolutions restent des besoins du site.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 20,
+          "endLine": 20
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 152,
+          "endLine": 164
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R13",
+      "origin": "matrice-historique",
+      "historicalId": "R13",
+      "qualification": "profil-candidat",
+      "applicability": "inventaire-multi-sources",
+      "title": "Rapprocher des inventaires par identité et preuve",
+      "formulation": "Identifier l’objet, la portée, la révision et l’autorité de chaque inventaire avant rapprochement. Distinguer présent dans Git, déclaré pour la production et attesté en service.",
+      "acceptance": {
+        "positive": "Un lien dépôt vers cible renvoie à une preuve de jointure. Les états Git et runtime restent distincts même si leurs identifiants concordent.",
+        "negative": "Le rapprochement repose uniquement sur un nom de dépôt, de chemin ou de domaine. Laisser le lien candidat ou non vérifié.",
+        "expectedEvidence": "Index de sources, identifiants et preuve de jointure."
+      },
+      "notTransferred": "Les dépôts, serveurs et domaines réellement associés relèvent du portefeuille WealthTech.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 21,
+          "endLine": 21
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 165,
+          "endLine": 179
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R14",
+      "origin": "matrice-historique",
+      "historicalId": "R14",
+      "qualification": "commun-candidat",
+      "applicability": "fin-de-boucle",
+      "title": "Produire un résultat transmissible",
+      "formulation": "En fin de boucle, conserver l’objectif, les résultats observés, les tests, les écarts, les risques, la preuve et la prochaine action. Indiquer si la phase n’a pas exécuté de tests d’application.",
+      "acceptance": {
+        "positive": "Un autre intervenant retrouve le dernier état, les artefacts vérifiés et les décisions à prendre, sans recalculer le travail.",
+        "negative": "Un livrable se dit fini mais ne distingue pas ce qui a été exécuté de ce qui est prévu. Ne pas lui attribuer une clôture probante.",
+        "expectedEvidence": "Résultat, vérifications, limitations et checkpoint."
+      },
+      "notTransferred": "Markdown et JSON sont des formats du corpus, pas une obligation universelle.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 22,
+          "endLine": 22
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 194,
+          "endLine": 202
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "R15",
+      "origin": "matrice-historique",
+      "historicalId": "R15",
+      "qualification": "commun-candidat",
+      "applicability": "tous",
+      "title": "Distinguer provenance historique, autorité et état courant",
+      "formulation": "Porter séparément date/version, nature de la source, périmètre et état d’adoption. Une observation ancienne ne vaut pas constat actuel.",
+      "acceptance": {
+        "positive": "Une citation indique la version et ce qu’elle prouve. Une contradiction ou un manque de couverture demeure visible.",
+        "negative": "Un brouillon, une ancienne preuve ou un document homonyme est promu source de vérité actuelle par son intitulé ou sa présence dans Git.",
+        "expectedEvidence": "Carte de provenance, statuts et écarts."
+      },
+      "notTransferred": "Les autorités précises sont déterminées par le projet et par le moment de l’opération.",
+      "sources": [
+        {
+          "sourceId": "H-LOOP-004",
+          "startLine": 23,
+          "endLine": 23
+        },
+        {
+          "sourceId": "H-LOOP-003",
+          "startLine": 23,
+          "endLine": 32
+        },
+        {
+          "sourceId": "LOOP-PR1-SOURCES",
+          "startLine": 5,
+          "endLine": 16
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "W2-G01",
+      "origin": "synthese-w2-proposee",
+      "historicalId": null,
+      "qualification": "commun-candidat",
+      "applicability": "entree-projet",
+      "title": "Distinguer constitution, entrée sur existant et reprise",
+      "formulation": "Préserver deux familles et les branches d’entrée pertinentes. Sans dépôt ou historique requis, conserver l’intention initiale et l’identité provisoire sans inventer de SHA ou de checkpoint. Avec un existant, établir la baseline et l’autorité avant tout changement.",
+      "acceptance": {
+        "positive": "Le dossier identifie l’un des cas projet neuf, projet existant ou reprise d’un travail engagé. Dans le neuf, on prépare les emplacements et les sources. Dans l’existant, on retrouve l’autorité et l’inventaire avant d’ajouter un support. En reprise, on réévalue le checkpoint.",
+        "negative": "Un agent utilise le cycle d’exécution ou de prise de tâche avant de qualifier l’intention et le type d’arrivée. Ou il fabrique un checkpoint pour un projet neuf. Le dossier ne passe pas le contrôle.",
+        "expectedEvidence": "Fiche d’entrée, source du mandat, registre de sources, décision de mode et point d’arrêt."
+      },
+      "notTransferred": "Ni nom de fichier imposé, ni granularité de workflow ou architecture cible adoptée.",
+      "sources": [
+        {
+          "sourceId": "LOOP-README-WF00",
+          "startLine": 7,
+          "endLine": 14
+        },
+        {
+          "sourceId": "LOOP-WF00-CANDIDAT",
+          "startLine": 7,
+          "endLine": 24
+        },
+        {
+          "sourceId": "LOOP-WF00-CANDIDAT",
+          "startLine": 36,
+          "endLine": 44
+        },
+        {
+          "sourceId": "H-LOOP-002",
+          "startLine": 60,
+          "endLine": 75
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    },
+    {
+      "id": "W2-G02",
+      "origin": "synthese-w2-proposee",
+      "historicalId": null,
+      "qualification": "commun-candidat",
+      "applicability": "conception-avant-code",
+      "title": "Séparer préparation, conception, planification et exécution",
+      "formulation": "Faire passer les exigences qualifiées et les questions ouvertes au cadrage et à la conception. Ne pas déduire une autorité d’exécution d’un inventaire fini ou de l’acceptation d’un besoin.",
+      "acceptance": {
+        "positive": "L’intention et les exigences ont une source et un périmètre. Les choix d’architecture sont traçables. Le plan explicite dépendances, validation et conditions de passage à l’exécution.",
+        "negative": "Le dossier propose directement une tâche de code, un moteur, une Action ou un déploiement en tirant la permission de W1, WF-00 ou W2. Le passage reste non admissible.",
+        "expectedEvidence": "Exigences et sources, questions, décisions de conception distinctes et plan vérifiable."
+      },
+      "notTransferred": "Ni nom de fichier imposé, ni granularité de workflow ou architecture cible adoptée.",
+      "sources": [
+        {
+          "sourceId": "LOOP-README-WF00",
+          "startLine": 7,
+          "endLine": 14
+        },
+        {
+          "sourceId": "LOOP-WF00-CANDIDAT",
+          "startLine": 7,
+          "endLine": 24
+        },
+        {
+          "sourceId": "LOOP-WF00-CANDIDAT",
+          "startLine": 36,
+          "endLine": 44
+        },
+        {
+          "sourceId": "H-LOOP-002",
+          "startLine": 60,
+          "endLine": 75
+        }
+      ],
+      "status": "qualifie-w2-non-adopte"
+    }
+  ],
+  "acceptanceCases": [
+    {
+      "id": "W2-C01",
+      "nom": "Projet neuf sans dépôt",
+      "exigences": [
+        "R01",
+        "R15",
+        "W2-G01",
+        "W2-G02"
+      ],
+      "condition": "Intention et sources initiales, aucun dépôt ou checkpoint prouvé.",
+      "verdictAttendu": "Squelette et emplacements proposés. Aucun SHA inventé ni travail de code engagé."
+    },
+    {
+      "id": "W2-C02",
+      "nom": "Projet existant avec deux checkpoints incompatibles",
+      "exigences": [
+        "R01",
+        "R05",
+        "R15",
+        "W2-G01"
+      ],
+      "condition": "Deux références documentaires prétendent faire autorité pour le même périmètre.",
+      "verdictAttendu": "Contradiction tracée. Reprise opérationnelle non déduite avant résolution."
+    },
+    {
+      "id": "W2-C03",
+      "nom": "Plesk ou nettoyage avec cible ambiguë",
+      "exigences": [
+        "R02",
+        "R03",
+        "R09",
+        "R13"
+      ],
+      "condition": "Connexion disponible, cible et dépendances non résolues ou autorité absente.",
+      "verdictAttendu": "Préparation ou diagnostic uniquement. Aucune écriture ni suppression."
+    },
+    {
+      "id": "W2-C04",
+      "nom": "Migration sans preuve de sauvegarde requise",
+      "exigences": [
+        "R06",
+        "R08",
+        "R10",
+        "W2-G02"
+      ],
+      "condition": "Une cible est proposée, mais le prérequis de protection des données n’est pas établi.",
+      "verdictAttendu": "Candidat non admissible à l’exécution. Précondition manquante explicite."
+    },
+    {
+      "id": "W2-C05",
+      "nom": "Observation, secret et trace de clôture",
+      "exigences": [
+        "R04",
+        "R07",
+        "R14",
+        "R15"
+      ],
+      "condition": "Audit réalisé sans droit d’écriture ni preuve d’un contrôle attendu.",
+      "verdictAttendu": "Restitution sans donnée sensible, résultat qualifié, opérations non effectuées et reprise explicite."
+    },
+    {
+      "id": "W2-C06",
+      "nom": "Import d’une orientation historique ou d’un kit non qualifié",
+      "exigences": [
+        "R11",
+        "R12",
+        "R15",
+        "W2-G02"
+      ],
+      "condition": "Une technologie, un besoin produit ou une règle de kit est proposée comme règle universelle sans adoption.",
+      "verdictAttendu": "Conserver la proposition et sa provenance, ne pas l’activer ni la promouvoir."
+    }
+  ],
+  "comparativeCorpus": {
+    "status": "NON_COMPARE",
+    "ref": "W1-E06",
+    "needed": "Archive ou référence immuable, version et inventaire vérifiés. Ne pas identifier le kit à partir de son seul nom."
+  }
+}
