@@ -1,0 +1,889 @@
+id,path,git_mode,git_type,blob_sha,octets,type_index,categorie_documentaire_source,niveau_lecture,titre_markdown,nb_sections_markdown
+MCP-F-24ad71c8613ddcf6,.devcontainer/devcontainer.json,100644,blob,5e77d739a5bb368648c2daacba245b6301a5caac,791,structure,,metadonnees_git,,
+MCP-F-aaf9e7764a12876c,.devcontainer/setup.sh,100755,blob,c4b3d138aae3ac1f87ac1148201bfe0749e3bdd4,302,autre,,metadonnees_git,,
+MCP-F-a3046da0d15a27e8,.env.example,100644,blob,332998b85e730b960454802de1ef40418ac48edb,1703,autre,,metadonnees_git,,
+MCP-F-3843b6576e49a11f,.github/workflows/mcp-auto-intake-discovery.yml,100644,blob,3a5d64520c314c2511687cde21e1f80e5c623bbc,3215,structure,,metadonnees_git,,
+MCP-F-e743bc45df3e81ae,.github/workflows/mcp-ci.yml,100644,blob,76ed3c19d830e5b004c733ae1fa1ac9ef7489c34,2898,structure,,metadonnees_git,,
+MCP-F-b8d7ab346f11b999,.github/workflows/mcp-deploy.yml,100644,blob,c8ff394b46e014c3be719854fd035ac0ee46d970,13263,structure,,metadonnees_git,,
+MCP-F-49ccd9376d7eadfc,.github/workflows/mcp-readonly-evidence.yml,100644,blob,0383e5b056c1463e867835028982964ebcc012e1,26145,structure,,metadonnees_git,,
+MCP-F-8c7733440e70622e,.github/workflows/repository-creation-capsule-ci.yml,100644,blob,9db6292efcc34ed0f0f8f2eab744e509ff414bcc,673,structure,,metadonnees_git,,
+MCP-F-49f90b734e4d6a0c,.github/workflows/repository-ssh-ca-bootstrap.yml,100644,blob,a39037390a2ff7c8902bea7a8816f7ab0c226dc9,4036,structure,,metadonnees_git,,
+MCP-F-c75089e8236eb6fc,.github/workflows/stablecoin-fast-forward.yml,100644,blob,4ccbe2e24b6d0e45038a29bf39d275daa3388858,11129,structure,,metadonnees_git,,
+MCP-F-bc37d034bad56458,.gitignore,100644,blob,77b719f32e85ec14d726c7114eb32992a87c1a25,624,autre,,metadonnees_git,,
+MCP-F-f1ef517038cabfe4,.mcp/agents.json,100644,blob,873b95fb651d89c78ca053fbe0f6433b9327e23d,802,structure,,metadonnees_git,,
+MCP-F-8a8d797191fed39b,.mcp/autodeploy-policy.json,100644,blob,d9499af12d19cf6adbb65e5ddebb56eab956fabe,48,structure,,metadonnees_git,,
+MCP-F-adc52216123b994a,.mcp/branch-governance.json,100644,blob,593692aa4e71ec62e5e5d40c3baf7aba255a2881,1114,structure,,metadonnees_git,,
+MCP-F-712d1d5d293717b1,.mcp/function-cartography.json,100644,blob,b515c193be2e9d4c8ac5b149922ea91126ce18c8,164663,structure,,metadonnees_git,,
+MCP-F-6f6d53a77401c740,.mcp/github-first-operational-policy.json,100644,blob,8b12cc7d5c4fec12970f57e14680f6f2bacc4b12,12646,structure,,qualifie,,
+MCP-F-94b16d521190fe39,.mcp/gwc-blueprints.json,100644,blob,499775752c3e32ba696b14bf65c96fa541675ba3,26124,structure,,metadonnees_git,,
+MCP-F-be225314b7bbe331,.mcp/gwc-contracts.json,100644,blob,fd35f9e1aefba155ea909752c4cd4e4796050432,98280,structure,,metadonnees_git,,
+MCP-F-32c9851e1b876002,.mcp/gwc-evolution-design.json,100644,blob,c151f96689f48d2b6db0a80e635bb581a59421c9,46956,structure,,metadonnees_git,,
+MCP-F-661e82f13a6030f1,.mcp/gwc-precode-action-flow.json,100644,blob,f30938f93b516ac4211978d0d6fbf768cabaf5d2,15195,structure,,metadonnees_git,,
+MCP-F-03d5fad60e3bf1c2,.mcp/gwc-precode-gate.json,100644,blob,c10019a8c65b418d6776026686bf2db477f85f60,4672,structure,,metadonnees_git,,
+MCP-F-aa7e4361443e5af8,.mcp/gwc-precode-status.json,100644,blob,90732b66ec9e592d40fac3ca20b025b0f8f191b5,325215,structure,,metadonnees_git,,
+MCP-F-ae8992f871be1c86,.mcp/gwc-workflow-graph.json,100644,blob,77f1a5dc33e9ef0e53444fc6fb2e587c150328cb,27706,structure,,metadonnees_git,,
+MCP-F-66126dbf8178f7fb,.mcp/identity-policy.json,100644,blob,1b600bb32a35fc83e14c61b11668ae4413d82a1a,1585,structure,,metadonnees_git,,
+MCP-F-d3de2532b3d0136f,.mcp/manifest.json,100644,blob,449e4d29c2eedb6bd56e8dac5f87395b7cd07ed3,618,structure,,metadonnees_git,,
+MCP-F-ebf7c6bbe3622bcd,.mcp/onboarding.json,100644,blob,f14ff9e654bad5508c66f758a0d9564c7d4621dd,853,structure,,metadonnees_git,,
+MCP-F-410b002824dc48be,.mcp/permissions.json,100644,blob,136f163c7ef132945785368791dd8a17104a7e9d,715,structure,,metadonnees_git,,
+MCP-F-4667a95f829a0372,.mcp/provisioning-contracts.json,100644,blob,80aa79cc602aab3ae0fc4e0b80608cc9217c6218,40687,structure,,metadonnees_git,,
+MCP-F-7e8c23b389aeef71,.mcp/server-map.json,100644,blob,09cf3c3b8d06b132604ca2332a1f8f6286f64168,693,structure,,metadonnees_git,,
+MCP-F-1b91945b47a6d63b,.mcp/task-registry.json,100644,blob,4406114b51b5f98b6853a50833f6820b00085c12,1478,structure,,metadonnees_git,,
+MCP-F-6ea6fc45d48f5133,ACCESS_MATRIX.md,100644,blob,2de8fd927477b1ba514be70f968d8612d181d9a0,427,Markdown,root-documentation,lecture_structure,ACCESS_MATRIX.md,4
+MCP-F-aafad4c01ce6bd66,ACTIVITY_LOG.md,100644,blob,b7e69bef495b17efbc960c7cf0bd080bba48b535,26406,Markdown,root-documentation,qualifie,ACTIVITY_LOG.md — Journal chronologique append-only,28
+MCP-F-a54ff182c7e8acf5,AGENTS.md,100644,blob,5b6cab480ad74dca23e5dd9487e362e205bd5f06,22084,Markdown,root-documentation,qualifie,AGENTS.md — Registre synthétique des agents,20
+MCP-F-b5c7179d08f231d4,AGENTS_ARCHITECTURE.md,100644,blob,dd39074690d70f558dbc93bfc77da828f2c85773,467,Markdown,root-documentation,lecture_structure,AGENTS_ARCHITECTURE.md,4
+MCP-F-29fc12bf3626a3f0,AI_OPERATING_MODE.md,100644,blob,e1a4f3f4553c46a311240ffeaee0644c3cdf4d79,402,Markdown,root-documentation,lecture_structure,AI_OPERATING_MODE.md,4
+MCP-F-7069f90b52eb80e5,AI_SKILLS.md,100644,blob,1ed15df26c79087dc95c5fae246656b7c73f43bc,467,Markdown,root-documentation,lecture_structure,AI_SKILLS.md,4
+MCP-F-8f6366fd8e7a5fa3,ARCHITECTURE.md,100644,blob,5a4450e0967baba8299441b4b012bc7fd8ce0f88,39155,Markdown,root-documentation,lecture_structure,ARCHITECTURE.md,18
+MCP-F-d4d35a9003d2fb49,BACKUP_RESTORE.md,100644,blob,74e6f13c323c7e82472d2b78416df6ccd6e6ab3b,397,Markdown,root-documentation,lecture_structure,BACKUP_RESTORE.md,4
+MCP-F-06572a96a58dc510,CHANGELOG.md,100644,blob,53018434bf067c30dd3ecc2605b8c1089030d95d,154815,Markdown,canonical,lecture_structure,CHANGELOG.md,183
+MCP-F-6ebdb617a8104a77,CLAUDE.md,100644,blob,906369ca74898893912e2b6e317d364be01dbfea,38024,Markdown,root-documentation,qualifie,CLAUDE.md — Porte d’entrée Claude Code,34
+MCP-F-4a97ec46a632728b,CODESPACES.md,100644,blob,f1a21c275baa8fbdbf1d72c4458b79e9c9730664,671,Markdown,root-documentation,lecture_structure,GitHub Codespaces — MCP Onboarding Engine,5
+MCP-F-2f41a784d95be0f1,CODEX.md,100644,blob,53bd9019ee26182fe6ab8fb38eceee8ef1b8bf8c,3785,Markdown,root-documentation,qualifie,CODEX.md,8
+MCP-F-b8f506c590d61296,CODE_REVIEW.md,100644,blob,5ab762ea2610242791b9620ca72a023df5194355,6143,Markdown,root-documentation,lecture_structure,CODE_REVIEW.md,9
+MCP-F-f5c74cccf4966b7e,CRON.md,100644,blob,b9abaf3dbd76d6cb3fe376585d368c386ca3d278,339,Markdown,root-documentation,lecture_structure,CRON.md,4
+MCP-F-d8a81f0c6b95d65e,DATABASE.md,100644,blob,bc480e565dff55ac97f59679bff91cc4468066a1,513,Markdown,root-documentation,lecture_structure,DATABASE.md,4
+MCP-F-48a5e5ceae8920c6,DECISIONS_LOG.md,100644,blob,2bf0ead7276a2feeb50136beef094301596da0f3,224850,Markdown,canonical,qualifie,DECISIONS_LOG.md,147
+MCP-F-a193efbc2b0a0dcc,DEPLOYMENT_PRODUCTION.md,100644,blob,ca94990a3195ec956f87c7b9245dc8d1c2e48ec5,6083,Markdown,canonical,lecture_structure,DEPLOYMENT_PRODUCTION.md,14
+MCP-F-972512ed94fce217,DOCKER.md,100644,blob,1a9a27c4a4fa22e160fd7ece11dc61908351d267,334,Markdown,root-documentation,lecture_structure,DOCKER.md,4
+MCP-F-dd2c0eb6ea5cfc6c,Dockerfile,100644,blob,269b6252f6db271eb5a1097e61108d8db2c05dd6,821,autre,,metadonnees_git,,
+MCP-F-7c1dac293c1bcb4f,GPT.md,100644,blob,4a20a75b32dfb51532fc16d5713f0a86ecc70d09,4971,Markdown,root-documentation,qualifie,GPT.md — Mémoire générale IA,11
+MCP-F-14eec93007ff464d,GPT_SKILL_BLOCK.md,100644,blob,211aceb2a610832e739408cb58651787b75345da,381,Markdown,root-documentation,lecture_structure,GPT_SKILL_BLOCK.md,2
+MCP-F-d1bb01bfbaec59b7,KUBERNETES_FUTURE.md,100644,blob,54b8c7262e2173a93d2fc4bab569ad2053915691,391,Markdown,root-documentation,lecture_structure,KUBERNETES_FUTURE.md,4
+MCP-F-031b094758fb06ee,LOOP_ENGINEERING.md,100644,blob,c6d90a09a7a28f7b9c5f8728a17cb18926fcc844,353,Markdown,root-documentation,qualifie,LOOP_ENGINEERING.md,3
+MCP-F-4d3d7d9c2346f176,MCP_AGENT_ROLES.md,100644,blob,8d4b127ca8009b7cc3beece18c2a9b33bdfecdd8,461,Markdown,root-documentation,lecture_structure,MCP_AGENT_ROLES.md,4
+MCP-F-0e5afe72a836bfb8,MCP_AGENT_RULES.md,100644,blob,3cee9f00fd0bd70579a74607c6e7faccd4f7c4a4,2280,Markdown,root-documentation,lecture_structure,MCP Agent Rules,5
+MCP-F-ba8ec437cadc6caf,MCP_ANTI_DISPERSION_GOVERNANCE.md,100644,blob,ec7c7b15d2c126b46837097ccf65672f4a6a55dc,2814,Markdown,canonical,lecture_structure,Gouvernance anti-dispersion MCP,9
+MCP-F-8f6c2242c2802012,MCP_AUDIT_LOG_POLICY.md,100644,blob,9ff587aa773957b2097fb9b977a50553a23396d3,344,Markdown,root-documentation,lecture_structure,MCP_AUDIT_LOG_POLICY.md,4
+MCP-F-6775bd9bc1c193b4,MCP_CONNECTION_IDENTITY_MODEL.md,100644,blob,ec65d5724ade51d7eb689686ab04ea905ac61142,6240,Markdown,root-documentation,lecture_structure,Modèle de reconnaissance connexions MCP/Git,10
+MCP-F-8137a12ae515d3d1,MCP_DURABLE_ACCOUNT_MANAGEMENT.md,100644,blob,3768a058d7855aa96dca60d1b6a3a99694a5eaa4,3682,Markdown,root-documentation,lecture_structure,MCP Durable Account Management,10
+MCP-F-2ef60f92a92c2152,MCP_FUNCTIONAL_CARTOGRAPHY.md,100644,blob,bf0e7dc464da33d70d8693fd061ba50801ae75b0,3860,Markdown,root-documentation,lecture_structure,Cartographie fonctionnelle MCP,4
+MCP-F-a305b4981de4d22e,MCP_FUNCTIONS_AND_TOOLS_MANUAL.md,100644,blob,b6e8d4ff2a045c92914bc42793ad1af1e1ac6f2c,6250,Markdown,root-documentation,lecture_structure,Manuel détaillé fonctions et outils MCP,15
+MCP-F-7ca4af370126a5cd,MCP_GITHUB_GOVERNANCE.md,100644,blob,b91be4a6cd73913ad382f1289aa25a7f0a42527a,1928,Markdown,root-documentation,lecture_structure,MCP_GITHUB_GOVERNANCE.md,6
+MCP-F-a9d3e0f62949f3e9,MCP_INTELLIGENT_USAGE_MODE.md,100644,blob,c5091d5ee755b96c1048f1f4b80469e2596f5e33,986,Markdown,root-documentation,lecture_structure,Mode d’utilisation intelligent MCP,4
+MCP-F-f4572cd92b4c93c3,MCP_ONBOARDING_ENGINE.md,100644,blob,7b6ae4f758df808a2ef0bb25c9780f4c2ab24ea3,2201,Markdown,root-documentation,lecture_structure,MCP_ONBOARDING_ENGINE.md,4
+MCP-F-c441b630afb41950,MCP_PERMISSIONS_MODEL.md,100644,blob,2e11ed0172f10519bedfbe62ad962259cc7a5dbe,1440,Markdown,root-documentation,lecture_structure,MCP_PERMISSIONS_MODEL.md,5
+MCP-F-5fe115e887d2627c,MCP_PROJECT.md,100644,blob,4f6192e3a11608c310cb909571bb015fc994e32a,607,Markdown,root-documentation,qualifie,MCP Project — ChainSolutions WealthTech,3
+MCP-F-023c21f1266d0976,MCP_REPO_BOOTSTRAP.md,100644,blob,be1a0c3b61d80f4e5875acfef5d5de1a7412c8e7,475,Markdown,root-documentation,qualifie,MCP_REPO_BOOTSTRAP.md,3
+MCP-F-9557e87e242c2589,MCP_REPO_INVENTORY.md,100644,blob,cef3b5f68f91955d37e54f0430747500a515937c,571,Markdown,root-documentation,qualifie,MCP Repo Inventory,5
+MCP-F-e69dfa879065c220,MCP_SECURITY_MODEL.md,100644,blob,023afca76e2b3916cfd0c245c948aee5dbad097b,1407,Markdown,root-documentation,lecture_structure,MCP_SECURITY_MODEL.md,5
+MCP-F-ad652369310556c4,MCP_SERVER_MAPPING.md,100644,blob,99f51c81de1546031e974d57b9774052b04cd572,355,Markdown,root-documentation,lecture_structure,MCP Server Mapping,4
+MCP-F-5b6308d6077b3c5a,MCP_SERVER_REGISTRY.md,100644,blob,e8ee65aad9739ce032ff7651311a0b69038e30cb,360,Markdown,root-documentation,lecture_structure,MCP_SERVER_REGISTRY.md,4
+MCP-F-82bbfb3a60b8b772,MCP_TOOLS.md,100644,blob,ea5436634dc5fc3fab8e11404143146ba5c7a8d4,11697,Markdown,root-documentation,lecture_structure,MCP_TOOLS.md,14
+MCP-F-543af13482d30008,MCP_WRITE_TEST.md,100644,blob,f30e993a6f7da3faca99f202104c581e2edac2e0,109,Markdown,root-documentation,lecture_structure,MCP_WRITE_TEST.md,1
+MCP-F-c1603ee6a674bb75,MIGRATION.md,100644,blob,bbf6ea0ee7f86950eea78c7fc39f665032c858b2,7130,Markdown,root-documentation,lecture_structure,MIGRATION.md,13
+MCP-F-c597c05bfcf7bbef,MONITORING.md,100644,blob,384a2be3fc25654ff9ec002bd97752502cc24226,336,Markdown,root-documentation,lecture_structure,MONITORING.md,4
+MCP-F-65273ca5dfec86ba,Migration/01_CONTEXTE_CONVERSATIONS.md,100644,blob,7e687e610f161b0234c3b39f50f13c06644eb20a,7451,Markdown,migration-history,lecture_structure,Contexte consolidé des conversations - Projet Migration WealthTech,15
+MCP-F-ac9a92c24ad7205e,Migration/02_PLAN_MIGRATION_ET_SECURITE.md,100644,blob,7dde832708e0438e2251dc617e6c5d623dc0fbf0,4222,Markdown,migration-history,lecture_structure,"Plan Migration, nettoyage, sécurité et non-régression",8
+MCP-F-fe257a1325f6d8c7,Migration/03_MANIFESTE_SOURCES.md,100644,blob,c4c9949014e5b353e61e31b473a2a5d819f58fbd,2925,Markdown,migration-history,lecture_structure,Manifeste des sources disponibles - Migration WealthTech,6
+MCP-F-6620d5e2f8a7fc07,Migration/04_GITHUB_PUBLICATION_LOG.md,100644,blob,93404cc0f309fa0bd6615fb9656c040ce1329b0f,1764,Markdown,migration-history,lecture_structure,Journal de publication GitHub - Migration,4
+MCP-F-f4d8fde06a9c42ce,Migration/PDF/README.md,100644,blob,e3ac35ad9438fc5a7d26ce8c400746957c6fbf8d,1061,Markdown,migration-history,lecture_structure,PDF - Migration WealthTech / MCP,5
+MCP-F-f61e474a6967d2fd,Migration/PDF/UPLOAD_STATUS_2026-07-04.md,100644,blob,caa9e4607222f39f6f8cc02c82ebb95470d3d30c,822,Markdown,migration-history,lecture_structure,Statut d'upload PDF - Migration,1
+MCP-F-a6d7f582c8eeb6a5,Migration/PDF/conversation_migration_part_01_of_05_2026-07-04.pdf,100644,blob,6550cd2785c7da9c2fe706bb0af741519e1cde59,6002,PDF,,metadonnees_git,,
+MCP-F-a874d300c58ee58f,Migration/PDF/conversation_migration_part_02_of_05_2026-07-04.pdf,100644,blob,bce8b82cee52b37fba50f4fe8db08401f7370029,4592,PDF,,metadonnees_git,,
+MCP-F-9e3f54db9a026bda,Migration/README.md,100644,blob,0ae43622050f554ad02532387cbcc7bae51e054b,1247,Markdown,migration-history,lecture_structure,Migration - dossier de mémoire projet WealthTech,4
+MCP-F-343ae1cce5c38d16,Migration/conversation_migration_disponible.pdf,100644,blob,bea5e4dd670431c459f27f93736bc0cabce2b3dc,5189,PDF,,metadonnees_git,,
+MCP-F-090cf623ff58d9ba,NO_REGRESSION_POLICY.md,100644,blob,1468410c9c4f23f1d73ce6abad6bf60767ba16b0,1316,Markdown,root-documentation,qualifie,NO_REGRESSION_POLICY.md,5
+MCP-F-c86e40afacc38cc0,PRODUCTION_STATE.json,100644,blob,bf8cbafc23bbb2564bd146fbc97b8eae8788c8eb,34414,structure,,qualifie,,
+MCP-F-5095665987de1635,PROJECT_BRIEF.md,100644,blob,e14a173609d3cb93855c0789c5b7afcee1063698,394,Markdown,root-documentation,qualifie,PROJECT_BRIEF.md,4
+MCP-F-9628ba745c895727,PROJECT_RULES.md,100644,blob,12c65a42c741a213c01cde9a7264c4404886f906,346,Markdown,root-documentation,lecture_structure,PROJECT_RULES.md,3
+MCP-F-140f0d50a026ca12,PROJECT_SCOPE.md,100644,blob,441b8b56494c55ff6a8b9696e15be4c80c735455,371,Markdown,root-documentation,qualifie,PROJECT_SCOPE.md,4
+MCP-F-b335630551682c19,README.md,100644,blob,2a648600259e98f0780f8a203cb9a15497331ee0,8794,Markdown,root-documentation,qualifie,WealthTech MCP SSH Bridge,16
+MCP-F-029808cc95396e2d,README_DEV.md,100644,blob,3748ec7e1b931d3bb46b3f4c09b0f742e166d63a,2013,Markdown,root-documentation,lecture_structure,README_DEV.md,6
+MCP-F-683343bdf93f55ed,ROADMAP.md,100644,blob,17501c9119cc683b24bec3e38808c43c31cc5229,31025,Markdown,root-documentation,lecture_structure,ROADMAP.md,63
+MCP-F-f6ed156e4bf5c791,SECURITY.md,100644,blob,7afbc1a091e60fe6209cae96507b300a5db23a6a,610,Markdown,root-documentation,lecture_structure,SECURITY.md,4
+MCP-F-2e8b8fb664b17164,SOURCE_OF_TRUTH.md,100644,blob,0c437c87fd880a511916c464c468ca6a60853cf4,1249,Markdown,root-documentation,qualifie,SOURCE_OF_TRUTH.md,5
+MCP-F-e13daf549e33e2af,SUIVI.md,100644,blob,12b6147737897739c30a8cd3e071a8fa0aeb15ff,329807,Markdown,canonical,qualifie,SUIVI.md,169
+MCP-F-66ee26543c5fa02b,TASKS.md,100644,blob,77b45fc31a19eb4ec01427f65c485ced2691d270,32452,Markdown,canonical,lecture_structure,TASKS.md,30
+MCP-F-6129e4842294d2f7,TESTS.md,100644,blob,e5ec107546496f7cdc91fb18f0bc8494b788e896,394,Markdown,root-documentation,lecture_structure,TESTS.md,4
+MCP-F-5c6a1301c6b59b30,TODO.md,100644,blob,fd4d602ecb6a8733bb151f7079afcd65c84162ce,33768,Markdown,canonical,lecture_structure,TODO.md,28
+MCP-F-2d4ccb2682bd9f4e,capsules/grt-repository-creation/src/resume.mjs,100644,blob,f581f4ac19930fded392c512fbf699b0620b0aca,9111,autre,,metadonnees_git,,
+MCP-F-404eee385904f42a,capsules/grt-repository-creation/test/grt-fixture.json,100644,blob,7980003fa8affcd03fe50139b1a2c47126088fde,15423,structure,,metadonnees_git,,
+MCP-F-cc9d4cdf8b2ac82d,capsules/grt-repository-creation/test/isolation.test.mjs,100644,blob,a8bd7704a5462cad80c76147b016e6571831a8f0,685,autre,,metadonnees_git,,
+MCP-F-e601b245f6306e78,capsules/grt-repository-creation/test/resume.test.mjs,100644,blob,671c128b56a3e7f6794961017b0c356e142ad4da,9710,autre,,metadonnees_git,,
+MCP-F-b9590374aa958c3e,data/github-accounts.json,100644,blob,cf8695124127a20772607ee5e55b428d9881e461,670,structure,,metadonnees_git,,
+MCP-F-65ac080f44e16424,data/mcp-git-registry.json,100644,blob,5c13f76438369b99d8581945f077d41c2b65e36e,11508,structure,,metadonnees_git,,
+MCP-F-e45e45baeda1c1e7,docker-compose.yml,100644,blob,5161c5d9188b5576f40b8121fd354dcb562a674d,455,structure,,metadonnees_git,,
+MCP-F-aa87451703676fbb,docs/ACCESS_MCP_CLIENTS_GITHUB.md,100644,blob,5deb5da8d4c42883d182fe2bf1538e9d29163bc0,7021,Markdown,documentation,lecture_structure,Document public — Accès MCP WealthTech,26
+MCP-F-67c11de56a6b8a8f,docs/AGENTS_ARCHITECTURE.md,100644,blob,c1c4f2ba8a7f1cf11835b6fd20087cee5eb47e38,1223,Markdown,documentation,lecture_structure,AGENTS_ARCHITECTURE.md — Architecture des agents IA,10
+MCP-F-7cb04d36b1b514af,docs/AI_SKILLS.md,100644,blob,21ea14dbef036ba2d0f6fc55cf06f279446ee533,792,Markdown,documentation,lecture_structure,AI_SKILLS.md — Compétences IA persistantes,4
+MCP-F-ff21b6b9a3a33e9d,docs/ARCHITECTURE.md,100644,blob,6169874d1395452dd135c1e02ee4454e27cec7a5,917,Markdown,documentation,lecture_structure,ARCHITECTURE.md — Architecture du MCP WealthTech,5
+MCP-F-fe6803eb5dd1f2ee,docs/BACKUP_RESTORE.md,100644,blob,6d39a3c601ba956b5bdca2a8f21d460790c6afe6,687,Markdown,documentation,lecture_structure,BACKUP_RESTORE.md — Sauvegarde et restauration,5
+MCP-F-2bfab3db5cc1baf4,docs/CHANGELOG.md,100644,blob,0c3f89c44ece417c065c4dce43ba215b7a832e22,468,Markdown,documentation,lecture_structure,CHANGELOG.md,4
+MCP-F-94b64ee5b5a1e8c3,docs/CODE_REVIEW.md,100644,blob,fc8f53980ec2d57175e76bdd55de7f8208fbc189,967,Markdown,documentation,lecture_structure,CODE_REVIEW.md — Revue du code,5
+MCP-F-9f9ec8185cc5099b,docs/DATABASE.md,100644,blob,2792931cb16b2d8ea56adc66fa9a939155f28a73,593,Markdown,documentation,lecture_structure,DATABASE.md — Données et bases,4
+MCP-F-305cbceb19a01de8,docs/DEPLOYMENT_PRODUCTION.md,100644,blob,356f593a0c33160c5867ba732d4555f2deaf8fe7,1127,Markdown,documentation,lecture_structure,DEPLOYMENT_PRODUCTION.md — Déploiement production,7
+MCP-F-005fcade827e716a,docs/DOCKER.md,100644,blob,ecb1615d6e944824072e262545ad96afad429c94,559,Markdown,documentation,lecture_structure,DOCKER.md,1
+MCP-F-c9b2de314c7f3841,docs/GITHUB_AUTO_DISCOVERY.md,100644,blob,7abe9ad7e5616ff1c3046ad84a3e1300c34eb072,4849,Markdown,documentation,lecture_structure,GITHUB_AUTO_DISCOVERY.md,13
+MCP-F-bb937a8c0fab0d81,docs/GPT.md,100644,blob,d133bad805c4a7698fd55920796a5e0b795ed233,3035,Markdown,documentation,qualifie,GPT.md — Mémoire persistante IA du projet MCP WealthTech,8
+MCP-F-d8f607b04b0e9baf,docs/KUBERNETES_FUTURE.md,100644,blob,dd45661e14e59b07911741ca660e9155ea3aecc0,566,Markdown,documentation,lecture_structure,KUBERNETES_FUTURE.md — Trajectoire Kubernetes,4
+MCP-F-23cb124aca2011de,docs/MCP_GITHUB_GUARDIAN.md,100644,blob,db63852f2f6455cb767ac7d427de0639e6be9dd9,5180,Markdown,documentation,lecture_structure,MCP GitHub Guardian,13
+MCP-F-5d13ebe4a737c499,docs/MCP_TOOLS.md,100644,blob,259280e377bfc13603b3ced7af60f3683c5432c9,1463,Markdown,documentation,lecture_structure,MCP_TOOLS.md — Catalogue des outils MCP,3
+MCP-F-beaf18f0babb216a,docs/MCP_WRITE_TOOLS.md,100644,blob,3ddf4407b7254ec74936d4b306e9a5a4227d975f,3756,Markdown,documentation,lecture_structure,MCP_WRITE_TOOLS.md — Outils d’écriture sécurisés,18
+MCP-F-9069ee5e76909ff1,docs/MIGRATION.md,100644,blob,a733cd5b0f1a89cb93b039852c91be9334fc0395,1198,Markdown,documentation,lecture_structure,MIGRATION.md — Migrations S2 vers S1,5
+MCP-F-a5a35cf615b99e24,docs/MONITORING.md,100644,blob,e07e5cb5686bc2771e4f12ce8269d9c7de792c98,469,Markdown,documentation,lecture_structure,MONITORING.md — Observabilité,4
+MCP-F-d9e568fed5608cd3,docs/OAUTH_CHATGPT_CLAUDE_GITHUB.md,100644,blob,9a6619c2a3bd485a6e6d423f085a7c0043c6cd8e,6764,Markdown,documentation,lecture_structure,"Documentation publique — OAuth, ChatGPT, Claude, GitHub et MCP WealthTech",23
+MCP-F-6c19f811685dd66a,docs/README_DEV.md,100644,blob,1df3611765e6a656ca14d5654dc7fb204cd00439,1000,Markdown,documentation,lecture_structure,README_DEV.md — Développement du MCP WealthTech,6
+MCP-F-0d96796e2b2a475d,docs/ROADMAP.md,100644,blob,c8a1fae3af5ab2a579a7daaabc8c841fd2c8568d,1477,Markdown,documentation,lecture_structure,ROADMAP.md — Feuille de route MCP WealthTech,8
+MCP-F-2605206b7e64be69,docs/SECURITY.md,100644,blob,4b4af26fe0260e6461ab1a3a53f2d9ab7f9fb129,1014,Markdown,documentation,lecture_structure,SECURITY.md — Sécurité du MCP WealthTech,7
+MCP-F-8af872715889edc7,docs/SUIVI.md,100644,blob,f662129ad86632f11b8dfd19815c467896ed4526,10039,Markdown,documentation,qualifie,SUIVI.md — Journal vivant du projet MCP WealthTech,43
+MCP-F-8862ca6f6e5cd205,docs/SUIVI_MEMOIRE_CONVERSATION_2026-07-01.md,100644,blob,070bca6fb1cc7e8698f823e9eb625f4883e8f90b,1326,Markdown,documentation,lecture_structure,Suivi — Ajout mémoire conversation MCP / EWARI,5
+MCP-F-8519adad9dcc16f4,docs/TASKS.md,100644,blob,78852d0367ef89685eca537da60804d1f8b41604,893,Markdown,documentation,lecture_structure,TASKS.md — Tâches opérationnelles,6
+MCP-F-d3b8e9da24ca50b0,docs/TODO.md,100644,blob,c641bc8b95761dd0205c8744850f82ad98ada292,758,Markdown,documentation,lecture_structure,TODO.md — Tâches ouvertes,4
+MCP-F-0380f6e5b6cecf88,docs/audits/2026-08-05/ALIGNMENT_EXECUTION_STATUS_PRE_RECOVERY.md,100644,blob,54b8db9910ec4eb4141f535946c35d154050ac2e,2936,Markdown,documentation,lecture_structure,Alignement GitHub ↔ S1 ↔ runtime — état historique avant récupération,9
+MCP-F-fe55ef51bd60c708,docs/audits/2026-08-05/MCP_CONNECTION_CONTINUITY_POLICY.md,100644,blob,c69920e4cfb7368f8fd782d00a0df7d01c91c5a9,1497,Markdown,documentation,lecture_structure,Politique de continuité MCP et GitHub,4
+MCP-F-2feca3146b6e2e6c,docs/audits/2026-08-05/MCP_FOUNDATIONS_FINAL_STATE.md,100644,blob,da7e336f722ec5c31364e36f7feceeee319eb18f,3528,Markdown,documentation,lecture_structure,État final des fondations MCP,10
+MCP-F-2b1a980a525c9ba5,docs/audits/2026-08-05/MCP_GIT_REGISTRY_V1_TO_V2_MIGRATION_PLAN.md,100644,blob,bd5ec0869a2a2a70fae1761224cea8ad2215c9b8,2480,Markdown,documentation,lecture_structure,Plan de migration GitRegistry v1 vers v2,11
+MCP-F-39dad930e328254f,docs/audits/2026-08-05/MCP_GIT_REGISTRY_V2_FOUNDATION.md,100644,blob,7e9055be2e53eebaaccc4f2f6a98f388f1b42037,3218,Markdown,documentation,lecture_structure,Fondation GitRegistry v2 — lecture duale et dry-run,10
+MCP-F-29c99dc020f5efa4,docs/audits/2026-08-05/MCP_GIT_REGISTRY_V2_SPEC.md,100644,blob,cc6d342fdcc382611bb7ae3e3a5b5a1460f2bd6a,7863,Markdown,documentation,lecture_structure,Specification GitRegistry v2 - audit 2026-08-05,16
+MCP-F-82f9b68ab2a56bd4,docs/audits/2026-08-05/MCP_NON_DESTRUCTIVE_EXECUTION_PLAN.md,100644,blob,97e17913393621b5273ed94de42d882748410505,1683,Markdown,documentation,lecture_structure,Plan d'exécution non destructif,7
+MCP-F-32816ead66158b75,docs/audits/2026-08-05/MCP_OAUTH_LOG_REDACTION_P1.md,100644,blob,9a07e5c70be77e6cdd7ef0dbac7afc35caea24d5,1675,Markdown,documentation,lecture_structure,P1 — Redaction des logs OAuth MCP,6
+MCP-F-c73505488d8efde2,docs/audits/2026-08-05/MCP_PRE29_RECOVERY_AUDIT.md,100644,blob,85548634cf6ad1c87788222dc795c78541e6ec52,13698,Markdown,documentation,lecture_structure,Audit de reprise MCP — état pré-29 juillet et dérive locale,24
+MCP-F-b04ed159c8662155,docs/audits/2026-08-05/MCP_READ_WRITE_FOUNDATION.md,100644,blob,2101a1055ad25d8422a0c85d1531795d010a8329,2597,Markdown,documentation,lecture_structure,Fondation propre de séparation READ / WRITE,8
+MCP-F-c0b54ae3500f8d30,docs/audits/2026-08-05/MCP_REGISTRY_UPDATE_SUMMARY.md,100644,blob,9eb00c848b276260d5cdf3f042403032558d6802,2907,Markdown,documentation,lecture_structure,MCP registry update audit - 2026-08-05,10
+MCP-F-5094c63a09778ec0,docs/audits/2026-08-05/MCP_REGISTRY_UPDATE_WORKFLOW.corrupted-original.md,100644,blob,a4a16b472b5dd524c8baabd36fdea38da46a28ce,9426,Markdown,documentation,lecture_structure,Procédure officielle de mise à jour du registre MCP,7
+MCP-F-0503da1a112a9f57,docs/audits/2026-08-05/MCP_REGISTRY_UPDATE_WORKFLOW.md,100644,blob,f4dfa52f11ff3c52b2fd48d3df965f09ce069bf9,2600,Markdown,documentation,lecture_structure,Procédure officielle de mise à jour du registre MCP — version réparée,8
+MCP-F-4cc090b0db996c0b,docs/audits/2026-08-05/MCP_RUNTIME_IMAGE_ATTESTATION_READONLY.md,100644,blob,ac941a489c0ae710947576ab602a38c495117b6b,2353,Markdown,documentation,lecture_structure,Attestation read-only du runtime et de l’image Docker MCP,8
+MCP-F-4134a49ab1e6405c,docs/audits/2026-08-05/MCP_RUNTIME_MODULE_SELECTION.md,100644,blob,87db535e2f727db39a5582207c49bb59dd5d86d3,6633,Markdown,documentation,lecture_structure,Sélection des modules récupérés du runtime S1,22
+MCP-F-9f05c52ff2594c5e,docs/audits/2026-08-05/MCP_RUNTIME_RECOVERY_ATTESTATION.md,100644,blob,4ae1698244a5551232423b53dff7ab28798bf99e,1356,Markdown,documentation,lecture_structure,Attestation de récupération du runtime MCP — 5 août 2026,6
+MCP-F-88c9dba1a5763224,docs/audits/2026-08-05/MCP_RUNTIME_TOOL_CATALOG_20260805.md,100644,blob,bb0c07ad363e51b4476397dafd788e38a7622e6b,1072,Markdown,documentation,lecture_structure,Catalogue MCP observé — 5 août 2026,2
+MCP-F-0e190f970cf67b4e,docs/audits/2026-08-05/README.md,100644,blob,e65bd18de56a2fc21f1d6764c62d9229b0b28137,3127,Markdown,documentation,lecture_structure,Programme de reprise MCP — 5 août 2026,7
+MCP-F-5d5ce0432055057e,docs/audits/2026-09-22-deferred-github-capability-overlap.md,100644,blob,6e9b8684fee68ab2634a21ba2b89b66024a37fa7,6072,Markdown,documentation,lecture_structure,Audit current-first des capacités GitHub différées par GWC-12 — 2026-09-22,9
+MCP-F-6ffb2ea6bfbf6a39,docs/audits/2026-09-22-legacy-open-pr-intent-reconciliation.md,100644,blob,59afa2f80f04307c4e4d350dce413c97ce4d943b,5955,Markdown,documentation,lecture_structure,Réconciliation des intentions des anciennes PR ouvertes — 2026-09-22,9
+MCP-F-32fcff0d81777e52,docs/governance/F04_DISPATCH_PARALLEL_RESUME_20261009.md,100644,blob,ae43bea57bc4d60b6bb6fd1e4432320c112747c2,7350,Markdown,documentation,lecture_structure,MCP — Reprise gouvernée F-04 et dispatch multi-agents (2026-10-09),8
+MCP-F-a634c4afae6da2fc,docs/governance/FND_FOUNDATIONS_REGISTRY.json,100644,blob,4a5e6fef00bf5d8e272739336cc45b15ca6948b3,9453,structure,,metadonnees_git,,
+MCP-F-312094165339c1bd,docs/governance/MASTER_RESUME_MEMORY.md,100644,blob,ff2d00eef1e67a99a700cb2579fc12257f8c86b8,17849,Markdown,documentation,lecture_structure,Mémoire maître de reprise — MCP WealthTech,10
+MCP-F-f29753586c28f9ec,docs/governance/README.md,100644,blob,9de9ad17bdfc9a519f4c2497472bb6f348a0dd54,12066,Markdown,documentation,qualifie,Gouvernance documentaire MCP,13
+MCP-F-d7da071b25db9d59,docs/governance/agent-historical-continuity-breadcrumbs-20261016.md,100644,blob,e488f6530d6993e4ce0538cac3981a8f69896d94,12685,Markdown,documentation,qualifie,MCP — Fil d'Ariane historique et protocole de mémoire inter-agents (16 octobre 2026),6
+MCP-F-3efd0a16843667bf,docs/governance/architecture-94-blueprint-crosswalk-20261009.json,100644,blob,d8ca0202585fb8166c029eb15ada139e52f2fdce,314921,structure,,metadonnees_git,,
+MCP-F-5ef7c6c33587c94f,docs/governance/architecture-chronology-issue65-20261009.json,100644,blob,af0d8782df887a3adc541227ca53f7fa034ebda7,119137,structure,,metadonnees_git,,
+MCP-F-1d7f72aea649d6c1,docs/governance/architecture-comments-batch01-20261009.json,100644,blob,b452217e0afb5cf2a34dbf9dd6647e094ad39bfa,123460,structure,,metadonnees_git,,
+MCP-F-b17959fc9c293434,docs/governance/architecture-comments-batch02-20261009.json,100644,blob,73463b951bb1aaa93e235e8e93a8084b6852c8dd,12355,structure,,metadonnees_git,,
+MCP-F-e5fbf3a7d03169e8,docs/governance/architecture-comments-batch03-20261009.json,100644,blob,2d3142799caca25f7c9c16a891579628b5490156,22981,structure,,metadonnees_git,,
+MCP-F-593d4e60eb3ee388,docs/governance/architecture-comments-batch04-20261009.json,100644,blob,5418305337c6f075bc71b9b79d7b65a397e0aa51,13071,structure,,metadonnees_git,,
+MCP-F-f76e8b0df205de40,docs/governance/architecture-comments-batch05-20261009.json,100644,blob,7e02bc3713033bc663293ff0587aa4b0ce19c66f,19155,structure,,metadonnees_git,,
+MCP-F-8ea4d8b21d3c0636,docs/governance/architecture-comments-batch06-20261009.json,100644,blob,d3e2db42629cee92795a5dd17cd59d38a575f3f3,14528,structure,,metadonnees_git,,
+MCP-F-b8cab903a71eeafe,docs/governance/architecture-review-provenance-batch02-20261009.json,100644,blob,86b99f5aaf00f44a8bb313622ebf6f3ed4ddb81d,105676,structure,,metadonnees_git,,
+MCP-F-ead9783ceed1adbd,docs/governance/architecture-review-threads-batch01-20261009.json,100644,blob,975d6013169fb6423b8efd9192f61be83fa1772d,90485,structure,,metadonnees_git,,
+MCP-F-b90cf93b8d3e29c2,docs/governance/client-evidence-inventory-20260925.json,100644,blob,f8505706f087cbdaa5f5d2e5158a280bbea401e2,3824,structure,,metadonnees_git,,
+MCP-F-99177fe66eec5c96,docs/governance/cug-grt-capsule.md,100644,blob,d6931097701335c685c014d30eee62443f9ad151,8294,Markdown,documentation,lecture_structure,Capsule isolée CUG/GRT — WT-MCP-CUG-GRT-20261114-01,7
+MCP-F-23b9dd930c4aa41d,docs/governance/cug-webhook-receiver.md,100644,blob,a75e96c22cc8d9e54715cac614d619dee096bfd0,7613,Markdown,documentation,lecture_structure,Webhook CUG — réception seule et pilote UAES,5
+MCP-F-a65db7bb4ea4afcd,docs/governance/gd-u-02d-b3b-b3c-release-evidence-20261028.json,100644,blob,746b5d9739a9558fd4fc340fb8f51544fd249271,3161,structure,,metadonnees_git,,
+MCP-F-023d21b03d1ed728,docs/governance/gd-u-02d-b3d-e3-single-use-20261028.json,100644,blob,136114c31854415a6fdb68b9b2b98165770d50bf,3884,structure,,metadonnees_git,,
+MCP-F-7d046fd61b9cc4c4,docs/governance/gd-u-02d-b3f-http-mcp-admission-20261028.json,100644,blob,b548fb0fabfc3bff00d5a10a3be912f144d48edf,3416,structure,,metadonnees_git,,
+MCP-F-81dfafb0472e7c72,docs/governance/gd-u-02d-b3g-trusted-consumption-clock-20261028.json,100644,blob,b7f7b8763dbd2c52bb617cf500b3a5d4f3a7892d,3308,structure,,metadonnees_git,,
+MCP-F-7f527d8b58defb25,docs/governance/gd-u-02d-b3h-review-integrity-20261028.json,100644,blob,58f3ecf3d5f225a29650dbf7c8e4d32553b2aeaf,3174,structure,,metadonnees_git,,
+MCP-F-e01bcf192713615e,docs/governance/gd-u-02d-b3i-authenticated-mcp-web-pairing-20261029.json,100644,blob,1655fd535896ae082f3504dfe7b04d1d9ec2e400,5969,structure,,metadonnees_git,,
+MCP-F-e3d5c05320a677e6,docs/governance/gd-u-02d-b3i-review-timestamp-ambiguity-20261028.json,100644,blob,bcc4b1e4fa6bcaf08aaa7bda9634ccc43d94d17d,1935,structure,,metadonnees_git,,
+MCP-F-d7bcfc41af79a79d,docs/governance/gd-u-e2/capability-evidence-current-20261030.json,100644,blob,594e641510181065604f37da711cc68c6a6ca256,65972,structure,,metadonnees_git,,
+MCP-F-86798a25cda43537,docs/governance/git-github-capability-convergence-20260925.json,100644,blob,4ee2b7aa9189bd5e4c511cbe3649f180802f9c9b,426575,structure,,metadonnees_git,,
+MCP-F-7dbaf0763204f7db,docs/governance/governed-audit-continuation-workblock-20261009.json,100644,blob,db3ca9b1892dcf4286d0df7d62e88de9e592ca4d,15163,structure,,metadonnees_git,,
+MCP-F-f8167d8fe9661fa1,docs/governance/gwb00-s1-evidence-20261011.json,100644,blob,0567cebb351d4e45ffec175dedfda297b6ba169f,4899,structure,,metadonnees_git,,
+MCP-F-08db73cf9d4bd2f8,docs/governance/gwb02-inline-pr-review-comments-20261015.json,100644,blob,06eb69e735f5502547367d9ac5a4ff71bbf44236,336108,structure,,metadonnees_git,,
+MCP-F-f9f194e6f25f8c11,docs/governance/gwb02-pr-review-submissions-batch01-20261015.json,100644,blob,df1faed1969edfa6d829df05c8db3dd7ea4c065d,24533,structure,,metadonnees_git,,
+MCP-F-fd8d0c4e29a9527f,docs/governance/gwb02-pr-review-submissions-batch02-20261015.json,100644,blob,533ceae5579b42bcc47358285ae51b7d29deb641,6999,structure,,metadonnees_git,,
+MCP-F-a806a73d220ec08b,docs/governance/gwb02-pr-review-submissions-batch03-20261015.json,100644,blob,4f47d059c537ddf8ee77b02e3435c7d15f729838,19651,structure,,metadonnees_git,,
+MCP-F-e31f4c49adc53de7,docs/governance/gwb02-pr-review-submissions-batch04-20261015.json,100644,blob,d668aa1dc150f9b6ef5cdf76895a5da2dbfa52c2,13269,structure,,metadonnees_git,,
+MCP-F-24c1ff4733bede0f,docs/governance/gwb02-pr-review-submissions-batch05-20261015.json,100644,blob,c1ef662fb4c925ce53770093ea1ebd129a278e27,14326,structure,,metadonnees_git,,
+MCP-F-474b716caa827384,docs/governance/gwb02-pr-review-submissions-batch06-20261015.json,100644,blob,633ef1a3b549d8097d061668b9789eb6301ec07e,1900,structure,,metadonnees_git,,
+MCP-F-120b57d7a6959f00,docs/governance/gwb02-pr-review-submissions-batch07-20261015.json,100644,blob,de88f3a744dfd8e1114bc436aaa9267f13a93db7,7032,structure,,metadonnees_git,,
+MCP-F-f187d67e3a904309,docs/governance/gwb02-pr-review-submissions-batch08-20261015.json,100644,blob,5b1ab8f1f34d48673d59995ecebe423316e7b0c6,5251,structure,,metadonnees_git,,
+MCP-F-7984c00bb76c3267,docs/governance/gwb02-pr-review-submissions-batch09-20261015.json,100644,blob,409230aadc799f0b8f7ce07e0ba1804c0d0d9cdc,61249,structure,,metadonnees_git,,
+MCP-F-04993832b8990016,docs/governance/gwb02-pr-review-submissions-postbaseline-20261015.json,100644,blob,83eab8f9cebe001cee8f5ef9781429fab36a7a82,722,structure,,metadonnees_git,,
+MCP-F-5b3b44a58e444fb7,docs/governance/gwb02-review-coverage-manifest-20261015.json,100644,blob,7e7bcb664d1d3107601658e97fd7adbdf4d63ec5,76346,structure,,metadonnees_git,,
+MCP-F-68bab383914afe35,docs/governance/gwb03-pr-review-findings-triage-20261015.json,100644,blob,8a07d2091feecc55e3d2356a04a459c786f4d409,160413,structure,,metadonnees_git,,
+MCP-F-e24babf357a227ac,docs/governance/gwb03-pr261-source-policy-evidence-20261015.json,100644,blob,372942b9bbd78677156fa6ebaad30590f813e89f,37671,structure,,metadonnees_git,,
+MCP-F-783fd9bf8d0d1e12,docs/governance/gwb03-pr267-domain-evidence-20261015.json,100644,blob,5d1468dc58e1c270ad1bb854631651fa7411dec5,22865,structure,,metadonnees_git,,
+MCP-F-b02efd9132455903,docs/governance/gwb04-94-blueprint-source-test-trace-20261015.json,100644,blob,e168a33b8e43d14b63b0ee9e120334d6741a28aa,141111,structure,,metadonnees_git,,
+MCP-F-f017dd64cd7c53ef,docs/governance/gwb04-ready-ownership-20261015.json,100644,blob,644d807ad5c5cc931006cf51f028365e0676aea4,41567,structure,,metadonnees_git,,
+MCP-F-a2a46ca40553851a,docs/governance/markdown-inventory.json,100644,blob,cc22c2762b75b0366412c80339a44f95ce945a27,24949,structure,,qualifie,,
+MCP-F-cb2c9d4529670c1e,docs/governance/mcp-global-automation-gap-map-20261105.json,100644,blob,0c543c58bb1741c839931871b452e5dee3d24035,28991,structure,,metadonnees_git,,
+MCP-F-c5c83ec3d253abd5,docs/governance/mcp-priority-convergence-map-20261015.json,100644,blob,d58e4d3808adfcac414d030cad7a6ac60dd76f7a,73372,structure,,metadonnees_git,,
+MCP-F-5b1928cfc1eafd5d,docs/governance/multi-repository-inventory-20261001.json,100644,blob,2af6493cc632017dbadf023c864b9b9c0c39560d,5422,structure,,metadonnees_git,,
+MCP-F-d6369ff7af0f4f35,docs/governance/multi-repository-target-scope-20261004.json,100644,blob,eea9fc3ee0ceb9feddc069b5cbfc2958955bae51,9634,structure,,metadonnees_git,,
+MCP-F-4ffda31721437a75,docs/governance/oauth-correlation-inventory-20260928.json,100644,blob,ecab43849b0addf6e2d35bba8766edd6618720cc,6886,structure,,metadonnees_git,,
+MCP-F-bb4c9b2ba6305eba,docs/governance/pilots/E2-MCP-ENTRY-RECONCILIATION-PROTOCOL.md,100644,blob,ee25e43d07995e91c80f61f5acb6ccd0d19fd5f7,29330,Markdown,documentation,qualifie,E2 — Protocole opérationnel de réconciliation et de continuité du MCP,19
+MCP-F-b2ef1782ff44421f,docs/governance/pilots/PILOT-E2-01-entry.json,100644,blob,fcd5670d38bceef60eed0ab5dad8b5cbd98f82ff,1065,structure,,qualifie,,
+MCP-F-9a05f7760f66a8c9,docs/governance/pilots/PILOT-E2-01.txt,100644,blob,ba911d1e8c760c44b6074edf39ffd2f9609e78b5,4349,texte,,metadonnees_git,,
+MCP-F-84fef46265aa5f62,docs/governance/pr350-provisioning-grt-s1-checkpoint-20261023.md,100644,blob,9a7421a3af70669dd046603e38ecea3fa8a55b8e,6059,Markdown,documentation,lecture_structure,PR #350 — Checkpoint canonique de l'extension additive et du pilote GRT /gouvern,7
+MCP-F-56b95b0d382dfb4b,docs/governance/program-backlog-convergence.json,100644,blob,fc1ec980c8ec82278acd889796afc34e0b70647e,558356,structure,,metadonnees_git,,
+MCP-F-49c605d47d3111ce,docs/governance/super-admin-cockpit-convergence-20261004.json,100644,blob,2c0a4c7451bb2ee45e606ea4192db1021183697c,29191,structure,,metadonnees_git,,
+MCP-F-b71ec33003150ac3,docs/governance/universal-agent-coordination-plan.md,100644,blob,6745409103d3f6f9ee7a604457362d8006738ecf,11085,Markdown,documentation,lecture_structure,Universal Agent Coordination — execution plan,8
+MCP-F-bf0b05678ef3fff0,docs/governance/universal-capabilities-bifurcation-20261028.json,100644,blob,e05103660a4c077f171289913c9dd55640482e08,35702,structure,,metadonnees_git,,
+MCP-F-c4f5c64e47e53e49,docs/governance/universal-program-history/00-fondations-issue349-pr350.md,100644,blob,311494e362594f9c41273e729a8763706fa920ea,6319,Markdown,documentation,lecture_structure,00 — Origine du programme et fondations #349 / #350,4
+MCP-F-0951cb1076503a29,docs/governance/universal-program-history/01-gd-u-01-compositions.md,100644,blob,da62fdc9e999a3f7dac30cbde86fc11d3882a01a,3317,Markdown,documentation,lecture_structure,01 — GD-U-01 et compositions transversales,3
+MCP-F-bf37bb86da1620e4,docs/governance/universal-program-history/02-gd-u-02-branches.md,100644,blob,dcc0a8c74c126997f0bdc691d34e2df92fe0de2e,8948,Markdown,documentation,lecture_structure,"02 — GD-U-02 : exécution, admission Plesk et sous-tranches",5
+MCP-F-32a49db6b5781b85,docs/governance/universal-program-history/03-pr-associees.md,100644,blob,7318ef9de07b61a53952b505f0ec143d70329a8a,3170,Markdown,documentation,lecture_structure,03 — PR connexes #350 à #355 : propriétés et dépendances,2
+MCP-F-e433cc2ef0bdcb7a,docs/governance/universal-program-history/04-sources-et-regles.md,100644,blob,acdd1ba8d180cbbc70e78a91008615234a39cbfe,3433,Markdown,documentation,lecture_structure,04 — Sources et règles de conservation,5
+MCP-F-af81a3549d01c831,docs/governance/universal-program-history/README.md,100644,blob,d661efb253f646f7a2a465873ef6e16d3c32c768,6852,Markdown,documentation,lecture_structure,Programme d'extension universelle du MCP — navigateur historique,5
+MCP-F-2cf2e30ee73a7939,docs/governance/universal-program-history/source-links.json,100644,blob,cb60e5b86071b9f8e63d7d95db288889d8c8667c,74103,structure,,metadonnees_git,,
+MCP-F-0eeeb42d9e4ebf6c,docs/gwc/ARCHITECTURE_73_CONTRACTS.md,100644,blob,301b16d4c1b01b55412309627d665240b26032e8,797986,Markdown,documentation,lecture_structure,GWC V1 — Architecture des 73 contrats (corps canonique),3950
+MCP-F-bd5103a72ef495cb,docs/gwc/BLUEPRINTS.md,100644,blob,a8ddfb4548ba0be5f8636cac01d2bdc3cbb591e7,212564,Markdown,documentation,lecture_structure,GWC — blueprints d'implémentation,94
+MCP-F-0b723164522049ad,docs/gwc/DEPRECATED_CLAIMS.md,100644,blob,f39a2654fba284138c899baf4cf01203dda92207,8833,Markdown,documentation,lecture_structure,GWC — affirmations remplacées,15
+MCP-F-4298c124247de6a4,docs/gwc/PRECODE_ACTION_TASK_FLOW.txt,100644,blob,9dbad9f263bb8be6152e7ed1d7df0f77d09b7e6d,53289,texte,,metadonnees_git,,
+MCP-F-54b5d382075c98a5,docs/gwc/PRECODE_EXECUTION_PLAN.txt,100644,blob,cc20dc3fc937217887441aba20c3e8a8dc5008ec,30366,texte,,metadonnees_git,,
+MCP-F-fa699a2a44f01871,docs/gwc/PRECODE_MULTI_AGENT_COORDINATION.md,100644,blob,bd7958a8c1a00b7f2ee673319ad0cf61c356db2d,30557,Markdown,documentation,lecture_structure,GWC PRE-CODE — MULTI-AGENT COORDINATION POLICY,24
+MCP-F-be67a41d127dabf8,docs/gwc/README.md,100644,blob,a00c65d6b644f7ddac74d459d602231dc408cb57,21868,Markdown,documentation,qualifie,GWC — Governed Workflow Contract : dossier permanent,16
+MCP-F-62c669f2ca6caa80,docs/gwc/REVISION_HISTORY.md,100644,blob,1fd69e50c431f815f3be5058541656833a073112,8348,Markdown,documentation,lecture_structure,GWC — historique des révisions,10
+MCP-F-01330c8c1ac1c925,docs/gwc/archive/ARCHITECTURE_R2_NON_CANONICAL.md,100644,blob,96e1513a74b8d78d65b933c6566e8917fa511197,254666,Markdown,documentation,lecture_structure,GWC V1 — Architecture des 73 contrats,207
+MCP-F-8a5701414d12bfd2,docs/gwc/canonical-memory/current.json,100644,blob,c12b0ff7331ec4a311d7110953ef1b06e2a9c266,37153,structure,,metadonnees_git,,
+MCP-F-ab773a231bcabda6,docs/gwc/canonical-memory/post-integration-terminal-handoff-20260920/bundle.json,100644,blob,263a2b162480a7d87b2863e9eb386f07dfc3e856,2804,structure,,metadonnees_git,,
+MCP-F-b8c0deca9d62a6d5,docs/gwc/canonical-memory/post-integration-terminal-handoff-20260920/sources/post-integration-terminal-state.json,100644,blob,135d5e75b2b940e8ab88393207aca3293f6ced95,3044,structure,,metadonnees_git,,
+MCP-F-09703c4727b10726,docs/gwc/canonical-memory/pr95-c1-af19-resolved/bundle.json,100644,blob,0ec22f6b50241b0137422c221c9c30a2d4993b8b,2060,structure,,metadonnees_git,,
+MCP-F-77fe8c1280be3998,docs/gwc/canonical-memory/pr95-c1-af19-resolved/sources/c1-af19-resolved.json,100644,blob,3378e707dd3fc48404a5d137876228f607635cdb,2186,structure,,metadonnees_git,,
+MCP-F-fdcc928193f05382,docs/gwc/canonical-memory/pr95-c2-af22-af30-resolved/bundle.json,100644,blob,0659af71605460469df9177ee3ca1cc75a3a75db,2128,structure,,metadonnees_git,,
+MCP-F-8fbda71f13661291,docs/gwc/canonical-memory/pr95-c2-af22-af30-resolved/sources/c2-af22-af30-resolved.json,100644,blob,2b78f385f58d2fd571d555ccb88f9985e78201b7,1950,structure,,metadonnees_git,,
+MCP-F-99b6cadf3a92864e,docs/gwc/canonical-memory/pr95-c3-capability-reconciliation-complete/bundle.json,100644,blob,12d30b2e12865bd90a754c1e4ad69cd58b87ae55,2462,structure,,metadonnees_git,,
+MCP-F-0f0a7715306f7d15,docs/gwc/canonical-memory/pr95-c3-capability-reconciliation-complete/sources/c3-capability-reconciliation.json,100644,blob,641cd156bb944548ddf4e5ab9bee30f7aa5c38dc,3346,structure,,metadonnees_git,,
+MCP-F-f29ce53f920aba4c,docs/gwc/canonical-memory/pr95-candidate-backlog-complete/bundle.json,100644,blob,babf3db80b9eaedced91371878eb1b774be276c7,2086,structure,,metadonnees_git,,
+MCP-F-aae5bb67c1ce620f,docs/gwc/canonical-memory/pr95-candidate-backlog-complete/sources/candidate-backlog-complete.json,100644,blob,ae9e7b2913f42d7c96cd38c670c98c95e3921cf6,2014,structure,,metadonnees_git,,
+MCP-F-dd6febf27e7ff7ec,docs/gwc/canonical-memory/pr95-candidate-build-ready/bundle.json,100644,blob,430ded837c5cc18d4d4f870e93e63edafad52bd1,2520,structure,,metadonnees_git,,
+MCP-F-ec2d79957141f122,docs/gwc/canonical-memory/pr95-candidate-build-ready/sources/candidate-build-transition.json,100644,blob,97fcf7cb1efbe6ab5cff2cdb2f30b23acee9904a,1542,structure,,metadonnees_git,,
+MCP-F-a054046055dd5785,docs/gwc/canonical-memory/pr95-candidate-continuity-ready/bundle.json,100644,blob,66621ec7ce9395aa27361bbf216098a4d4421ad9,2384,structure,,metadonnees_git,,
+MCP-F-89a9c8109ed80787,docs/gwc/canonical-memory/pr95-candidate-continuity-ready/sources/candidate-continuity.json,100644,blob,16236de324be4bfaacec80eb93161cb4a24a7239,2306,structure,,metadonnees_git,,
+MCP-F-cd28e310507c45be,docs/gwc/canonical-memory/pr95-ded/bundle.json,100644,blob,bd5534580e76c106232c788be8ee0eae069d33f9,7484,structure,,metadonnees_git,,
+MCP-F-50b31c5d5ba8e25f,docs/gwc/canonical-memory/pr95-ded/sources/ded-checkpoint.md,100644,blob,7e6b13b6841907ccbf1ac0f7c9914acd5a58398a,1075,Markdown,documentation,lecture_structure,PR #95 Detailed Evolution Design checkpoint,1
+MCP-F-078086c21b05684e,docs/gwc/canonical-memory/pr95-ded/sources/github-live.json,100644,blob,3a0d016c75c107892149228da01d492b941917f4,769,structure,,metadonnees_git,,
+MCP-F-e3c10e9781be5462,docs/gwc/canonical-memory/pr95-ded/sources/historical-baseline.md,100644,blob,cb1e4a4c94cedd63890eaf709c71bb27e8066a97,390,Markdown,documentation,lecture_structure,Historical baseline / superseded state,1
+MCP-F-f6b429a54fabff58,docs/gwc/canonical-memory/pr95-ded/sources/mission-directive.md,100644,blob,4282f514541243cf7163affc0d412f09633a46b9,7068,Markdown,documentation,lecture_structure,Current mission directive — normative summary,3
+MCP-F-cfdd970d8cad2a6f,docs/gwc/canonical-memory/pr95-e-gwc0-contract-substrate-complete/bundle.json,100644,blob,38c27880d1bb0dba7bb9a819c1705347ce579818,2098,structure,,metadonnees_git,,
+MCP-F-42ae14e20c9fc1f4,docs/gwc/canonical-memory/pr95-e-gwc0-contract-substrate-complete/sources/gwc0-contract-substrate.json,100644,blob,292f4669d8579f46b5704e8e258a9463dc284c7e,2323,structure,,metadonnees_git,,
+MCP-F-2b00a11186838abb,docs/gwc/canonical-memory/pr95-e-gwc1-intent-capture-complete/bundle.json,100644,blob,512822d31ed2f7f50efc08754bccd7b68de4bea3,1996,structure,,metadonnees_git,,
+MCP-F-f40f192d69b75303,docs/gwc/canonical-memory/pr95-e-gwc1-intent-capture-complete/sources/gwc1-intent-capture.json,100644,blob,f0548788789f797d3a5c3ef2f09ccfbf7ddf7e1c,2281,structure,,metadonnees_git,,
+MCP-F-5f05d6f2205c227e,docs/gwc/canonical-memory/pr95-e-gwc10-multi-repository-target-scope-complete/bundle.json,100644,blob,104371c583947f643247a347ff88cc31f4bef94f,2418,structure,,metadonnees_git,,
+MCP-F-d6a3958c030ccb8f,docs/gwc/canonical-memory/pr95-e-gwc10-multi-repository-target-scope-complete/sources/gwc10-target-scope.json,100644,blob,e40b14eddaa6ce18801c946d9f3dad8384842c84,4834,structure,,metadonnees_git,,
+MCP-F-3b2cda44a4cc5a91,docs/gwc/canonical-memory/pr95-e-gwc11-authority-baseline-complete/bundle.json,100644,blob,8c0696d0c9a675b72b0edf61906e9d130f843ac3,2380,structure,,metadonnees_git,,
+MCP-F-4e68209ae449e28f,docs/gwc/canonical-memory/pr95-e-gwc11-authority-baseline-complete/sources/gwc11-authority-baseline.json,100644,blob,b8b161026ad964eee36604afcf59fb5e8bb49de2,4197,structure,,metadonnees_git,,
+MCP-F-97a7169273194a35,docs/gwc/canonical-memory/pr95-e-gwc12-github-control-plane-complete/bundle.json,100644,blob,fc1d9982e7c9e91403c5d7b7d6fca4d8d87df0c5,2454,structure,,metadonnees_git,,
+MCP-F-4103d45b8313a680,docs/gwc/canonical-memory/pr95-e-gwc12-github-control-plane-complete/sources/gwc12-github-control-plane.json,100644,blob,6fa1f9e920357edbf203170bc42c1a2e4a5d5465,5230,structure,,metadonnees_git,,
+MCP-F-56e51160d2224033,docs/gwc/canonical-memory/pr95-e-gwc13-development-workflow-complete/bundle.json,100644,blob,97cf2c1203bb4bf81d7d74849c25c5d72615e38f,2540,structure,,metadonnees_git,,
+MCP-F-9f8d9398818bf6b7,docs/gwc/canonical-memory/pr95-e-gwc13-development-workflow-complete/sources/gwc13-development-workflow.json,100644,blob,4983c3208fd0890a0db3057a4b59b974810d6a08,4402,structure,,metadonnees_git,,
+MCP-F-f2b011a04dd04579,docs/gwc/canonical-memory/pr95-e-gwc14-review-merge-complete/bundle.json,100644,blob,cb703de6d49ef51595224a267a5bc9ee231ca9a0,2395,structure,,metadonnees_git,,
+MCP-F-3ff41158991a5268,docs/gwc/canonical-memory/pr95-e-gwc14-review-merge-complete/sources/gwc14-review-merge.json,100644,blob,c2f046f3a217234fa14646d0a2ca827721a0cdc5,4668,structure,,metadonnees_git,,
+MCP-F-4fe53ae8314d54aa,docs/gwc/canonical-memory/pr95-e-gwc15-deployment-evidence-complete/bundle.json,100644,blob,efa5afd272a71e0db3a0f17aa095ea3a9a5ad3af,2541,structure,,metadonnees_git,,
+MCP-F-d4660f1e4610efe4,docs/gwc/canonical-memory/pr95-e-gwc15-deployment-evidence-complete/sources/gwc15-deployment-evidence.json,100644,blob,f2a1365ea722482be4908c14c3dcaba0bacf06f0,5457,structure,,metadonnees_git,,
+MCP-F-fb6a5f9b747af212,docs/gwc/canonical-memory/pr95-e-gwc16-documentation-closure-complete/bundle.json,100644,blob,a480d1ead4fb89a90fd09490a0ed0626c36cb3eb,2727,structure,,metadonnees_git,,
+MCP-F-249aed910fb280df,docs/gwc/canonical-memory/pr95-e-gwc16-documentation-closure-complete/sources/gwc16-documentation-closure-evidence.json,100644,blob,1d8dbccab9aa3d87fc9a30663e6c7d9aeb9e61a6,6015,structure,,metadonnees_git,,
+MCP-F-1438071708a4cfa5,docs/gwc/canonical-memory/pr95-e-gwc17-universal-acceptance-complete/bundle.json,100644,blob,4aecc3b9bf4f1208405b3a9f6cef0bcfbfecaca9,3084,structure,,metadonnees_git,,
+MCP-F-51dc1adce4692cb3,docs/gwc/canonical-memory/pr95-e-gwc17-universal-acceptance-complete/sources/gwc17-universal-acceptance-evidence.json,100644,blob,63f648aebdb11f2ef96b6f03f3bc912d3ded9191,5774,structure,,metadonnees_git,,
+MCP-F-f2e4e15d48b65d6f,docs/gwc/canonical-memory/pr95-e-gwc2-execution-engine-complete/bundle.json,100644,blob,24bc4ac601280cca5c734329d9fb1e4006e425c9,2253,structure,,metadonnees_git,,
+MCP-F-c14605734218b00f,docs/gwc/canonical-memory/pr95-e-gwc2-execution-engine-complete/sources/gwc2-execution-engine.json,100644,blob,36f6c90b11bd4c384c6ae3c8ee05e4abef51697d,2895,structure,,metadonnees_git,,
+MCP-F-94ac590a0e3e0413,docs/gwc/canonical-memory/pr95-e-gwc3-resolver-adapters-complete/bundle.json,100644,blob,942b75b8df76f9c0ec639350adf9db275fca1d86,2079,structure,,metadonnees_git,,
+MCP-F-bfceb413e1fe1d66,docs/gwc/canonical-memory/pr95-e-gwc3-resolver-adapters-complete/sources/gwc3-resolver-adapters.json,100644,blob,07586f3cb020f04e8cdc0d5aa8426761b47c1b2c,2470,structure,,metadonnees_git,,
+MCP-F-826eaf30f52895cf,docs/gwc/canonical-memory/pr95-e-gwc4-intake003-recovery-complete/bundle.json,100644,blob,1e5b0b4cbb5c9e71b609d787efaebed11aa32077,2702,structure,,metadonnees_git,,
+MCP-F-d1d7c112f3bf10bb,docs/gwc/canonical-memory/pr95-e-gwc4-intake003-recovery-complete/sources/gwc4-intake003-recovery.json,100644,blob,06f465e21813cfb2fa5314ef1c069d609917ca56,5795,structure,,metadonnees_git,,
+MCP-F-020966296d696215,docs/gwc/canonical-memory/pr95-e-gwc4-session-integration-complete/bundle.json,100644,blob,045f77025c67f5ad03e025bd78ebf984b08d9b09,2299,structure,,metadonnees_git,,
+MCP-F-d8a42a8c45ed7d0e,docs/gwc/canonical-memory/pr95-e-gwc4-session-integration-complete/sources/gwc4-session-integration.json,100644,blob,aa5108048175119bdf632f5354b005260040bfe9,3629,structure,,metadonnees_git,,
+MCP-F-7056f67b5cf6e503,docs/gwc/canonical-memory/pr95-e-gwc5-task-lock-orchestration-complete/bundle.json,100644,blob,80da42db5754e3161743ce624aac66702adbcb8f,2587,structure,,metadonnees_git,,
+MCP-F-e9d0ed1113dae79e,docs/gwc/canonical-memory/pr95-e-gwc5-task-lock-orchestration-complete/sources/gwc5-task-lock-orchestration.json,100644,blob,873c84218e29964ac35d284756a7764e47d6f612,6037,structure,,metadonnees_git,,
+MCP-F-121fa1d23b8a49d2,docs/gwc/canonical-memory/pr95-e-gwc6-server-resolver-complete/bundle.json,100644,blob,6439c19e6caed5ad9157691bc2fa14d24c0a0f50,2629,structure,,metadonnees_git,,
+MCP-F-d0f330ad6d1afb08,docs/gwc/canonical-memory/pr95-e-gwc6-server-resolver-complete/sources/gwc6-server-resolver.json,100644,blob,c6e232aff984dc99aecf15c569fbbfbd18ae3b64,5298,structure,,metadonnees_git,,
+MCP-F-54cd0362fe1574b5,docs/gwc/canonical-memory/pr95-e-gwc7-runtime-resolver-complete/bundle.json,100644,blob,59f1354479c33139f6f8be5dc3bd1c4ae097f2d1,2420,structure,,metadonnees_git,,
+MCP-F-8680ec4fb2186abd,docs/gwc/canonical-memory/pr95-e-gwc7-runtime-resolver-complete/sources/gwc7-runtime-resolver.json,100644,blob,86d17000f8f39160fc4374535b6a7cfa4183b644,4542,structure,,metadonnees_git,,
+MCP-F-7b1b2515befc9209,docs/gwc/canonical-memory/pr95-e-gwc8-domain-resolver-complete/bundle.json,100644,blob,ea914de5e322fc86b3263c41d3650412aed60b2e,2542,structure,,metadonnees_git,,
+MCP-F-1677c4d782eba15a,docs/gwc/canonical-memory/pr95-e-gwc8-domain-resolver-complete/sources/gwc8-domain-resolver.json,100644,blob,e7fabeb31f6772d273f0ddfaa07f6bcf6cd8b73c,5941,structure,,metadonnees_git,,
+MCP-F-a1db14e0b0ea99bf,docs/gwc/canonical-memory/pr95-e-gwc9-governance-capabilities-complete/bundle.json,100644,blob,1b532b5c0b6d9ca1d3577e6b65cf3f4872a004aa,2540,structure,,metadonnees_git,,
+MCP-F-3a5786531cf24d09,docs/gwc/canonical-memory/pr95-e-gwc9-governance-capabilities-complete/sources/gwc9-governance-capabilities.json,100644,blob,376856627c2208cf80eb50dd12e58756552cd309,4578,structure,,metadonnees_git,,
+MCP-F-563c5cbaec8da662,docs/gwc/canonical-memory/pr95-github-first-bootstrap-ready/bundle.json,100644,blob,169fa1041d59b0cfd00ed24c632cb9fc4104a556,3004,structure,,metadonnees_git,,
+MCP-F-31cbd4536d570448,docs/gwc/canonical-memory/pr95-github-first-bootstrap-ready/sources/github-first-bootstrap.json,100644,blob,3977675cacb279776af62186e98a1915344f0c7f,2712,structure,,metadonnees_git,,
+MCP-F-8437c853454bb141,docs/gwc/canonical-memory/pr95-intake-003-reconciled/bundle.json,100644,blob,a70d696591ade325d291b379e3261b151e68be53,1928,structure,,metadonnees_git,,
+MCP-F-4bcca9c836cacf9d,docs/gwc/canonical-memory/pr95-intake-003-reconciled/sources/intake-003-reconciliation.json,100644,blob,4f955aad18c0e04a5b649e5b9741b44fddcd5a55,6571,structure,,metadonnees_git,,
+MCP-F-55c896acadd3bc7b,docs/gwc/canonical-memory/pr95-intake-004-minute-liveness-complete/bundle.json,100644,blob,9948250e4f79613c49a76f89c68730202626271b,1885,structure,,metadonnees_git,,
+MCP-F-3c20a0918c3e5ea1,docs/gwc/canonical-memory/pr95-intake-004-minute-liveness-complete/sources/intake-004-minute-liveness-completion.json,100644,blob,38b93e4a9e8248d29dff26047057190370f6f3c3,3356,structure,,metadonnees_git,,
+MCP-F-0f5d38dc5964f1c6,docs/gwc/canonical-memory/pr95-intake-004-reconciled/bundle.json,100644,blob,deb50fa1de57611f262d489451f6a22e4cb789a8,1779,structure,,metadonnees_git,,
+MCP-F-fe35d121471a81d0,docs/gwc/canonical-memory/pr95-intake-004-reconciled/sources/intake-004-reconciliation.json,100644,blob,c2a2350cabb2450f009d38d1fbd15dd24c29f45e,6289,structure,,metadonnees_git,,
+MCP-F-22bd925a88df2da9,docs/gwc/canonical-memory/pr95-intake-continuity-coherence-ready/bundle.json,100644,blob,23350a004bdeadcf94c09dfcc10dd9b66d04650b,3550,structure,,metadonnees_git,,
+MCP-F-25d70ca65259de23,docs/gwc/canonical-memory/pr95-intake-continuity-coherence-ready/sources/intake-continuity-coherence.json,100644,blob,a4b5d26ca80b898693c06ce9d00892367cb65ad6,4060,structure,,metadonnees_git,,
+MCP-F-a005b0bdadedefeb,docs/gwc/canonical-memory/pr95-intakes-001-002-reconciled/bundle.json,100644,blob,971c53759f999031a23e80d17c3a8fda2055b88b,2381,structure,,metadonnees_git,,
+MCP-F-56b593aec994e578,docs/gwc/canonical-memory/pr95-intakes-001-002-reconciled/sources/intakes-001-002-reconciliation.json,100644,blob,4d58b8c9e898f0211dd9d4299a4edcab340e3d2e,7393,structure,,metadonnees_git,,
+MCP-F-4d30d218055ef7f6,docs/gwc/canonical-memory/pr95-new-information-intake-001/bundle.json,100644,blob,1a171aedf06af54cde46959d61aaf56f69b4cd63,2883,structure,,metadonnees_git,,
+MCP-F-2e56150bbcccd298,docs/gwc/canonical-memory/pr95-new-information-intake-001/sources/new-information-intake-001.json,100644,blob,f9f2fcc4a9531024dcecdb67438eec8d859f6d0a,5464,structure,,metadonnees_git,,
+MCP-F-de0f0b1470744c79,docs/gwc/canonical-memory/pr95-new-information-intake-002/bundle.json,100644,blob,4ecfbbed8d2b124567aa8eff2e559838ead04492,2757,structure,,metadonnees_git,,
+MCP-F-fe5b09932ef6df76,docs/gwc/canonical-memory/pr95-new-information-intake-002/sources/new-information-intake-002.json,100644,blob,7a64cf125570aec6a43bc441ae71dd92b7a7ea7b,5644,structure,,metadonnees_git,,
+MCP-F-effc06e7947dac04,docs/gwc/canonical-memory/pr95-new-information-intake-003/bundle.json,100644,blob,08782e494800d45ec75d389d8e11015a104d7720,1822,structure,,metadonnees_git,,
+MCP-F-aaf0a51f2bb8627d,docs/gwc/canonical-memory/pr95-new-information-intake-003/sources/new-information-intake-003.json,100644,blob,6f1ce2f4e9543e2a86ac5c74cce01f198258c7f2,3381,structure,,metadonnees_git,,
+MCP-F-989fc3dd462fda4c,docs/gwc/canonical-memory/pr95-new-information-intake-004/bundle.json,100644,blob,dab2ed5968c7c11dbc77045fd4457fcca73276aa,1826,structure,,metadonnees_git,,
+MCP-F-7ff22c0b9bf2b184,docs/gwc/canonical-memory/pr95-new-information-intake-004/sources/new-information-intake-004.json,100644,blob,16c674d49f4a4d0325fc1ca65fd14423123a60cd,3746,structure,,metadonnees_git,,
+MCP-F-3cd3fb79273ff9b8,docs/gwc/canonical-memory/pr95-phase-b-live-reconciliation/bundle.json,100644,blob,57b0dd246c0ac4bfdcf2390edc12f97bbb1f0bf3,4931,structure,,metadonnees_git,,
+MCP-F-d38532708f124509,docs/gwc/canonical-memory/pr95-phase-b-live-reconciliation/sources/github-live.json,100644,blob,c9dc99d46bf960902b0953aa0f7c0e3247288552,519,structure,,metadonnees_git,,
+MCP-F-63787ddfda40a7be,docs/gwc/canonical-memory/pr95-phase-b-live-reconciliation/sources/live-authorities.json,100644,blob,0e5ca87af05583ccb7df4e0622264f8cf0be6b96,2305,structure,,metadonnees_git,,
+MCP-F-9bbe78170fc21942,docs/gwc/canonical-memory/pr95-phase-b-resolved/bundle.json,100644,blob,ccbd7322ccbc2b1088b31fe6d302507041909fad,4905,structure,,metadonnees_git,,
+MCP-F-ffae7e347f1862cb,docs/gwc/canonical-memory/pr95-phase-b-resolved/sources/github-live.json,100644,blob,32ad055d241ec16266fbf3281a7fbe38efbaf6a9,494,structure,,metadonnees_git,,
+MCP-F-5e003facaa59c124,docs/gwc/canonical-memory/pr95-phase-b-resolved/sources/live-authorities.json,100644,blob,6ee3dd0e1ff33d319ba17936d387ad58941c9a91,2216,structure,,metadonnees_git,,
+MCP-F-0c4bbf7fcac54a66,docs/gwc/canonical-memory/pr95-precode-architecture-complete/bundle.json,100644,blob,796fb32bfa65817adb9177d72b03ee635ce88113,4383,structure,,metadonnees_git,,
+MCP-F-6f204b52ee96da82,docs/gwc/canonical-memory/pr95-precode-architecture-complete/sources/architecture-closure.json,100644,blob,5e6074614c3eb699db6f2bc043af6910fbcd9cc9,475,structure,,metadonnees_git,,
+MCP-F-cedc6a4fa2f14b83,docs/gwc/canonical-memory/pr95-precode-architecture-complete/sources/execution-procedure-summary.json,100644,blob,a52ee18d5d1b939f0c02a1ac6e51a6f8bf4418d4,714,structure,,metadonnees_git,,
+MCP-F-4ef7cc5c52c75a80,docs/gwc/canonical-memory/pr95-precode-architecture-complete/sources/github-live.json,100644,blob,b8cf5b60a4b2446f21c35387c96e60bd2593c8e9,517,structure,,metadonnees_git,,
+MCP-F-a3bd5a8eb279c99e,docs/gwc/canonical-memory/pr95-precode-gate/bundle.json,100644,blob,b3402704ca63766948dc4663dd14e4cced242f35,2956,structure,,metadonnees_git,,
+MCP-F-4df0ae6f8d5a372e,docs/gwc/canonical-memory/pr95-precode-gate/sources/github-live.json,100644,blob,dadb594d80608bf7bad99c111f3d9350a6ba33d4,607,structure,,metadonnees_git,,
+MCP-F-61bd9ff4d37f3927,docs/gwc/canonical-memory/pr95-precode-gate/sources/precode-phase-closure.json,100644,blob,40db5637da7de84ef3b51cc62effdb6a68522758,1043,structure,,metadonnees_git,,
+MCP-F-f5c877c02d4e6d2a,docs/gwc/canonical-memory/pr95-task-reconciliation-ready/bundle.json,100644,blob,0856dda003a52ab3de172bb7bfdfefc0f489e811,7138,structure,,metadonnees_git,,
+MCP-F-f841be3943a14581,docs/gwc/canonical-memory/pr95-task-reconciliation-ready/sources/github-live.json,100644,blob,acbdd6af92700f9d92e5e5d5a659e9a02f093c41,887,structure,,metadonnees_git,,
+MCP-F-04ff23bcd20f2397,docs/gwc/canonical-memory/pr95-task-reconciliation-ready/sources/phase-checkpoint.json,100644,blob,dd4c6f9e5a57e62dcffbbf5ac367879217ecfa1f,1072,structure,,metadonnees_git,,
+MCP-F-cf612c1d8ecac000,docs/gwc/canonical-memory/pr95-task-reconciliation-ready/sources/previous-checkpoint.json,100644,blob,18e97e010a97f84c7cf89f6e2e031b07b7890783,465,structure,,metadonnees_git,,
+MCP-F-24d3c9383c5d7360,docs/gwc/canonical-memory/pr95-task-reconciliation-ready/sources/program-procedure.txt,100644,blob,f0f5b1b8eb703a106caf6870abeccf0907dce2d6,4334,texte,,metadonnees_git,,
+MCP-F-76954084a8094d0b,docs/history/SUIVI_PRE_FOUNDATIONS_20260805.md,100644,blob,0d3aad08430992587c77c670b60361258bfc29de,10173,Markdown,history,lecture_structure,SUIVI.md — Journal vivant et point de reprise,19
+MCP-F-11fbff12c0cf45a5,docs/migration-wealthtech-2026-07-04/README.md,100644,blob,1390e2634562244d70b7b633a38c4065731e7b74,2480,Markdown,documentation,lecture_structure,WealthTech migration resources - 2026-07-04,6
+MCP-F-e0cea0cafed7f5cc,docs/reports/MCP_CODE_INVENTORY_20260708_175029.md,100644,blob,ddc605f4a1fa10438fc0d4e1d267677c5b33e35e,54006,Markdown,documentation,lecture_structure,MCP Code Inventory,34
+MCP-F-2eb20e8bdd8cca9d,docs/reports/MCP_CODE_INVENTORY_SAFE_20260708_175627.md,100644,blob,de48e0ffda9d56b33e98c65d78a7322bd0e4b5b4,9874,Markdown,documentation,lecture_structure,MCP Code Inventory Safe,10
+MCP-F-0720fbf42ff83ca9,docs/reports/MCP_CORE_SOURCE_SAFE_20260708_175917.md,100644,blob,de1a85afc88ef45424ba183bc4ed784382875d06,65967,Markdown,documentation,lecture_structure,MCP Core Source Safe,25
+MCP-F-fb3c5a87d56410a7,docs/reports/MCP_GITHUB_ALIGNMENT_CHECK_20260708_180532.md,100644,blob,808c285c836e2dcc1e0aa3d0ea5fab7bd15db04d,2385,Markdown,documentation,lecture_structure,MCP GitHub Alignment Check,11
+MCP-F-6ddf9da62e83614d,docs/runbooks/GITHUB_FIRST_GOVERNED_RECOVERY.md,100644,blob,5cef455ea8d7f08ec3010166ede82d6cfe725a51,16807,Markdown,documentation,qualifie,"Méthode universelle de bifurcation externe gouvernée pour le développement, la correction, la maintenance, la reprise et le déploiement contrôlé du MCP — GitHub-first / OIDC / Non-",12
+MCP-F-8384c5f4fa4ce85e,docs/runbooks/GITHUB_PR_AUTHORIZATION_DIAGNOSTIC.md,100644,blob,b6d4a3dbfd4a0a57e1b905f0ef4a0155e692801e,4829,Markdown,documentation,lecture_structure,Diagnostic d’autorisation GitHub pour les Pull Requests,13
+MCP-F-0e79fd6ee89740ad,docs/runbooks/S1_GITHUB_READ_ONLY_DEPLOY_IDENTITY.md,100644,blob,ef60405cc42d54b8bfb3f8a260bbe8c188eafaee,5237,Markdown,documentation,lecture_structure,Rotation de l'identité GitHub de déploiement S1 en lecture seule,14
+MCP-F-d1384910bdfa0da5,docs/superpowers/plans/2026-08-09-governed-autodeploy-v1.md,100644,blob,4a943ba4ed6ca6d8767f0811fcbabea1a5e254b4,4745,Markdown,engineering-plan,lecture_structure,MCP Governed Autodeploy V1 — Implementation Plan,8
+MCP-F-2b06601d8097ce4e,docs/superpowers/plans/2026-08-09-live-state-v1.md,100644,blob,b46b04cd8c4c83fa6a37f5d4fa52a5e57d8abacf,8439,Markdown,engineering-plan,lecture_structure,MCP Live State V1 Implementation Plan,7
+MCP-F-ceaa239055ce210d,docs/superpowers/plans/2026-08-13-mcp-governed-session-continuity-v1.md,100644,blob,61b329a7bda1d5825a18ec7b12328013853b7a51,55996,Markdown,engineering-plan,lecture_structure,MCP Governed Session Continuity / Operational Memory V1 Implementation Plan,24
+MCP-F-c5657a4ec7f5f42d,docs/superpowers/plans/2026-08-22-mandatory-agent-bootstrap-work-orchestration-v1.md,100644,blob,a616a2caf3c1b4433b7cec548d72da3aa4ec670a,15275,Markdown,engineering-plan,lecture_structure,Mandatory Agent Bootstrap & Work Orchestration V1 Implementation Plan,13
+MCP-F-537edc965beaa026,docs/superpowers/plans/2026-09-01-governed-connection-context-minimal.md,100644,blob,34ecf3dcc089673e781a4f71e2084438bb733b85,15461,Markdown,engineering-plan,lecture_structure,Governed Connection Context Minimal — Implementation Plan,10
+MCP-F-afa3fa2fd5020f46,docs/superpowers/plans/2026-09-07-b1-github-identity-resolution.md,100644,blob,5b1a853f797e88834faa3f535e912d3c9850102c,16157,Markdown,engineering-plan,lecture_structure,B1 GitHub Identity Resolution Implementation Plan,22
+MCP-F-067efcaeb9062ae4,docs/superpowers/plans/2026-09-09-b2-repository-resolution.md,100644,blob,0416669b0a497ce2c82fd6117ed61007174614a7,21046,Markdown,engineering-plan,lecture_structure,B2 Repository Resolution Implementation Plan,13
+MCP-F-65c5fac1f748a731,docs/superpowers/plans/2026-09-12-africafunds-project-aware-s2-mapping.md,100644,blob,f1c90f554b4177dea77b3264c754b6e25ada898b,6322,Markdown,engineering-plan,lecture_structure,AfricaFunds Project-Aware S2 Mapping Implementation Plan,12
+MCP-F-c2260f2711db7815,docs/superpowers/specs/2026-08-09-governed-autodeploy-v1-design.md,100644,blob,d71b4cff4b1c5b9357d9ac6585333954fbaa3bb8,7356,Markdown,engineering-spec,lecture_structure,MCP Governed Autodeploy V1 — Design,14
+MCP-F-132055913a3d06f8,docs/superpowers/specs/2026-08-09-live-state-v1-design.md,100644,blob,70bb2434da5db6748a99dbb8f4c85562bdc46ed7,10171,Markdown,engineering-spec,lecture_structure,MCP Live State V1 — Design,22
+MCP-F-7dee92e9c9bd3084,docs/superpowers/specs/2026-08-13-mcp-governed-session-continuity-v1-design.md,100644,blob,d7bd160b74fdaa895971dd44b53b84b86ec77001,25698,Markdown,engineering-spec,lecture_structure,MCP Governed Session Continuity / Operational Memory V1 — Design,44
+MCP-F-32037996167edb79,docs/superpowers/specs/2026-08-22-mandatory-agent-bootstrap-work-orchestration-v1-design.md,100644,blob,64c2c2b13f7999e6d2dec13d0d24c7872b513445,14399,Markdown,engineering-spec,lecture_structure,Mandatory Agent Bootstrap & Work Orchestration V1 — Design intégré,27
+MCP-F-4cd67d6a0495c8dc,docs/superpowers/specs/2026-09-01-governed-connection-context-minimal-design.md,100644,blob,f77fe6f5a171bde617946fac9573fae435887552,9743,Markdown,engineering-spec,lecture_structure,Governed Connection Context Minimal — Design,15
+MCP-F-3f8ee19cf7fc9520,docs/superpowers/specs/2026-09-07-b1-github-identity-resolution-design.md,100644,blob,5bf57355aba946f3ec1b87d3a22eb6f2dfb9113b,21448,Markdown,engineering-spec,lecture_structure,B1 GitHub Identity Resolution Design,22
+MCP-F-d6fee7e1b695477b,docs/superpowers/specs/2026-09-09-b2-repository-resolution-design.md,100644,blob,ab4d4cac1fbc0793f07fac6a8494f285e4cdbf90,23575,Markdown,engineering-spec,lecture_structure,B2 Repository Resolution Design,28
+MCP-F-9afdb405ba213efe,docs/superpowers/specs/2026-09-12-africafunds-project-aware-s2-mapping-design.md,100644,blob,8a666ed9925e97b65e6326ec33143e025b4bf8ce,10548,Markdown,engineering-spec,lecture_structure,AfricaFunds Project-Aware S2 Mapping Design,13
+MCP-F-6c8a83666ac0450c,docs/superpowers/specs/2026-09-15-governed-workflow-contract-v1-design.md,100644,blob,b779e6c24b1307000354f0d1a257f94836ea8f3f,13802,Markdown,engineering-spec,lecture_structure,Governed Workflow Contract V1 — Design,40
+MCP-F-b2e48cc2b09229b5,docs/superpowers/specs/2026-09-20-github-first-operational-continuity-v1-design.md,100644,blob,a092a17f19f8c3909cab7e76a2639447e74c56ed,7424,Markdown,engineering-spec,lecture_structure,GitHub-first Operational Continuity V1,15
+MCP-F-7298766f6e664565,memory/2026-05-05-stablecoin-ewari-conversation-memory.md,100644,blob,2d55065d44024f042bbd6036263920d23850104d,13339,Markdown,memory,lecture_structure,Mémoire consolidée — Stablecoin E-WARI / WealthTech,20
+MCP-F-87e226870007f1ce,memory/ACTION_REQUISE_CLOTURE_OBJECTIF_LOOP_ENGINEERING_20260703.md,100644,blob,d7dd514551f76f36a819bc06475a58a83362de50,2302,Markdown,memory,lecture_structure,Action Requise Pour Cloture Objectif Loop Engineering - 2026-07-03,6
+MCP-F-7dc020b41c9688d6,memory/AUDIT_COMPLETUDE_OBJECTIF_LOOP_ENGINEERING_20260702.md,100644,blob,faca83c69d53dfc9187ae689bd47dc4e01790352,7576,Markdown,memory,lecture_structure,AUDIT_COMPLETUDE_OBJECTIF_LOOP_ENGINEERING_20260702,12
+MCP-F-39fee7398f3b925c,memory/AUDIT_FINAL_COMPLETUDE_ET_READY_COMMIT_MCP_20260702.md,100644,blob,a67b1bcfa872825402cbb2b0635656ccb96aae20,6204,Markdown,memory,lecture_structure,AUDIT_FINAL_COMPLETUDE_ET_READY_COMMIT_MCP_20260702,12
+MCP-F-65074a468b5f35e3,memory/AUDIT_FINAL_OBJECTIF_ACTIF_LOOP_ENGINEERING_20260703.md,100644,blob,4d84288e2e037be34540518deb8527998ad927bd,5295,Markdown,memory,lecture_structure,Audit Final Objectif Actif Loop Engineering - 2026-07-03,15
+MCP-F-9c8ac32825c67c28,memory/AUDIT_GLOBAL_S1_S2_MCP_PROMPT.md,100644,blob,992ad65f1b7289a619d668cfb1e796c65d14be41,5726,Markdown,memory,lecture_structure,PROMPT — AUDIT GLOBAL NON DESTRUCTIF S1 + S2 VIA MCP,13
+MCP-F-1ef9f49dec26da40,memory/AUDIT_OBJECTIF_ACTIF_LOOP_ENGINEERING_PREUVE_20260702.md,100644,blob,2543d7e036be8e0ea40c4c3de31ce10380e01e26,8777,Markdown,memory,lecture_structure,Audit Objectif Actif - Preuve Loop Engineering WealthTech - 2026-07-02,19
+MCP-F-132b4a7440ca6ae2,memory/CHAINSOLUTIONS_WEALTHTECH_CODESPACES_CONFIGURED_20260708_052531.md,100644,blob,566eea80cdf6aa2edfac80a7aacf7f18a58b12cb,597,Markdown,memory,lecture_structure,Codespaces configuré — chainsolutions-wealthtech/MCP,5
+MCP-F-cd734389c9d97c74,memory/CHAINSOLUTIONS_WEALTHTECH_GITHUB_ORG_CONFIGURED_20260708_050957.md,100644,blob,b418b2b12c2eed118bf7003ef7d8eb399973670b,948,Markdown,memory,lecture_structure,Configuration GitHub organisation — chainsolutions-wealthtech,5
+MCP-F-2692c1f580f0e737,memory/CHAINSOLUTIONS_WEALTHTECH_TARGET_ORG_20260708_044836.md,100644,blob,e81ed9a58770906b2cb88fd72bb881a268a962f7,833,Markdown,memory,lecture_structure,Paramétrage MCP — chainsolutions-wealthtech,4
+MCP-F-f3dd8bddf5a8818b,memory/CLOTURE_DOCUMENTS_SAFE_NON_LUS_20260703.md,100644,blob,c27441f0b7edcd01785902eafd1af86a075f8060,1516,Markdown,memory,lecture_structure,Cloture Documents Surs Non Lus - 2026-07-03,5
+MCP-F-0cfcab1231b9667a,memory/CODEX_AUTO_ANALYSIS_REQUEST.md,100644,blob,7e2e2f00b5268c169f4f42fa2e5f92c64b2f9e0b,1874,Markdown,memory,lecture_structure,CODEX AUTO ANALYSIS REQUEST — WealthTech Memory,3
+MCP-F-b488c4f31424c550,memory/CODEX_AUTO_ANALYSIS_RESPONSE_20260701.md,100644,blob,2657a69f67985c64c3166aa895c4743ea37f6d4a,2760,Markdown,memory,lecture_structure,CODEX_AUTO_ANALYSIS_RESPONSE_20260701.md,6
+MCP-F-8d1bb152f7fb8797,memory/CODEX_HANDOFF_STABLECOIN_EWARI.md,100644,blob,90822dee0526ec45ee97b085fe292cb229fb3e16,3094,Markdown,memory,lecture_structure,Handoff Codex — Stablecoin E-WARI / WealthTech,8
+MCP-F-992981542faef653,memory/CONVERSATIONS_POUSSEES_20260701.md,100644,blob,86b8bc5770a4de269dbd5520a15f2744ff244aa3,2423,Markdown,memory,lecture_structure,CONVERSATIONS_POUSSEES_20260701.md,6
+MCP-F-63c1820d78825ac9,memory/CONVERSATION_20260701_LOOP_ENGINEERING.md,100644,blob,bc0deb2dd9f449dd8e400b2df11120613f64db01,3740,Markdown,memory,qualifie,CONVERSATION_20260701_LOOP_ENGINEERING.md,9
+MCP-F-046ba4c0086ee3b0,memory/CONVERSATION_COMPILED_INDEX_2026-07-01.md,100644,blob,ca5143d22809636a65c588136983a245460b877f,1216,Markdown,memory,lecture_structure,Index mémoire — Conversation WealthTech MCP / EWARI / KOREE,5
+MCP-F-3d0c3b642dacc4aa,memory/CONVERSATION_COMPILED_WEALTHTECH_EWARI_MCP.md,100644,blob,113724e0ec23d3e50ee5ec7aef52ea77daf4b237,16158,Markdown,memory,lecture_structure,Compilation structurée — Conversation WealthTech / EWARI / KOREE / MCP,30
+MCP-F-824ddda9ef5a3d61,memory/CONVERSATION_PART_01_MCP_SERVERS_MIGRATION_2026-07-01.md,100644,blob,a26695c2a3b51790502aed6795f1ed090988a861,3477,Markdown,memory,lecture_structure,"Conversation compilée — Partie 01 — MCP, serveurs et migrations",10
+MCP-F-5462740fe4988797,memory/CONVERSATION_PART_02_ECOSYSTEM_LOOP_ENGINEERING_2026-07-01.md,100644,blob,4d75613bd8afeb7e108705ebb95fdcbc9cb2963c,3491,Markdown,memory,qualifie,Conversation compilée — Partie 02 — Écosystème WealthTech et Loop Engineering,8
+MCP-F-e36c6125063a62b8,memory/CONVERSATION_PART_03_EWARI_KOREE_STABLECOIN_2026-07-01.md,100644,blob,7e721d09fc6b76a736ece208bcd21cc507e5bd1a,5809,Markdown,memory,lecture_structure,Conversation compilée — Partie 03 — EWARI / KOREE / Stablecoin,12
+MCP-F-e8a298cb326f4cf6,memory/GPT.md,100644,blob,e50dc1277d2c4a78fc4dbab974f61b904ca69fcb,2627,Markdown,memory,qualifie,GPT.md — Mémoire IA persistante WEALTHTECH / MCP,8
+MCP-F-cce346a7257ab65b,memory/GUIDE_IMPORT_CONVERSATION_CHATGPT_EXTERNE_20260702.md,100644,blob,ff8c2174b4c1db866a572339fad73b2d46b01a9c,1801,Markdown,memory,lecture_structure,GUIDE_IMPORT_CONVERSATION_CHATGPT_EXTERNE_20260702,6
+MCP-F-dcfa6aa95e634fb5,memory/INDEX_MEMOIRE_WEALTHTECH_20260701.md,100644,blob,a1664173924fdb92f24edcb54d536a02d47dce60,4228,Markdown,memory,lecture_structure,INDEX_MEMOIRE_WEALTHTECH_20260701.md,11
+MCP-F-2b92903d60031a2f,memory/INSTALLATION_MCP_MEMORY.md,100644,blob,e030808a490de3d643760d6415d5f11be5b080bf,2366,Markdown,memory,lecture_structure,Installation / synchronisation de la mémoire projet sur S1,7
+MCP-F-988a47286fb2b59e,memory/INSTALLATION_MCP_WEALTHTECH.md,100644,blob,a0a3a1d147e52316ee27d683e4901d4a09cadd1a,4768,Markdown,memory,lecture_structure,INSTALLATION_MCP_WEALTHTECH.md — Installation et synchronisation mémoire MCP WealthTech,9
+MCP-F-1f5f2fa8b0cf161c,memory/INSTALL_MCP_WEALTHTECH_MEMORY.md,100644,blob,02a2d4da5ecb5d9449374f37184b4e6b1d244a50,2787,Markdown,memory,lecture_structure,Installation / synchronisation mémoire MCP WealthTech,7
+MCP-F-071c1c05b0e6f689,memory/INSTALL_ON_WEALTHTECH_SERVER.md,100644,blob,37a2428afe702714078dc77b1fbe2d79c66c4b35,3879,Markdown,memory,lecture_structure,INSTALLATION — Mémoire projet WEALTHTECH depuis Patricked-code/MCP,10
+MCP-F-198ce08be25ca238,memory/INTEGRATION_CODEX_WORKSPACE_RECHERCHE_ELARGIE_20260702.md,100644,blob,fa7313951e206796a94764e9dfe5670d12e0809a,4471,Markdown,memory,lecture_structure,Integration Recherche Elargie Documents/Codex - 2026-07-02,7
+MCP-F-154b59e78337d5a6,memory/INTEGRATION_CORPUS_LOCAL_DOCUMENTS_DOWNLOADS_20260702.md,100644,blob,64a9d2339eab6817e28b90dc66d7ed51299817ed,10357,Markdown,memory,lecture_structure,Integration Corpus Local Documents / Downloads - 2026-07-02,20
+MCP-F-94806a040bf7c56e,memory/INTEGRATION_DOCS_AGENTS_LOOP_ENGINEERING_20260702.md,100644,blob,1ae20c176943ba5bb3844afffe00595109bbd75e,3464,Markdown,memory,lecture_structure,INTEGRATION_DOCS_AGENTS_LOOP_ENGINEERING_20260702,6
+MCP-F-1e130f31bb8ad1a6,memory/INTEGRATION_MEMOIRE_ROOT_ONLY_20260702.md,100644,blob,15175870d124fde4ad89438c5ff1edec52d99dfe,4571,Markdown,memory,lecture_structure,Integration Memoire Secondaire /root - 2026-07-02,11
+MCP-F-fd361bf03e58397d,memory/INTEGRATION_OAUTH_CHATGPT_CLAUDE_GITHUB_MCP_20260702.md,100644,blob,c2ef748c9f7332708d60e77d716d6bd34deec59f,1702,Markdown,memory,lecture_structure,INTEGRATION_OAUTH_CHATGPT_CLAUDE_GITHUB_MCP_20260702,4
+MCP-F-ec9eb15017dd7c3c,memory/INTEGRATION_RAPPORTS_LEGACY_ET_LOCAUX_20260702.md,100644,blob,d2e2c16e5d4081356fcc91e7a844e27d3caa9187,13952,Markdown,memory,lecture_structure,INTEGRATION_RAPPORTS_LEGACY_ET_LOCAUX_20260702,14
+MCP-F-7e77677ac85cc27d,memory/INTEGRATION_SOURCES_LOCALES_SITE_CHAINSOLUTIONS_20260702.md,100644,blob,d47206ce416f8f95ee0c869599a9e0cc7707c74e,36887,Markdown,memory,lecture_structure,INTEGRATION_SOURCES_LOCALES_SITE_CHAINSOLUTIONS_20260702,10
+MCP-F-bfef9f0de56b44a5,memory/INTEGRATION_SOURCES_MCP_SERVEUR_SYNCHRONISATION_20260703.md,100644,blob,f00a6decd5f251ff4383c11115279894bbc5848d,5519,Markdown,memory,lecture_structure,Integration Sources MCP / Serveur / Synchronisation - 2026-07-03,11
+MCP-F-397a45f9130c314c,memory/INTEGRATION_WORKSPACE_LOCAL_WEALTHTECH_20260702.md,100644,blob,d35c6759e6a66646891c2646310e0a728fbbe536,14513,Markdown,memory,lecture_structure,INTEGRATION_WORKSPACE_LOCAL_WEALTHTECH_20260702,11
+MCP-F-d2dbc63ce8fc5d68,memory/INVENTAIRE_FICHIERS_CREES_20260701.md,100644,blob,af9928c18078154e068df87f03a717e2261aee86,3077,Markdown,memory,lecture_structure,INVENTAIRE_FICHIERS_CREES_20260701.md,11
+MCP-F-03e14177867fc2b7,memory/LECTURE_CONSOLIDEE_SOURCES_20260702.md,100644,blob,f9d8c4043340a5979190aa3b3ba649ad57f7dda2,10771,Markdown,memory,lecture_structure,LECTURE CONSOLIDEE SOURCES WEALTHTECH - 2026-07-02,6
+MCP-F-010c21a815afb1d1,memory/LOOPBACK_WEALTHTECH_CURRENT.md,100644,blob,994892ce489d11468eca7ca10908c415d562c3d3,16315,Markdown,memory,qualifie,LOOPBACK_WEALTHTECH_CURRENT.md,33
+MCP-F-3dfb8bc9c4cc479e,memory/LOOP_ENGINEERING_INSTRUCTIONS_DOCX_EXTRACT_20260702.md,100644,blob,0d99fa47fb2275f5f46e586ea24ab61b2aaddfa6,30447,Markdown,memory,qualifie,LOOP_ENGINEERING_INSTRUCTIONS_DOCX_EXTRACT_20260702,7
+MCP-F-6f36efa5d1b365b4,memory/LOOP_ENGINEERING_WEALTHTECH_20260701.md,100644,blob,874915edfb099dc1bf72b6a030d097f285526dc0,4457,Markdown,memory,lecture_structure,LOOP_ENGINEERING_WEALTHTECH_20260701.md,11
+MCP-F-dc33231ad47b9c12,memory/LOOP_ENGINEERING_WEALTHTECH_MASTER_PLAN_20260702.md,100644,blob,8600d9d3d0da59078c4736a71198e65e2a266ae4,16507,Markdown,memory,qualifie,LOOP_ENGINEERING_WEALTHTECH_MASTER_PLAN_20260702,29
+MCP-F-ee423cead14dbe21,memory/LOOP_ENGINEERING_WEALTHTECH_PLAYBOOK_COMPLET_20260702.md,100644,blob,92b45e3726588ffad100fac9b35fd97b20a305a8,14940,Markdown,memory,qualifie,LOOP_ENGINEERING_WEALTHTECH_PLAYBOOK_COMPLET_20260702,24
+MCP-F-a65df0eec96d96dc,memory/MATRICE_TRACABILITE_SOURCES_EXIGENCES_TRACKS_20260702.md,100644,blob,465444d6132938be3eb3f365c0b3fe557810823c,10649,Markdown,memory,qualifie,MATRICE_TRACABILITE_SOURCES_EXIGENCES_TRACKS_20260702,22
+MCP-F-28d72f9b3a2decae,memory/MCP_INSTALLATION_AND_SERVER_SYNC_2026-07-01.md,100644,blob,c6ed35789cd3c4264835a88d13aa6739e2c94df3,1877,Markdown,memory,lecture_structure,Runbook — Synchronisation mémoire serveur MCP,6
+MCP-F-b90dc9fbac1ac7d1,memory/MEMO_MCP_GITHUB_SERVER_ACCESS.md,100644,blob,d617bb94b1a765f020a87c854bd2b2ed37e0cea9,3242,Markdown,memory,lecture_structure,"Mémo — MCP, GitHub, S1, S2, Claude, ChatGPT",11
+MCP-F-26041168d3eb0d26,memory/MEMO_PROJECT_STABLECOIN_EWARI.md,100644,blob,03c6e41e9984f78f7a132a4ef187364f43a6f7c6,4536,Markdown,memory,lecture_structure,Mémo projet — Stablecoin EWARI / KOREE / XOF,10
+MCP-F-8032a7b9032217fa,memory/PLAN_EXECUTION_COMPLET_WEALTHTECH_ACTUALISE_20260702.md,100644,blob,8b38893abdd392a146d384f422d49d1c05645af3,11026,Markdown,memory,lecture_structure,Plan Execution Complet WealthTech Actualise - 2026-07-02,20
+MCP-F-7631b53bc51a7ce7,memory/PREPARATION_COMMIT_PUSH_MCP_MEMOIRE_20260702.md,100644,blob,3141e66c1beb968db687764bf653957680f896a5,4019,Markdown,memory,lecture_structure,Preparation Commit Push MCP Memoire - 2026-07-02,11
+MCP-F-b663e92eb4ba87fd,memory/PROMPT_AUDIT_6BI_B.md,100644,blob,7bce7ac0b210c8f8c3099a06bda7fa8be1a6016c,6123,Markdown,memory,lecture_structure,Prompt Codex — Étape 6BI-B,12
+MCP-F-a47b3b052f57d389,memory/PROMPT_AUDIT_OPCVM_SANS_REGRESSION.md,100644,blob,e8270885afcce296085d2e48164b208084b9899d,1996,Markdown,memory,lecture_structure,PROMPT_AUDIT_OPCVM_SANS_REGRESSION.md,7
+MCP-F-79549b055524e171,memory/PROMPT_AUDIT_WEALTHTECH_MCP.md,100644,blob,db8bb58a8d0377018bf2fcd8d7bd17a37e12b957,1875,Markdown,memory,lecture_structure,Prompt d’audit — WealthTech MCP,7
+MCP-F-4539c65580ac6a75,memory/README.md,100644,blob,19d4fe923849a724bc8edace99d6f6e3f45a483d,3568,Markdown,memory,lecture_structure,Mémoire projet WealthTech / MCP,8
+MCP-F-d8616598736d2677,memory/REGISTRE_COMPLET_CORPUS_LOCAL_DOCUMENTS_DOWNLOADS_20260702.md,100644,blob,b1605bb774e1c850449c09e33290bdf38477efb7,9249,Markdown,memory,lecture_structure,Registre Complet Corpus Local Documents / Downloads - 2026-07-02,17
+MCP-F-f2bed60c1c3416c2,memory/RUNBOOK_GLOBAL_REVIEW_S1_S2_2026-07-01.md,100644,blob,50f6882d61a31a8418d37e004861308921f98dfc,867,Markdown,memory,lecture_structure,Runbook global review — WealthTech MCP,5
+MCP-F-a31f3ad396fe71e7,memory/SUIVI.md,100644,blob,0c3788fdce3c9e413ecc5d0aa30371a566d6e7f5,3683,Markdown,memory,qualifie,SUIVI.md — WEALTHTECH / MCP / Stablecoin,17
+MCP-F-7d675d2dae5bbb1f,memory/SUIVI_MEMORY.md,100644,blob,6ec45846a6d7452c342241de2ba157b05164eb93,16004,Markdown,memory,lecture_structure,SUIVI MEMORY — WealthTech MCP,27
+MCP-F-44057e871ed170c9,memory/VERIFICATION_TRANSCRIPT_CHATGPT_EXTERNE_20260702.md,100644,blob,e3c96bb955735aec129473ee0e78ccb2326decfb,1496,Markdown,memory,lecture_structure,Verification Transcript ChatGPT Externe - 2026-07-02,5
+MCP-F-8474ce3f2addb1d9,memory/WEALTHTECH_CONVERSATION_COMPILED.md,100644,blob,f696c975da10179fa34165be69f1fa76c4162a5f,11184,Markdown,memory,lecture_structure,WEALTHTECH / MCP / STABLECOIN — Conversation compilée et mémoire projet,25
+MCP-F-3cf510a6c098da76,memory/WEALTHTECH_PROJECT_MEMORY.md,100644,blob,cdb59762e365e79271910f42b63a7371b9505860,15300,Markdown,memory,lecture_structure,WEALTHTECH_PROJECT_MEMORY.md — Mémoire consolidée WealthTech / OPCVM / MCP,20
+MCP-F-520277ded87a9754,memory/manifest.json,100644,blob,bc03d7336e2fb61dc63784c90dd60d75bc4dedfb,10080,structure,,metadonnees_git,,
+MCP-F-053150b640a7ce75,package-lock.json,100644,blob,c5692361ec806876592fe2a381bbaf4dc76930fa,72704,structure,,metadonnees_git,,
+MCP-F-7ae45ad102eab3b6,package.json,100644,blob,b7da855264809c99548e695b6a8a8231a4b1359b,3131,structure,,metadonnees_git,,
+MCP-F-0c5064cf97fc000b,scripts/amf_registry_native_export.txt,100644,blob,6d1550f2251417d78f2e6a0c73d8b7759ce6a9cc,822,texte,,metadonnees_git,,
+MCP-F-0f7494073d090c94,scripts/brvmdata_amf_push.txt,100644,blob,3e8d75c79896f37892a3f8b086f0b41d3f43939f,4926,texte,,metadonnees_git,,
+MCP-F-43e131fd4d045d2e,scripts/check-doc-governance.mjs,100644,blob,5b111f4ce449d22508798d2f6fdcb2bd8cd6580e,3330,autre,,metadonnees_git,,
+MCP-F-e651b9964e3dad12,scripts/check-docs.mjs,100644,blob,ab27f5e45f70431fec57127c13be3d70a591993a,646,autre,,metadonnees_git,,
+MCP-F-ce3f72ef0e5e5798,scripts/check-function-cartography.mjs,100644,blob,ca42a93875d52d657b29b1d01a34e4bd3f60335f,1601,autre,,metadonnees_git,,
+MCP-F-a5ef633669fd24a8,scripts/check-governance-rules.sh,100755,blob,ce9f5300081d9045f42b095abc06295bb455dc8f,843,autre,,metadonnees_git,,
+MCP-F-7837871f277e48e0,scripts/check-mcp-server.sh,100755,blob,c0498c8434061d77804ff0096ffbfdbbd9a997c6,1640,autre,,metadonnees_git,,
+MCP-F-06bbf72dda05dd94,scripts/check-no-secrets.mjs,100644,blob,c1c0cb21f41257de8fa1444d098cfaaa1579f120,403,autre,,metadonnees_git,,
+MCP-F-9cfc4ac473ba944b,scripts/current-state-evidence.mjs,100644,blob,96bf85e191ef7cd8d54390d5186a45a72958155b,11413,autre,,metadonnees_git,,
+MCP-F-bd3f36924e506756,scripts/doc-governance-lib.mjs,100644,blob,65bc5efea2ae332dc6406d9db047d52e5571edc7,12368,autre,,metadonnees_git,,
+MCP-F-edab4406020c705c,scripts/emit-function-cartography.ts,100644,blob,caac260ac67c19c9836f64cfa8c3ca8794cf1723,1031,autre,,metadonnees_git,,
+MCP-F-66aa6c0638bd4ee4,scripts/generate-autodeploy-governance-candidates.mjs,100644,blob,40a7d9e3b70feb1a0fda0ac0d01eda408e899b7b,744,autre,,metadonnees_git,,
+MCP-F-2dd9c6e4317ac218,scripts/generate-doc-governance-baseline.mjs,100644,blob,7b9b6082856b38402e97747d9a6d69ecece1bd14,972,autre,,metadonnees_git,,
+MCP-F-85ec712343508501,scripts/governed-repository-ssh-gateway.sh,100644,blob,57ac8c427fd63f63bebc2d143395aa0f547aa0c5,542,autre,,metadonnees_git,,
+MCP-F-fa12683161817826,scripts/gwc-precode-verify.mjs,100755,blob,2e5cb72028169462449cd583aeba35e9418b16ed,14066,autre,,metadonnees_git,,
+MCP-F-261a4e5d1c9f13c7,scripts/gwc-verify.mjs,100644,blob,066dc870eca151e53b381b7ebf85ae099de10096,34392,autre,,metadonnees_git,,
+MCP-F-49710539bb76bbb7,scripts/mcp-auto-intake-discovery.mjs,100644,blob,f5a8e4f7bbdc84ec38aa94c607661404eb1b995b,8911,autre,,metadonnees_git,,
+MCP-F-dfe9e01995c354d6,scripts/mcp-autonomous-agent-continuation.mjs,100644,blob,259a6d267e2bef205e81b88b9b82e4ccda8d8864,10272,autre,,metadonnees_git,,
+MCP-F-1eaaa16ac3559688,scripts/mcp-autonomy-e2e-certification.mjs,100644,blob,08a2148f7bd15b6b26493b2d8585b03f5c3e325e,8710,autre,,metadonnees_git,,
+MCP-F-7e3b306b34db2bdd,scripts/mcp-c27-github-proof-readers.mjs,100644,blob,01cb38309dbb8b775751ef548dbc418eca1b7a65,8749,autre,,metadonnees_git,,
+MCP-F-da9159c348a67243,scripts/mcp-g1-documentation.ts,100644,blob,e6e5ce52490e30af749656ff6576f3d2d47a5062,6506,autre,,metadonnees_git,,
+MCP-F-e2a1b44bf7af4ff1,scripts/mcp-global-agent-handoff.mjs,100644,blob,59c34819a66eabf832d1af88b3176c6f06b98794,7345,autre,,metadonnees_git,,
+MCP-F-e80cf311db8d24ac,scripts/mcp-global-continuation-observer.mjs,100644,blob,259f96b80d0e7b2e52ebd193bc5711c85c965abe,11652,autre,,metadonnees_git,,
+MCP-F-82debeba047337a6,scripts/mcp-postdeploy-run-proof.mjs,100644,blob,d8612d34c0d9d70366ca7254a19b018f5ff174b0,3789,autre,,metadonnees_git,,
+MCP-F-2da19a36a1f84866,scripts/program-backlog-convergence-lib.mjs,100644,blob,6777f5c576734ef9d6ca31d2d03050a04fdd35cd,23695,autre,,metadonnees_git,,
+MCP-F-cc054b59e8faa3f5,scripts/program-backlog-readiness.mjs,100644,blob,9d0b6126fc36103867e58c03af2d0842c38c5606,1692,autre,,metadonnees_git,,
+MCP-F-97a2e2eef1574c57,scripts/run-validation-tests.mjs,100644,blob,edaab1cb92e0e32f8e5bef97dc34511f4455cb9e,3570,autre,,metadonnees_git,,
+MCP-F-04f585803c123758,scripts/sync-mcp-from-github.sh,100755,blob,5e3c2cea96fecf5256ff835a990fa8b12bf25bbf,837,autre,,metadonnees_git,,
+MCP-F-84a5d130fb4cccb8,src/auth.ts,100644,blob,fd03c809a9707070b194af7ecf3a6485e219d47f,1604,autre,,metadonnees_git,,
+MCP-F-0628e9bc652476c1,src/config/env.ts,100644,blob,508f381d6c742b917f8080bafca9646ab63ba81a,3311,autre,,metadonnees_git,,
+MCP-F-56483dd8d3956485,src/config/servers.ts,100644,blob,fee7b86c4d5012458edf5646b2c009271219fa01,1495,autre,,metadonnees_git,,
+MCP-F-fbd98fe4096d2082,src/cug/admission.ts,100644,blob,9b92cec06fb4b4177cb0f7aa37a07b18feae9ddb,15594,autre,,metadonnees_git,,
+MCP-F-638a27f8a0d7f63a,src/cug/discoveryRegister.ts,100644,blob,c791c7f3db4efe2a343f567edb088b825be33423,6886,autre,,metadonnees_git,,
+MCP-F-798056a4feb7d2d1,src/cug/page.ts,100644,blob,0683a5f19efafd89a2a835c095453e37c380c44f,7984,autre,,metadonnees_git,,
+MCP-F-cc69220c392856de,src/cug/pilotInventory.ts,100644,blob,8f5328020c0eb3929b6aa485a445c779f55780a8,7745,autre,,metadonnees_git,,
+MCP-F-6f24031e54b2f791,src/cug/questionnaire.ts,100644,blob,fc203f04fc75e7a6d51f3dc82f7d0fa4b4cb8680,6925,autre,,metadonnees_git,,
+MCP-F-142de6b5068a5f07,src/cug/runPilotInventory.ts,100644,blob,45e9e4ed411cae2236640a9fa476ef02aa2a4c96,1884,autre,,metadonnees_git,,
+MCP-F-7f6bc67cb52a5d69,src/cug/webhook.ts,100644,blob,9da4e9d29a21d238eb8da42323ca1a45ad8d1340,8354,autre,,metadonnees_git,,
+MCP-F-209dbbd5b56866d8,src/cug/wiring.ts,100644,blob,84d11f0d9e2c483aceb724c853adf5d22153e12f,4331,autre,,metadonnees_git,,
+MCP-F-7d2b73b32d98c490,src/currentState/service.ts,100644,blob,0de58a23bd45c16c1b5d865f5f3892f68ae57dee,10655,autre,,metadonnees_git,,
+MCP-F-a3b7ed11ed5a07e9,src/currentState/toolCatalog.ts,100644,blob,61e2a17831467a08dbc42e15cdb1f40cd317030f,8607,autre,,metadonnees_git,,
+MCP-F-db66b316b150829b,src/deploy/g1Documentation.ts,100644,blob,ce9f16051211f60f9421ac2352e6b9295b23dc44,7594,autre,,metadonnees_git,,
+MCP-F-105421653662fec3,src/deploy/githubOidc.ts,100644,blob,577be1f620295ad7f7fd46fe52a082c45c5e8bd5,14516,autre,,metadonnees_git,,
+MCP-F-451828cf9cb1701f,src/deploy/routes.ts,100644,blob,44a536f693522b3b092b7ffca3db2dfb5945acf6,7689,autre,,metadonnees_git,,
+MCP-F-cc8bd4b5bcaa4af1,src/deploy/s1Deploy.ts,100644,blob,cccb29bf435250eb47e6b2e8b969cac2a4541fa9,19994,autre,,metadonnees_git,,
+MCP-F-61309cb575062953,src/evidence/gitRegistryReadinessProbe.ts,100644,blob,4fdc3b2cf0cf927966605c1186826c8b411b10e8,2632,autre,,metadonnees_git,,
+MCP-F-7ae94d664f908430,src/evidence/githubReadonlyRoutes.ts,100644,blob,b33e5b9257750c60f637bf9e30b019aef1bad7e6,18705,autre,,metadonnees_git,,
+MCP-F-f7b7cb2dac693dd3,src/github/appInstallationToken.ts,100644,blob,e34e89fb657f5bc85502b4666505fc0a0d5a5b06,4790,autre,,metadonnees_git,,
+MCP-F-1c01cd0c44ce2b4c,src/github/authorizationDiagnostics.ts,100644,blob,7a238a2cd80fb5635608eb041782ed3514ea3ede,15836,autre,,metadonnees_git,,
+MCP-F-a034695a3fd7afc7,src/github/connectConsent.ts,100644,blob,ffe4a6ec3164d1129986f3aef8816b94a157ac38,2874,autre,,metadonnees_git,,
+MCP-F-ed79342d5a37b619,src/github/connection.ts,100644,blob,42f75d3d1bfb68083a0093519e56e0eb973fffb8,18432,autre,,metadonnees_git,,
+MCP-F-e38bd46b93d6c2e5,src/github/credentialCompletion.ts,100644,blob,c1c47c763ac48c20e82e9647fa37eceb87124b86,3857,autre,,metadonnees_git,,
+MCP-F-996d7990e2654644,src/github/delegatedRepositoryPermissions.ts,100644,blob,95f0bd9c0205a21880ebdd4477a07c20ead75c23,2803,autre,,metadonnees_git,,
+MCP-F-3a6f8a83e7c71a07,src/github/domainResolution.ts,100644,blob,ddfb29d9ba88ace26d699666a6e05ecc13de9adf,4606,autre,,metadonnees_git,,
+MCP-F-9f056378cbf782ce,src/github/governPilotArchiveSource.ts,100644,blob,8716854e69479d837cf48a7c54441d3873ae0e44,2118,autre,,metadonnees_git,,
+MCP-F-6707b2d54e1151a6,src/github/identityPolicy.ts,100644,blob,344cbd26a815e66968354f7ca450970ac6ea35ee,4186,autre,,metadonnees_git,,
+MCP-F-230499f84073c7f2,src/github/identityResolution.ts,100644,blob,a8a1f18566e4f45f835a42eca23034020ce45ea6,7765,autre,,metadonnees_git,,
+MCP-F-50d98d7614c0ecd8,src/github/installationCapabilityReadiness.ts,100644,blob,f7aa6209936f288421081769797484c12c8768fd,6219,autre,,metadonnees_git,,
+MCP-F-9c5d07e809864df4,src/github/installationLiveReadiness.ts,100644,blob,fada58602a60ec73630737b023a9031c092a152b,5444,autre,,metadonnees_git,,
+MCP-F-31867f737484ba4f,src/github/inventory.ts,100644,blob,f82947cfdb017b1185c38fbc8c06246a95e7ebaf,13283,autre,,metadonnees_git,,
+MCP-F-9a3b249c741a0dca,src/github/observeGithubReviewAndCi.ts,100644,blob,6fa366c7d7c98b0234e27c5a1d66e288ea1d98cd,9482,autre,,metadonnees_git,,
+MCP-F-4015b27c5a059480,src/github/projectReality.ts,100644,blob,674c31a123a94e126237019f9c0f68c83fd8ded7,10860,autre,,metadonnees_git,,
+MCP-F-49582b03303ae4bc,src/github/projectResolution.ts,100644,blob,2be048154f752242498d531b4cfaa10927670696,8291,autre,,metadonnees_git,,
+MCP-F-4acf71bd1a8ae734,src/github/registry.ts,100644,blob,99830e8df17fe17485a9766084c1a15cf4b9cf04,23808,autre,,metadonnees_git,,
+MCP-F-96e08197efcfaf25,src/github/registryV2.ts,100644,blob,07ed8be408ee7e1a1202df56010e77cdef5622a0,25488,autre,,metadonnees_git,,
+MCP-F-93b3866fc01c69b3,src/github/repositoryResolution.ts,100644,blob,acc138d0f68099eafe6dd828f8b7acd383fc9d14,11247,autre,,metadonnees_git,,
+MCP-F-e8b238b8da400054,src/github/runtimeResolution.ts,100644,blob,27096c67161563939d56f2c5cb3a6b1f64f07b40,7818,autre,,metadonnees_git,,
+MCP-F-b04f0b50d1b9e072,src/github/serverResolution.ts,100644,blob,2941ff9fda0f2b57b6242c1c6e282458b9ebed39,5065,autre,,metadonnees_git,,
+MCP-F-ebba0b7c1c453189,src/governance/branchGovernance.ts,100644,blob,4aedf24da4e9b54b9da5d1b4235790b92d6c6d43,3337,autre,,metadonnees_git,,
+MCP-F-bab20cb53cc82d00,src/governance/e2AutoActivation.ts,100644,blob,09d8f894235c3e2589b26152c06d107bb7553421,3890,autre,,metadonnees_git,,
+MCP-F-c5226d14750a315e,src/governance/e2EntryFlow.ts,100644,blob,89b07f8b82ddcf741557be0dae11a643a235c806,5140,autre,,metadonnees_git,,
+MCP-F-41edef574f44686c,src/governance/e2EntryJournal.ts,100644,blob,5bb929d29e04de0acb5c601e00325d0a6a706aa8,8986,autre,,metadonnees_git,,
+MCP-F-c7865c31798e2917,src/governance/e2GitHubEvidence.ts,100644,blob,6877b67fa13afc50652c49e9ef8416fef9272cb6,7353,autre,,metadonnees_git,,
+MCP-F-dabaaf010f0c7646,src/governance/e2LivePreflight.ts,100644,blob,5b4f3992acbea82900cfc645a294827b0f39add9,3078,autre,,metadonnees_git,,
+MCP-F-81f2ff9ced4ac010,src/governance/e2OwnerLifecycle.ts,100644,blob,9351b857a1422ed2ef50714f7315f532346fb317,14002,autre,,metadonnees_git,,
+MCP-F-a0a8a4caf268c9ad,src/governance/e2S1GithubProposal.ts,100644,blob,e7cfc2d522b52e4c37128f680a523dc0cef83362,16711,autre,,metadonnees_git,,
+MCP-F-61f9db36c4b29e5c,src/governance/mcpS1ReconciliationCycle.ts,100644,blob,0b1148ca9124474f843d8867d8c7a48c0e972288,4808,autre,,metadonnees_git,,
+MCP-F-45d9674968056bea,src/governance/mcpS1ToMainPolicy.ts,100644,blob,3e7429ed12996c914a235fedd1d564d0e030ecec,5657,autre,,metadonnees_git,,
+MCP-F-24b141a1faf91de4,src/governance/nextWorkProjection.ts,100644,blob,def6a1b4d387f1a003bd823dbe99fcac44bb0af1,8842,autre,,metadonnees_git,,
+MCP-F-5f7895d5b11baaff,src/governance/operationalDecision.ts,100644,blob,aa8e47f6ebc7722b164424330053a0829b2a70b6,12563,autre,,metadonnees_git,,
+MCP-F-8f7a7a33fd978b88,src/governance/programBlueprintMaterialization.ts,100644,blob,af3577b4ccf670d14048819bfed6b20bc6161149,5182,autre,,metadonnees_git,,
+MCP-F-8b56701caa993ceb,src/governance/provisioningContracts.ts,100644,blob,a059aa8f05f0b43a17a016e7cdd015939d7fc3e1,15330,autre,,metadonnees_git,,
+MCP-F-69dc6f9a15f67607,src/governance/scopedWriteGate.ts,100644,blob,a325f544c66270f9c3c93e9de1d576da97472ce2,9770,autre,,metadonnees_git,,
+MCP-F-0e0d31bd92803fd7,src/governance/toolSurfaceAttestation.ts,100644,blob,33f2f4e92cd1fa58089d9f4b6dcccd74636c8339,4376,autre,,metadonnees_git,,
+MCP-F-5860c66af05bf218,src/governance/workEntryContinuityIndex.ts,100644,blob,bb547a07873075add76bcc4e3208462b5c9cf932,3373,autre,,metadonnees_git,,
+MCP-F-3a515d5ea59f5018,src/governance/workEntryTrace.ts,100644,blob,e7c999f6786ed583512bb8ce8790e30d15dab3f2,8824,autre,,metadonnees_git,,
+MCP-F-2407207a8375593c,src/governedContext/agentCoordination.ts,100644,blob,f04ee22d59fdd65b90f5ec2bfc389334db1d2904,5166,autre,,metadonnees_git,,
+MCP-F-7597db090282d1a2,src/governedContext/candidateContinuity.ts,100644,blob,f1e559dd17fb39be4a4247fb2b7d56ad9496ba6b,72669,autre,,metadonnees_git,,
+MCP-F-8246d2d2757fc645,src/governedContext/contextCompletion.ts,100644,blob,7d71bc8798ce80ee6f7a7e9e9195489b27a295f9,8004,autre,,metadonnees_git,,
+MCP-F-379582558b1d2407,src/governedContext/dashboard.ts,100644,blob,0556c2000cde5c9e8eeede4030d8613df21a2a7d,10308,autre,,metadonnees_git,,
+MCP-F-655d6adc037a3e4d,src/governedContext/github.ts,100644,blob,f05715a3cf50eae283be6f50aae626005ace2234,55444,autre,,metadonnees_git,,
+MCP-F-e197c19bd0745eef,src/governedContext/githubFirstOperationalContinuity.ts,100644,blob,6baea6de919218cd58d4208b8b1dfa5beceaecc9,12312,autre,,metadonnees_git,,
+MCP-F-aa2972bcaf50cdcc,src/governedContext/missingContext.ts,100644,blob,fb089da26099636a7ef474c76d1b540dbbfd9225,12129,autre,,metadonnees_git,,
+MCP-F-831587a325046cb0,src/governedContext/receiptReferences.ts,100644,blob,49c1eff8be63a9992ec9e9ca67d31ca7398e3058,3342,autre,,metadonnees_git,,
+MCP-F-538ea38f181e7cb4,src/governedContext/service.ts,100644,blob,0a8f67873cf6ed914578224aa72fcadab3762386,24481,autre,,metadonnees_git,,
+MCP-F-3c263e244ef620bf,src/governedContext/types.ts,100644,blob,c2c4b920b67c13ef294eab056adf61e39500ecd6,8775,autre,,metadonnees_git,,
+MCP-F-39c9b0171bc1157e,src/governedWorkflow/adapters/session.ts,100644,blob,6c18b78c625f9a2322ed89250d71a96dd211f6de,13157,autre,,metadonnees_git,,
+MCP-F-bd18c84e40601ad7,src/governedWorkflow/adapters/task.ts,100644,blob,96f16acc0d6d16ab9e20ac007765b2740e152a5c,13197,autre,,metadonnees_git,,
+MCP-F-3a5c5bc71cb86566,src/governedWorkflow/authority/index.ts,100644,blob,f77ee8bf5a9c17cd03b66aa872490f02283f7c9c,14674,autre,,metadonnees_git,,
+MCP-F-bc32bfa8703be603,src/governedWorkflow/contractSubstrate.ts,100644,blob,d08dcdf83e46992a8e3a5d5af790a97526679108,12956,autre,,metadonnees_git,,
+MCP-F-0ea377430e9f7e3d,src/governedWorkflow/deploy/index.ts,100644,blob,70dfe926a5bf167c0f60cbabd6eb43a6097120cd,31453,autre,,metadonnees_git,,
+MCP-F-79290b9f057d64c4,src/governedWorkflow/development/index.ts,100644,blob,7aeb0de3b12a6749be12b42bc861b3b8b565599c,25427,autre,,metadonnees_git,,
+MCP-F-c578d66c9d6165ee,src/governedWorkflow/executionEngine.ts,100644,blob,77f1f43e8683c16bae29d0caa5871d5006ab723e,9265,autre,,metadonnees_git,,
+MCP-F-b72cfa95c555b8fa,src/governedWorkflow/governance/effectiveCapabilities.ts,100644,blob,590c612bdba71552e05bd541a4a4828a30b545a5,8582,autre,,metadonnees_git,,
+MCP-F-e6ed3869992de89f,src/governedWorkflow/governance/projectCapabilities.ts,100644,blob,45b79a62e88e93a6efc4561d6e4e9ab85e80d266,17692,autre,,metadonnees_git,,
+MCP-F-c42af2fbce52c944,src/governedWorkflow/governance/projectInheritance.ts,100644,blob,ca8160a107458d9ba8336637a705a89d907bc2e8,20410,autre,,metadonnees_git,,
+MCP-F-953fa2b2b34acb40,src/governedWorkflow/intentCapture.ts,100644,blob,96ca2cc5a01710b3900fc2ad7301947406775141,3965,autre,,metadonnees_git,,
+MCP-F-76996d2880a8f13b,src/governedWorkflow/resolvers/domain.ts,100644,blob,cf133240db117918ee3387bf6ac540d0d7d92a90,17652,autre,,metadonnees_git,,
+MCP-F-67652687fe8bf690,src/governedWorkflow/resolvers/githubResolvers.ts,100644,blob,d2417f079b96beb94db9d3d26c40d76bcf9f733b,2562,autre,,metadonnees_git,,
+MCP-F-ae7d061ef69a0a6e,src/governedWorkflow/resolvers/runtime.ts,100644,blob,d9d6891c927a2b65b65a6a7470a2771828484f50,12390,autre,,metadonnees_git,,
+MCP-F-19d0db5045643379,src/governedWorkflow/resolvers/server.ts,100644,blob,d6e5a6beb6deb7abe700cafaadb09c5104e76445,13723,autre,,metadonnees_git,,
+MCP-F-b8bf7d8c1ce544de,src/governedWorkflow/review/index.ts,100644,blob,1e120857a56bff717cec75ad50b547b24b82bfe3,28747,autre,,metadonnees_git,,
+MCP-F-b4c293eaee8a8743,src/governedWorkflow/terminal/index.ts,100644,blob,114a502ff406e21465065d3412154d47b9102041,42825,autre,,metadonnees_git,,
+MCP-F-a2a171449d862fe2,src/index.ts,100644,blob,7df20480492030f7b559f28a1f42b2ecf7343231,290,autre,,metadonnees_git,,
+MCP-F-05667b49c387b5fe,src/liveState/collect.ts,100644,blob,90328d1ab24765cdb4aef5dd1fba7b7df1cef1d8,21767,autre,,metadonnees_git,,
+MCP-F-ac3137b6bbe3e750,src/liveState/engine.ts,100644,blob,037baeb7e7d4f4b9adc54cb6658d4c9f005f68dd,4668,autre,,metadonnees_git,,
+MCP-F-66b9c43dc9097c14,src/liveState/provisionedRuntime.ts,100644,blob,edfc4cc4e890bb47effb1412f670e6c343ddd6ec,2468,autre,,metadonnees_git,,
+MCP-F-4a027cb5b374ba44,src/liveState/reconcile.ts,100644,blob,c563c360f44de47c9979021970d664dda492f6f5,7455,autre,,metadonnees_git,,
+MCP-F-464a04f3b5e2a83a,src/liveState/runtimeObservation.ts,100644,blob,6e1ff7f91f957ae68649b49e3766d2ae8717896b,3897,autre,,metadonnees_git,,
+MCP-F-8f9dd63acd16c0da,src/liveState/servedDomains.ts,100644,blob,13f9ef56f5268743b2429d2cde74110565556d29,12196,autre,,metadonnees_git,,
+MCP-F-9f8a8054cb7df06b,src/liveState/store.ts,100644,blob,0d4154709fed705a5ead549e271d4eb7f25fad22,1467,autre,,metadonnees_git,,
+MCP-F-4fa86e93bf646f5e,src/liveState/targetProject.ts,100644,blob,cad12a8749eed1cb39b6dbe12a4bef816b369315,6377,autre,,metadonnees_git,,
+MCP-F-e6aba73d8fdbc34e,src/liveState/types.ts,100644,blob,5cfb4f457cdd713622ffe613b4bbb332b927c9ab,5443,autre,,metadonnees_git,,
+MCP-F-7bc1140e724e284a,src/logger.ts,100644,blob,7be9a79b3a37ea93ef269a5c919ff54cbd057877,634,autre,,metadonnees_git,,
+MCP-F-925c5a384ebdd32b,src/oauth.ts,100644,blob,aded77500ea03e636463e4ea5f7f731bcc903dcd,25900,autre,,metadonnees_git,,
+MCP-F-d33b9c1a21f411d1,src/operationalMemory/atomicStore.ts,100644,blob,14b3949364492ab8daa0588e0d180714bf36a5b2,2817,autre,,metadonnees_git,,
+MCP-F-e12e5649c74561e4,src/operationalMemory/clientPresence.ts,100644,blob,9ee7cbe8ffa4d1ca27e151301dc74ba9e0c9255b,9303,autre,,metadonnees_git,,
+MCP-F-b7ab37113c2646c5,src/operationalMemory/config.ts,100644,blob,e05e04b0086dd856eb51fb816c4be259ddc1b27e,1214,autre,,metadonnees_git,,
+MCP-F-09ac483f4e678ff8,src/operationalMemory/connectionContext.ts,100644,blob,438637d8fcbd50d18083deb8b33b5442f2ebc336,6342,autre,,metadonnees_git,,
+MCP-F-1cdb51de128ed39b,src/operationalMemory/eventJournal.ts,100644,blob,f155e14d2112b94ac4808e089c07b27f88e6d599,10723,autre,,metadonnees_git,,
+MCP-F-c45a3e77dddf3f60,src/operationalMemory/lockService.ts,100644,blob,56c9080ce6e8c379c117a2c5b5fafaaf3a22fe0f,27730,autre,,metadonnees_git,,
+MCP-F-1b660c23a5980b4e,src/operationalMemory/maintenance.ts,100644,blob,f6ac6630d0d8f21c5faed9f66ff6a417ac05155c,2031,autre,,metadonnees_git,,
+MCP-F-bd32359d1e209c2c,src/operationalMemory/operationalAudit.ts,100644,blob,23dcdc7b7616473c65569bcff53a79c15282f222,11598,autre,,metadonnees_git,,
+MCP-F-9f4d62e3f7068c87,src/operationalMemory/resumeProof.ts,100644,blob,c0bf6dc74da2f1e5b69c2747808b0ac0521a5071,1630,autre,,metadonnees_git,,
+MCP-F-9eaa519fd523d0dc,src/operationalMemory/sessionService.ts,100644,blob,f6ee0989582124e95b242005c68db4b9d910b4f5,37019,autre,,metadonnees_git,,
+MCP-F-e0cd025f2bb457a3,src/operationalMemory/targetScope.ts,100644,blob,c6643b7f4da92d4085708ca261018917456364e2,10896,autre,,metadonnees_git,,
+MCP-F-713a4acf4ef81ecc,src/operationalMemory/taskLifecycleCoordinator.ts,100644,blob,d894d4eaa8f7140a8e8185f07c8f980e7b2363a0,519,autre,,metadonnees_git,,
+MCP-F-5eb876415790866b,src/operationalMemory/taskQueue.ts,100644,blob,6fa0ee32e18bef35a1cb357b46c3021a04e63abb,29674,autre,,metadonnees_git,,
+MCP-F-1792789d38ffde95,src/operationalMemory/transportBindings.ts,100644,blob,b5708393fa4fb10c1bcb1a3655ef0d59f132ee9e,3013,autre,,metadonnees_git,,
+MCP-F-2b6c96b415c40b90,src/operationalMemory/types.ts,100644,blob,6eac9f8eeec4d2fe03fd59715782b2565d484f4d,13221,autre,,metadonnees_git,,
+MCP-F-47c498074c830e5f,src/provisioning/composePolicy.ts,100644,blob,a539d25dfd8c908383557a8a1f6fc21cbbaa6239,24442,autre,,metadonnees_git,,
+MCP-F-035a510b4fae8685,src/provisioning/consent.ts,100644,blob,6d74620f80c0a4887319875567642f82d9431a21,4879,autre,,metadonnees_git,,
+MCP-F-c160309aea79e57d,src/provisioning/dockerfilePolicy.ts,100644,blob,f088c7257528407fd6f08e093e6020831ddca3fe,4464,autre,,metadonnees_git,,
+MCP-F-c219926675e6d2bf,src/provisioning/existingPleskAuthorityReader.ts,100644,blob,94ba6e3a338b5f7f91a6be836e8e66ff9f3b8a2d,9225,autre,,metadonnees_git,,
+MCP-F-a311720b5332013f,src/provisioning/governPilot.ts,100644,blob,53d3c785209ab80c644b4488e0d639316786e27f,6900,autre,,metadonnees_git,,
+MCP-F-fe55945495e375aa,src/provisioning/governPilotRoutes.ts,100644,blob,c16164a7bf2195367d7099b278dfc96ef641db8e,4164,autre,,metadonnees_git,,
+MCP-F-d9a59fda758b3157,src/provisioning/governedPleskSubdomainExecutor.ts,100644,blob,cde6d06afe2ea2dd44918d2fcb6e117cc03a69c4,11314,autre,,metadonnees_git,,
+MCP-F-948fa09e7e617cae,src/provisioning/pleskE3GovernedConsumption.ts,100644,blob,f50ff3f728a8ede8c39b9489b7d5fe36c63a7059,4117,autre,,metadonnees_git,,
+MCP-F-ec4e34617e1c15ab,src/provisioning/pleskE3SingleUse.ts,100644,blob,f4f5b037d6da113c6fdc066ef27b5ff2fc167cf8,7047,autre,,metadonnees_git,,
+MCP-F-21a2fe7467664977,src/provisioning/pleskExecute.ts,100644,blob,5413f56e1ee5e18f30cfa94b8ecf58ae3c460778,2593,autre,,metadonnees_git,,
+MCP-F-ae0223ee07ecef3f,src/provisioning/pleskFoundationCompletionGate.ts,100644,blob,3fc27f7ba769a6cd6d1b4c44dca5f4c5601adfbb,2257,autre,,metadonnees_git,,
+MCP-F-924839e8be3129b1,src/provisioning/pleskGovernedReleaseGate.ts,100644,blob,62439959ea7299892cd94d043cf3d7e6d11d62d1,6191,autre,,metadonnees_git,,
+MCP-F-34c271408b3bca7d,src/provisioning/pleskGovernedWebExecutionBridge.ts,100644,blob,e2581af2718a32757fa9fde574cdef5c0675e091,3425,autre,,metadonnees_git,,
+MCP-F-07c83535fa48251f,src/provisioning/pleskHttpToMcpAdmission.ts,100644,blob,b107f54783ed58a6671979755af068b893ce5682,9002,autre,,metadonnees_git,,
+MCP-F-f9e5e83a67c6d6e0,src/provisioning/pleskMcpPairingTool.ts,100644,blob,b4415c067e09609af8110542a84d05f59e98541a,1645,autre,,metadonnees_git,,
+MCP-F-5edef250da601b0d,src/provisioning/pleskOwnedWebSession.ts,100644,blob,b0db50733efe5d35796d57b940c28ebe1fe42ebb,6515,autre,,metadonnees_git,,
+MCP-F-c9e06583d14a60b2,src/provisioning/pleskSite.ts,100644,blob,f70d1908ba8ab2d7f3192c3936b8d7a75a43872f,2830,autre,,metadonnees_git,,
+MCP-F-e5880ab0caa068e8,src/provisioning/pleskSshAdapter.ts,100644,blob,f9a1238aacb9ee4c75beaf602407451b4e8225f3,6113,autre,,metadonnees_git,,
+MCP-F-7b88d487a262688a,src/provisioning/pleskSubscriptionReadProbe.ts,100644,blob,be414e54161fde885d66512b2abd2bc5297b73ab,2294,autre,,metadonnees_git,,
+MCP-F-1ab720b47b738d36,src/provisioning/pleskWebOauthBridge.ts,100644,blob,5de2ca1677872987140433518edb71b20c61dce1,4782,autre,,metadonnees_git,,
+MCP-F-e49c0bc1ff30723d,src/provisioning/pleskWebRoutes.ts,100644,blob,7dac3ee1b9d29d897760acb3f512705ba79a6741,8490,autre,,metadonnees_git,,
+MCP-F-58d4c631ade42841,src/provisioning/pleskWebTransportLink.ts,100644,blob,1dd0da7fe28204f4c89140353b6d114e3f6a0576,4411,autre,,metadonnees_git,,
+MCP-F-e1326b6e5a0868ed,src/provisioning/pleskWebTransportPairing.ts,100644,blob,2e58315c37c217f7802ddae63cb93fd951aeef22,7494,autre,,metadonnees_git,,
+MCP-F-08ae9c2c220cd3c7,src/provisioning/projectRuntime.ts,100644,blob,95965e5703efbc2dcc921986b24d6043b1fcd003,34007,autre,,metadonnees_git,,
+MCP-F-23366c93cba21a65,src/provisioning/repositoryPleskHostingRoute.ts,100644,blob,7827292ebb5ba1962dce0f0b5a36e80895110aa1,2866,autre,,metadonnees_git,,
+MCP-F-f1c8939345ba5068,src/provisioning/revisionAdmission.ts,100644,blob,f4aaade87a74283e14d015f356ae6372cc067c85,5581,autre,,metadonnees_git,,
+MCP-F-1ebeae45cbf35b0d,src/provisioning/routes.ts,100644,blob,01f3cb56e5c44c9499a5c98e0b718ddc1d78abc9,16608,autre,,metadonnees_git,,
+MCP-F-6ad65dd1b36cd7d5,src/provisioning/runtimeExecutor.ts,100644,blob,5075b032c0e41d31f52c9bd7a07fd5f17f19c394,61325,autre,,metadonnees_git,,
+MCP-F-e04a6946b67d85c8,src/provisioning/sourceArchive.ts,100644,blob,69d5985bdbf5aebe16582c23cfea1b1f923012a9,4467,autre,,metadonnees_git,,
+MCP-F-009f3f245dd00df9,src/provisioning/universalAdminCapabilityCatalog.ts,100644,blob,b2ff25c9de390618afd2c85d9381b1d4e7931676,24602,autre,,metadonnees_git,,
+MCP-F-76df2e5442e68f2d,src/provisioning/universalAdminLiveProbe.ts,100644,blob,702b26064b407221dc269a96b2dbca0e4529811a,7653,autre,,metadonnees_git,,
+MCP-F-ab4a11eff2e91301,src/provisioning/universalAutonomyAdvice.ts,100644,blob,def5294f35cbb89ee9762733366a2de3a512e5c9,6553,autre,,metadonnees_git,,
+MCP-F-eedc86a311c50692,src/provisioning/universalCapabilityDiscovery.ts,100644,blob,7aee3dc68b0376bab3c81598d3d5993b5ac78505,7289,autre,,metadonnees_git,,
+MCP-F-b04bcd50c6331cd3,src/provisioning/universalDeploymentBlueprint.ts,100644,blob,b72d2aa50ef78d4c360bfafe9dac105df84c2f76,7018,autre,,metadonnees_git,,
+MCP-F-2e034ca545373971,src/provisioning/universalExecutableBindings.ts,100644,blob,900c85a7caf302a4b5fb3e8b79ea9c94d4df594e,4521,autre,,metadonnees_git,,
+MCP-F-0ae12fa185e02ae0,src/provisioning/universalResumeAdvice.ts,100644,blob,a7363cd28de364e785ad030922cb5f9c12730385,5773,autre,,metadonnees_git,,
+MCP-F-2764589f52351888,src/provisioning/wiring.ts,100644,blob,dbd501742a4504cf2a9e5ef87a102b73aa03e5f5,6616,autre,,metadonnees_git,,
+MCP-F-8a8ae07582c9d433,src/server.ts,100644,blob,ffe074d9f63c8c01802549bc4d9317f2f95160ba,45089,autre,,metadonnees_git,,
+MCP-F-a410e604a9902de8,src/ssh/client.ts,100644,blob,e27e7708a557d8e9a36ccfdf19defcb8dd5890aa,3760,autre,,metadonnees_git,,
+MCP-F-1c21ef1b45a131db,src/ssh/githubRepositoryAccessRoutes.ts,100644,blob,b5e6a6b78fc03dfd541e31e414502d0d6bb424ab,4097,autre,,metadonnees_git,,
+MCP-F-3f7a71a6f1a87fd7,src/ssh/githubRepositoryCaBootstrapRoutes.ts,100644,blob,a2349993efb6a651dce36d4ece25c9050bfd2e07,3447,autre,,metadonnees_git,,
+MCP-F-acb5cc48e7df75bf,src/ssh/repositoryAccess.ts,100644,blob,cba934ac1217d1f087b35c0028bc9c2993d7c2f9,2308,autre,,metadonnees_git,,
+MCP-F-5c92dfce581e3ac9,src/ssh/repositoryCertificate.ts,100644,blob,6fa6f4ba72874918c7ad2bec40a635e5a86a69cd,3546,autre,,metadonnees_git,,
+MCP-F-dcedd8e8d46e5b7d,src/ssh/repositoryGateway.ts,100644,blob,6ce0634dbd9cd12acc3247ec7149dae5af98f472,2699,autre,,metadonnees_git,,
+MCP-F-38cda3f25a40145e,src/ssh/repositoryGatewayCli.ts,100644,blob,5bb11c7de7fc0bd3aa5be46238678f3511051416,557,autre,,metadonnees_git,,
+MCP-F-b45fe8a904258646,src/ssh/safety.ts,100644,blob,e2daca4813b592d9e3e950d9dc2bdd66ab8e9666,3530,autre,,metadonnees_git,,
+MCP-F-d51693a1ff21325c,src/ssh/writeSafety.ts,100644,blob,c3953bb8bd6ec5161f9f8d08cc18cc1cbbbfb8db,3028,autre,,metadonnees_git,,
+MCP-F-97b1d0a5ed301173,src/stablecoin/githubFastForward.ts,100644,blob,be884d62903049218577db0d6392fa49e24a9ab7,10861,autre,,metadonnees_git,,
+MCP-F-b8ffba3cb826ac83,src/tools/amfRegistry.ts,100644,blob,bcfba8e0eb314235b24dcfe95436a11bcb8d14e4,4428,autre,,metadonnees_git,,
+MCP-F-310280c890e88679,src/tools/cleanupCacheFunds.ts,100644,blob,a6ba9a4651c3c3e2db9a696ee9058160faceae38,7074,autre,,metadonnees_git,,
+MCP-F-cf3262478a5b3279,src/tools/cleanupPlan.ts,100644,blob,c7c7d72a982b8b3370f810ef8ddc3bfabf281b7a,5098,autre,,metadonnees_git,,
+MCP-F-47e713dd9b9baf96,src/tools/currentState.ts,100644,blob,223628a79995664c521d03601329499a6f471a1e,3795,autre,,metadonnees_git,,
+MCP-F-c334fea4149bc7cb,src/tools/durableAccounts.ts,100644,blob,cd70d22e821bc4d9a89a6e6bc4c68125cb511d60,17870,autre,,metadonnees_git,,
+MCP-F-5ac63b94309cdb71,src/tools/e2Activation.ts,100644,blob,69d94a96cccebdafcce00f701650bf081940c52c,8743,autre,,metadonnees_git,,
+MCP-F-fe15cd1b137727bd,src/tools/e2Entry.ts,100644,blob,5c3facae777e834611f2e8e0ade23cf13f6080a1,1460,autre,,metadonnees_git,,
+MCP-F-8a9d68f2002d9d0e,src/tools/e2OwnerTools.ts,100644,blob,aa5ce6aed585d20312068859c293fe6fdaa75961,9998,autre,,metadonnees_git,,
+MCP-F-0cf4ef6b6f674b84,src/tools/format.ts,100644,blob,b4178ac48c622f6ad68682c1434d55be3b326cf8,488,autre,,metadonnees_git,,
+MCP-F-b032c6350deb7dd3,src/tools/githubAuthorization.ts,100644,blob,fb0592500fa340665e323f37e1e906878768a15f,1123,autre,,metadonnees_git,,
+MCP-F-6006da60261b6166,src/tools/githubControlPlaneRead.ts,100644,blob,c5e628e7fd007b50592a50a97e0693a5da388872,19927,autre,,metadonnees_git,,
+MCP-F-0aac6a0038171a37,src/tools/githubInventory.ts,100644,blob,e2dfce1ee8ebd1088584afd0ddf59b3bf916a4d7,1603,autre,,metadonnees_git,,
+MCP-F-d1512520d59566aa,src/tools/githubLifecycle.ts,100644,blob,201236ae9c97776f0dde33010965d4c28bf97791,22821,autre,,metadonnees_git,,
+MCP-F-eea418bcffd77120,src/tools/githubRegistryV2.ts,100644,blob,cf74fed5c5e89fc3a18bf43f5b82c234da890919,1102,autre,,metadonnees_git,,
+MCP-F-fb610f491dc08545,src/tools/governedContext.ts,100644,blob,6593de97d10331fbfdca03de00c319a6f033d778,9446,autre,,metadonnees_git,,
+MCP-F-eed82d1d2a457366,src/tools/governedSessions.ts,100644,blob,6bbc2278ff524004931d61f1dddd8d02f121077d,16119,autre,,metadonnees_git,,
+MCP-F-c71fd0d788e645e6,src/tools/governedTasks.ts,100644,blob,604b3df5931df0554bc1258fd245133ca547dc17,12581,autre,,metadonnees_git,,
+MCP-F-8652145896b6a2ef,src/tools/legacyFundsScoped.ts,100644,blob,9f2cd83bddf6d2b3c8e103dbcf57b51a446c88dd,6494,autre,,metadonnees_git,,
+MCP-F-48c4a3f2a3e90d80,src/tools/legacyVhostsScoped.ts,100644,blob,c408cc9c21f6fb51d3efd6e7375dcc5b3c955994,17697,autre,,metadonnees_git,,
+MCP-F-cba59d415cb220d5,src/tools/liveState.ts,100644,blob,f2b866138ab313d9b333e934e79ecf86dff3a1d4,2088,autre,,metadonnees_git,,
+MCP-F-022ec941da09d9f2,src/tools/mcpGitSync.ts,100644,blob,6c876ce06c0792b40958a92057a7f8634478ee58,2201,autre,,metadonnees_git,,
+MCP-F-f655cc3c324bd565,src/tools/mcpReconcileS1ToMain.ts,100644,blob,ad1bc5e5abe211e94b173afdca0f7775f1e59342,5257,autre,,metadonnees_git,,
+MCP-F-935b8fdc07a9d12e,src/tools/mcpRuntimeDeploy.ts,100644,blob,e89a9edd71882baafd56e6725c42ecd07beb7b12,815,autre,,metadonnees_git,,
+MCP-F-3ad2eaac909e3885,src/tools/mcpS1ExactContentReconcile.ts,100644,blob,2358c136592fd9841b1435e6434f1061bf18ba7f,4545,autre,,metadonnees_git,,
+MCP-F-919ee043572c89b4,src/tools/nigeriaScoped.ts,100644,blob,fa08aa18049f37085ff13cb52921b446652fbf39,6194,autre,,metadonnees_git,,
+MCP-F-571ed335b8bb468e,src/tools/pleskProvisioning.ts,100644,blob,dd4f5164deeb73cc37f3fef9580c3e2939f46856,2860,autre,,metadonnees_git,,
+MCP-F-16061eed2c764b33,src/tools/readOnly.ts,100644,blob,bdb4c7b9194c1b7237f900a2ecf0c1ed72515b44,8181,autre,,metadonnees_git,,
+MCP-F-ccfa6efeb5edb383,src/tools/registrationPolicy.ts,100644,blob,06c76dab421aa48ebbe8fc5db194bc5d8b9a29b4,2300,autre,,metadonnees_git,,
+MCP-F-14a16decba40cd37,src/tools/runtimeAttestation.ts,100644,blob,3f713dad0b76f1ed33ba0fe311236b131700932e,3278,autre,,metadonnees_git,,
+MCP-F-25a96187ea3a9414,src/tools/s2LeafCleanup.ts,100644,blob,a4e8f96126181d476339aa3e89ea51815435d2f9,17985,autre,,metadonnees_git,,
+MCP-F-abb55b1077371261,src/tools/sadiaafDeploy.ts,100644,blob,0d77c1c626ff6856ca42f6c293bc7c1b205a64cf,4655,autre,,metadonnees_git,,
+MCP-F-8f354c32ee8a0b0d,src/tools/sadiaafScoped.ts,100644,blob,8db2430eac317b98921e821c612a8af104d0715a,20131,autre,,metadonnees_git,,
+MCP-F-5481b13f8f4b37ff,src/tools/selfManagement.ts,100644,blob,b3dffc033f1ce56724b75c4275f8b2e74100401e,12506,autre,,metadonnees_git,,
+MCP-F-f991bc51fe86d1b9,src/tools/writeScoped.ts,100644,blob,acf08c61e6a7bfa9c13540c5f5e5d6fc439a96b9,14989,autre,,metadonnees_git,,
+MCP-F-943a4f4fad68098d,tests/agentArrivalContract.test.ts,100644,blob,8e4273fe12873c117a807a23153be30fca67a89e,4321,autre,,metadonnees_git,,
+MCP-F-5df5abafe75a1dd0,tests/agentCoordination.test.ts,100644,blob,9c92135a1eff5652beb6d882b9fb60a9a80a688f,31951,autre,,metadonnees_git,,
+MCP-F-f4991b34f1d899b9,tests/bootstrapReceiptReferences.test.ts,100644,blob,5ec486fca326f12f30693b6f8cc12e988bdb449a,14864,autre,,metadonnees_git,,
+MCP-F-c74a63f72da142a1,tests/candidateContinuity.test.ts,100644,blob,6574e6567d04b87510fbf29135b5cd17654078cc,50886,autre,,metadonnees_git,,
+MCP-F-2fdc862af25bc366,tests/cleanupCacheFunds.test.ts,100644,blob,517e22fb91fb948ffd75f4197e5505491cc355ce,3490,autre,,metadonnees_git,,
+MCP-F-1168d416a3ff4c4a,tests/cleanupPlan.test.ts,100644,blob,4efd8eac422145b8e5c165869049df2c13ca2870,2801,autre,,metadonnees_git,,
+MCP-F-fcd83b4577b7c77a,tests/clientEvidenceExtensionHandoff.test.ts,100644,blob,4299c8311d9df243a5edafe6af500cab8f8b1671,3686,autre,,metadonnees_git,,
+MCP-F-382210dedabee2cc,tests/clientEvidenceInventory.test.ts,100644,blob,9e06524efbcca44b177f346bf10ad63fc0daeea1,3025,autre,,metadonnees_git,,
+MCP-F-1a670d865a802c88,tests/clientPresenceHandoff.test.ts,100644,blob,bf6386f20de6906eed55fb6e765d8d2fcb54934f,1727,autre,,metadonnees_git,,
+MCP-F-92700436570254bd,tests/clientPresenceObservation.test.ts,100644,blob,d103a01c9bf2eea7927eac714602838dff817dd2,6222,autre,,metadonnees_git,,
+MCP-F-1a55c3f1d3b2a8f6,tests/clientPresenceTwoClock.test.ts,100644,blob,ac3ed55604d457c856f8a2b891b3c8790dec2305,4567,autre,,metadonnees_git,,
+MCP-F-431aa17fbb4560c8,tests/clientPresenceTwoClockHandoff.test.ts,100644,blob,09d9c5a02fec4a195ca32e83055234f4e5b035a8,2037,autre,,metadonnees_git,,
+MCP-F-3901c0b9ab70af96,tests/clientToolSurfaceAttestation.test.ts,100644,blob,9ea2149d15f16965c87c07dbacfbd4e71874bc12,7870,autre,,metadonnees_git,,
+MCP-F-2e5eb50188cd8bbc,tests/clientToolSurfaceHandoff.test.ts,100644,blob,2f3ef7e299c79502871a58dd458fe0d359cbb3c8,2037,autre,,metadonnees_git,,
+MCP-F-562dcc758e49ad44,tests/clientToolSurfaceResidual.test.ts,100644,blob,99f95dd12655c48f70deae9ed2ade1399c5d04d1,12640,autre,,metadonnees_git,,
+MCP-F-8e216215da94e459,tests/connectConsent.test.ts,100644,blob,bf9ce0247a64830179bcb42cc873ae00650af8ee,7876,autre,,metadonnees_git,,
+MCP-F-a7b53dd4150f4296,tests/connectedAgentNextWork.test.ts,100644,blob,3f692c5e7c22db11545a5a7914d15daf33179dd4,23816,autre,,metadonnees_git,,
+MCP-F-89cd684e933c678a,tests/connectedAgentNextWorkHandoff.test.ts,100644,blob,13e9cb6a866adec8a84894ec881af0fc984641f5,3100,autre,,metadonnees_git,,
+MCP-F-b4ccbb18ff46ea59,tests/connectionContext.test.ts,100644,blob,0782507af60cd0c2d708ac1cd62e5001204e41a5,4482,autre,,metadonnees_git,,
+MCP-F-3fa8099ec958257e,tests/connectionContextBindingCleanup.test.ts,100644,blob,3a6ae964109148947578f86109134692144448fc,2341,autre,,metadonnees_git,,
+MCP-F-8d6aef1b15cb1526,tests/connectionContextClientEvidence.test.ts,100644,blob,58b9b5fc9fe5de288b9c000ba8a15ca889a353a1,8913,autre,,metadonnees_git,,
+MCP-F-3c10b58b3bdd13ad,tests/consentHandoff.test.ts,100644,blob,7b0d424424ad3847328abcc43ca81dc7f233ae1d,3719,autre,,metadonnees_git,,
+MCP-F-5debb6c50074c709,tests/contextCompletionHandoff.test.ts,100644,blob,806174c7b1d4ed19821bd738a90bb02d6f4a68eb,3631,autre,,metadonnees_git,,
+MCP-F-d17ea2e8fbd876d7,tests/contextCompletionWizard.test.ts,100644,blob,c389c5e4942ad0887289933f2a69f30e9c535ce1,22742,autre,,metadonnees_git,,
+MCP-F-a8d71aedddb47f5f,tests/cugAdmission.test.ts,100644,blob,add3d05fb460fe9c652045b74a3545744f5feba0,8417,autre,,metadonnees_git,,
+MCP-F-12c58bdd193cbfae,tests/cugPilotInventory.test.ts,100644,blob,b10f59b2c25b323ab1ae7d452a1cb6dcd2b26e47,5558,autre,,metadonnees_git,,
+MCP-F-0cd9750a79fa7d0b,tests/cugQuestionnaire.test.ts,100644,blob,3db3afb0f4733da253a6b0826d6d532adaacb952,10615,autre,,metadonnees_git,,
+MCP-F-41c2fe2416020df6,tests/cugWebhook.test.ts,100644,blob,21074911c97b65a34b5f0a0380d03c2d8450a97d,11360,autre,,metadonnees_git,,
+MCP-F-2811f81aae68bfc5,tests/currentStateEvidence.test.ts,100644,blob,7a2641d83a0fb8008ab6c95498f1e6c440b74919,6230,autre,,metadonnees_git,,
+MCP-F-fcc279ced9cf64da,tests/currentStateTools.test.ts,100644,blob,1a3a5bc05eacaf1af8c1c1798dab619e22738db6,12009,autre,,metadonnees_git,,
+MCP-F-87827c6a8ea76801,tests/currentToolCatalog.test.ts,100644,blob,a5e07bc200482d3cf6223ff3d29b3438e788c1c5,7688,autre,,metadonnees_git,,
+MCP-F-dcca532ecbd2ad6b,tests/delegatedRepositoryPermissions.test.ts,100644,blob,c4f12393f2c68cdbebf7b80c392ee444e320d783,2417,autre,,metadonnees_git,,
+MCP-F-a3bd9e2358273e06,tests/deployRoutes.test.ts,100644,blob,b39da3c25d05d2a55b6b3d2d0400619fa2dbad6e,11653,autre,,metadonnees_git,,
+MCP-F-336da70f1da71f3d,tests/deployWorkflow.test.ts,100644,blob,905b9b5d74c0e374cac91e68c009acc3cfe7702c,6306,autre,,metadonnees_git,,
+MCP-F-7784e7fe0ae49e82,tests/deployWorkflowShell.test.ts,100644,blob,1621ce9354369c1e59c790db24a6bc06d7cc1f7f,4146,autre,,metadonnees_git,,
+MCP-F-e384492338448d99,tests/docGovernance.test.ts,100644,blob,19e409a5fed8a22e0ed4c8407f6054a68b57c9dc,10305,autre,,metadonnees_git,,
+MCP-F-6c8a6cc01a472290,tests/dockerfilePolicy.test.ts,100644,blob,cede36bc718378bc2fdd5033703d7ed310823ad6,3711,autre,,metadonnees_git,,
+MCP-F-c0c3179956da5fdb,tests/domainResolutionHandoff.test.ts,100644,blob,6b0ccc3b04791af95f103f75b94af30e81ffd67b,3156,autre,,metadonnees_git,,
+MCP-F-0bae45f05447be41,tests/domainResolutionIntegration.test.ts,100644,blob,89ef2888772a13c5843d6dd5e525b4851560b2f5,19817,autre,,metadonnees_git,,
+MCP-F-854a1edf687026bd,tests/e2ActivationTool.test.ts,100644,blob,f9f64ffa0e3fe76132f1ff08730ae4fc051da98f,6111,autre,,metadonnees_git,,
+MCP-F-bc31c3beb938516d,tests/e2ActivationWriteGate.test.ts,100644,blob,27f814c949677b2e0aa876ea17fb6bebb081da55,1608,autre,,metadonnees_git,,
+MCP-F-684694f329b864b5,tests/e2AutoActivation.test.ts,100644,blob,6f81cb332b8114377fa080bf0841681363b04f9f,4672,autre,,metadonnees_git,,
+MCP-F-6be7c8275bf2f5d8,tests/e2EntryFlow.test.ts,100644,blob,1ce1b2b5e13d4f7aa76052729ee1a67048a3784d,10320,autre,,metadonnees_git,,
+MCP-F-bd562a2b79f56ef3,tests/e2EntryJournal.test.ts,100644,blob,1e62e033e4cd3cf68505b55a71751fc1ec8cda3d,7281,autre,,metadonnees_git,,
+MCP-F-48bbbfb0df82beca,tests/e2EntryTool.test.ts,100644,blob,5d36d8f00beefec205dc532e971021ccadcff600,1692,autre,,metadonnees_git,,
+MCP-F-2bbf9cdcd1adce14,tests/e2GitHubEvidence.test.ts,100644,blob,d6e46730eb204f378c4566359cde54d9b005ab5f,7896,autre,,metadonnees_git,,
+MCP-F-0ade726485a0cd51,tests/e2LivePreflight.test.ts,100644,blob,8b0234ed4efb54d1e8ee7eda790af82b07a979a7,2665,autre,,metadonnees_git,,
+MCP-F-073ae6d60ce4033b,tests/e2OwnerLifecycle.test.ts,100644,blob,ff5c61e0c2eff50aceb7d02f6a578db3dd41486c,11420,autre,,metadonnees_git,,
+MCP-F-b92eb9af6bb45dc6,tests/e2OwnerWriteGate.test.ts,100644,blob,52dc4ec8b828ce432e1e95f6cfc6c69bc6da6af4,1579,autre,,metadonnees_git,,
+MCP-F-471cfb30f22d824e,tests/e2S1GithubProposal.test.ts,100644,blob,3d02fe217d78e73d71036050289794d6a092d72a,8849,autre,,metadonnees_git,,
+MCP-F-6b30ee2424c94f44,tests/e2S1SecretReader.test.ts,100644,blob,9d44c26d97f7ff2bfe98d174a8355cfb2735bb4a,3199,autre,,metadonnees_git,,
+MCP-F-0f798496b6c42fbb,tests/e2ServerRegistration.test.ts,100644,blob,5758191b087a2be6a57e6973f3401993c2e89f78,966,autre,,metadonnees_git,,
+MCP-F-83cd6a22e4f0e93f,tests/effectiveCapabilitiesHandoff.test.ts,100644,blob,7431371988c38083fc8b449e3978dc4b3fdf346b,3961,autre,,metadonnees_git,,
+MCP-F-60623f73f44f5327,tests/existingPleskAuthorityReader.test.ts,100644,blob,5b54a50363a6c7b7e414e30081f27e3512ec8107,8922,autre,,metadonnees_git,,
+MCP-F-4836d9db5644c062,tests/externalGovernedRecoveryProfile.test.ts,100644,blob,a61a74b67f34524e0af17e7c41b4f8539e59773b,7984,autre,,metadonnees_git,,
+MCP-F-86cd6313a2ac84de,tests/externalGovernedRecoverySelection.test.ts,100644,blob,6dec6ac50cf1e973c5e82995608a0c1ddba6748f,3733,autre,,metadonnees_git,,
+MCP-F-e969abbeaa1df5a5,tests/fixtures/current-state-evidence-repo/.mcp/branch-governance.json,100644,blob,74444dae40db2aaa720ef666397d014c017cf5ba,104,structure,,metadonnees_git,,
+MCP-F-3537007c85fd0cce,tests/fixtures/current-state-evidence-repo/.mcp/manifest.json,100644,blob,83d18de2f266556823186601204b7695474056a9,46,structure,,metadonnees_git,,
+MCP-F-efce639227eff890,tests/fixtures/current-state-evidence-repo/README.md,100644,blob,ca69e6d08b5b8bb4f11a74f9695e329c203cbfd8,10,Markdown,documentation,lecture_structure,Fixture,1
+MCP-F-0fc3e30675be67cc,tests/fixtures/current-state-evidence-repo/docs/audits/baseline.md,100644,blob,cad05b8c6da724264202d2cfe1efaefc6f0b71cd,17,Markdown,documentation,lecture_structure,Baseline audit,1
+MCP-F-9a3e27885cd5a57e,tests/fixtures/current-state-evidence-repo/docs/history/change.md,100644,blob,e061a53722a15a6cf36d1712580428a1c9b0b76f,10,Markdown,documentation,lecture_structure,History,1
+MCP-F-d7c108056e8001ed,tests/fixtures/current-state-evidence-repo/src/a.ts,100644,blob,c9316fa598d120e2c26af060711a5109996ddc88,59,autre,,metadonnees_git,,
+MCP-F-ab45ebcdfcd8d0c4,tests/fixtures/current-state-evidence-repo/src/b.ts,100644,blob,b39e8b386d5c18e8d07b2021392b7f5785707870,23,autre,,metadonnees_git,,
+MCP-F-7445170c757fca3c,tests/fixtures/current-state-evidence-repo/src/server.ts,100644,blob,6325fac95f22434057fe192be7de4438ab9ee39d,101,autre,,metadonnees_git,,
+MCP-F-86f7dea86ab92ce5,tests/fixtures/existing-tool-contracts-v1.json,100644,blob,ac226c2fc28d93011af52b4f56b67d03571d2458,50948,structure,,metadonnees_git,,
+MCP-F-0dded8eb51bacce7,tests/functionCartography.test.ts,100644,blob,63a38e18963f761440fe1ff3bfe222c5d97d2bd7,1215,autre,,metadonnees_git,,
+MCP-F-c2b17ec570671ae5,tests/g1DocumentationCandidate.test.ts,100644,blob,f9a31f33791099919900f89a6a8d6930af97943a,3160,autre,,metadonnees_git,,
+MCP-F-673ac38bfb990600,tests/g1OpenCorrection.test.ts,100644,blob,bb00ac6d794627dfb8ee237556e812dcfaa9d066,2170,autre,,metadonnees_git,,
+MCP-F-34b6290de14d548e,tests/gdUE2CapabilitySnapshot.test.ts,100644,blob,8380c117d47f495e821741839100e318af3324a5,2758,autre,,metadonnees_git,,
+MCP-F-a3b5355569d092ba,tests/gitRegistryProjectCompatibility.test.ts,100644,blob,b6d09775e8327a31df596ebe9beae19fc997be4a,11085,autre,,metadonnees_git,,
+MCP-F-55088a7d828f9615,tests/gitRegistryReadinessHandoff.test.ts,100644,blob,cbe99e95e1bfefdeaaa56cb88d4403f46cc82cf5,2523,autre,,metadonnees_git,,
+MCP-F-7a048709cffe0c60,tests/gitRegistryReadinessProbe.test.ts,100644,blob,6b78b4fcd9b00a43c4cc641bcd2f1b0594c88c3f,8779,autre,,metadonnees_git,,
+MCP-F-492d6fc3d023a393,tests/gitRegistryV2.test.ts,100644,blob,f9ad376e11e08d48c4435a8622ca86fd0ab4de94,6049,autre,,metadonnees_git,,
+MCP-F-54ddc3e8b0ef9d0c,tests/githubAppInstallationToken.test.ts,100644,blob,45834b5acf29d1f11957144f1870ca75656f352d,3938,autre,,metadonnees_git,,
+MCP-F-0c300fc1bb98ab37,tests/githubAuthorization.test.ts,100644,blob,6c3d22fdc3e2c677a2052badf81bcaa0010cdb1d,5793,autre,,metadonnees_git,,
+MCP-F-8a72076ed4453504,tests/githubConnectionObservation.test.ts,100644,blob,97d231320a69d4cd617f9f5dd22902ebb3a7c65a,15254,autre,,metadonnees_git,,
+MCP-F-acabf7fa5d08bcae,tests/githubControlPlaneReadComplements.test.ts,100644,blob,b61d6c8ea692fa16cf66bbdac49d8cd65439d69a,8208,autre,,metadonnees_git,,
+MCP-F-218308fc5b736d41,tests/githubFirstOperationalContinuity.test.ts,100644,blob,142183ed392a6e99ea47f765eb50e9a6306edeb1,4734,autre,,metadonnees_git,,
+MCP-F-2c4699202da58782,tests/githubIdentityResolution.test.ts,100644,blob,c00b91e33f8d70a3b0f63e0743dc208394cad978,11714,autre,,metadonnees_git,,
+MCP-F-ac0aaa32f5477600,tests/githubInstallationCapabilityReadiness.test.ts,100644,blob,2e7cf7f46d1cbd775680f19d5ad4d27e618a51ed,5923,autre,,metadonnees_git,,
+MCP-F-ff7f40c85e482687,tests/githubLifecycleControl.test.ts,100644,blob,bb3b411b81f5c7b09b0ae3a1d0de27aec54edbaa,20107,autre,,metadonnees_git,,
+MCP-F-fa67ccaee466c202,tests/githubOidc.test.ts,100644,blob,40496b64ba3015b4332254693576c8c8972c6973,7849,autre,,metadonnees_git,,
+MCP-F-93e33187d4f01d8c,tests/githubOperationalRealityErrors.test.ts,100644,blob,7e91fb8d55abd0a853a3f76f94876ada80a9a721,6946,autre,,metadonnees_git,,
+MCP-F-1cc50cd771aa8a15,tests/githubProjectResolution.test.ts,100644,blob,009fed359ea1b199c91b7000ef261ce23b896bcb,7590,autre,,metadonnees_git,,
+MCP-F-f607f9856d026b8d,tests/githubReadonlyEvidenceWorkflow.test.ts,100644,blob,b2b45b368ffca7aac418ce4228421a8362bbd44b,4998,autre,,metadonnees_git,,
+MCP-F-b476e78ec9f6f8ba,tests/githubReadonlyOidc.test.ts,100644,blob,dd1fd39a7b3b5e99f279b207c047764d9da1409f,4025,autre,,metadonnees_git,,
+MCP-F-5903d2bbf07b2bdd,tests/githubReadonlyRoutes.test.ts,100644,blob,21cf06ffcda2fe5a4ecf15a815a130aa9dc7d37e,12977,autre,,metadonnees_git,,
+MCP-F-3da3b8eb24d3b4e1,tests/githubRegistryEvidence.test.ts,100644,blob,1c5b0e96679598bd44373de4be885440c22a05c0,5205,autre,,metadonnees_git,,
+MCP-F-c49c584d2b5faec4,tests/githubRepositoryResolution.test.ts,100644,blob,09a54815c72173c71cc58c4e5d90e6aad444e799,12138,autre,,metadonnees_git,,
+MCP-F-91a28577a7cdf239,tests/governPilot.test.ts,100644,blob,761b562da66e8694cd4ede451fab90194963e061,5342,autre,,metadonnees_git,,
+MCP-F-233f47eba2f2035e,tests/governPilotArchiveSource.test.ts,100644,blob,7560ef8344f3aa766f3351584fcbb36f707c676f,2528,autre,,metadonnees_git,,
+MCP-F-ef52d05a1176d41e,tests/governPilotRoutes.test.ts,100644,blob,33fff03576fd1f343c0b5f92f2c48dfc9a7ced28,3563,autre,,metadonnees_git,,
+MCP-F-f15f1569da0d8db9,tests/governanceDecisionShadowParity.test.ts,100644,blob,918cc1783dfb1bbf001f1e86a96132c9056eb3f2,4708,autre,,metadonnees_git,,
+MCP-F-721f6e85b41c75f8,tests/governanceInheritance.test.ts,100644,blob,f1e9a047e93f80090fee9d47f7873acaf3fc1baa,23324,autre,,metadonnees_git,,
+MCP-F-376992122c90d610,tests/governanceInheritanceHandoff.test.ts,100644,blob,c3aa421e2b510c3f2bcec2465dcf9d43492f6a1a,3708,autre,,metadonnees_git,,
+MCP-F-81f91af1840af9ae,tests/governedAuditWorkblock.test.ts,100644,blob,08de6f104be2f5a7a1e2fe6d626c0ad051197884,4174,autre,,metadonnees_git,,
+MCP-F-f936e5cb9e9a9c4e,tests/governedConnectionBootstrap.test.ts,100644,blob,b38a22a89281e4a420538e136479c7ffbfa5189d,12476,autre,,metadonnees_git,,
+MCP-F-3bc68e1438e1757e,tests/governedContextGithub.test.ts,100644,blob,ebdae4bbfa5e85e3e61aa507e09eaa994f168bb9,28308,autre,,metadonnees_git,,
+MCP-F-7b4afc7d349eb6ad,tests/governedContextObserverIntegration.test.ts,100644,blob,a7791da5d2983c5f82842227096eaadeaccc5494,9623,autre,,metadonnees_git,,
+MCP-F-500d51ab6e1e655d,tests/governedContextService.test.ts,100644,blob,5b8b5ea30afbc4a2002dac0793fa7307390cb8f5,18465,autre,,metadonnees_git,,
+MCP-F-eae320158b26c8dc,tests/governedContextTools.test.ts,100644,blob,0e05b554f24e22ce8089059375a863d37a0e5bfe,7728,autre,,metadonnees_git,,
+MCP-F-7bbf2274b58337fb,tests/governedContextUnifiedReality.test.ts,100644,blob,7005ef2c626575d18fb8a4b1d5b19a3c7e73e7fa,9348,autre,,metadonnees_git,,
+MCP-F-5658b4793555580c,tests/governedDashboard.test.ts,100644,blob,43b009f2bfa5ae9565034c1ed085eb5e88b8b10f,16573,autre,,metadonnees_git,,
+MCP-F-c5273a0118c27676,tests/governedLocks.test.ts,100644,blob,9794496c62cdd5acad5b8b4e286da321ad1bbacf,24378,autre,,metadonnees_git,,
+MCP-F-23196c19bffd73a7,tests/governedObservability.test.ts,100644,blob,4fc2cd2bdc9d41d728601f87469d2cdd3050031b,6371,autre,,metadonnees_git,,
+MCP-F-5b8d3dd25be34208,tests/governedPleskSubdomainExecutor.test.ts,100644,blob,fa078be74908d9f4ce40412b5218760facdc7971,13649,autre,,metadonnees_git,,
+MCP-F-1e612b0522cf754d,tests/governedSessionService.test.ts,100644,blob,fdb888baa423c669d5aa8fb6b3973668cf310ad5,50224,autre,,metadonnees_git,,
+MCP-F-1587440a5c4bfbaf,tests/governedSessionTools.test.ts,100644,blob,c1409f894af1788fbdddfbb621103456aca3039e,10115,autre,,metadonnees_git,,
+MCP-F-9c832495714c2b27,tests/governedTaskQueue.test.ts,100644,blob,c58f62f51f76d06c689da48af5fadae8f955d0fc,19477,autre,,metadonnees_git,,
+MCP-F-22d5e797a4bb423b,tests/governedTaskTools.test.ts,100644,blob,0f66ffa63912bfba8928d7d5f9aaaa0ee14a662f,7173,autre,,metadonnees_git,,
+MCP-F-336c4f9c196f5dbf,tests/governedWorkflowAuthority.test.ts,100644,blob,9c078d1e94500ea57efc572765076730965b22c9,10443,autre,,metadonnees_git,,
+MCP-F-56064cc18d4e231f,tests/governedWorkflowContractSubstrate.test.ts,100644,blob,b397d6757bb7e119cd73eff6edfcc101e9e0e774,6980,autre,,metadonnees_git,,
+MCP-F-f3c3b5914a92287d,tests/governedWorkflowDeploy.test.ts,100644,blob,5dd693cd8a9fdc9ad033697b2a711933a24c61d4,17602,autre,,metadonnees_git,,
+MCP-F-600c83fab9dcf81b,tests/governedWorkflowDevelopment.test.ts,100644,blob,fdb69a69ddd9d3e3fb10696b4ee37501c00d7001,15310,autre,,metadonnees_git,,
+MCP-F-1ecc86fa41ac5c4e,tests/governedWorkflowDomainResolver.test.ts,100644,blob,b2cd994ac3e6da100b4c4171f0c7ae0aaa1980a9,12931,autre,,metadonnees_git,,
+MCP-F-aefde67e01b94856,tests/governedWorkflowExecutionEngine.test.ts,100644,blob,ec2ad4480cd1b85cecbaca2e52406530ae8096ca,7363,autre,,metadonnees_git,,
+MCP-F-7b33cf62db972156,tests/governedWorkflowGithubResolverAdapters.test.ts,100644,blob,361eeffda1188db8d0f1fcd29393675425580e70,15983,autre,,metadonnees_git,,
+MCP-F-9437894a5c5aecfc,tests/governedWorkflowGovernanceIntegration.test.ts,100644,blob,2a4ff31750e7cffed1c1c18490f005a3c0afe3ec,12708,autre,,metadonnees_git,,
+MCP-F-caa3c527bb55a3c6,tests/governedWorkflowIntentCapture.test.ts,100644,blob,98ad6c74ff2cdcdea84642de6d1b6415f28924f8,4704,autre,,metadonnees_git,,
+MCP-F-976b6f8b5f2048dc,tests/governedWorkflowReview.test.ts,100644,blob,ae30e5e7f71ceb5d07b69dbe5f7b8ea4e64f1126,14068,autre,,metadonnees_git,,
+MCP-F-150ab467147fe004,tests/governedWorkflowRuntimeResolver.test.ts,100644,blob,6a9921f27217c1fcc29974152b8ca2b992f965e1,9651,autre,,metadonnees_git,,
+MCP-F-4b4c2e6805b2e745,tests/governedWorkflowSessionIntegration.test.ts,100644,blob,3d3db6b37fd55c8801eb6935161a77de542571af,12259,autre,,metadonnees_git,,
+MCP-F-a3c62d18f7e94685,tests/governedWorkflowTargetScope.test.ts,100644,blob,a62df985742f8ebf45cf34732a345c76be031003,22008,autre,,metadonnees_git,,
+MCP-F-0fcef35ba62bce85,tests/governedWorkflowTaskLockIntegration.test.ts,100644,blob,7c86ba4900d2ccd7907c3e446c0ddbeb09ff1ef7,17431,autre,,metadonnees_git,,
+MCP-F-ca78d6ab69392bee,tests/governedWorkflowTerminal.test.ts,100644,blob,3c8292d2b72fb2db224a0f7b1a328ae825b9db13,17291,autre,,metadonnees_git,,
+MCP-F-a0262329056150e5,tests/governedWorkflowUniversalAcceptance/fixtures.ts,100644,blob,80eeec8e7b6f0055114bedff864e85fce0906a3d,2858,autre,,metadonnees_git,,
+MCP-F-7bc982e1eb774067,tests/governedWorkflowUniversalAcceptance/harness.ts,100644,blob,c20461606b3971e1b28deffa2cc0ef3f86fdc5d4,74172,autre,,metadonnees_git,,
+MCP-F-69605719f353499a,tests/governedWorkflowUniversalAcceptance/universalAcceptance.test.ts,100644,blob,3ab8ebb782490d91de2944a672c5ff67570ccec6,10340,autre,,metadonnees_git,,
+MCP-F-adb5ac669ea4fcc9,tests/gwb03Pr261AuditEvidence.test.ts,100644,blob,44e4a78b325d6793bacdacd5ebe4f82c69658fd6,2694,autre,,metadonnees_git,,
+MCP-F-18e1e69230d38a5e,tests/gwb03Pr267DomainAudit.test.ts,100644,blob,57120b3940c6b06a24827877e43fa0f81f30fb82,1884,autre,,metadonnees_git,,
+MCP-F-514f25cbf6dfb156,tests/gwb04ReadyOwnershipAudit.test.ts,100644,blob,dbd2631372bdd1eb3d9314f46369d26c9c4371ac,2032,autre,,metadonnees_git,,
+MCP-F-26663addd6a0574d,tests/gwcGithubCapabilitySplit.test.ts,100644,blob,b4c91a60d59e8fc6727f26972af8674301a31e46,4547,autre,,metadonnees_git,,
+MCP-F-479970374cb6176e,tests/helpers/captureToolContracts.ts,100644,blob,96cc944590df924da27b79a5547fc539f732f8a5,1898,autre,,metadonnees_git,,
+MCP-F-2945c738a9dec583,tests/installationLiveReadiness.test.ts,100644,blob,1649bb17245015e423ca5ee791ff6e539f8e7bcd,5371,autre,,metadonnees_git,,
+MCP-F-15e940ec39657240,tests/intake177CapabilityConvergence.test.ts,100644,blob,bf4c356fb3e55a89e1b5e228736d85221d40edab,8672,autre,,metadonnees_git,,
+MCP-F-157d9e00a923f9c4,tests/intake201TlsRecoveryConvergence.test.ts,100644,blob,0faa77310b3545c74ded40bde84da94672d9d04c,3186,autre,,metadonnees_git,,
+MCP-F-8a274272814f8297,tests/liveStateCollectors.test.ts,100644,blob,c9536a10c50773cca5cb022eab2bc8997b541de3,11197,autre,,metadonnees_git,,
+MCP-F-571f1f542fb4d683,tests/liveStateEngine.test.ts,100644,blob,8e8bf564fff1ff7a7c25c7a93665a98dc14c770b,4855,autre,,metadonnees_git,,
+MCP-F-f249f79ed192b2d1,tests/liveStateReconcile.test.ts,100644,blob,a1ab4b3c0226e264b8cd056059ec365a295bc165,6755,autre,,metadonnees_git,,
+MCP-F-a2434499af40c3cd,tests/liveStateStore.test.ts,100644,blob,2624e4f64039eb1d8084e1d1cb0ced9102e5dcfd,3176,autre,,metadonnees_git,,
+MCP-F-153c1e233dc82d5f,tests/liveStateTools.test.ts,100644,blob,46d00f6be3c06dacad299c9c4accacbfadb548d6,5393,autre,,metadonnees_git,,
+MCP-F-2da040a775e6f29e,tests/mcpAgentColdStartHandoff.test.ts,100644,blob,f1524b68025cfbc236aa3869de7bd1ca1f69e21a,1538,autre,,metadonnees_git,,
+MCP-F-003637fad7448765,tests/mcpAuditHistoricalBreadcrumbs.test.ts,100644,blob,00647259fa4960a7c3bac094a5ec0d220294344d,2652,autre,,metadonnees_git,,
+MCP-F-9c4ae5680542b3fe,tests/mcpAuthContext.test.ts,100644,blob,55f10d0901b61ad91722380e1aeb7a1c3024fa12,3884,autre,,metadonnees_git,,
+MCP-F-8ea0079879d82f21,tests/mcpAutoIntakeDiscovery.test.mjs,100644,blob,37e6409b2b4d30c9abd60aa8f6f9b147046e2098,6358,autre,,metadonnees_git,,
+MCP-F-cdfd9fee213a5631,tests/mcpAutonomousAgentContinuation.test.mjs,100644,blob,2fb9bb662a501b58f1fbb0f4fe2bea83762eebe2,14634,autre,,metadonnees_git,,
+MCP-F-354fa2782623cbe1,tests/mcpAutonomyE2ECertification.test.mjs,100644,blob,82f1e3d84f2f8ffb8562641ce576bc93d52b97de,8942,autre,,metadonnees_git,,
+MCP-F-582523ffaf52ee2e,tests/mcpC27GithubProofReaders.test.mjs,100644,blob,f6e06b5f67e13233942d254b5af9b9cefd2a3805,8358,autre,,metadonnees_git,,
+MCP-F-370c9d0d787160cd,tests/mcpGitSync.test.ts,100644,blob,53ce08b8d08d75edfe4e347daf3481023ac801f0,4713,autre,,metadonnees_git,,
+MCP-F-81a7ea08eb3c0c90,tests/mcpGlobalAgentHandoff.test.mjs,100644,blob,ad5062d675ac7fbfacb33ba6813607ef897a829b,7338,autre,,metadonnees_git,,
+MCP-F-cfd23a8556000ddb,tests/mcpGlobalContinuationObserver.test.mjs,100644,blob,662c17f717bb056a16e29e5148b5bf00420508f1,8503,autre,,metadonnees_git,,
+MCP-F-ecdfb50ba60b0d33,tests/mcpPostdeployRunProof.test.mjs,100644,blob,348ae2852ea05f0cb30d1101a0a306465908d301,2913,autre,,metadonnees_git,,
+MCP-F-b3bbadd4528d39ea,tests/mcpPriorityConvergenceMap.test.ts,100644,blob,0273a196ee524a6a8de87a684b387583a104e209,5165,autre,,metadonnees_git,,
+MCP-F-ba0e0ae3dbab0cfe,tests/mcpReconcileS1ToMain.test.ts,100644,blob,8d03750e403e75f94c2725768b9d129ce3c081e3,6829,autre,,metadonnees_git,,
+MCP-F-0d58973050713458,tests/mcpS1ExactContentReconcile.test.ts,100644,blob,41b28e72ded945cb4c90d8a56f99905c881ac746,6439,autre,,metadonnees_git,,
+MCP-F-ff2c18539de7816d,tests/mcpS1ReconciliationCycle.test.ts,100644,blob,39f432e8446271a2b2660e8f72c78fab273b84ef,5994,autre,,metadonnees_git,,
+MCP-F-29394d03d4c270b1,tests/mcpS1ToMainPolicy.test.ts,100644,blob,853e86183697c7a3fdf50a94069cb9054484443f,5398,autre,,metadonnees_git,,
+MCP-F-a67370c346aaa70f,tests/missingContextDetection.test.ts,100644,blob,e01475333d12464cce31cafdea18237e9c0df1a8,21903,autre,,metadonnees_git,,
+MCP-F-f19df032cb7ba102,tests/missingContextHandoff.test.ts,100644,blob,36d0987ff947e3a08339b0a1949ce49dcbd44e2e,4396,autre,,metadonnees_git,,
+MCP-F-d34fbe4b79da8711,tests/multiRepositoryInventory.test.ts,100644,blob,2722027af79137a03891b75688aec2bdc1738eb0,3829,autre,,metadonnees_git,,
+MCP-F-ab0e9212067f33ba,tests/multiRepositoryTargetSelectionGate.test.ts,100644,blob,624da2c9611c098a9b2caa5a4846a337f79048f6,2397,autre,,metadonnees_git,,
+MCP-F-af53c21c1fb1a1e0,tests/oauthAuthorizeConsent.test.ts,100644,blob,144812f9caa0fb50d8edaf73a3226f2169216e70,15787,autre,,metadonnees_git,,
+MCP-F-23baea449eb75fe5,tests/oauthConsentHandoff.test.ts,100644,blob,a7682a24683ce7c07af61a5026c18993bf04a5be,1784,autre,,metadonnees_git,,
+MCP-F-b6b40dabbf76eb3f,tests/oauthConsentProgramConvergence.test.ts,100644,blob,6677a8df57dcd410d3278dde12f715d612e7fc53,1588,autre,,metadonnees_git,,
+MCP-F-acb2a0fcf9ee0a90,tests/oauthCorrelationInventory.test.ts,100644,blob,206324cf1c5b7ebcca0ce2d191310453a4f55b04,3137,autre,,metadonnees_git,,
+MCP-F-3fc49323e6ad24b7,tests/oauthLogRedaction.test.ts,100644,blob,5b851ab05cb2c28c60fb1f4cec33044f737c2b31,2818,autre,,metadonnees_git,,
+MCP-F-91694a9fdd9fb6ca,tests/oauthTransportSessionIsolation.test.ts,100644,blob,39b4273813821e142aa21a9960346a24ff8fd6fa,3922,autre,,metadonnees_git,,
+MCP-F-4368d4c434eb082b,tests/observeGithubReviewAndCi.test.ts,100644,blob,b2b52bed57d023e608581839620c1775976252a0,13725,autre,,metadonnees_git,,
+MCP-F-c6ac4043d5633ebb,tests/operationalDecisionEdgeCases.test.ts,100644,blob,521b6220562eb4b238a3fe2e38c91a7ccbb40b63,4890,autre,,metadonnees_git,,
+MCP-F-8690852196a7ec51,tests/operationalEventJournal.test.ts,100644,blob,afe41e40755043697a3a1a8e032be716cf176067,12100,autre,,metadonnees_git,,
+MCP-F-ac2b1955ec216d6a,tests/operationalMemoryStore.test.ts,100644,blob,67d31939ea6c7b31b2f15c5e661b80101e1c56e7,5080,autre,,metadonnees_git,,
+MCP-F-c3fd3e7251dc3d32,tests/pleskE3GovernedConsumption.test.ts,100644,blob,c7835a5b6b07ee126ab90f9e5178a9f0b34110bb,7580,autre,,metadonnees_git,,
+MCP-F-a9305533f5896192,tests/pleskE3SingleUse.test.ts,100644,blob,d2a6d1fd163d753ce5463c63455823bcfccfa168,6653,autre,,metadonnees_git,,
+MCP-F-bf55a7b376ba9417,tests/pleskExternalGovernedRecoveryConcurrency.test.ts,100644,blob,9162fba43e91b5c2616b2f2a8773134053497ba1,2773,autre,,metadonnees_git,,
+MCP-F-79c6e28d8c132397,tests/pleskFoundationCompletionGate.test.ts,100644,blob,47cdf9ec47aeb17cc5fe8e3fb8222072fa88485f,1839,autre,,metadonnees_git,,
+MCP-F-07c24b93c021d9fd,tests/pleskGovernedReleaseGate.test.ts,100644,blob,1916b2d5366bd75583ad78671d89a983a5bb74ca,5369,autre,,metadonnees_git,,
+MCP-F-322ac2482de36375,tests/pleskGovernedWebExecutionBridge.test.ts,100644,blob,640d07ab1500c06b62375f8e52d28c07538f5b53,3945,autre,,metadonnees_git,,
+MCP-F-d26a1c3645b2ba80,tests/pleskHttpToMcpAdmission.test.ts,100644,blob,bc3cedb63135bb28122addb5a48ab4cad0f41394,7533,autre,,metadonnees_git,,
+MCP-F-eba8fefcbf991259,tests/pleskOwnedWebSession.test.ts,100644,blob,917dc6a9719938f4a21b4a1e5cbe84896bb5ae15,4297,autre,,metadonnees_git,,
+MCP-F-4ef90954120d2e4c,tests/pleskSiteExecution.test.ts,100644,blob,91ea48a47dff2706a86890f43e16d758023568b5,3348,autre,,metadonnees_git,,
+MCP-F-ccbf9330041b2ca0,tests/pleskSiteProvisioning.test.ts,100644,blob,d2373f2bfcdbe93906e6bbc94377514e02336316,2830,autre,,metadonnees_git,,
+MCP-F-8ec3f578ad05f5f9,tests/pleskSshAdapter.test.ts,100644,blob,4d43b404c9520b584ecf18ba69e0d640566d51b1,4788,autre,,metadonnees_git,,
+MCP-F-5427aaa9493695fc,tests/pleskSubscriptionReadProbe.test.ts,100644,blob,c5e257ac2c15db5f68f8be25543ae230b97d590d,2466,autre,,metadonnees_git,,
+MCP-F-df627ff88b88614f,tests/pleskToolPolicy.test.ts,100644,blob,45f84b54c260d0c2ede03e7bfaeb8cac6ee96330,1172,autre,,metadonnees_git,,
+MCP-F-562c297d92ee8409,tests/pleskWebConsent.test.ts,100644,blob,09de0ee5b0a1c1ee2425a91aae03faa991383599,13101,autre,,metadonnees_git,,
+MCP-F-6675cf4ae9a4ceb4,tests/pleskWebOauthBridge.test.ts,100644,blob,c9da0192ed689587f0558a0e7a46b6fb2913a62f,4414,autre,,metadonnees_git,,
+MCP-F-231d5a1ae19bbfcc,tests/pleskWebTransportLink.test.ts,100644,blob,03d6da2f95a1b877d9164e2171c4d91cabee36e5,3465,autre,,metadonnees_git,,
+MCP-F-a699042044d4c222,tests/pleskWebTransportPairing.test.ts,100644,blob,d80aa0d1f5fea5e96e71e33358c0b89ea23113ea,4208,autre,,metadonnees_git,,
+MCP-F-61c7db77cdbecea0,tests/pleskWebTransportPairingIntegration.test.ts,100644,blob,6d2dbdbbb45573883d581037f6e981161075ead2,4076,autre,,metadonnees_git,,
+MCP-F-37cbcb445e9daeb8,tests/pr55ReviewApprovalRegression.test.ts,100644,blob,ee77f6de7d3c968be90915d2dd631a92ef268ea4,3075,autre,,metadonnees_git,,
+MCP-F-21acc71467baef8b,tests/pr55ReviewRegressions.test.ts,100644,blob,bebfd015ee5b5036ffa6c7bc9621461435545af9,12050,autre,,metadonnees_git,,
+MCP-F-666e7552ba1256d6,tests/programBacklogAutomation.test.ts,100644,blob,3383963e2ce5ac886867d5b0f7287406af1dbb44,7292,autre,,metadonnees_git,,
+MCP-F-b309a65a06c60e9a,tests/programBacklogConvergence.test.ts,100644,blob,03e13e23ccf3dd87d27cd53a5f52a4fdef7f96a5,21940,autre,,metadonnees_git,,
+MCP-F-02837973d365c2b7,tests/programBlueprintMaterialization.test.ts,100644,blob,2452f99016442f9f6ff8040abe6515252f37f79f,13982,autre,,metadonnees_git,,
+MCP-F-8f3957677571845a,tests/programBlueprintMaterializationHandoff.test.ts,100644,blob,7460b458ed4cb033d001a0719619b45b1ab55172,2212,autre,,metadonnees_git,,
+MCP-F-8e45e5a1b8ed8d58,tests/programIntake236ExposureClarification.test.ts,100644,blob,597caf63b33ebc63c3fa79d629fb5954fa4705ae,5211,autre,,metadonnees_git,,
+MCP-F-f2a204ccfcb48a46,tests/programIntakes220to222Convergence.test.ts,100644,blob,493116f13cc45f72ec5f5fa6dbfc973db3f02da5,15373,autre,,metadonnees_git,,
+MCP-F-def9bfe467cf3a19,tests/programIntakes235to236Convergence.test.ts,100644,blob,1a83b85b26ab57f27a8694c424e26247b035bf10,17654,autre,,metadonnees_git,,
+MCP-F-84ba6d015011cebe,tests/projectEffectiveCapabilities.test.ts,100644,blob,da3b24a39c4817242c1a29c04cfc9cd0026b7c27,28618,autre,,metadonnees_git,,
+MCP-F-4201d9823fecaa04,tests/projectRealityAcceptance.test.ts,100644,blob,905d875b375d53d8ac1d1e9e464ee9047c8ab476,30143,autre,,metadonnees_git,,
+MCP-F-6e4603ac584b7e5e,tests/projectRealityHandoff.test.ts,100644,blob,c730d23260f8cadb11f30f7f0ec6930e7e05340a,3728,autre,,metadonnees_git,,
+MCP-F-389a74b614f7c015,tests/projectRuntimeExecutor.test.ts,100644,blob,560b326f5e7ae4f93cbf28a36812668419be9f78,94187,autre,,metadonnees_git,,
+MCP-F-9dd6756cc2c8d99b,tests/projectRuntimeProvisioning.test.ts,100644,blob,d951dc93a355451055fef9ef92daa087e1bacfd3,21841,autre,,metadonnees_git,,
+MCP-F-a133b194ceedad42,tests/projectRuntimeSurface.test.ts,100644,blob,88a699bacf1b2d2a844c81d960f59821a101cc99,33843,autre,,metadonnees_git,,
+MCP-F-d3fc7ff09fa2860e,tests/provisioningContracts.test.ts,100644,blob,e630faf3c8b4bed91a5ab3096af8c8783908747a,13897,autre,,metadonnees_git,,
+MCP-F-6c32922e1653cad4,tests/provisioningHandoff.test.ts,100644,blob,1ba41453ce3edfff88691b3030fc0ff2c6277fae,5108,autre,,metadonnees_git,,
+MCP-F-c59380d76a9243a7,tests/readOnlySafety.test.ts,100644,blob,b9b9c56f83090cf616718f482e50b8891580c310,4578,autre,,metadonnees_git,,
+MCP-F-63c97d4c79b38b52,tests/receiptReferencesHandoff.test.ts,100644,blob,b17ca3468f1c5a3b8e8ec77880913ade9f7de943,3560,autre,,metadonnees_git,,
+MCP-F-fcfce7fd6ba41dc6,tests/repositoryPleskHostingRoute.test.ts,100644,blob,e37bd12590a39bcd81824daa10988f4c1095314c,2812,autre,,metadonnees_git,,
+MCP-F-796f48d76f568f1f,tests/repositorySshProvisioning.test.ts,100644,blob,e6fd0d3ad3506b87800f6ae899a994a219ad7e70,7128,autre,,metadonnees_git,,
+MCP-F-39d895ac84685909,tests/resumeOwnedFirstClaim.test.ts,100644,blob,fd5a7df58731c8c42ea738a438b58e1088adc323,9001,autre,,metadonnees_git,,
+MCP-F-a0115950029bd68d,tests/resumeOwnedFirstClaimHandoff.test.ts,100644,blob,735360f18ed313ea1439c09ed66058dfb5eba6d4,2203,autre,,metadonnees_git,,
+MCP-F-cf35d8e4a1426407,tests/runtimeAttestation.test.ts,100644,blob,f136e253bb1e724d610bab6d9dedb3dbe67ffac2,3636,autre,,metadonnees_git,,
+MCP-F-99af34c999cad233,tests/runtimeResolutionHandoff.test.ts,100644,blob,ad1052f3750e9daa349226d03cab5c1a1ebafeeb,3273,autre,,metadonnees_git,,
+MCP-F-2fb151f59cfeb32c,tests/runtimeResolutionIntegration.test.ts,100644,blob,ecd08c856626f20e89204d26bd856218e358a95d,19860,autre,,metadonnees_git,,
+MCP-F-0f53237b0d343df7,tests/s1Deploy.test.ts,100644,blob,158a6c3f5b61e184820bf68c208c49017ef54a0e,9021,autre,,metadonnees_git,,
+MCP-F-893c6907d21aea15,tests/s2LeafCleanup.test.ts,100644,blob,de9e25b24f0cd40aa275482857b9a063e95a7842,7476,autre,,metadonnees_git,,
+MCP-F-f02a5abaf88a7c91,tests/scopedWriteGate.test.ts,100644,blob,8aabf4e5b8c3b01d1c8e04e29783a05403e3ede2,12970,autre,,metadonnees_git,,
+MCP-F-6e4a0e3d648a6442,tests/servedDomainObservation.test.ts,100644,blob,612eedae83427d08e95b62f8574b9c261d677871,13241,autre,,metadonnees_git,,
+MCP-F-dd88cf7778ebbf49,tests/serverDeployRegistration.test.ts,100644,blob,7590c20c703c584211580adea9cac532f01937fd,1744,autre,,metadonnees_git,,
+MCP-F-5017b610c802b94e,tests/serverGovernedConnectionBootstrap.test.ts,100644,blob,32d2f8994e527b71d50f73a4497090f524d7a128,2160,autre,,metadonnees_git,,
+MCP-F-66852594dbdea4f5,tests/serverResolutionHandoff.test.ts,100644,blob,083d9bfcfdcabc2a48746aa69dcb36fe98356edf,2740,autre,,metadonnees_git,,
+MCP-F-b1b9d2b4c50bff8b,tests/serverResolutionIntegration.test.ts,100644,blob,81fea1a8a8a4393bbfe57faeb15cbfe3e049c135,15377,autre,,metadonnees_git,,
+MCP-F-2228183a4c6e6b9e,tests/serverTargetProjectSelection.test.ts,100644,blob,bec178eb7ddebe75f15bdd0e3a7ced101a577f41,12866,autre,,metadonnees_git,,
+MCP-F-9040c31da6af0b30,tests/stablecoinGithubFastForward.test.ts,100644,blob,afc45c255b6cf5eb750fb682fe3300a4d48d7aa1,6771,autre,,metadonnees_git,,
+MCP-F-eeafe4658a9a9e1f,tests/stablecoinGithubFastForwardOidc.test.ts,100644,blob,7bd96025d60a8da33d672b9d9482e1e168a7a66d,3080,autre,,metadonnees_git,,
+MCP-F-0405962f977e8cfc,tests/stablecoinGithubFastForwardWorkflow.test.ts,100644,blob,9fba5a83a796643379c1813dffe31aa5b07bba42,1310,autre,,metadonnees_git,,
+MCP-F-0353ee9332681287,tests/stablecoinReadOnly.test.ts,100644,blob,010ca265440f0348f4d9357e76d7f711eb1fde9e,1434,autre,,metadonnees_git,,
+MCP-F-61cd5abd1125ad96,tests/targetScopeServerHandoff.test.ts,100644,blob,4d113a0200357f0e3465f119a7286a06f740fd9b,2395,autre,,metadonnees_git,,
+MCP-F-d99fcc35264cbe88,tests/targetScopeToolSurface.test.ts,100644,blob,56e4fcf45b502dcd50abfa54fa2ce0e3c1926177,19823,autre,,metadonnees_git,,
+MCP-F-17fce9f9e1617da0,tests/toolClassification.test.ts,100644,blob,7d0521f2a18d4e9a8a6b9dbde9dd8713e32ab7cb,2866,autre,,metadonnees_git,,
+MCP-F-483782b6cec3a714,tests/toolContractRegression.test.ts,100644,blob,2f75c9da20c909dc9cf520b655143eecf2b566fd,1448,autre,,metadonnees_git,,
+MCP-F-f9e6cddda9b07c06,tests/unifiedOperationalWorkState.test.ts,100644,blob,da289d7bc92ea6ed76813defc21c199735db7cde,9205,autre,,metadonnees_git,,
+MCP-F-2bbc09850797416f,tests/universalAdminCapabilityCatalog.test.ts,100644,blob,6ea8b01db8b242662318e8a3529ccf880d6b09c2,4963,autre,,metadonnees_git,,
+MCP-F-2124ddcb413af943,tests/universalAdminLiveProbe.test.ts,100644,blob,0559ac4fe85d4def388379e19c835800f8f9effb,7233,autre,,metadonnees_git,,
+MCP-F-a4397d0eb2106df4,tests/universalAutonomyAdvice.test.ts,100644,blob,77f2e02a966a3765f4a3f623ecf26d2b9e7bf167,7800,autre,,metadonnees_git,,
+MCP-F-142047866e7e47ef,tests/universalCapabilityContextIntegration.test.ts,100644,blob,e90881c9d536b9c2971429f7c690914a80617c9e,5936,autre,,metadonnees_git,,
+MCP-F-2c38ecf5fc5ccf43,tests/universalCapabilityDiscovery.test.ts,100644,blob,73e465170920be435b0258ebd613748ea8630049,3597,autre,,metadonnees_git,,
+MCP-F-c3f44d90814308d6,tests/universalDeploymentBlueprint.test.ts,100644,blob,03286df26dd640381085c6f3b88a1120029d84cd,8033,autre,,metadonnees_git,,
+MCP-F-9a6c37bbac71eb3d,tests/universalExecutableBindings.test.ts,100644,blob,2110e70373021f0a53d0d6babc06d3a37ead9291,3017,autre,,metadonnees_git,,
+MCP-F-db51d9a28d446a13,tests/universalResumeAdvice.test.ts,100644,blob,f06a38e9ce8e6a7bdc41ffafcf12ae9466fb1f3c,5941,autre,,metadonnees_git,,
+MCP-F-b0da00a88c746357,tests/workEntryContinuityIndex.test.ts,100644,blob,bb8cd75c2450a981011997f7e6aaf814892ed45f,2138,autre,,metadonnees_git,,
+MCP-F-6c015303325e5075,tests/workEntryTrace.test.ts,100644,blob,b51c899aad5790f6e1a0d4103d2cf98680713ed9,6974,autre,,metadonnees_git,,
+MCP-F-b55cdbef4907b704,tsconfig.json,100644,blob,1f66ec2eb954c03341ab682255809ebb2a3855b4,469,structure,,metadonnees_git,,
+MCP-F-5bebb3fd41b0388b,wealthtech_project_memory/memory/CONVERSATION_COMPILED_WEALTHTECH_EWARI_MCP.md,100644,blob,113724e0ec23d3e50ee5ec7aef52ea77daf4b237,16158,Markdown,runtime-mirror-tracked,lecture_structure,Compilation structurée — Conversation WealthTech / EWARI / KOREE / MCP,30
+MCP-F-4421811e4f566ffe,wealthtech_project_memory/memory/INSTALLATION_MCP_MEMORY.md,100644,blob,e030808a490de3d643760d6415d5f11be5b080bf,2366,Markdown,runtime-mirror-tracked,lecture_structure,Installation / synchronisation de la mémoire projet sur S1,7
+MCP-F-51826c58138ee166,wealthtech_project_memory/memory/MEMO_MCP_GITHUB_SERVER_ACCESS.md,100644,blob,d617bb94b1a765f020a87c854bd2b2ed37e0cea9,3242,Markdown,runtime-mirror-tracked,lecture_structure,"Mémo — MCP, GitHub, S1, S2, Claude, ChatGPT",11
+MCP-F-fde9065b2456bbeb,wealthtech_project_memory/memory/MEMO_PROJECT_STABLECOIN_EWARI.md,100644,blob,03c6e41e9984f78f7a132a4ef187364f43a6f7c6,4536,Markdown,runtime-mirror-tracked,lecture_structure,Mémo projet — Stablecoin EWARI / KOREE / XOF,10
+MCP-F-d8ed132805b88908,wealthtech_project_memory/memory/PROMPT_AUDIT_WEALTHTECH_MCP.md,100644,blob,db8bb58a8d0377018bf2fcd8d7bd17a37e12b957,1875,Markdown,runtime-mirror-tracked,lecture_structure,Prompt d’audit — WealthTech MCP,7
+MCP-F-bb47f4d8e57830e2,wealthtech_project_memory/memory/README.md,100644,blob,3c0d8709bd20285f173f01d1864295d3d2ec4e06,1824,Markdown,runtime-mirror-tracked,lecture_structure,Mémoire projet WealthTech / MCP,5
+MCP-F-999fdbfb9c559ae3,wealthtech_project_memory/memory/SUIVI_MEMORY.md,100644,blob,1ec483f09650866786c1d515b7e1af0f896ae747,2452,Markdown,runtime-mirror-tracked,lecture_structure,SUIVI MÉMOIRE — WealthTech / EWARI / MCP,4
