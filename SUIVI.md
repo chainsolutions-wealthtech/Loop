@@ -1,4 +1,9 @@
-# Suivi et continuité — Loop
+# Suivi et continuité — Loop — WT-PROJECT-LOOP-001
+
+Entrée historique compatible du dépôt `chainsolutions-wealthtech/Loop`.
+Pour le suivi de pilotage, ouvrir [le suivi nommé du projet](docs/pilotage/WT-PROJECT-LOOP-001/SUIVI-WT-PROJECT-LOOP-001.md)
+ou l’[index des sous-projets et chantiers](docs/pilotage/README.md).
+Les états historiques ci-dessous conservent leur périmètre propre.
 
 ## POINT DE REPRISE COURANT
 
@@ -199,8 +204,8 @@ complète et laisse le préflight CUG distinct. `EV-032` couvre les
 parcours, la validation et la concurrence sur dossiers de test.
 Aucune soumission de choix à la place du demandeur. Aucun déploiement.
 
-Reprise : ouvrir la demande pilote dans l'interface locale, vérifier
-les décisions et les soumettre par le bouton groupé. Après une
-soumission effective, reprendre la qualification de l'hôte et de
-l'identité CUG de `LOOP-W23`. L'hébergement et le rapprochement
-dépôt–serveur–répertoire restent dans `LOOP-W18`.
+Le 14 novembre 2026, le journal local du dossier pilote a confirmé
+la fin de préparation à la révision 31, sans préflight CUG enregistré.
+Ne pas ressaisir le questionnaire. Reprendre séparément le préflight CUG
+(`LOOP-W23`) et la qualification de l’hébergement de l’interface
+(`LOOP-W18`). Voir le [suivi du chantier](docs/pilotage/LOOP-SUJ-020/SUIVI-LOOP-SUJ-020.md).

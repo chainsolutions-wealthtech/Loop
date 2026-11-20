@@ -7,7 +7,7 @@
 1. README.md — nature du projet.
 2. GOVERNANCE.md — règles, limites, interdictions.
 3. SOURCE_OF_TRUTH.md — carte des autorités et de leur statut.
-4. SUIVI.md — checkpoint et prochaine action.
+4. [SUIVI.md](SUIVI.md) — checkpoint global, puis [suivi nommé du périmètre](docs/pilotage/README.md) et mémoire associée.
 5. docs/SOURCE_REGISTER.md — sources et degré de vérification.
 6. docs/SOFTWARE_DESIGN_SCOPE.md — périmètre provisoire du spécialiste.
 7. Documents du chantier concerné, puis code et tests existants.

@@ -12,6 +12,10 @@ une inscription dans MCP, un ID de session, ni une fusion sur `main`.
 Le dépôt est lié par le nom complet **et** son identifiant stable GitHub.
 Le suivi du projet est distinct de l'autorité du propriétaire.
 
+Pour le pilotage du projet, de ses sous-projets et du chantier
+SUJ-020, ouvrir l’[index des dossiers documentaires nommés](pilotage/README.md).
+Les identités, relations et preuves restent dans les registres existants.
+
 ## Hiérarchie et relations
 
 **Projet → sous-projet → sujet ou module → élément, opération ou table.**

@@ -19,6 +19,8 @@ droit opérationnel. Les autres conversations ne sont pas déclarées importées
 | [Feuille de route](../docs/LOOP_ROADMAP.md) | Lots et point de reprise, avec liens vers les unités du registre. |
 | [Suivi du dépôt](../SUIVI.md) | Checkpoint de la branche, décisions en attente et limites. |
 
+[Index des mémoires par périmètre](../docs/pilotage/README.md) · [Chronologie du 14 novembre](2026-11-14-loop.md).
+
 ## Conservation
 
 Une nouvelle instruction est inscrite dans la chronologie avec son
