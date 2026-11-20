@@ -7,7 +7,7 @@
 1. README.md — nature du projet.
 2. GOVERNANCE.md — règles, limites, interdictions.
 3. SOURCE_OF_TRUTH.md — carte des autorités et de leur statut.
-4. SUIVI.md — checkpoint et prochaine action.
+4. [SUIVI.md](SUIVI.md) — checkpoint global, puis [suivi nommé du périmètre](docs/pilotage/README.md) et mémoire associée.
 5. docs/SOURCE_REGISTER.md — sources et degré de vérification.
 6. docs/SOFTWARE_DESIGN_SCOPE.md — périmètre provisoire du spécialiste.
 7. Documents du chantier concerné, puis code et tests existants.
@@ -25,3 +25,9 @@
 ## Après travail
 
 Présenter l'état avant/après, les chemins modifiés, le SHA/PR, les contrôles réellement exécutés, les limites, les décisions en attente et un point de reprise exact. Ne pas déclarer une règle « active » si elle n'existe que dans la documentation.
+
+## Reprise du chantier de la PR #2
+
+Après le checkpoint, lire [la mémoire du chantier](memory/README.md) et [la roadmap](docs/LOOP_ROADMAP.md). Les décisions et preuves du registre sont bornées à leur périmètre. Ne jamais publier les instantanés privés dans ce dépôt public.
+
+Pour une reprise par ID, lire [l'entrée canonique](docs/LOOP_CANONICAL_REGISTRY.md) et résoudre `LOOP-CONV-CONT-20261113-ROOT-01`. Cette référence ne remplace pas les vérifications d'autorité et de périmètre.

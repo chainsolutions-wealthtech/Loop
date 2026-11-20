@@ -1,0 +1,470 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "LOOP-INV-20261113-02",
+  "visibility": "public_only",
+  "private_repository_count": 12,
+  "repositories": [
+    {
+      "github_id": "1390094787",
+      "repository": "Patricked-code/Ekyc",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/Ekyc",
+      "branch": "main",
+      "sha": "3e889a2bdac78312ebcc7e31d1388ead65c9fceb",
+      "coverage": "signals_found",
+      "counts": {
+        "Indices classés": 10,
+        "Workflows, scripts et configurations": 36,
+        "Raccordements et appels": 206
+      }
+    },
+    {
+      "github_id": "1189655635",
+      "repository": "Patricked-code/Front",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/Front",
+      "branch": "claude/code-review-improvements-ikvuj",
+      "sha": "c169fd2e3c95b112b52b23eed6f4a9cae6cf29ea",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 496,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1386678603",
+      "repository": "Patricked-code/Gouvern",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/Gouvern",
+      "branch": "main",
+      "sha": "671774dfc8e8be8eac2b50d5fb8f0928591694b3",
+      "coverage": "signals_found",
+      "counts": {
+        "Indices classés": 9,
+        "Workflows, scripts et configurations": 35,
+        "Raccordements et appels": 191
+      }
+    },
+    {
+      "github_id": "1224703923",
+      "repository": "Patricked-code/Investbourse",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/Investbourse",
+      "branch": "main",
+      "sha": "5fc3b655b1617b0ad9635f78e30531cf1a7f59df",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 129,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1285534440",
+      "repository": "Patricked-code/MCP",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/MCP",
+      "branch": "main",
+      "sha": "c775709fdaf490eef2e1d43345e0b26e460a072c",
+      "coverage": "signals_found",
+      "counts": {
+        "Indices classés": 55,
+        "Workflows, scripts et configurations": 488,
+        "Raccordements et appels": 275
+      }
+    },
+    {
+      "github_id": "1317506202",
+      "repository": "Patricked-code/Nigeria",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/Nigeria",
+      "branch": "main",
+      "sha": "917f6cd9b2797802ad1fae4cfad0c09fa15707c5",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 0,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1227251709",
+      "repository": "Patricked-code/Stablecoin",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/Stablecoin",
+      "branch": "main",
+      "sha": "a8c5580b925f26588a06b458e15d4921f7fc54db",
+      "coverage": "signals_found",
+      "counts": {
+        "Indices classés": 4,
+        "Workflows, scripts et configurations": 395,
+        "Raccordements et appels": 50
+      }
+    },
+    {
+      "github_id": "1189657835",
+      "repository": "Patricked-code/api",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/api",
+      "branch": "claude/code-review-improvements-ikvuj",
+      "sha": "76c5fd6f2b105c2f3a9bd33067a0ec6eb6bbb1d5",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 127,
+        "Raccordements et appels": 2
+      }
+    },
+    {
+      "github_id": "1212533851",
+      "repository": "Patricked-code/civitech-commune-saas",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/civitech-commune-saas",
+      "branch": "main",
+      "sha": "7f4ef99a51887b0c6bc2895e25922533009ee882",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 151,
+        "Raccordements et appels": 2
+      }
+    },
+    {
+      "github_id": "1222677988",
+      "repository": "Patricked-code/coach-serges",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/coach-serges",
+      "branch": "main",
+      "sha": "b688609af581ab95c8ecc605035f256326ef9cf2",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 15,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1328416064",
+      "repository": "Patricked-code/financialdata",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/financialdata",
+      "branch": "main",
+      "sha": "7870e23e58bc2093979620b2dd74703fbc1bd830",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 26,
+        "Raccordements et appels": 17
+      }
+    },
+    {
+      "github_id": "1285408974",
+      "repository": "Patricked-code/foot",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/foot",
+      "branch": "main",
+      "sha": "7982b7a3b828b99ec6ac521c71ccf1304ae2f139",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 0,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1409555646",
+      "repository": "Patricked-code/immo-",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/immo-",
+      "branch": "main",
+      "sha": "4030824853e942784761b4f4953599f57285d138",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 0,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1232848724",
+      "repository": "Patricked-code/mealcard-africa",
+      "account": "Patricked-code",
+      "url": "https://github.com/Patricked-code/mealcard-africa",
+      "branch": "main",
+      "sha": "acc90c4a47455e2302b7b6a9f81df971107b54bb",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 33,
+        "Raccordements et appels": 10
+      }
+    },
+    {
+      "github_id": "1232224965",
+      "repository": "Wealthtechinnovations/Chainsolutions",
+      "account": "Wealthtechinnovations",
+      "url": "https://github.com/Wealthtechinnovations/Chainsolutions",
+      "branch": "main",
+      "sha": "7ffaaf76ad2f8758896b55b1f9a0f67612d108f4",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 68,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1188792680",
+      "repository": "Wealthtechinnovations/Database",
+      "account": "Wealthtechinnovations",
+      "url": "https://github.com/Wealthtechinnovations/Database",
+      "branch": "Server",
+      "sha": null,
+      "coverage": "empty_repository",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 0,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "895812523",
+      "repository": "Wealthtechinnovations/Funds",
+      "account": "Wealthtechinnovations",
+      "url": "https://github.com/Wealthtechinnovations/Funds",
+      "branch": "main",
+      "sha": "927c6c034b0bf321e009b70fee560672435c22a8",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 16,
+        "Raccordements et appels": 4
+      }
+    },
+    {
+      "github_id": "1232215545",
+      "repository": "Wealthtechinnovations/Mutadafp",
+      "account": "Wealthtechinnovations",
+      "url": "https://github.com/Wealthtechinnovations/Mutadafp",
+      "branch": "main",
+      "sha": "b83e706efc1bceacb904131fff297c7ff5886057",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 45,
+        "Raccordements et appels": 3
+      }
+    },
+    {
+      "github_id": "1232221136",
+      "repository": "Wealthtechinnovations/ParcoursEpargnant",
+      "account": "Wealthtechinnovations",
+      "url": "https://github.com/Wealthtechinnovations/ParcoursEpargnant",
+      "branch": "main",
+      "sha": "861daca46bf1365e73572dd2f2c3da05729f1441",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 0,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1232214083",
+      "repository": "Wealthtechinnovations/Simulateur",
+      "account": "Wealthtechinnovations",
+      "url": "https://github.com/Wealthtechinnovations/Simulateur",
+      "branch": "main",
+      "sha": "10e40a7a15393f9f7425a3c8dbbdab8710074fff",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 25,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "895977310",
+      "repository": "Wealthtechinnovations/api_opcv",
+      "account": "Wealthtechinnovations",
+      "url": "https://github.com/Wealthtechinnovations/api_opcv",
+      "branch": "claude/code-review-improvements-ikvuj",
+      "sha": "fcee6ac9ff61e6491113522470799185a8bafd08",
+      "coverage": "signals_found",
+      "counts": {
+        "Indices classés": 3,
+        "Workflows, scripts et configurations": 416,
+        "Raccordements et appels": 331
+      }
+    },
+    {
+      "github_id": "895972649",
+      "repository": "Wealthtechinnovations/front_end_opcvm",
+      "account": "Wealthtechinnovations",
+      "url": "https://github.com/Wealthtechinnovations/front_end_opcvm",
+      "branch": "claude/code-review-improvements-ikvuj",
+      "sha": "a2cc791605234b563be8ebcc96d82602124b6509",
+      "coverage": "signals_found",
+      "counts": {
+        "Indices classés": 2,
+        "Workflows, scripts et configurations": 562,
+        "Raccordements et appels": 18
+      }
+    },
+    {
+      "github_id": "1409559163",
+      "repository": "Wealthtechinnovations/immo-",
+      "account": "Wealthtechinnovations",
+      "url": "https://github.com/Wealthtechinnovations/immo-",
+      "branch": "Server",
+      "sha": "ae2cc25a779fc0b92b5279f570807b24efde57a5",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 23,
+        "Raccordements et appels": 18
+      }
+    },
+    {
+      "github_id": "1290053075",
+      "repository": "chainsolutions-wealthtech/.github",
+      "account": "chainsolutions-wealthtech",
+      "url": "https://github.com/chainsolutions-wealthtech/.github",
+      "branch": "main",
+      "sha": "2c35a45e5a168d07a7db117eed2fe1c46d90ca47",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 6,
+        "Raccordements et appels": 3
+      }
+    },
+    {
+      "github_id": "1386478935",
+      "repository": "chainsolutions-wealthtech/Governed-Repository-Template",
+      "account": "chainsolutions-wealthtech",
+      "url": "https://github.com/chainsolutions-wealthtech/Governed-Repository-Template",
+      "branch": "main",
+      "sha": "9d8fd277dc113aacb2e171fbb6cde00bded982fd",
+      "coverage": "signals_found",
+      "counts": {
+        "Indices classés": 21,
+        "Workflows, scripts et configurations": 207,
+        "Raccordements et appels": 862
+      }
+    },
+    {
+      "github_id": "1456075212",
+      "repository": "chainsolutions-wealthtech/Loop",
+      "account": "chainsolutions-wealthtech",
+      "url": "https://github.com/chainsolutions-wealthtech/Loop",
+      "branch": "main",
+      "sha": "07a35de18de9bbe46022aa87eaafe1ed1898350a",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 0,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1456213061",
+      "repository": "chainsolutions-wealthtech/Looping-",
+      "account": "chainsolutions-wealthtech",
+      "url": "https://github.com/chainsolutions-wealthtech/Looping-",
+      "branch": "main",
+      "sha": "4569cd8bdb157f760729cf0b8b9e5751a640e6fb",
+      "coverage": "signals_found",
+      "counts": {
+        "Indices classés": 17,
+        "Workflows, scripts et configurations": 194,
+        "Raccordements et appels": 770
+      }
+    },
+    {
+      "github_id": "1320452839",
+      "repository": "chainsolutions-wealthtech/OPCDATA",
+      "account": "chainsolutions-wealthtech",
+      "url": "https://github.com/chainsolutions-wealthtech/OPCDATA",
+      "branch": "main",
+      "sha": "9265211d9d4a57e2f52c8dee42f0e131a1e6e163",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 0,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1318590558",
+      "repository": "chainsolutions-wealthtech/Openfunds",
+      "account": "chainsolutions-wealthtech",
+      "url": "https://github.com/chainsolutions-wealthtech/Openfunds",
+      "branch": "main",
+      "sha": "946145e4b33a6289eb340a16bf5c651cb9bbee7c",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 0,
+        "Raccordements et appels": 0
+      }
+    },
+    {
+      "github_id": "1430011396",
+      "repository": "chainsolutions-wealthtech/Php2shell",
+      "account": "chainsolutions-wealthtech",
+      "url": "https://github.com/chainsolutions-wealthtech/Php2shell",
+      "branch": "main",
+      "sha": "d87bef907f050be02a2d5e34fb0c04cdf3851d38",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 14,
+        "Raccordements et appels": 2
+      }
+    },
+    {
+      "github_id": "1323383289",
+      "repository": "chainsolutions-wealthtech/Regulatory",
+      "account": "chainsolutions-wealthtech",
+      "url": "https://github.com/chainsolutions-wealthtech/Regulatory",
+      "branch": "main",
+      "sha": "15933ff9ea1e9b83ae5c1cb23725169667af4969",
+      "coverage": "signals_found",
+      "counts": {
+        "Indices classés": 2,
+        "Workflows, scripts et configurations": 404,
+        "Raccordements et appels": 420
+      }
+    },
+    {
+      "github_id": "1429189311",
+      "repository": "chainsolutions-wealthtech/universal-agent-engineering-system",
+      "account": "chainsolutions-wealthtech",
+      "url": "https://github.com/chainsolutions-wealthtech/universal-agent-engineering-system",
+      "branch": "main",
+      "sha": "f4b49771a4b4a7e7dbed2a204a79ccf31b584fb5",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 49,
+        "Raccordements et appels": 14
+      }
+    },
+    {
+      "github_id": "1428999918",
+      "repository": "chainsolutions-wealthtech/universal-agent-platform",
+      "account": "chainsolutions-wealthtech",
+      "url": "https://github.com/chainsolutions-wealthtech/universal-agent-platform",
+      "branch": "main",
+      "sha": "0b8b2e01e826b915a0c593d5d6545681e9316567",
+      "coverage": "no_signal_in_examined_files",
+      "counts": {
+        "Indices classés": 0,
+        "Workflows, scripts et configurations": 0,
+        "Raccordements et appels": 0
+      }
+    }
+  ]
+}

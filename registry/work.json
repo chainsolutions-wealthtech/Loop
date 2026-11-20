@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "scope": "chainsolutions-wealthtech/Loop",
+  "states": [
+    "draft_verified",
+    "documented",
+    "partial",
+    "ready_for_readonly",
+    "blocked",
+    "pending_review",
+    "conditional"
+  ],
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "events": [
+        "E01",
+        "E02"
+      ],
+      "need": "Constituer et coordonner les documents, qualifier les besoins, concevoir et planifier pour dépôt neuf ou existant, avant réalisation ou déploiement."
+    },
+    {
+      "id": "REQ-002",
+      "events": [
+        "E03",
+        "E12"
+      ],
+      "need": "Conserver un noyau modulaire, indépendant de MCP/CUG, réutilisable sans régression, sans mutation des autres projets."
+    },
+    {
+      "id": "REQ-003",
+      "events": [
+        "E04"
+      ],
+      "need": "Vérifier dépôt, reconnaissance, ID canonique, App CUG et procédure versionnée sur les appels ciblés."
+    },
+    {
+      "id": "REQ-004",
+      "events": [
+        "E05"
+      ],
+      "need": "Découvrir un dépôt, reprendre un ID existant ou préparer un rattachement et une demande CUG selon les preuves."
+    },
+    {
+      "id": "REQ-005",
+      "events": [
+        "E06",
+        "E07"
+      ],
+      "need": "Relier projet, serveur, environnement et checkout sans confondre déclaration, rattachement, autorisation ou déploiement."
+    },
+    {
+      "id": "REQ-006",
+      "events": [
+        "E08"
+      ],
+      "need": "Recenser les dépôts visibles sur les trois comptes GitHub et distinguer le rôle MCP de chaque indice."
+    },
+    {
+      "id": "REQ-007",
+      "events": [
+        "E09"
+      ],
+      "need": "Produire une fiche par dépôt et un graphe des workflows, scripts, raccordements et appels avec provenance et couverture."
+    },
+    {
+      "id": "REQ-008",
+      "events": [
+        "E10"
+      ],
+      "need": "Conserver résultats et historique dans un registre, indexer les preuves privées et permettre une reprise reproductible."
+    },
+    {
+      "id": "REQ-009",
+      "events": [
+        "E10",
+        "E13"
+      ],
+      "need": "Relier les demandes, le contexte, la méthode, l'architecture, la roadmap et les travaux."
+    },
+    {
+      "id": "REQ-010",
+      "events": [
+        "E11",
+        "E13"
+      ],
+      "need": "Compléter les appels dynamiques et les clients effectivement liés par preuves de code ou de runtime autorisées."
+    },
+    {
+      "id": "REQ-011",
+      "events": [
+        "E15"
+      ],
+      "need": "Attribuer un ID au projet et à la continuité, puis rattacher sous-projets, modules et contrats, sujets, tables, preuves et travaux à une architecture descendante."
+    },
+    {
+      "id": "REQ-012",
+      "events": [
+        "E16"
+      ],
+      "need": "Relier chaque ID global stable aux dépôts identifiés et aux répertoires serveur attestés. Retrouver le projet depuis chacune de ces clés sans confondre identité, observation, activation et autorisation."
+    },
+    {
+      "id": "REQ-013",
+      "events": [
+        "E17"
+      ],
+      "need": "Isoler la jonction dépôt, compte, projet global et cibles serveur. Fournir découverte et questions conditionnelles, puis plan distinct de rattachement ou de création, avec remise au déploiement seulement si demandé et autorisé."
+    },
+    {
+      "id": "REQ-014",
+      "events": [
+        "LOOP-EVT-20261114-001"
+      ],
+      "need": "Isoler la création gouvernée et son bootstrap de l'adoption, de l'entrée locale et du déploiement. Une demande doit être consultable et reprenable sans recréer le dépôt."
+    },
+    {
+      "id": "REQ-015",
+      "events": [
+        "LOOP-EVT-20261114-004"
+      ],
+      "need": "Préparer et tracer une demande de création avant session, afficher les choix conditionnels, les modèles et l'architecture documentaire dérivés de GRT."
+    },
+    {
+      "id": "REQ-016",
+      "events": [
+        "LOOP-EVT-20261114-006"
+      ],
+      "need": "Voir toutes les questions du dossier dans Loop, sélectionner les choix applicables et envoyer le lot en une fois sans écraser le journal existant."
+    }
+  ],
+  "work": [
+    {
+      "id": "LOOP-W01",
+      "title": "Fondations GitHub et gouvernance",
+      "state": "pending_review",
+      "requirements": [
+        "REQ-001",
+        "REQ-002"
+      ],
+      "depends_on": [],
+      "evidence": [
+        "EV-001"
+      ],
+      "acceptance": "Relire règles, CI et décision de revue. Ne pas fusionner sans accord."
+    },
+    {
+      "id": "LOOP-W02",
+      "title": "Classer et rapprocher le corpus historique",
+      "state": "partial",
+      "requirements": [
+        "REQ-001"
+      ],
+      "depends_on": [],
+      "evidence": [
+        "EV-009"
+      ],
+      "acceptance": "Référencer les sources accessibles avec version, portée et contradictions, sans supposer l'exhaustivité."
+    },
+    {
+      "id": "LOOP-W03",
+      "title": "WF-00, cartes parallèles et contrat conception vers planification",
+      "state": "documented",
+      "requirements": [
+        "REQ-001",
+        "REQ-002"
+      ],
+      "depends_on": [
+        "LOOP-W02"
+      ],
+      "evidence": [
+        "EV-001",
+        "EV-009",
+        "EV-013",
+        "EV-014"
+      ],
+      "acceptance": "Définir par lot les modèles, le passage, les critères et l'existant à préserver. Ne pas déclarer l'orchestrateur installé."
+    },
+    {
+      "id": "LOOP-W04",
+      "title": "Contrôle d'entrée dépôt et procédure",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-002",
+        "REQ-003"
+      ],
+      "depends_on": [],
+      "evidence": [
+        "EV-011"
+      ],
+      "acceptance": "Tests hors ligne sur chaîne concordante, absente, ambiguë et contradictoire."
+    },
+    {
+      "id": "LOOP-W05",
+      "title": "Planifier découverte, CUG et rattachement",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-004",
+        "REQ-005"
+      ],
+      "depends_on": [
+        "LOOP-W04"
+      ],
+      "evidence": [
+        "EV-011",
+        "EV-005"
+      ],
+      "acceptance": "Réessai sans doublon simulé, reprise d'ID, comparaison du checkout, aucun appel d'écriture."
+    },
+    {
+      "id": "LOOP-W06",
+      "title": "Inventaire multi-compte en lecture seule",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-006"
+      ],
+      "depends_on": [],
+      "evidence": [
+        "EV-002",
+        "EV-003"
+      ],
+      "acceptance": "Propriétaires exacts, pagination, branches observées, erreurs et limites conservées."
+    },
+    {
+      "id": "LOOP-W07",
+      "title": "Fiches et graphe statique sourcé",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-007"
+      ],
+      "depends_on": [
+        "LOOP-W06"
+      ],
+      "evidence": [
+        "EV-002",
+        "EV-003"
+      ],
+      "acceptance": "45 fiches, séparation appels/exposition/configuration/runtime et liens vers SHA/chemin/ligne quand établis."
+    },
+    {
+      "id": "LOOP-W08",
+      "title": "Mémoire, registre privé et référence Git",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-008",
+        "REQ-009"
+      ],
+      "depends_on": [
+        "LOOP-W07"
+      ],
+      "evidence": [
+        "EV-003",
+        "EV-010"
+      ],
+      "acceptance": "Import SQLite idempotent, intégrité, index par ID, liens vers demandes et roadmap, aucune donnée privée dans la PR."
+    },
+    {
+      "id": "LOOP-W09",
+      "title": "Résoudre les dispatchs et élargir la couverture",
+      "state": "partial",
+      "requirements": [
+        "REQ-007",
+        "REQ-010"
+      ],
+      "depends_on": [
+        "LOOP-W07"
+      ],
+      "evidence": [
+        "EV-003",
+        "EV-006",
+        "EV-007",
+        "EV-008",
+        "EV-012"
+      ],
+      "acceptance": "Qualifier chaque cible dynamique par preuve, ou conserver la raison du non-résolu. Couvrir les branches supplémentaires sans écriture.",
+      "remaining": "Recueillir les paquets ou traces autorisés des deux moteurs et les preuves des proxys entrants. Étendre ensuite la couverture aux branches utiles."
+    },
+    {
+      "id": "LOOP-W10",
+      "title": "Attester les clients réellement liés",
+      "state": "partial",
+      "requirements": [
+        "REQ-010"
+      ],
+      "depends_on": [
+        "LOOP-W07"
+      ],
+      "evidence": [
+        "EV-006",
+        "EV-007",
+        "EV-008"
+      ],
+      "acceptance": "Corréler dépôt, client, action, révision et trace autorisée. Le bootstrap seul ne suffit pas."
+    },
+    {
+      "id": "LOOP-W11",
+      "title": "Vérifier reconnaissance et identité CUG réelles",
+      "state": "blocked",
+      "requirements": [
+        "REQ-003",
+        "REQ-004",
+        "REQ-005"
+      ],
+      "depends_on": [
+        "LOOP-W04",
+        "LOOP-W05"
+      ],
+      "evidence": [
+        "EV-004",
+        "EV-005",
+        "EV-015"
+      ],
+      "acceptance": "Preuve d'App CUG couvrant le dépôt exact et d'ID relisible par l'autorité. Gouvern et Regulatory restent des cas de preuve, pas des cibles à modifier."
+    },
+    {
+      "id": "LOOP-W12",
+      "title": "Raccorder le point de passage et l'hôte privé",
+      "state": "conditional",
+      "requirements": [
+        "REQ-002",
+        "REQ-003",
+        "REQ-006",
+        "REQ-008"
+      ],
+      "depends_on": [
+        "LOOP-W04",
+        "LOOP-W08",
+        "LOOP-W11"
+      ],
+      "evidence": [
+        "EV-011"
+      ],
+      "acceptance": "Identités de lecture configurées, report privé reproductible, garde branchée dans l'intégration Loop. Aucun appel direct externe intercepté."
+    },
+    {
+      "id": "LOOP-W13",
+      "title": "Valider le dossier de conception et son premier plan",
+      "state": "pending_review",
+      "requirements": [
+        "REQ-001",
+        "REQ-009"
+      ],
+      "depends_on": [
+        "LOOP-W03",
+        "LOOP-W08"
+      ],
+      "evidence": [
+        "EV-009",
+        "EV-011",
+        "EV-013",
+        "EV-014"
+      ],
+      "acceptance": "Exigences, risques et preuves de réception du premier lot versionnés avant toute décision d'exécution."
+    },
+    {
+      "id": "LOOP-W14",
+      "title": "Identité canonique, sous-projets et navigation descendante",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-011",
+        "REQ-008",
+        "REQ-009"
+      ],
+      "depends_on": [
+        "LOOP-W08"
+      ],
+      "evidence": [
+        "EV-010",
+        "EV-011"
+      ],
+      "acceptance": "Projet et dépôt non ambigus, contrats de module complets, alias historiques résolus, liens valides, tables et observations privées adressables sans publication."
+    },
+    {
+      "id": "LOOP-W15",
+      "title": "Tester l’entrée sur Stablecoin et modéliser l’ancrage global",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-012"
+      ],
+      "depends_on": [
+        "LOOP-W14"
+      ],
+      "evidence": [
+        "EV-015",
+        "EV-016"
+      ],
+      "acceptance": "Rejeu du cas réel sans appel métier, résolution bidirectionnelle testée et projection Loop vérifiable. Aucune écriture côté MCP ou sur S1/S2."
+    },
+    {
+      "id": "LOOP-W16",
+      "title": "Isoler le parcours de rattachement et d’hébergement applicatif",
+      "state": "documented",
+      "requirements": [
+        "REQ-013"
+      ],
+      "depends_on": [
+        "LOOP-W15"
+      ],
+      "evidence": [
+        "EV-017",
+        "EV-018"
+      ],
+      "acceptance": "Contrat portable, transitions de rattachement, création et refus, lacunes historiques et portes de vérification sourcées. Aucun exécuteur ni écriture externe dans ce lot."
+    },
+    {
+      "id": "LOOP-W17",
+      "title": "Implémenter et vérifier le planificateur portable de rattachement",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-013"
+      ],
+      "depends_on": [
+        "LOOP-W16"
+      ],
+      "evidence": [
+        "EV-019"
+      ],
+      "acceptance": "Un point d’appel Python hors ligne, avec des tests pour réutiliser, rattacher, préparer la création et refuser les preuves insuffisantes ou contradictoires. Aucun accès externe."
+    },
+    {
+      "id": "LOOP-W18",
+      "title": "Raccorder l’arrivée et le préflight applicatif au planificateur d’hébergement",
+      "state": "conditional",
+      "requirements": [
+        "REQ-013"
+      ],
+      "depends_on": [
+        "LOOP-W17"
+      ],
+      "evidence": [
+        "EV-020",
+        "EV-021",
+        "EV-022",
+        "EV-023",
+        "EV-024",
+        "EV-025",
+        "EV-026"
+      ],
+      "acceptance": "Adaptateur de lecture testé sur un lien vérifié, un répertoire observé sans lien actif et une vue non concluante. Une projection V1/V2 ne suffit ni à vérifier un lien ni à prouver l’absence. Aucune écriture ni mise en service dans cette tranche."
+    },
+    {
+      "id": "LOOP-W19",
+      "title": "Spécifier et rejouer la création gouvernée jusqu’à HANDOFF_READY",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-014"
+      ],
+      "depends_on": [],
+      "evidence": [
+        "EV-021",
+        "EV-027"
+      ],
+      "acceptance": "Contrat portable et rejeu hors ligne du moteur de référence sur 409 après création et dépôt préexistant non reconnu. Suite distincte : adapter la corrélation durable et vérifier le contrat de l'outil avant toute création réelle."
+    },
+    {
+      "id": "LOOP-W20",
+      "title": "Implémenter la capsule autonome de création gouvernée",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-014"
+      ],
+      "depends_on": [
+        "LOOP-W19"
+      ],
+      "evidence": [
+        "EV-028"
+      ],
+      "acceptance": "Noyau importable seul, demande durable, réservation et reprise sans second appel de création, remise sur preuves cohérentes. Port réel et exposition MCP hors de cette tranche."
+    },
+    {
+      "id": "LOOP-W21",
+      "title": "Relier la capsule à un préflight GitHub Apps nominatif",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-014"
+      ],
+      "depends_on": [
+        "LOOP-W20"
+      ],
+      "evidence": [
+        "EV-029"
+      ],
+      "acceptance": "Hiérarchie sourcée, questionnaire et préflight CUG en lecture testés. Preuve nominative réelle et exécuteur GitHub de création restent à qualifier."
+    },
+    {
+      "id": "LOOP-W22",
+      "title": "Projeter le questionnaire GRT et journaliser la préparation web",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-015"
+      ],
+      "depends_on": [
+        "LOOP-W19"
+      ],
+      "evidence": [
+        "EV-030"
+      ],
+      "acceptance": "Catalogue et manifeste sourcés, choix conditionnels, journal reprenable, modèle et plan documentaires visibles. Aucun accès GitHub et aucune session d'exécution."
+    },
+    {
+      "id": "LOOP-W23",
+      "title": "Joindre la demande préparée à l’identité GitHub et au préflight CUG",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-014",
+        "REQ-015"
+      ],
+      "depends_on": [
+        "LOOP-W21",
+        "LOOP-W22"
+      ],
+      "evidence": [
+        "EV-031"
+      ],
+      "acceptance": "Identité stable fournie par l'hôte, contrôle d'accès par compte, preuve liée à la révision et au dossier, refus d'une preuve périmée, sans autoriser la création. Qualification réelle encore ouverte."
+    },
+    {
+      "id": "LOOP-W24",
+      "title": "Enregistrer les réponses groupées dans Loop",
+      "state": "draft_verified",
+      "requirements": [
+        "REQ-015",
+        "REQ-016"
+      ],
+      "depends_on": [
+        "LOOP-W22",
+        "LOOP-W23"
+      ],
+      "evidence": [
+        "EV-032"
+      ],
+      "acceptance": "Envoi groupé natif dans le journal existant. Réponses précédentes conservées, choix conditionnels, écritures atomiques, révisions concurrentes protégées. Le parcours séquentiel et le préflight distinct restent compatibles."
+    }
+  ]
+}

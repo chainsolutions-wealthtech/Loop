@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "LOOP-INV-20261113-02",
+  "status": "static_review",
+  "sites": [
+    {
+      "id": "D01",
+      "repository": "Patricked-code/Ekyc",
+      "sha": "3e889a2bdac78312ebcc7e31d1388ead65c9fceb",
+      "path": "scripts/mcp_repository_discovery.py",
+      "line": 144,
+      "status": "static_resolved",
+      "tools": [
+        "ping",
+        "get_project_context",
+        "list_domains_s1",
+        "list_domains_s2",
+        "get_write_tools_context"
+      ],
+      "reference": "https://github.com/Patricked-code/Ekyc/blob/3e889a2bdac78312ebcc7e31d1388ead65c9fceb/scripts/mcp_repository_discovery.py#L18",
+      "execution_attested": false
+    },
+    {
+      "id": "D02",
+      "repository": "Patricked-code/Gouvern",
+      "sha": "671774dfc8e8be8eac2b50d5fb8f0928591694b3",
+      "path": "scripts/mcp_repository_discovery.py",
+      "line": 98,
+      "status": "static_resolved",
+      "tools": [
+        "ping",
+        "get_project_context",
+        "list_domains_s1",
+        "list_domains_s2",
+        "get_write_tools_context"
+      ],
+      "reference": "https://github.com/Patricked-code/Gouvern/blob/671774dfc8e8be8eac2b50d5fb8f0928591694b3/scripts/mcp_repository_discovery.py#L18",
+      "execution_attested": false
+    },
+    {
+      "id": "D03",
+      "repository": "chainsolutions-wealthtech/Governed-Repository-Template",
+      "sha": "9d8fd277dc113aacb2e171fbb6cde00bded982fd",
+      "path": "plugins/gscc-github-mcp/server.py",
+      "line": 42,
+      "status": "incoming_dynamic",
+      "tools": [],
+      "reference": "https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/9d8fd277dc113aacb2e171fbb6cde00bded982fd/plugins/gscc-github-mcp/server.py#L42",
+      "execution_attested": false
+    },
+    {
+      "id": "D04",
+      "repository": "chainsolutions-wealthtech/Governed-Repository-Template",
+      "sha": "9d8fd277dc113aacb2e171fbb6cde00bded982fd",
+      "path": "plugins/gscc-github-mcp/test_server.py",
+      "line": 35,
+      "status": "test_fixture",
+      "tools": [],
+      "reference": "https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/9d8fd277dc113aacb2e171fbb6cde00bded982fd/plugins/gscc-github-mcp/test_server.py#L35",
+      "execution_attested": false
+    },
+    {
+      "id": "D05",
+      "repository": "chainsolutions-wealthtech/Governed-Repository-Template",
+      "sha": "9d8fd277dc113aacb2e171fbb6cde00bded982fd",
+      "path": "scripts/control_plane_mcp_capability_snapshot.py",
+      "line": 309,
+      "status": "static_resolved",
+      "tools": [
+        "mcp_get_current_state_inventory",
+        "get_project_context",
+        "get_write_tools_context",
+        "ping"
+      ],
+      "reference": "https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/9d8fd277dc113aacb2e171fbb6cde00bded982fd/scripts/control_plane_mcp_capability_snapshot.py#L768",
+      "execution_attested": false
+    },
+    {
+      "id": "D06",
+      "repository": "chainsolutions-wealthtech/Governed-Repository-Template",
+      "sha": "9d8fd277dc113aacb2e171fbb6cde00bded982fd",
+      "path": "scripts/governed_execution_engine.py",
+      "line": 474,
+      "status": "runtime_package_required",
+      "tools": [],
+      "reference": "https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/9d8fd277dc113aacb2e171fbb6cde00bded982fd/scripts/governed_execution_engine.py#L705",
+      "execution_attested": false
+    },
+    {
+      "id": "D07",
+      "repository": "chainsolutions-wealthtech/Governed-Repository-Template",
+      "sha": "9d8fd277dc113aacb2e171fbb6cde00bded982fd",
+      "path": "scripts/mcp_repository_discovery.py",
+      "line": 144,
+      "status": "static_resolved",
+      "tools": [
+        "ping",
+        "get_project_context",
+        "list_domains_s1",
+        "list_domains_s2",
+        "get_write_tools_context"
+      ],
+      "reference": "https://github.com/chainsolutions-wealthtech/Governed-Repository-Template/blob/9d8fd277dc113aacb2e171fbb6cde00bded982fd/scripts/mcp_repository_discovery.py#L18",
+      "execution_attested": false
+    },
+    {
+      "id": "D08",
+      "repository": "chainsolutions-wealthtech/Looping-",
+      "sha": "4569cd8bdb157f760729cf0b8b9e5751a640e6fb",
+      "path": "plugins/gscc-github-mcp/server.py",
+      "line": 42,
+      "status": "incoming_dynamic",
+      "tools": [],
+      "reference": "https://github.com/chainsolutions-wealthtech/Looping-/blob/4569cd8bdb157f760729cf0b8b9e5751a640e6fb/plugins/gscc-github-mcp/server.py#L42",
+      "execution_attested": false
+    },
+    {
+      "id": "D09",
+      "repository": "chainsolutions-wealthtech/Looping-",
+      "sha": "4569cd8bdb157f760729cf0b8b9e5751a640e6fb",
+      "path": "plugins/gscc-github-mcp/test_server.py",
+      "line": 35,
+      "status": "test_fixture",
+      "tools": [],
+      "reference": "https://github.com/chainsolutions-wealthtech/Looping-/blob/4569cd8bdb157f760729cf0b8b9e5751a640e6fb/plugins/gscc-github-mcp/test_server.py#L35",
+      "execution_attested": false
+    },
+    {
+      "id": "D10",
+      "repository": "chainsolutions-wealthtech/Looping-",
+      "sha": "4569cd8bdb157f760729cf0b8b9e5751a640e6fb",
+      "path": "scripts/governed_execution_engine.py",
+      "line": 474,
+      "status": "runtime_package_required",
+      "tools": [],
+      "reference": "https://github.com/chainsolutions-wealthtech/Looping-/blob/4569cd8bdb157f760729cf0b8b9e5751a640e6fb/scripts/governed_execution_engine.py#L705",
+      "execution_attested": false
+    },
+    {
+      "id": "D11",
+      "repository": "chainsolutions-wealthtech/Looping-",
+      "sha": "4569cd8bdb157f760729cf0b8b9e5751a640e6fb",
+      "path": "scripts/mcp_repository_discovery.py",
+      "line": 144,
+      "status": "static_resolved",
+      "tools": [
+        "ping",
+        "get_project_context",
+        "list_domains_s1",
+        "list_domains_s2",
+        "get_write_tools_context"
+      ],
+      "reference": "https://github.com/chainsolutions-wealthtech/Looping-/blob/4569cd8bdb157f760729cf0b8b9e5751a640e6fb/scripts/mcp_repository_discovery.py#L18",
+      "execution_attested": false
+    }
+  ]
+}

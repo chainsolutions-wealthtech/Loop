@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "scope": "chainsolutions-wealthtech/Loop",
+  "evidence": [
+    {
+      "id": "EV-001",
+      "kind": "github_pr",
+      "scope": "Loop",
+      "status": "draft",
+      "reference": "https://github.com/chainsolutions-wealthtech/Loop/pull/1",
+      "summary": "Fondations documentaires et de gouvernance. Ne vaut pas activation des règles GitHub."
+    },
+    {
+      "id": "EV-002",
+      "kind": "github_commit_ci",
+      "scope": "Loop",
+      "status": "observed",
+      "reference": "https://github.com/chainsolutions-wealthtech/Loop/actions/runs/43382807245/job/131744287885",
+      "sha": "45d0549ca884f20b8ff81653e4a44cbbd23dee1f",
+      "summary": "Inventaire v2 et contrôle structure-and-policy réussi. 38 tests hors ligne lors de cette tranche."
+    },
+    {
+      "id": "EV-003",
+      "kind": "private_snapshot_index",
+      "scope": "Trois comptes GitHub, branches par défaut",
+      "status": "observed",
+      "reference": "LOOP-INV-20261113-02",
+      "source_sha256": "129326382e4aaa17ea9428e610e9d2df1e31628611ea7c8246de449a533703b6",
+      "storage": "private",
+      "counts": {
+        "repositories": 45,
+        "trees": 44,
+        "empty_repositories": 1,
+        "workflows_read": 169,
+        "files_read": 1104,
+        "code_or_script_paths": 4119,
+        "package_scripts": 304,
+        "static_relations": 3485,
+        "generic_dispatch_sites": 11
+      },
+      "summary": "Le hash porte sur le rapport HTML d'origine. Le détail n'est pas dans Git public. Branches secondaires et clients actifs non attestés.",
+      "public_projection": "registry/public-repositories.json"
+    },
+    {
+      "id": "EV-004",
+      "kind": "repository_declaration",
+      "scope": "Regulatory",
+      "status": "declared",
+      "reference": "https://github.com/chainsolutions-wealthtech/Regulatory/blob/15933ff9ea1e9b83ae5c1cb23725169667af4969/deploy/mcp-target.json",
+      "summary": "Cible S1 demandée. Répertoire et provisioning non attestés."
+    },
+    {
+      "id": "EV-005",
+      "kind": "registry_observation",
+      "scope": "Loop et Regulatory",
+      "status": "not_established",
+      "reference": "memory/2026-11-13-loop.md#e07--vérification-en-lecture-seule-de-loop-et-regulatory",
+      "summary": "La projection du registre consultée ne démontre pas un ID actif. L'installation GitHub visible ne démontre pas l'identité CUG."
+    },
+    {
+      "id": "EV-006",
+      "kind": "github_job",
+      "scope": "Gouvern",
+      "status": "observed",
+      "reference": "https://github.com/Patricked-code/Gouvern/actions/runs/43355364468/job/131656011048",
+      "summary": "Job bootstrap réussi, dépôt déjà initialisé. Pas une attestation d'appel MCP."
+    },
+    {
+      "id": "EV-007",
+      "kind": "github_job",
+      "scope": "Ekyc",
+      "status": "observed",
+      "reference": "https://github.com/Patricked-code/Ekyc/actions/runs/43352830929/job/131647747515",
+      "summary": "Job bootstrap réussi, dépôt déjà initialisé. Pas une attestation d'appel MCP."
+    },
+    {
+      "id": "EV-008",
+      "kind": "github_job",
+      "scope": "Regulatory",
+      "status": "observed",
+      "reference": "https://github.com/chainsolutions-wealthtech/Regulatory/actions/runs/43359946145/job/131670793225",
+      "summary": "Plan réussi. Jobs reconcile, claim et release non exécutés dans ce run."
+    },
+    {
+      "id": "EV-009",
+      "kind": "historical_source_index",
+      "scope": "Loop",
+      "status": "partial",
+      "reference": "docs/SOURCE_REGISTER.md",
+      "summary": "Corpus fondateur de juillet. Les sources ne sont pas des autorités opérationnelles de Loop."
+    },
+    {
+      "id": "EV-010",
+      "kind": "private_registry",
+      "scope": "LOOP-INV-20261113-02",
+      "status": "observed",
+      "reference": "LOOP_REGISTRE_PREUVES_20261113.sqlite",
+      "storage": "private",
+      "counts": {
+        "repositories": 45,
+        "observation_rows": 8936
+      },
+      "summary": "SQLite reconstruit à partir du rapport HTML. Les lignes incluent fiches, artefacts, relations, indices, rattachements et sections du catalogue, pas 8 936 exécutions. Contrôle SQLite integrity_check = ok.",
+      "artifact_sha256": "3bf3077b1d43d7dd619ab8d3cef3416cb3a12ee8830f2691b6436f620767286f"
+    },
+    {
+      "id": "EV-011",
+      "kind": "draft_code",
+      "scope": "Loop",
+      "status": "draft",
+      "reference": "https://github.com/chainsolutions-wealthtech/Loop/pull/2",
+      "summary": "Contrôle d'entrée, planificateur de rattachement, inventaire et projection statique. Aucun branchement réel au transport ni déploiement."
+    },
+    {
+      "id": "EV-012",
+      "kind": "static_dispatch_review",
+      "scope": "LOOP-INV-20261113-02",
+      "status": "observed",
+      "reference": "registry/dispatch-review.json",
+      "counts": {
+        "sites": 11,
+        "static_resolved": 5,
+        "incoming_dynamic": 2,
+        "test_fixture": 2,
+        "runtime_package_required": 2
+      },
+      "summary": "Chaque site du relevé est qualifié sur son SHA. Aucun appel exécuté ni client connecté n'est attesté par cette revue."
+    },
+    {
+      "id": "EV-013",
+      "kind": "design_document",
+      "scope": "Loop",
+      "status": "draft",
+      "reference": "docs/WF00_DESIGN_PLANNING_CONTRACT.md",
+      "summary": "Proposition de passage WF-00, Software Design et planification, conservée dans Loop."
+    },
+    {
+      "id": "EV-014",
+      "kind": "design_document",
+      "scope": "Loop",
+      "status": "draft",
+      "reference": "docs/PARALLEL_ARCHITECTURE_SKELETON.md",
+      "summary": "Proposition de modèle des vues fonctionnelle et technique, conservée dans Loop."
+    },
+    {
+      "id": "EV-015",
+      "kind": "read_only_observation_and_offline_replay",
+      "scope": "Patricked-code/Stablecoin",
+      "status": "observed",
+      "reference": "docs/PROJECT_ANCHOR.md#test-réel-en-lecture-seule--13-novembre-2026",
+      "summary": "Checkout et remote observés sur S2. Reconnaissance active et CUG non attestées. Garde mcp_unverified, sans appel métier."
+    },
+    {
+      "id": "EV-016",
+      "kind": "read_only_observation",
+      "scope": "Patricked-code/MCP",
+      "status": "observed",
+      "reference": "docs/PROJECT_ANCHOR.md#test-réel-en-lecture-seule--13-novembre-2026",
+      "summary": "Même révision observée sur GitHub, checkout S1 et runtime Docker. État global en réconciliation. Aucun ancrage serveur créé."
+    },
+    {
+      "id": "EV-017",
+      "kind": "read_only_runtime_registry_dry_run",
+      "scope": "Patricked-code/MCP",
+      "status": "observed",
+      "reference": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
+      "summary": "Registre en service V1, projection V2 en mémoire, aucune écriture. 3 connexions, 6 dépôts projetés, 5 mappings, 1 migration en attente."
+    },
+    {
+      "id": "EV-018",
+      "kind": "source_and_historical_workflow_review",
+      "scope": "Patricked-code/MCP #349",
+      "status": "observed",
+      "reference": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
+      "summary": "Revue au SHA exact des contrats et du raccordement partiel. Le run réussi après #350 a déployé MCP et ne prouve pas le parcours applicatif universel."
+    },
+    {
+      "id": "EV-019",
+      "kind": "offline_acceptance_tests",
+      "scope": "chainsolutions-wealthtech/Loop",
+      "status": "observed",
+      "reference": "tests/test_repository_hosting.py",
+      "summary": "Fixtures locales couvrant les branches du planificateur, les trois périmètres GitHub, la portée des preuves et la stabilité du plan. Aucun appel réseau."
+    },
+    {
+      "id": "EV-020",
+      "kind": "source_and_read_only_runtime_review",
+      "scope": "Patricked-code/MCP",
+      "status": "observed",
+      "reference": "docs/WORKFLOW_REPOSITORY_HOSTING.md",
+      "summary": "Le GitRegistry runtime est en V1 au relevé. Le dry run V2 n’écrit rien. La synchronisation V1 peut affecter S1 et un chemin par défaut, sans attester de répertoire. La route Git affiche un état de correspondance, sans appeler le sélecteur d’hébergement."
+    },
+    {
+      "id": "EV-021",
+      "kind": "historical_source_and_execution_review",
+      "scope": "Patricked-code/Gouvern",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#grt-et-gouvern--création-puis-entrée",
+      "summary": "Création depuis GRT attestée et bootstrap GitHub réussi. Le run central a échoué en relisant main avant apparition du commit."
+    },
+    {
+      "id": "EV-022",
+      "kind": "historical_source_and_execution_review",
+      "scope": "GRT et Patricked-code/Gouvern",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#grt-et-gouvern--création-puis-entrée",
+      "summary": "Appels MCP de lecture attestés. L'upgrade v2.8.1 de Gouvern remet la projection Git à UNCONFIGURED, sans prouver un état serveur."
+    },
+    {
+      "id": "EV-023",
+      "kind": "historical_source_and_execution_review",
+      "scope": "UAES et CUG",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#uaes-et-cug--portée-de-chaque-preuve",
+      "summary": "Bypass de ruleset et préflight S1 en lecture seule observés. Installation nominative, permissions et runtime UAES non attestés."
+    },
+    {
+      "id": "EV-024",
+      "kind": "historical_source_and_execution_review",
+      "scope": "chainsolutions-wealthtech/Regulatory",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#regulatory--constitution-du-dépôt-et-du-produit",
+      "summary": "Dépôt initial README, puis gouvernance, corpus et kit documentaire Loop 1.0.0. Aucun template parent déclaré ni transfert attesté."
+    },
+    {
+      "id": "EV-025",
+      "kind": "historical_source_and_execution_review",
+      "scope": "chainsolutions-wealthtech/Regulatory",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#regulatory--constitution-du-dépôt-et-du-produit",
+      "summary": "Moteur et application Next.js versionnés. CI avec build, API HTTP et PostgreSQL en environnement de test."
+    },
+    {
+      "id": "EV-026",
+      "kind": "historical_source_and_execution_review",
+      "scope": "Regulatory et Patricked-code/MCP #349",
+      "status": "observed",
+      "reference": "docs/REPOSITORY_LIFECYCLE_PRECEDENTS.md#regulatory--préparation-s1-et-limite-de-preuve",
+      "summary": "Manifestes successifs sous-chemin et sous-domaine. Pilote et admission MCP non livrés bout en bout. Aucun déploiement Regulatory attesté."
+    },
+    {
+      "id": "EV-027",
+      "kind": "offline_acceptance_tests",
+      "scope": "Contrat Loop et exécuteur historique GRT",
+      "status": "observed",
+      "reference": "scripts/replay_governed_creation.py",
+      "sha": "3d9cba0223ec43003802635dd264f1f266b7b12b",
+      "summary": "Deux tests hors ligne sur l'exécuteur GRT épinglé et son état central : un seul POST puis reprise après 409 jusqu'au handoff sur preuves simulées, et refus d'un dépôt préexistant sans manifeste reconnu. Aucun appel externe."
+    },
+    {
+      "id": "EV-028",
+      "kind": "offline_acceptance_tests",
+      "scope": "Capsule de création gouvernée dans Loop",
+      "status": "observed",
+      "reference": "tests/test_governed_repository_creation_capsule.py",
+      "summary": "Tests hors ligne de soumission, stockage SQLite, reprise, réservation concurrente, corrélation et remise. Aucun dépôt réel créé et aucun service externe contacté."
+    },
+    {
+      "id": "EV-029",
+      "kind": "offline_acceptance_tests",
+      "scope": "Capsule de création gouvernée dans Loop",
+      "status": "observed",
+      "reference": "tests/test_governed_creation_app_preflight.py",
+      "summary": "Préflight simulé : App et installation exactes, JWT RS256 signé avec clé éphémère, jeton limité à la lecture, modèle, cible et révocation. Aucun appel GitHub dans les tests."
+    },
+    {
+      "id": "EV-030",
+      "kind": "offline_acceptance_tests",
+      "scope": "Interface locale Loop et projection GRT",
+      "status": "observed",
+      "reference": "tests/test_governed_creation_intake.py",
+      "summary": "Contrôle des entrées de manifeste, branchements conditionnels, historique SQLite et parcours HTTP local. Aucune création ni connexion externe."
+    },
+    {
+      "id": "EV-031",
+      "kind": "offline_acceptance_tests",
+      "scope": "Loop — jonction de préparation et préflight CUG",
+      "status": "observed",
+      "reference": "tests/test_governed_creation_intake_preflight.py",
+      "summary": "Tests de l'identité hôte, des contrôles de compte et de révision, du résultat borné et de l'intégration HTTP locale. Aucun appel à GitHub ou CUG pendant les tests."
+    },
+    {
+      "id": "EV-032",
+      "kind": "offline_acceptance_tests",
+      "scope": "Loop — envoi groupé de la préparation web",
+      "status": "observed",
+      "reference": "tests/test_governed_creation_intake_batch.py",
+      "summary": "Tests du journal et des requêtes HTTP locales : envoi groupé, reprise, choix conditionnels, format, isolation, concurrence et équivalence avec la préparation séquentielle."
+    }
+  ]
+}

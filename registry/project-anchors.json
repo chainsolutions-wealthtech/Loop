@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "projects": [
+    {
+      "project_id": "WT-PROJECT-LOOP-001",
+      "repositories": [
+        {
+          "host": "github.com",
+          "repository_id": "1456075212",
+          "full_name": "chainsolutions-wealthtech/Loop"
+        }
+      ]
+    }
+  ]
+}
